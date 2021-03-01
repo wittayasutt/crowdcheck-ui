@@ -1,0 +1,74 @@
+import styled from 'styled-components'
+import Link from 'next/link'
+
+const Wrapper = styled.nav`
+	height: 64px;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	overflow-y: hidden;
+
+	padding: 0 16px 0 0;
+`
+
+const Logo = styled.a`
+	height: 56px;
+
+	cursor: pointer;
+
+	img {
+		height: 100%;
+	}
+`
+
+const Center = styled.div`
+	flex: 1;
+`
+
+const MenuList = styled.ul`
+	display: flex;
+	height: 100%;
+
+	._hide-mobile {
+		display: none;
+
+		@media (min-width: ${(props) => props.theme.breakpoint}) {
+			display: flex;
+		}
+	}
+`
+
+const MenuItem = styled.li`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 100%;
+	cursor: pointer;
+
+	@media (min-width: ${(props) => props.theme.breakpoint}) {
+		width: 120px;
+	}
+`
+
+const Navbar = () => {
+	return (
+		<Wrapper>
+			<Link href='/'>
+				<Logo>
+					<img src='/logo.png' alt='logo' />
+				</Logo>
+			</Link>
+			<Center />
+			<MenuList>
+				<Link href='/about'>
+					<MenuItem>About Us</MenuItem>
+				</Link>
+				<MenuItem className='_hide-mobile'>EN/TH</MenuItem>
+			</MenuList>
+		</Wrapper>
+	)
+}
+
+export default Navbar
