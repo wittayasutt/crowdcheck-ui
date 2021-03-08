@@ -1,0 +1,62 @@
+$family-primary: $font-family-base, $font-family-base-th;
+$primary: $soft-green;
+$link: $green;
+// $link: $blue;
+// $info: $cyan;
+// $success: $green;
+// $warning: $yellow;
+// $danger: $red;
+// $dark: $grey-darker;
+// $text: $grey-dark;
+
+@import '~bulma/sass/utilities/_all.sass';
+@import '~bulma/sass/base/_all';
+// ===== elements
+// @import "~bulma/sass/elements/_all.sass";
+@import '~bulma/sass/elements/box.sass';
+@import '~bulma/sass/elements/button.sass';
+// @import '~bulma/sass/elements/container.sass';
+// @import '~bulma/sass/elements/icon.sass';
+// @import '~bulma/sass/elements/image.sass';
+// @import '~bulma/sass/elements/title.sass';
+// ====== forms
+@import '~bulma/sass/form/_all.sass';
+// ====== components
+// @import "~bulma/sass/components/_all.sass";
+// @import '~bulma/sass/components/dropdown.sass';
+// @import '~bulma/sass/components/level.sass';
+// @import '~bulma/sass/components/menu.sass';
+// @import '~bulma/sass/components/navbar.sass';
+// ====== grid
+// @import "~bulma/sass/grid/_all.sass";
+// @import '~bulma/sass/grid/columns.sass';
+// ====== layout
+// @import "~bulma/sass/layout/_all.sass";
+// @import '~bulma/sass/layout/section.sass';
+// @import '~bulma/sass/layout/footer.sass';
+
+.label {
+	font-weight: 400;
+}
+
+.button.is-primary,
+.button.is-link {
+	color: $white;
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: $white;
+		opacity: 0.8;
+	}
+}
+
+h1 {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 1.5em;
+	font-weight: bold;
+}

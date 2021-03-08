@@ -1,32 +1,19 @@
-import styled from 'styled-components'
-import Head from 'next/head'
-
 // components
-import Navbar from '../components/Navbar'
+import Header from '../components/Header'
+import Layout from '../components/Layout'
 import About from '../components/About'
 
-const Wrapper = styled.div`
-	min-height: 100vh;
-
-	display: flex;
-	flex-direction: column;
-`
-
-const Main = styled.main`
-	flex: 1;
-`
-
-export default function Home() {
+const AboutPage = () => {
 	return (
-		<Wrapper>
-			<Head>
+		<>
+			<Header>
 				<title>About Us | Crowdcheck.io</title>
-				<link rel='icon' href='/favicon.ico' />
-			</Head>
-			<Navbar />
-			<Main>
+			</Header>
+			<Layout>
 				<About />
-			</Main>
-		</Wrapper>
+			</Layout>
+		</>
 	)
 }
+
+export default AboutPage

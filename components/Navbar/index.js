@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Link from 'next/link'
+import PropTypes from 'prop-types'
 
 const Wrapper = styled.nav`
 	height: 64px;
@@ -45,14 +46,16 @@ const MenuItem = styled.li`
 	align-items: center;
 
 	height: 100%;
+	margin-left: 16px;
 	cursor: pointer;
 
 	@media (min-width: ${(props) => props.theme.breakpoint}) {
 		width: 120px;
+		margin-left: 0;
 	}
 `
 
-const Navbar = () => {
+const Navbar = ({ role }) => {
 	return (
 		<Wrapper>
 			<Link href='/'>
@@ -62,6 +65,11 @@ const Navbar = () => {
 			</Link>
 			<Center />
 			<MenuList>
+				{role === 'ADMIN' && (
+					<Link href='/admin'>
+						<MenuItem>Admin</MenuItem>
+					</Link>
+				)}
 				<Link href='/about'>
 					<MenuItem>About Us</MenuItem>
 				</Link>
@@ -69,6 +77,15 @@ const Navbar = () => {
 			</MenuList>
 		</Wrapper>
 	)
+}
+
+Navbar.propTypes = {
+	role: PropTypes.string,
+}
+
+Navbar.defaultProps = {
+	// role: 'USER',
+	role: 'ADMIN',
 }
 
 export default Navbar
