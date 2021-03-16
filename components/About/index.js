@@ -1,22 +1,27 @@
-import styled from 'styled-components'
-import Link from 'next/link'
+import styled from 'styled-components';
+import Link from 'next/link';
 
 // icon
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 const Wrapper = styled.div`
 	width: ${(props) => props.theme.breakpoint};
 	max-width: 100%;
 	position: relative;
+	background-color: ${(props) => props.theme.color.white};
 
 	margin: auto;
 	padding: 16px 16px 0;
 
-	p {
-		margin-bottom: 48px;
+	h2 {
+		margin-bottom: 16px;
 	}
-`
+
+	p {
+		margin-bottom: 32px;
+	}
+`;
 
 const IconCaretDown = styled(FontAwesomeIcon)`
 	height: 24px;
@@ -30,7 +35,7 @@ const IconCaretDown = styled(FontAwesomeIcon)`
 	@media (min-width: ${(props) => props.theme.breakpoint}) {
 		display: none;
 	}
-`
+`;
 
 const About = () => {
 	return (
@@ -65,7 +70,7 @@ const About = () => {
 				zzri.
 			</p>
 		</Wrapper>
-	)
-}
+	);
+};
 
-export default About
+export default About;

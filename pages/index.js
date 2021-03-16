@@ -1,20 +1,23 @@
 // components
-import Header from '../components/Header'
-import Layout from '../components/Layout'
-import Footer from '../components/Footer'
-import Map from '../components/Map'
+import Header from '../components/Header';
+import Layout from '../components/Layout';
+import Footer from '../components/Footer';
+import Map from '../components/Map';
+import Filter from '../components/Filter';
+import Legend from '../components/Legend';
 
 const HomePage = () => {
 	return (
 		<>
 			<Header />
 			<Layout>
-				{/* 112px = Nav height + Footer height */}
-				<Map offset='112px' />
+				<Map />
 				<Footer />
+				<Filter />
+				<Legend />
 			</Layout>
 		</>
-	)
-}
+	);
+};
 
-export default HomePage
+export default HomePage;

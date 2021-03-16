@@ -1,6 +1,9 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-const Wrapper = styled.nav`
+// components
+import Menu from './menu';
+
+const StatusWrapper = styled.nav`
 	height: 48px;
 	display: flex;
 	justify-content: space-between;
@@ -19,22 +22,25 @@ const Wrapper = styled.nav`
 	@media (min-width: ${(props) => props.theme.breakpoint}) {
 		padding: 0 32px;
 	}
-`
+`;
 
 const Status = styled.div`
 	color: ${(props) => props.theme.color.white};
 	padding: 8px;
-`
+`;
 
 const Footer = () => {
 	return (
-		<Wrapper>
-			<Status>50%</Status>
-			<Status>75%</Status>
-			<Status>100%</Status>
-			<Status>Exceed</Status>
-		</Wrapper>
-	)
-}
+		<>
+			<StatusWrapper>
+				<Status>50%</Status>
+				<Status>75%</Status>
+				<Status>100%</Status>
+				<Status>Exceed</Status>
+			</StatusWrapper>
+			<Menu />
+		</>
+	);
+};
 
-export default Footer
+export default Footer;

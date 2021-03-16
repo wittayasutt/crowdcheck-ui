@@ -25,8 +25,8 @@ const AdminFormVenue = ({ data, isView }) => {
 	};
 
 	const [id, setId] = useState('');
-	const [placeName, setPlaceName] = useState(initData);
-	const [placeType, setPlaceType] = useState(initData);
+	const [programName, setProgramName] = useState(initData);
+	const [programType, setProgramType] = useState(initData);
 	const [owner, setOwner] = useState(initData);
 	const [startDate, setStartDate] = useState(new Date());
 	const [endDate, setEndDate] = useState(new Date());
@@ -54,14 +54,14 @@ const AdminFormVenue = ({ data, isView }) => {
 		}
 
 		if (data.name) {
-			setPlaceName({
+			setProgramName({
 				th: data.name,
 				en: data.name,
 			});
 		}
 
 		if (data.type) {
-			setPlaceType({
+			setProgramType({
 				th: data.type,
 				en: data.type,
 			});
@@ -107,16 +107,16 @@ const AdminFormVenue = ({ data, isView }) => {
 			</div>
 
 			<Input2Lang
-				title='Place Name'
-				data={placeName}
-				onChange={(e) => setPlaceName(e)}
+				title='Program Name'
+				data={programName}
+				onChange={(e) => setProgramName(e)}
 				isView={isView}
 			/>
 
 			<Input2Lang
-				title='Place Type'
-				data={placeType}
-				onChange={(e) => setPlaceType(e)}
+				title='Program Type'
+				data={programType}
+				onChange={(e) => setProgramType(e)}
 				isView={isView}
 			/>
 

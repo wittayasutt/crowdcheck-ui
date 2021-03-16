@@ -1,39 +1,43 @@
-import { useState } from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
-import GoogleMapReact from 'google-map-react'
+import { useState } from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import GoogleMapReact from 'google-map-react';
 
-import { defaultCenter, defaultZoom } from './const'
-import mapStyles from './theme'
+import { defaultCenter, defaultZoom } from './const';
+import mapStyles from './theme';
 
 // components
-import Marker from '../Marker'
+import Marker from '../Marker';
 
 // TODO: add real key
 const bootstrapURLKeys = {
 	key: 'AIzaSyCER7hN0p-_U36bIxFR3W_fRD6BZ_Kf3CI',
 	libraries: ['places', 'geometry'],
-}
+};
 
 const Wrapper = styled.nav`
-	height: ${(props) => `calc(100vh - ${props.offset})`};
+	height: calc(100vh - 176px);
 	width: 100%;
-`
+
+	@media (min-width: ${(props) => props.theme.breakpoint}) {
+		height: calc(100vh - 112px);
+	}
+`;
 
 const Map = ({ offset }) => {
-	const [instance, setInstance] = useState(null)
+	const [instance, setInstance] = useState(null);
 	const [mapApi, setMapApi] = useState({
 		loaded: false,
 		api: null,
-	})
+	});
 
 	const apiHasLoaded = (instance, api) => {
-		setInstance(instance)
+		setInstance(instance);
 		setMapApi({
 			loaded: true,
 			api,
-		})
-	}
+		});
+	};
 
 	return (
 		<Wrapper offset={offset}>
@@ -55,15 +59,15 @@ const Map = ({ offset }) => {
 				<Marker level={4} lat={13.756774} lng={100.5326445} />
 			</GoogleMapReact>
 		</Wrapper>
-	)
-}
+	);
+};
 
 Map.propTypes = {
 	offset: PropTypes.string,
-}
+};
 
 Map.defaultProps = {
 	offset: '0px',
-}
+};
 
-export default Map
+export default Map;

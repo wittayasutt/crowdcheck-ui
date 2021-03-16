@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import Link from 'next/link'
-import PropTypes from 'prop-types'
+import styled from 'styled-components';
+import Link from 'next/link';
+import PropTypes from 'prop-types';
 
 const Wrapper = styled.nav`
 	height: 64px;
@@ -8,10 +8,11 @@ const Wrapper = styled.nav`
 
 	display: flex;
 	align-items: center;
+	background-color: ${(props) => props.theme.color.white};
 	overflow-y: hidden;
 
 	padding: 0 16px 0 0;
-`
+`;
 
 const Logo = styled.a`
 	height: 56px;
@@ -21,11 +22,11 @@ const Logo = styled.a`
 	img {
 		height: 100%;
 	}
-`
+`;
 
 const Center = styled.div`
 	flex: 1;
-`
+`;
 
 const MenuList = styled.ul`
 	display: flex;
@@ -38,7 +39,7 @@ const MenuList = styled.ul`
 			display: flex;
 		}
 	}
-`
+`;
 
 const MenuItem = styled.li`
 	display: flex;
@@ -46,6 +47,7 @@ const MenuItem = styled.li`
 	align-items: center;
 
 	height: 100%;
+	font-size: 14px;
 	margin-left: 16px;
 	cursor: pointer;
 
@@ -53,7 +55,7 @@ const MenuItem = styled.li`
 		width: 120px;
 		margin-left: 0;
 	}
-`
+`;
 
 const Navbar = ({ role }) => {
 	return (
@@ -76,16 +78,16 @@ const Navbar = ({ role }) => {
 				<MenuItem className='_hide-mobile'>EN/TH</MenuItem>
 			</MenuList>
 		</Wrapper>
-	)
-}
+	);
+};
 
 Navbar.propTypes = {
 	role: PropTypes.string,
-}
+};
 
 Navbar.defaultProps = {
 	// role: 'USER',
 	role: 'ADMIN',
-}
+};
 
-export default Navbar
+export default Navbar;
