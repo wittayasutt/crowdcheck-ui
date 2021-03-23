@@ -91,29 +91,38 @@ const Content = styled.div`
 `;
 
 const Summary = styled.summary`
-	display: flex;
-	align-items: center;
-	height: 48px;
+	list-style: none;
 
-	background-color: ${(props) => props.theme.color.softGreen};
-	color: ${(props) => props.theme.color.white};
-	font-weight: 600;
-	margin-bottom: 8px;
-	padding: 8px;
-	border-radius: 2px;
-
-	cursor: pointer;
-
-	:focus {
-		outline: none;
+	&::-webkit-details-marker {
+		display: none;
 	}
 
-	.id {
-		border-right: 2px solid ${(props) => props.theme.color.white};
-	}
+	.summary {
+		display: inline-flex;
+		align-items: center;
+		height: 48px;
+		width: 100%;
 
-	.button-action {
-		color: ${(props) => props.theme.color.softGreen};
+		background-color: ${(props) => props.theme.color.softGreen};
+		color: ${(props) => props.theme.color.white};
+		font-weight: 600;
+		margin-bottom: 8px;
+		padding: 8px;
+		border-radius: 2px;
+
+		cursor: pointer;
+
+		&:focus {
+			outline: none;
+		}
+
+		.id {
+			border-right: 2px solid ${(props) => props.theme.color.white};
+		}
+
+		.button-action {
+			color: ${(props) => props.theme.color.softGreen};
+		}
 	}
 `;
 
@@ -178,30 +187,32 @@ const List = ({ title, type }) => {
 							<li key={index}>
 								<details>
 									<Summary>
-										<div className='id'>{index + 1}</div>
-										<div className='item'>{item.name}</div>
+										<div className='summary'>
+											<div className='id'>{index + 1}</div>
+											<div className='item'>{item.name}</div>
 
-										<Link href={`admin/venue/${item._id}`}>
-											<button className='button button-action'>
-												<Icon icon={faEye} />
+											<Link href={`admin/venue/${item._id}`}>
+												<button className='button button-action'>
+													<Icon icon={faEye} />
+												</button>
+											</Link>
+
+											<Link href={`admin/venue/${item._id}/edit`}>
+												<button className='button button-action'>
+													<Icon icon={faPen} />
+												</button>
+											</Link>
+
+											<button
+												className='button button-action'
+												onClick={() => {
+													openConfimRemoveModal(item._id);
+												}}
+											>
+												<Icon icon={faTrash} />
+												{/* Remove */}
 											</button>
-										</Link>
-
-										<Link href={`admin/venue/${item._id}/edit`}>
-											<button className='button button-action'>
-												<Icon icon={faPen} />
-											</button>
-										</Link>
-
-										<button
-											className='button button-action'
-											onClick={() => {
-												openConfimRemoveModal(item._id);
-											}}
-										>
-											<Icon icon={faTrash} />
-											{/* Remove */}
-										</button>
+										</div>
 									</Summary>
 
 									<ul>
