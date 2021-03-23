@@ -3,18 +3,18 @@ import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 // components
-import Header from '../../../components/Header/admin';
-import Layout from '../../../components/Layout/admin';
-import Form from '../../../components/Form';
+import Header from '../../../../components/Header/admin';
+import Layout from '../../../../components/Layout/admin';
+import Form from '../../../../components/Form';
 
 // mock
-import mockData from '../../../mock/vanueList';
+import mockData from '../../../../mock/venueList';
 
 const Wrapper = styled.div`
 	padding: 16px;
 `;
 
-const AdminItem = () => {
+const AdminItemViewVenue = () => {
 	const router = useRouter();
 	const { id } = router.query;
 
@@ -30,10 +30,12 @@ const AdminItem = () => {
 		<>
 			<Header />
 			<Layout>
-				<Wrapper>{data && <Form action='VIEW' data={data} />}</Wrapper>
+				<Wrapper>
+					{data && <Form action='VIEW' formType='VENUE' data={data} />}
+				</Wrapper>
 			</Layout>
 		</>
 	);
 };
 
-export default AdminItem;
+export default AdminItemViewVenue;

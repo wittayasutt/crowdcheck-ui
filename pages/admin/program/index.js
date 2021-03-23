@@ -9,17 +9,17 @@ const Wrapper = styled.div`
 	padding: 16px;
 `;
 
-const AdminItemAddOther = () => {
+const AdminItemAddProgram = () => {
 	return (
 		<>
 			<Header />
 			<Layout>
 				<Wrapper>
-					<Form action='ADD' type='other' />
+					<Form action='ADD' formType='PROGRAM' />
 				</Wrapper>
 			</Layout>
 		</>
 	);
 };
 
-export default AdminItemAddOther;
+export default AdminItemAddProgram;

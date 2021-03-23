@@ -15,7 +15,7 @@ const AdminItemAddVenue = () => {
 			<Header />
 			<Layout>
 				<Wrapper>
-					<Form action='ADD' type='venue' />
+					<Form action='ADD' formType='VENUE' />
 				</Wrapper>
 			</Layout>
 		</>

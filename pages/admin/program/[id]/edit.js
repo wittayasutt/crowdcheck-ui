@@ -3,18 +3,18 @@ import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 // components
-import Header from '../../../components/Header/admin';
-import Layout from '../../../components/Layout/admin';
-import Form from '../../../components/Form';
+import Header from '../../../../components/Header/admin';
+import Layout from '../../../../components/Layout/admin';
+import Form from '../../../../components/Form';
 
 // mock
-import mockData from '../../../mock/vanueList';
+import mockData from '../../../../mock/programList';
 
 const Wrapper = styled.div`
 	padding: 16px;
 `;
 
-const AdminItemEdit = () => {
+const AdminItemEditProgram = () => {
 	const router = useRouter();
 	const { id } = router.query;
 
@@ -31,11 +31,13 @@ const AdminItemEdit = () => {
 			<Header />
 			<Layout>
 				<Wrapper>
-					<Wrapper>{data && <Form action='EDIT' data={data} />}</Wrapper>
+					<Wrapper>
+						{data && <Form action='EDIT' formType='PROGRAM' data={data} />}
+					</Wrapper>
 				</Wrapper>
 			</Layout>
 		</>
 	);
 };
 
-export default AdminItemEdit;
+export default AdminItemEditProgram;

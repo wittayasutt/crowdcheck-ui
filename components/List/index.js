@@ -3,11 +3,36 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
+// icon
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+	faEye,
+	faPen,
+	faTrash,
+	faPlus,
+} from '@fortawesome/free-solid-svg-icons';
+
+// components
+import Modal from '../../components/Base/modal';
+
 // mock
-import data from '../../mock/vanueList';
+import venueData from '../../mock/venueList';
+import programData from '../../mock/programList';
 
 const Wrapper = styled.div`
 	padding-top: 24px;
+
+	.button-add {
+		justify-content: center;
+		font-weight: 600;
+		padding: 8px;
+
+		cursor: pointer;
+
+		span {
+			margin-right: 4px;
+		}
+	}
 `;
 
 const Title = styled.div`
@@ -24,102 +49,209 @@ const Button = styled.button`
 `;
 
 const Content = styled.div`
-	background-color: ${(props) => props.theme.color.white};
-	padding: 8px 16px 8px 8px;
+	.id {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-	ul {
-		li {
-			height: 48px;
-			display: flex;
-			align-items: center;
+		height: 32px;
+		width: 32px;
+		border-right: 2px solid ${(props) => props.theme.color.white};
+		margin-right: 8px;
+	}
 
-			.id {
-				display: flex;
-				justify-content: center;
-				align-items: center;
+	.item {
+		flex: 1;
 
-				height: 32px;
-				width: 32px;
-				border-right: 2px solid ${(props) => props.theme.color.green};
-				margin-right: 8px;
-			}
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
 
-			.item {
-				flex: 1;
+	.button-action {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
+		height: 32px;
+		width: 32px;
+		margin-left: 8px;
+		padding: 0;
+		border-radius: 2px;
+		border: none;
+		color: ${(props) => props.theme.color.softGreen};
 
-				transition: 0.2s;
-				cursor: pointer;
+		transition: 0.2s;
 
-				&:hover {
-					color: ${(props) => props.theme.color.softGreen};
-				}
-			}
-
-			.button-action {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-
-				height: 32px;
-				width: 100px;
-				border-radius: 2px;
-				margin-left: 8px;
-			}
+		:hover {
+			opacity: 0.8;
+			width: 48px;
 		}
 	}
 `;
 
+const Summary = styled.summary`
+	display: flex;
+	align-items: center;
+	height: 48px;
+
+	background-color: ${(props) => props.theme.color.softGreen};
+	color: ${(props) => props.theme.color.white};
+	font-weight: 600;
+	margin-bottom: 8px;
+	padding: 8px;
+	border-radius: 2px;
+
+	cursor: pointer;
+
+	:focus {
+		outline: none;
+	}
+
+	.id {
+		border-right: 2px solid ${(props) => props.theme.color.white};
+	}
+
+	.button-action {
+		color: ${(props) => props.theme.color.softGreen};
+	}
+`;
+
+const Program = styled.li`
+	display: flex;
+	align-items: center;
+	height: 48px;
+
+	background-color: ${(props) => props.theme.color.white};
+	color: ${(props) => props.theme.color.softGreen};
+	margin-bottom: 8px;
+	padding: 8px 8px 8px 24px;
+	border-radius: 2px;
+
+	.id {
+		border-right: 2px solid ${(props) => props.theme.color.softGreen};
+	}
+
+	.button-action {
+		color: ${(props) => props.theme.color.white};
+	}
+`;
+
+const Icon = styled(FontAwesomeIcon)`
+	height: 12px;
+	width: 12px;
+`;
+
 const List = ({ title, type }) => {
 	const [removeId, setRemoveId] = useState(null);
+	const [openModal, setOpenModal] = useState(false);
 
 	const openConfimRemoveModal = (id) => {
+		setOpenModal(true);
+
 		console.log('remove', id);
 		setRemoveId(id);
 	};
 
 	const closeConfimRemoveModal = () => {
-		setRemoveId(null);
+		setOpenModal(false);
+	};
+
+	const confirmRemove = () => {
+		closeConfimRemoveModal();
 	};
 
 	return (
-		<Wrapper>
-			<Title>
-				<h2>{title}</h2>
-				<Link href={`admin/add/${type}`}>
-					<Button className='button is-primary'>Add</Button>
-				</Link>
-			</Title>
-			<Content>
-				<ul>
-					{data.map((item, index) => (
-						<li key={index}>
-							<div className='id'>{index + 1}</div>
+		<>
+			<Wrapper>
+				<Title>
+					<h2>{title}</h2>
+					<Link href={`admin/venue`}>
+						<Button className='button button-add is-primary'>
+							<span>ADD</span> <Icon icon={faPlus} />
+						</Button>
+					</Link>
+				</Title>
+				<Content>
+					<ul>
+						{venueData.map((item, index) => (
+							<li key={index}>
+								<details>
+									<Summary>
+										<div className='id'>{index + 1}</div>
+										<div className='item'>{item.name}</div>
 
-							<Link href={`admin/${item._id}`}>
-								<div className='item'>{item.name}</div>
-							</Link>
+										<Link href={`admin/venue/${item._id}`}>
+											<button className='button button-action'>
+												<Icon icon={faEye} />
+											</button>
+										</Link>
 
-							<Link href={`admin/${item._id}/edit`}>
-								<button className='button is-link button-action'>Edit</button>
-							</Link>
+										<Link href={`admin/venue/${item._id}/edit`}>
+											<button className='button button-action'>
+												<Icon icon={faPen} />
+											</button>
+										</Link>
 
-							<button
-								className='button is-link button-action'
-								onClick={() => {
-									openConfimRemoveModal(item._id);
-								}}
-							>
-								Remove
-							</button>
-						</li>
-					))}
-				</ul>
-			</Content>
-		</Wrapper>
+										<button
+											className='button button-action'
+											onClick={() => {
+												openConfimRemoveModal(item._id);
+											}}
+										>
+											<Icon icon={faTrash} />
+											{/* Remove */}
+										</button>
+									</Summary>
+
+									<ul>
+										{programData.map((item, index) => (
+											<Program className='program' key={index}>
+												<div className='item'>{item.name}</div>
+
+												<Link href={`admin/program/${item._id}`}>
+													<button className='button is-primary button-action'>
+														<Icon icon={faEye} />
+													</button>
+												</Link>
+
+												<Link href={`admin/program/${item._id}/edit`}>
+													<button className='button is-primary button-action'>
+														<Icon icon={faPen} />
+													</button>
+												</Link>
+
+												<button
+													className='button is-primary button-action'
+													onClick={() => {
+														openConfimRemoveModal(item._id);
+													}}
+												>
+													<Icon icon={faTrash} />
+													{/* Remove */}
+												</button>
+											</Program>
+										))}
+
+										<Link href={`admin/program`}>
+											<Program className='button-add'>
+												<span>ADD</span> <Icon icon={faPlus} />
+											</Program>
+										</Link>
+									</ul>
+								</details>
+							</li>
+						))}
+					</ul>
+				</Content>
+			</Wrapper>
+
+			<Modal
+				open={openModal}
+				onClose={closeConfimRemoveModal}
+				onConfirm={confirmRemove}
+			/>
+		</>
 	);
 };
 

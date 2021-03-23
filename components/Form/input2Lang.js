@@ -4,7 +4,14 @@ import PropTypes from 'prop-types';
 // components
 import RequiredLabel from '../Base/requiredLabel';
 
-const AdminFormInput = ({ title, data, onChange, isView, isTextarea }) => {
+const AdminFormInput = ({
+	title,
+	require,
+	data,
+	onChange,
+	isView,
+	isTextarea,
+}) => {
 	const [valueTH, setValueTH] = useState('');
 	const [valueEN, setValueEN] = useState('');
 
@@ -38,7 +45,7 @@ const AdminFormInput = ({ title, data, onChange, isView, isTextarea }) => {
 
 	return (
 		<div className='field mb-2'>
-			<RequiredLabel>{title}</RequiredLabel>
+			{require ? <RequiredLabel>{title}</RequiredLabel> : <div>{title}</div>}
 			<div className='control'>
 				{isView && <strong>{valueTH}</strong>}
 				{!isView && !isTextarea && (

@@ -9,8 +9,8 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { FORM_ACTION, FORM_TYPE } from './const';
 
 // components
-import Divider from '../Base/divider';
 import VenueForm from './venue';
+import ProgramForm from './program';
 
 const Wrapper = styled.div``;
 
@@ -58,7 +58,7 @@ const IconAngleLeft = styled(FontAwesomeIcon)`
 	width: 24px;
 `;
 
-const AdminForm = ({ action, data, isOther }) => {
+const AdminForm = ({ action, data, formType }) => {
 	const [isView, setIsView] = useState(false);
 	const [isAdd, setIsAdd] = useState(false);
 	const [isEdit, setIsEdit] = useState(false);
@@ -66,17 +66,17 @@ const AdminForm = ({ action, data, isOther }) => {
 	const [type, setType] = useState(FORM_TYPE.VENUE);
 	const [title, setTitle] = useState('');
 
-	const handleSelectType = (e) => {
-		setType(e.target.value);
-	};
-
 	const handleSubmit = () => {};
 
 	useEffect(() => {
-		if (isOther) {
-			setType(FORM_TYPE.OTHER);
+		if (formType) {
+			setType(formType);
 		}
-	}, [isOther]);
+
+		if (action === FORM_ACTION.ADD) {
+			setTitle(`ADD NEW ${formType}`);
+		}
+	}, [formType]);
 
 	useEffect(() => {
 		if (action === FORM_ACTION.VIEW) {
@@ -91,8 +91,6 @@ const AdminForm = ({ action, data, isOther }) => {
 	useEffect(() => {
 		if (action === FORM_ACTION.VIEW || action === FORM_ACTION.EDIT) {
 			setTitle(data.name);
-		} else if (action === FORM_ACTION.ADD) {
-			setTitle('ADD NEW ITEM');
 		}
 	}, [data]);
 
@@ -109,24 +107,11 @@ const AdminForm = ({ action, data, isOther }) => {
 
 			<Title>{title}</Title>
 
-			<Form className='mb-2' isView={isView}>
-				{isAdd && (
-					<>
-						<div className='field'>
-							<div className='control'>
-								<div className='select is-rounded'>
-									<select onChange={handleSelectType}>
-										<option value={FORM_TYPE.VENUE}>Venue</option>
-										<option value={FORM_TYPE.OTHER}>Other</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						<Divider />
-					</>
-				)}
-
+			<Form className='mb-2'>
 				{type === FORM_TYPE.VENUE && <VenueForm data={data} isView={isView} />}
+				{type === FORM_TYPE.PROGRAM && (
+					<ProgramForm data={data} isView={isView} />
+				)}
 			</Form>
 
 			{(isAdd || isEdit) && (
@@ -142,14 +127,14 @@ const AdminForm = ({ action, data, isOther }) => {
 
 AdminForm.propTypes = {
 	action: PropTypes.string,
+	formType: PropTypes.string,
 	data: PropTypes.object,
-	isOther: PropTypes.bool,
 };
 
 AdminForm.defaultProps = {
 	action: 'view',
+	formType: '',
 	data: null,
-	isOther: false,
 };
 
 export default AdminForm;

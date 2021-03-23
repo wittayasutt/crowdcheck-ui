@@ -1,21 +1,10 @@
 import { useState, useEffect } from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 // components
-import DateTimePicker from '../../components/Base/dateTime';
-import UploadImage from '../../components/Base/uploadImage';
 import RequiredLabel from '../Base/requiredLabel';
 import Input2Lang from './input2Lang';
-
-const Row = styled.div`
-	display: flex;
-	flex-flow: row wrap;
-`;
-
-const Col = styled.div`
-	width: 50%;
-`;
+import InputLocation from './inputLocation';
 
 const AdminFormVenue = ({ data, isView }) => {
 	// form
@@ -25,23 +14,14 @@ const AdminFormVenue = ({ data, isView }) => {
 	};
 
 	const [id, setId] = useState('');
-	const [programName, setProgramName] = useState(initData);
-	const [programType, setProgramType] = useState(initData);
-	const [owner, setOwner] = useState(initData);
-	const [startDate, setStartDate] = useState(new Date());
-	const [endDate, setEndDate] = useState(new Date());
-	const [detail, setDetail] = useState(initData);
+	const [venueName, setVenueName] = useState(initData);
+	const [location, setLocation] = useState({
+		lat: '',
+		lng: '',
+	});
 
 	const handleSetId = (e) => {
 		setId(e.target.value);
-	};
-
-	const handleChangeStartDatePicker = (date) => {
-		console.log('StartDatePicker', date);
-	};
-
-	const handleChangeEndDatePicker = (date) => {
-		console.log('EndDatePicker', date);
 	};
 
 	useEffect(() => {
@@ -54,34 +34,16 @@ const AdminFormVenue = ({ data, isView }) => {
 		}
 
 		if (data.name) {
-			setProgramName({
+			setVenueName({
 				th: data.name,
 				en: data.name,
 			});
 		}
 
-		if (data.type) {
-			setProgramType({
-				th: data.type,
-				en: data.type,
-			});
-		}
-
-		if (data.owner) {
-			setOwner({
-				th: data.owner,
-				en: data.owner,
-			});
-		}
-
-		// TODO: add real date
-		setStartDate(new Date());
-		setEndDate(new Date());
-
-		if (data.description) {
-			setDetail({
-				th: data.description,
-				en: data.description,
+		if (data.location) {
+			setLocation({
+				lat: data.location.lat,
+				lng: data.location.lng,
 			});
 		}
 	}, [data]);
@@ -107,63 +69,18 @@ const AdminFormVenue = ({ data, isView }) => {
 			</div>
 
 			<Input2Lang
-				title='Program Name'
-				data={programName}
-				onChange={(e) => setProgramName(e)}
+				title='Venue Name'
+				data={venueName}
+				onChange={(e) => setVenueName(e)}
 				isView={isView}
+				require
 			/>
 
-			<Input2Lang
-				title='Program Type'
-				data={programType}
-				onChange={(e) => setProgramType(e)}
+			<InputLocation
+				title='Location'
+				data={location}
+				onChange={(e) => setLocation(e)}
 				isView={isView}
-			/>
-
-			<Input2Lang
-				title='Owner'
-				data={owner}
-				onChange={(e) => setOwner(e)}
-				isView={isView}
-			/>
-
-			<div className='field mb-2'>
-				<Row>
-					<Col>
-						<RequiredLabel>Start Date</RequiredLabel>
-						<div className='control'>
-							<DateTimePicker
-								onChange={handleChangeStartDatePicker}
-								date={startDate}
-								placeholder={'Select Start Date'}
-							/>
-						</div>
-					</Col>
-
-					<Col>
-						<RequiredLabel>End Date</RequiredLabel>
-						<div className='control'>
-							<DateTimePicker
-								onChange={handleChangeEndDatePicker}
-								date={endDate}
-								placeholder={'Select End Date'}
-							/>
-						</div>
-					</Col>
-				</Row>
-			</div>
-
-			<div className='field mb-2'>
-				<label className='label'>Upload Image:</label>
-				<UploadImage />
-			</div>
-
-			<Input2Lang
-				title='Detail'
-				data={detail}
-				onChange={(e) => setDetail(e)}
-				isView={isView}
-				isTextarea
 			/>
 		</>
 	);
