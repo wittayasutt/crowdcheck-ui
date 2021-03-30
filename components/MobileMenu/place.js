@@ -2,15 +2,15 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 
-const useMenu = () => {
+const usePlace = () => {
 	const dispatch = useDispatch();
-	const hideMenu = () => dispatch({ type: 'HIDE_MENU' });
+	const deselectPlace = () => dispatch({ type: 'DESELECT_PLACE' });
 
-	return { hideMenu };
+	return { deselectPlace };
 };
 
 const Wrapper = styled.div`
-	height: calc(100vh - 128px);
+	height: calc(100vh - 64px);
 	width: 100vw;
 
 	position: fixed;
@@ -20,7 +20,7 @@ const Wrapper = styled.div`
 	z-index: 1000;
 
 	@media (min-width: ${(props) => props.theme.breakpoint}) {
-		height: calc(100vh - 112px);
+		display: none;
 	}
 `;
 
@@ -42,39 +42,37 @@ const Overlay = styled.div`
 
 const ContentWrapper = styled.div`
 	max-height: 90%;
-	width: 256px;
-	padding: 0 16px;
+	width: 100%;
 	background-color: ${(props) => props.theme.color.white};
-	overflow-y: auto;
 
 	position: absolute;
 	bottom: 0;
 	left: 0;
 `;
 
-const MobileMenu = ({ children }) => {
-	const { hideMenu } = useMenu();
+const MobileMenuPlace = ({ children }) => {
+	const { deselectPlace } = usePlace();
 
-	const handleCloseMenu = () => {
-		hideMenu();
+	const handleClosePlace = () => {
+		deselectPlace();
 	};
 
 	return (
 		<Wrapper>
 			<WrapperOverlay>
-				<Overlay onClick={handleCloseMenu} />
+				<Overlay onClick={handleClosePlace} />
 				<ContentWrapper>{children}</ContentWrapper>
 			</WrapperOverlay>
 		</Wrapper>
 	);
 };
 
-MobileMenu.propTypes = {
+MobileMenuPlace.propTypes = {
 	children: PropTypes.node,
 };
 
-MobileMenu.defaultProps = {
+MobileMenuPlace.defaultProps = {
 	children: <></>,
 };
 
-export default MobileMenu;
+export default MobileMenuPlace;

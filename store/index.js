@@ -7,6 +7,9 @@ let store;
 const initialState = {
 	showFilter: false,
 	showLegend: false,
+	place: {
+		name: 'Place',
+	},
 };
 
 const reducer = (state = initialState, action) => {
@@ -28,6 +31,19 @@ const reducer = (state = initialState, action) => {
 				...state,
 				showFilter: false,
 				showLegend: false,
+			};
+		case 'SELECT_PLACE': {
+			console.log('action', action);
+
+			return {
+				...state,
+				place: null,
+			};
+		}
+		case 'DESELECT_PLACE':
+			return {
+				...state,
+				place: null,
 			};
 		default:
 			return state;
@@ -64,7 +80,8 @@ export const initializeStore = (preloadedState) => {
 	return _store;
 };
 
-export function useStore(initialState) {
+export const useStore = (initialState) => {
 	const store = useMemo(() => initializeStore(initialState), [initialState]);
+
 	return store;
-}
+};

@@ -8,9 +8,9 @@ const getMarker = (level) => {
 		case 1:
 			return 'green';
 		case 2:
-			return 'soft-green';
+			return 'softGreen';
 		case 3:
-			return 'soft-red';
+			return 'softRed';
 		case 4:
 			return 'red';
 		default:
