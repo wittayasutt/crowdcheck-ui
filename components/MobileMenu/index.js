@@ -41,7 +41,7 @@ const Overlay = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-	max-height: 90%;
+	max-height: 100%;
 	width: 256px;
 	padding: 0 16px;
 	background-color: ${(props) => props.theme.color.white};

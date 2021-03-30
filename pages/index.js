@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import Map from '../components/Map';
 
 // Popup
-import Filter from '../components/Filter';
+import Density from '../components/Density';
 import Legend from '../components/Legend';
 import Place from '../components/Place';
 
@@ -16,7 +16,7 @@ const HomePage = () => {
 			<Layout>
 				<Map />
 				<Footer />
-				<Filter />
+				<Density />
 				<Legend />
 				<Place />
 			</Layout>

@@ -1,31 +1,20 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { getLevelColor } from '../../helpers';
 
-const getMarker = (level) => {
-	switch (level) {
-		case 0:
-			return 'pointer';
-		case 1:
-			return 'green';
-		case 2:
-			return 'softGreen';
-		case 3:
-			return 'softRed';
-		case 4:
-			return 'red';
-		default:
-			return 'green';
-	}
-};
+const Image = styled.img`
+	cursor: pointer;
+`;
 
-const Marker = ({ level }) => {
-	const marker = getMarker(level);
+const Marker = ({ level, onClick }) => {
+	const marker = getLevelColor(level);
 
 	return (
-		<img
+		<Image
 			src={`/images/${marker}.png`}
 			alt='marker'
 			style={{ height: '32px', width: '32px' }}
+			onClick={onClick}
 		/>
 	);
 };

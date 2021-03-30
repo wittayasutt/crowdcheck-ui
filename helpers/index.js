@@ -9,7 +9,7 @@ export const getLevelColor = (level) => {
 		case 4:
 			return 'red';
 		default:
-			return 'darkerGray';
+			return 'default';
 	}
 };
 

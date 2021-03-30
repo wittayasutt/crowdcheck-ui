@@ -3,6 +3,8 @@ import styled from 'styled-components';
 // components
 import Zoom from '../Base/zoom';
 import Marker from '../Marker';
+import Switch from './switch';
+import Checkbox from './checkbox';
 
 const Wrapper = styled.div``;
 
@@ -23,9 +25,31 @@ const Row = styled.div`
 	}
 `;
 
+const SwitchWrapper = styled.div`
+	display: flex;
+	align-items: center;
+
+	p {
+		font-size: 11px;
+		line-height: 16px;
+		margin-right: 16px;
+	}
+`;
+
+const Title = styled.h4`
+	font-size: 12px;
+	font-weight: 500;
+
+	margin: 24px 0 12px;
+`;
+
 const LegendContent = () => {
 	return (
 		<Wrapper>
+			<SwitchWrapper>
+				<p>Location Name</p>
+				<Switch onChange={() => {}} />
+			</SwitchWrapper>
 			<Row>
 				<Marker level={0} />
 				<p>Find where you are</p>
@@ -63,6 +87,14 @@ const LegendContent = () => {
 					Plenty of space is best for a good shot’
 				</p>
 			</Row>
+
+			<Title>Point Of Interest</Title>
+			<Checkbox label='Cafe & Restaurant' onChange={() => {}} />
+			<Checkbox label='Parking' onChange={() => {}} />
+			<Checkbox label='Gallery' onChange={() => {}} />
+			<Checkbox label='Design studio' onChange={() => {}} />
+			<Checkbox label='Craft' onChange={() => {}} />
+			<Checkbox label='Fashion' onChange={() => {}} />
 		</Wrapper>
 	);
 };

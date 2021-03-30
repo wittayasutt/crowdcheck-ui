@@ -10,6 +10,10 @@ const Wrapper = styled.div`
 	height: calc((100vh - 64px) * 0.9 - 88px);
 	padding: 8px 16px;
 	overflow-y: auto;
+
+	@media (min-width: ${(props) => props.theme.breakpoint}) {
+		height: calc((100vh - 112px) - 88px);
+	}
 `;
 
 const Title = styled.h2`

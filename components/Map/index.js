@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import GoogleMapReact from 'google-map-react';
@@ -15,6 +16,13 @@ const bootstrapURLKeys = {
 	libraries: ['places', 'geometry'],
 };
 
+const useMap = () => {
+	const dispatch = useDispatch();
+	const selectPlace = (place) => dispatch({ type: 'SELECT_PLACE', place });
+
+	return { selectPlace };
+};
+
 const Wrapper = styled.nav`
 	height: calc(100vh - 176px);
 	width: 100%;
@@ -24,7 +32,56 @@ const Wrapper = styled.nav`
 	}
 `;
 
+const mockMap = [
+	{
+		programName: 'Lighting Exhibition',
+		programImage: '/mock/colosseum.jpeg',
+		detail: 'Lighting Designers Thailand',
+		date: Date.now(),
+		level: 1,
+		location: {
+			lat: 13.746774,
+			lng: 100.5126445,
+		},
+	},
+	{
+		programName: 'Lighting Exhibition',
+		programImage: '/mock/colosseum.jpeg',
+		detail: 'Lighting Designers Thailand',
+		date: Date.now(),
+		level: 2,
+		location: {
+			lat: 13.736774,
+			lng: 100.5326445,
+		},
+	},
+	{
+		programName: 'Lighting Exhibition',
+		programImage: '/mock/colosseum.jpeg',
+		detail: 'Lighting Designers Thailand',
+		date: Date.now(),
+		level: 3,
+		location: {
+			lat: 13.746774,
+			lng: 100.5526445,
+		},
+	},
+	{
+		programName: 'Lighting Exhibition',
+		programImage: '/mock/colosseum.jpeg',
+		detail: 'Lighting Designers Thailand',
+		date: Date.now(),
+		level: 4,
+		location: {
+			lat: 13.756774,
+			lng: 100.5326445,
+		},
+	},
+];
+
 const Map = ({ offset }) => {
+	const { selectPlace } = useMap();
+
 	const [instance, setInstance] = useState(null);
 	const [mapApi, setMapApi] = useState({
 		loaded: false,
@@ -38,6 +95,8 @@ const Map = ({ offset }) => {
 			api,
 		});
 	};
+
+	const marker = mockMap;
 
 	return (
 		<Wrapper offset={offset}>
@@ -53,10 +112,15 @@ const Map = ({ offset }) => {
 				yesIWantToUseGoogleMapApiInternals
 				onGoogleApiLoaded={({ map, maps }) => apiHasLoaded(map, maps)}
 			>
-				<Marker level={1} lat={13.746774} lng={100.5126445} />
-				<Marker level={2} lat={13.736774} lng={100.5326445} />
-				<Marker level={3} lat={13.746774} lng={100.5526445} />
-				<Marker level={4} lat={13.756774} lng={100.5326445} />
+				{marker.map((item, key) => (
+					<Marker
+						key={key}
+						level={item.level}
+						lat={item.location.lat}
+						lng={item.location.lng}
+						onClick={() => selectPlace(item)}
+					/>
+				))}
 			</GoogleMapReact>
 		</Wrapper>
 	);

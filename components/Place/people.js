@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { getLevelColor, getPeopleNumber } from '../../helpers';
 
 const Wrapper = styled.div`
 	display: flex;
@@ -12,8 +13,8 @@ const Person = styled.img`
 const People = ({ data }) => {
 	const MAX_PEOPLE = 6;
 
-	const getLeftPeople = () => {
-		let leftPeople = MAX_PEOPLE - data.people;
+	const getLeftPeople = (people) => {
+		let leftPeople = MAX_PEOPLE - people;
 
 		if (leftPeople < 0) {
 			return 0;
@@ -22,17 +23,19 @@ const People = ({ data }) => {
 		return leftPeople;
 	};
 
+	const people = getPeopleNumber(data.level);
+
 	return data ? (
 		<Wrapper>
-			{Array.from(Array(data.people), (e, i) => (
+			{Array.from(Array(people), (e, i) => (
 				<Person
 					key={i}
-					src={`/images/person_${data.levelColor}.png`}
+					src={`/images/person_${getLevelColor(data.level)}.png`}
 					alt='person'
 				/>
 			))}
 
-			{Array.from(Array(getLeftPeople()), (e, i) => (
+			{Array.from(Array(getLeftPeople(people)), (e, i) => (
 				<Person key={i} src='/images/person.png' alt='person' />
 			))}
 		</Wrapper>

@@ -5,39 +5,35 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 let store;
 
 const initialState = {
-	showFilter: false,
+	showDensity: false,
 	showLegend: false,
-	place: {
-		name: 'Place',
-	},
+	place: null,
 };
 
 const reducer = (state = initialState, action) => {
 	switch (action.type) {
-		case 'SHOW_FILTER':
+		case 'SHOW_DENSITY':
 			return {
 				...state,
-				showFilter: true,
+				showDensity: true,
 				showLegend: false,
 			};
 		case 'SHOW_LEGEND':
 			return {
 				...state,
-				showFilter: false,
+				showDensity: false,
 				showLegend: true,
 			};
 		case 'HIDE_MENU':
 			return {
 				...state,
-				showFilter: false,
+				showDensity: false,
 				showLegend: false,
 			};
 		case 'SELECT_PLACE': {
-			console.log('action', action);
-
 			return {
 				...state,
-				place: null,
+				place: action.place,
 			};
 		}
 		case 'DESELECT_PLACE':

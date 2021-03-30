@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
+import { useRouter } from 'next/router';
+
+// lang
+import t from '../../translate';
 
 const Wrapper = styled.nav`
 	height: 64px;
@@ -58,6 +62,9 @@ const MenuItem = styled.li`
 `;
 
 const Navbar = ({ role }) => {
+	const router = useRouter();
+	const { locale } = router;
+
 	return (
 		<Wrapper>
 			<Link href='/'>
@@ -73,7 +80,7 @@ const Navbar = ({ role }) => {
 					</Link>
 				)}
 				<Link href='/about'>
-					<MenuItem>About Us</MenuItem>
+					<MenuItem>{t[locale].aboutUs}</MenuItem>
 				</Link>
 				<MenuItem className='_hide-mobile'>EN/TH</MenuItem>
 			</MenuList>

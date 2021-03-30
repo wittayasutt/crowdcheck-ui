@@ -1,20 +1,17 @@
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 
+import { useRouter } from 'next/router';
+
 // components
 import Content from './content';
 import MobileMenu from '../MobileMenu';
 
 const useMenu = () => {
-	const legend = useSelector((state) => state.showLegend);
+	const density = useSelector((state) => state.showDensity);
 
-	return { legend };
+	return { density };
 };
-
-const MobileTitle = styled.h4`
-	font-size: 14px;
-	margin: 24px 0 16px;
-`;
 
 const Desktop = styled.div`
 	display: none;
@@ -23,7 +20,7 @@ const Desktop = styled.div`
 		display: initial;
 
 		position: fixed;
-		bottom: 48px;
+		top: 64px;
 		left: 0;
 
 		height: calc((100vh - 112px) / 2 - 8px);
@@ -50,20 +47,22 @@ const DesktopContent = styled.div`
 	overflow-y: auto;
 `;
 
-const Legend = () => {
-	const { legend } = useMenu();
+const Density = () => {
+	const { density } = useMenu();
+
+	const router = useRouter();
+	const { locale, locales, defaultLocale } = router;
 
 	return (
 		<>
-			{legend && (
+			{density && (
 				<MobileMenu>
-					<MobileTitle>Legend and suggested action</MobileTitle>
 					<Content />
 				</MobileMenu>
 			)}
 
 			<Desktop>
-				<DesktopTitle>Legend and suggested action</DesktopTitle>
+				<DesktopTitle>Density List</DesktopTitle>
 				<DesktopContent>
 					<Content />
 				</DesktopContent>
@@ -72,4 +71,4 @@ const Legend = () => {
 	);
 };
 
-export default Legend;
+export default Density;

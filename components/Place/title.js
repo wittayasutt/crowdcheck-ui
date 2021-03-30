@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { getLevelColor } from '../../helpers';
 import dayjs from 'dayjs';
 
 // icon
@@ -62,9 +63,7 @@ const IconCaretDown = styled(FontAwesomeIcon)`
 	height: 14px;
 	width: 14px;
 
-	@media (min-width: ${(props) => props.theme.breakpoint}) {
-		display: none;
-	}
+	cursor: pointer;
 `;
 
 const PlaceTitle = ({ data }) => {
@@ -74,13 +73,26 @@ const PlaceTitle = ({ data }) => {
 		deselectPlace();
 	};
 
+	const getTitle = (level) => {
+		switch (level) {
+			case 1:
+				return 'Go Ahead!';
+			case 2:
+				return 'Go Ahead!';
+			case 3:
+				return 'Avoid';
+			case 4:
+				return 'Avoid';
+			default:
+				'';
+		}
+	};
+
 	return data ? (
-		<Wrapper levelColor={data.levelColor} onClick={handleClosePlace}>
-			<Left>Go Ahead!</Left>
+		<Wrapper levelColor={getLevelColor(data.level)} onClick={handleClosePlace}>
+			<Left>{getTitle(data.level)}</Left>
 			<Right>
-				<div className='place-name'>
-					Grand Postal Building, (North) Basement Hall
-				</div>
+				<div className='place-name'>{data.programName}</div>
 				<div className='updated-time'>
 					<span>
 						(update {dayjs(data.date).format('DD/MM/YYYY , hh:mm a')})

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
-import { getLevelColor, getPeopleNumber } from '../../helpers';
 
 // components
 import Content from './content';
@@ -34,28 +33,19 @@ const Desktop = styled.div`
 const Place = () => {
 	const { place } = usePlace();
 
-	const data = {
-		programName: 'Lighting Exhibition',
-		programImage: '/mock/colosseum.jpeg',
-		detail: 'Lighting Designers Thailand',
-		date: Date.now(),
-		people: getPeopleNumber(2),
-		levelColor: getLevelColor(2),
-	};
-
 	return (
 		<>
 			{place && (
 				<MobileMenuPlace>
-					<PlaceTitle data={data} />
-					<Content data={data} />
+					<PlaceTitle data={place} />
+					<Content data={place} />
 				</MobileMenuPlace>
 			)}
 
 			{place && (
 				<Desktop>
-					<PlaceTitle data={data} />
-					<Content data={data} />
+					<PlaceTitle data={place} />
+					<Content data={place} />
 				</Desktop>
 			)}
 		</>

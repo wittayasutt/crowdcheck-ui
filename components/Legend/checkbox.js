@@ -6,9 +6,10 @@ const Label = styled.label`
 	display: flex;
 	align-items: center;
 
-	margin: 16px 0;
+	margin: 12px 0;
 	padding-left: 24px;
-	font-size: 11px;
+	font-size: 12px;
+	font-weight: 500;
 	cursor: pointer;
 
 	input {

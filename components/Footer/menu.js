@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 // icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,15 +10,15 @@ import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { LANGUAGE } from './const';
 
 const useMenu = () => {
-	const filter = useSelector((state) => state.showFilter);
+	const density = useSelector((state) => state.showDensity);
 	const legend = useSelector((state) => state.showLegend);
 
 	const dispatch = useDispatch();
-	const showFilter = () => dispatch({ type: 'SHOW_FILTER' });
+	const showDensity = () => dispatch({ type: 'SHOW_DENSITY' });
 	const showLegend = () => dispatch({ type: 'SHOW_LEGEND' });
 	const hideMenu = () => dispatch({ type: 'HIDE_MENU' });
 
-	return { filter, legend, showFilter, showLegend, hideMenu };
+	return { density, legend, showDensity, showLegend, hideMenu };
 };
 
 const Wrapper = styled.div`
@@ -59,14 +60,17 @@ const IconCaretDown = styled(FontAwesomeIcon)`
 `;
 
 const MenuComponent = () => {
-	const { filter, legend, showFilter, showLegend, hideMenu } = useMenu();
+	const router = useRouter();
+	const { locale } = router;
+
+	const { density, legend, showDensity, showLegend, hideMenu } = useMenu();
 	const [lang, setLang] = useState(LANGUAGE.TH);
 
-	const handleOpenFilter = () => {
-		if (filter) {
+	const handleOpenDensity = () => {
+		if (density) {
 			hideMenu();
 		} else {
-			showFilter();
+			showDensity();
 		}
 	};
 
@@ -81,16 +85,18 @@ const MenuComponent = () => {
 	const handleToggleLanguage = () => {
 		if (lang === LANGUAGE.TH) {
 			setLang(LANGUAGE.EN);
+			router.push('/', '/', { locale: 'en' });
 		} else {
 			setLang(LANGUAGE.TH);
+			router.push('/', '/', { locale: 'th' });
 		}
 	};
 
 	return (
 		<Wrapper>
-			<Menu onClick={handleOpenFilter}>
-				<span>Map filter</span>{' '}
-				<IconCaretDown className={filter ? 'active' : ''} icon={faCaretDown} />
+			<Menu onClick={handleOpenDensity}>
+				<span>Density List</span>{' '}
+				<IconCaretDown className={density ? 'active' : ''} icon={faCaretDown} />
 			</Menu>
 			<Menu onClick={handleOpenLegend}>
 				<span>Legend</span>{' '}
