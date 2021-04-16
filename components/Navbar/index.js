@@ -97,7 +97,7 @@ const Navbar = ({ role }) => {
 					</Link>
 				)}
 				<Link href='/about'>
-					<MenuItem>{t[locale].aboutUs.title}</MenuItem>
+					<MenuItem>{t[locale].aboutUs}</MenuItem>
 				</Link>
 				<MenuItem className='_hide-mobile' onClick={handleToggleLanguage}>
 					<span className={locale === LANGUAGE.EN ? 'active' : ''}>EN</span>/

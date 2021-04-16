@@ -95,6 +95,7 @@ const AdminFormInput = ({
 
 AdminFormInput.propTypes = {
 	title: PropTypes.string,
+	require: PropTypes.bool,
 	data: PropTypes.object,
 	onChange: PropTypes.func,
 	isView: PropTypes.bool,
@@ -103,6 +104,7 @@ AdminFormInput.propTypes = {
 
 AdminFormInput.defaultProps = {
 	title: '',
+	require: false,
 	data: {},
 	onChange: () => {},
 	isView: false,

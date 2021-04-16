@@ -8,6 +8,7 @@ import DateTimePicker from '../../components/Base/dateTime';
 import UploadImage from '../../components/Base/uploadImage';
 import RequiredLabel from '../Base/requiredLabel';
 import Input2Lang from './input2Lang';
+import InputProgramType from './inputProgramType';
 
 // lang
 import t from '../../translate';
@@ -32,7 +33,7 @@ const AdminFormProgram = ({ data, isView }) => {
 	};
 
 	const [programName, setProgramName] = useState(initData);
-	const [programType, setProgramType] = useState(initData);
+	const [programType, setProgramType] = useState('');
 	const [owner, setOwner] = useState(initData);
 	const [link, setLink] = useState(initData);
 	const [linkSrc, setLinkSrc] = useState('');
@@ -65,10 +66,7 @@ const AdminFormProgram = ({ data, isView }) => {
 		}
 
 		if (data.type) {
-			setProgramType({
-				th: data.type,
-				en: data.type,
-			});
+			setProgramType(data.type);
 		}
 
 		if (data.owner) {
@@ -111,7 +109,7 @@ const AdminFormProgram = ({ data, isView }) => {
 				require
 			/>
 
-			<Input2Lang
+			<InputProgramType
 				title={t[locale].programType.title}
 				data={programType}
 				onChange={(e) => setProgramType(e)}

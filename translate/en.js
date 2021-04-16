@@ -54,7 +54,17 @@ export default {
 		title: 'Privacy',
 	},
 	programName: 'Program name',
-	programType: { title: 'program type' },
+	programType: {
+		creativeMarket: 'Creative market',
+		event: 'Event',
+		promotion: 'Promotion',
+		showcase: 'Showcase',
+		showcaseAndExhibition: 'Showcase & exhibition',
+		talk: 'Talk',
+		title: 'program type',
+		tour: 'Tour',
+		workshop: 'Workshop',
+	},
 	projectBackground: {
 		content: `Distribution of density is an important tool in restricting coronavirus (COVID-19). Op-portunist therefore develop this project as part of the preventive measures and hopefully rebuilding trust in public space as the common ground of city dwellers. Crowd check is a web-base platform which informs crowd density at public venue. Crowd check assists in journey planning, prior to and on site, with real-time density which equally disclosing the information to the public. To do so, it measures the crowd density by capturing real-time Bluetooth signals, representing number of people, and analyse the number in relation to location's capacity.`,
 		title: 'Project Background',
