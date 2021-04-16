@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
@@ -14,6 +15,9 @@ import {
 
 // components
 import Modal from '../../components/Base/modal';
+
+// lang
+import t from '../../translate';
 
 // mock
 import venueData from '../../mock/venueList';
@@ -155,6 +159,9 @@ const List = ({ title, type }) => {
 	const [removeId, setRemoveId] = useState(null);
 	const [openModal, setOpenModal] = useState(false);
 
+	const router = useRouter();
+	const { locale } = router;
+
 	const openConfimRemoveModal = (id) => {
 		setOpenModal(true);
 
@@ -177,7 +184,7 @@ const List = ({ title, type }) => {
 					<h2>{title}</h2>
 					<Link href={`admin/venue`}>
 						<Button className='button button-add is-primary'>
-							<span>ADD</span> <Icon icon={faPlus} />
+							<span>{t[locale].add}</span> <Icon icon={faPlus} />
 						</Button>
 					</Link>
 				</Title>
@@ -246,7 +253,7 @@ const List = ({ title, type }) => {
 
 										<Link href={`admin/program`}>
 											<Program className='button-add'>
-												<span>ADD</span> <Icon icon={faPlus} />
+												<span>{t[locale].add}</span> <Icon icon={faPlus} />
 											</Program>
 										</Link>
 									</ul>

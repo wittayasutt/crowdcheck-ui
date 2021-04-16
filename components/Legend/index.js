@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
 
 // components
 import Content from './content';
 import MobileMenu from '../MobileMenu';
+
+// lang
+import t from '../../translate';
 
 const useMenu = () => {
 	const legend = useSelector((state) => state.showLegend);
@@ -53,17 +57,20 @@ const DesktopContent = styled.div`
 const Legend = () => {
 	const { legend } = useMenu();
 
+	const router = useRouter();
+	const { locale } = router;
+
 	return (
 		<>
 			{legend && (
 				<MobileMenu>
-					<MobileTitle>Legend and suggested action</MobileTitle>
+					<MobileTitle>{t[locale].legend.legendAndSuggestion}</MobileTitle>
 					<Content />
 				</MobileMenu>
 			)}
 
 			<Desktop>
-				<DesktopTitle>Legend and suggested action</DesktopTitle>
+				<DesktopTitle>{t[locale].legend.legendAndSuggestion}</DesktopTitle>
 				<DesktopContent>
 					<Content />
 				</DesktopContent>

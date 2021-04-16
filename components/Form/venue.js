@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 
 // components
@@ -6,7 +7,13 @@ import RequiredLabel from '../Base/requiredLabel';
 import Input2Lang from './input2Lang';
 import InputLocation from './inputLocation';
 
+// lang
+import t from '../../translate';
+
 const AdminFormVenue = ({ data, isView }) => {
+	const router = useRouter();
+	const { locale } = router;
+
 	// form
 	const initData = {
 		th: '',
@@ -51,7 +58,7 @@ const AdminFormVenue = ({ data, isView }) => {
 	return (
 		<>
 			<div className='field mb-2'>
-				<RequiredLabel>ID</RequiredLabel>
+				<RequiredLabel>{t[locale].id}</RequiredLabel>
 				{isView ? (
 					<strong>{id}</strong>
 				) : (
@@ -69,7 +76,7 @@ const AdminFormVenue = ({ data, isView }) => {
 			</div>
 
 			<Input2Lang
-				title='Venue Name'
+				title={t[locale].venueName}
 				data={venueName}
 				onChange={(e) => setVenueName(e)}
 				isView={isView}
@@ -77,7 +84,7 @@ const AdminFormVenue = ({ data, isView }) => {
 			/>
 
 			<InputLocation
-				title='Location'
+				title={t[locale].locationName}
 				data={location}
 				onChange={(e) => setLocation(e)}
 				isView={isView}

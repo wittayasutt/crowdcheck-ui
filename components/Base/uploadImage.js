@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpload } from '@fortawesome/free-solid-svg-icons';
 
 // components
 import ErrorText from '../Base/errorText';
+
+// lang
+import t from '../../translate';
 
 const Wrapper = styled.div``;
 
@@ -21,6 +25,9 @@ const IconUpload = styled(FontAwesomeIcon)`
 `;
 
 const UploadImage = () => {
+	const router = useRouter();
+	const { locale } = router;
+
 	const [file, setFile] = useState(null);
 	const [error, setError] = useState(false);
 
@@ -52,11 +59,11 @@ const UploadImage = () => {
 					/>
 					<span className='file-cta'>
 						<IconUpload icon={faUpload} />
-						<span className='file-label'>Choose a file…</span>
+						<span className='file-label'>{t[locale].chooseAFile}</span>
 					</span>
 				</File>
 			</div>
-			{error && <ErrorText>Please select an image file (png or jpg)</ErrorText>}
+			{error && <ErrorText>{t[locale].pleaseSelectAnImageFile}</ErrorText>}
 		</Wrapper>
 	);
 };

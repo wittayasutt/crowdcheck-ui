@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -7,6 +8,9 @@ import DateTimePicker from '../../components/Base/dateTime';
 import UploadImage from '../../components/Base/uploadImage';
 import RequiredLabel from '../Base/requiredLabel';
 import Input2Lang from './input2Lang';
+
+// lang
+import t from '../../translate';
 
 const Row = styled.div`
 	display: flex;
@@ -18,6 +22,9 @@ const Col = styled.div`
 `;
 
 const AdminFormProgram = ({ data, isView }) => {
+	const router = useRouter();
+	const { locale } = router;
+
 	// form
 	const initData = {
 		th: '',
@@ -97,7 +104,7 @@ const AdminFormProgram = ({ data, isView }) => {
 	return (
 		<>
 			<Input2Lang
-				title='Program Name'
+				title={t[locale].programName}
 				data={programName}
 				onChange={(e) => setProgramName(e)}
 				isView={isView}
@@ -105,7 +112,7 @@ const AdminFormProgram = ({ data, isView }) => {
 			/>
 
 			<Input2Lang
-				title='Program Type'
+				title={t[locale].programType.title}
 				data={programType}
 				onChange={(e) => setProgramType(e)}
 				isView={isView}
@@ -113,7 +120,7 @@ const AdminFormProgram = ({ data, isView }) => {
 			/>
 
 			<Input2Lang
-				title='Owner'
+				title={t[locale].owner}
 				data={owner}
 				onChange={(e) => setOwner(e)}
 				isView={isView}
@@ -121,7 +128,7 @@ const AdminFormProgram = ({ data, isView }) => {
 			/>
 
 			<Input2Lang
-				title='Link'
+				title={t[locale].link}
 				data={link}
 				onChange={(e) => setLink(e)}
 				isView={isView}
@@ -135,7 +142,7 @@ const AdminFormProgram = ({ data, isView }) => {
 						<input
 							className='input'
 							type='text'
-							placeholder='link destination'
+							placeholder={t[locale].linkDestination}
 							value={linkSrc}
 							onChange={handleSetLinkSrc}
 						/>
@@ -170,12 +177,12 @@ const AdminFormProgram = ({ data, isView }) => {
 			</div>
 
 			<div className='field mb-2'>
-				<label className='label'>Upload Image:</label>
+				<label className='label'>{t[locale].uploadImage}:</label>
 				<UploadImage />
 			</div>
 
 			<Input2Lang
-				title='Detail'
+				title={t[locale].detail}
 				data={detail}
 				onChange={(e) => setDetail(e)}
 				isView={isView}

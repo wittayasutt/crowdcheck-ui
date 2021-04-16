@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -11,6 +12,9 @@ import { FORM_ACTION, FORM_TYPE } from './const';
 // components
 import VenueForm from './venue';
 import ProgramForm from './program';
+
+// lang
+import t from '../../translate';
 
 const Wrapper = styled.div``;
 
@@ -59,6 +63,9 @@ const IconAngleLeft = styled(FontAwesomeIcon)`
 `;
 
 const AdminForm = ({ action, data, formType }) => {
+	const router = useRouter();
+	const { locale } = router;
+
 	const [isView, setIsView] = useState(false);
 	const [isAdd, setIsAdd] = useState(false);
 	const [isEdit, setIsEdit] = useState(false);
@@ -100,7 +107,7 @@ const AdminForm = ({ action, data, formType }) => {
 				<Link href='/admin'>
 					<a>
 						<IconAngleLeft icon={faAngleLeft} />
-						<span>back</span>
+						<span>{t[locale].back}</span>
 					</a>
 				</Link>
 			</Back>

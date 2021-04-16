@@ -1,10 +1,14 @@
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
 
 // components
 import Zoom from '../Base/zoom';
 import Marker from '../Marker';
 import Switch from './switch';
 import Checkbox from './checkbox';
+
+// lang
+import t from '../../translate';
 
 const Wrapper = styled.div``;
 
@@ -44,57 +48,69 @@ const Title = styled.h4`
 `;
 
 const LegendContent = () => {
+	const router = useRouter();
+	const { locale } = router;
+
 	return (
 		<Wrapper>
 			<SwitchWrapper>
-				<p>Location Name</p>
+				<p>{t[locale].locationName}</p>
 				<Switch onChange={() => {}} />
 			</SwitchWrapper>
 			<Row>
 				<Marker level={0} />
-				<p>Find where you are</p>
+				<p>{t[locale].legend.find}</p>
 			</Row>
 			<Row>
 				<Zoom />
-				<p>Zoom in for spacific location</p>
+				<p>{t[locale].legend.zoom}</p>
 			</Row>
 			<Row>
 				<Marker level={1} />
-				<p>
-					Exceed capacity of the venue. ‘Maybe this is not the right time,{' '}
-					<strong>avoid</strong> the crowd is better than join it’
-				</p>
+				<p
+					dangerouslySetInnerHTML={{
+						__html: t[locale].legend.avoid,
+					}}
+				/>
 			</Row>
 			<Row>
 				<Marker level={2} />
-				<p>
-					Max capacity of the venue. ‘If it the place for you,{' '}
-					<strong>wait</strong> until the right moment ’
-				</p>
+				<p
+					dangerouslySetInnerHTML={{
+						__html: t[locale].legend.wait,
+					}}
+				/>
 			</Row>
 			<Row>
 				<Marker level={3} />
-				<p>
-					75% capacity of the venue. ‘Don’t you feel it right,{' '}
-					<strong>go</strong> and have some fun with the place’
-				</p>
+				<p
+					dangerouslySetInnerHTML={{
+						__html: t[locale].legend.go,
+					}}
+				/>
 			</Row>
 			<Row>
 				<Marker level={4} />
-				<p>
-					50% capacity of the venue. ‘Perspective is how we see,{' '}
-					<strong>go ahead!</strong>
-					Plenty of space is best for a good shot’
-				</p>
+				<p
+					dangerouslySetInnerHTML={{
+						__html: t[locale].legend.goAhead,
+					}}
+				/>
 			</Row>
 
-			<Title>Point Of Interest</Title>
-			<Checkbox label='Cafe & Restaurant' onChange={() => {}} />
-			<Checkbox label='Parking' onChange={() => {}} />
-			<Checkbox label='Gallery' onChange={() => {}} />
-			<Checkbox label='Design studio' onChange={() => {}} />
-			<Checkbox label='Craft' onChange={() => {}} />
-			<Checkbox label='Fashion' onChange={() => {}} />
+			<Title>{t[locale].pointOfInterest.title}</Title>
+			<Checkbox
+				label={t[locale].pointOfInterest.cafeAndRestaurant}
+				onChange={() => {}}
+			/>
+			<Checkbox label={t[locale].pointOfInterest.parking} onChange={() => {}} />
+			<Checkbox label={t[locale].pointOfInterest.gallery} onChange={() => {}} />
+			<Checkbox
+				label={t[locale].pointOfInterest.designStudio}
+				onChange={() => {}}
+			/>
+			<Checkbox label={t[locale].pointOfInterest.craft} onChange={() => {}} />
+			<Checkbox label={t[locale].pointOfInterest.fashion} onChange={() => {}} />
 		</Wrapper>
 	);
 };

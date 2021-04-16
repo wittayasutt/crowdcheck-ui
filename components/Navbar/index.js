@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 // lang
 import t from '../../translate';
+
+import { LANGUAGE } from '../../enum/lang';
 
 const Wrapper = styled.nav`
 	height: 64px;
@@ -43,6 +46,10 @@ const MenuList = styled.ul`
 			display: flex;
 		}
 	}
+
+	.active {
+		font-weight: 600;
+	}
 `;
 
 const MenuItem = styled.li`
@@ -65,6 +72,16 @@ const Navbar = ({ role }) => {
 	const router = useRouter();
 	const { locale } = router;
 
+	const handleToggleLanguage = () => {
+		const { asPath } = router;
+
+		if (locale === LANGUAGE.TH) {
+			router.push(asPath, asPath, { locale: 'en' });
+		} else {
+			router.push(asPath, asPath, { locale: 'th' });
+		}
+	};
+
 	return (
 		<Wrapper>
 			<Link href='/'>
@@ -76,13 +93,16 @@ const Navbar = ({ role }) => {
 			<MenuList>
 				{role === 'ADMIN' && (
 					<Link href='/admin'>
-						<MenuItem>Admin</MenuItem>
+						<MenuItem>{t[locale].admin}</MenuItem>
 					</Link>
 				)}
 				<Link href='/about'>
-					<MenuItem>{t[locale].aboutUs}</MenuItem>
+					<MenuItem>{t[locale].aboutUs.title}</MenuItem>
 				</Link>
-				<MenuItem className='_hide-mobile'>EN/TH</MenuItem>
+				<MenuItem className='_hide-mobile' onClick={handleToggleLanguage}>
+					<span className={locale === LANGUAGE.EN ? 'active' : ''}>EN</span>/
+					<span className={locale === LANGUAGE.TH ? 'active' : ''}>TH</span>
+				</MenuItem>
 			</MenuList>
 		</Wrapper>
 	);

@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
+
+// lang
+import t from '../../translate';
 
 const Wrapper = styled.div`
 	height: 100vh;
@@ -85,19 +89,22 @@ const Content = styled.div`
 `;
 
 const Modal = ({ open, onClose, onConfirm }) => {
+	const router = useRouter();
+	const { locale } = router;
+
 	return (
 		open && (
 			<Wrapper>
 				<Container>
 					<OverayBG onClick={onClose} />
 					<Content>
-						<h2>Are you sure?</h2>
+						<h2>{t[locale].areYouSure}</h2>
 						<div className='btn-wrapper'>
 							<button className='btn btn-cancel' onClick={onClose}>
-								Cancel
+								{t[locale].cancel}
 							</button>
 							<button className='btn btn-confirm' onClick={onConfirm}>
-								Confirm
+								{t[locale].confirm}
 							</button>
 						</div>
 					</Content>

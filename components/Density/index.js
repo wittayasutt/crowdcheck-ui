@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
-
 import { useRouter } from 'next/router';
 
 // components
 import Content from './content';
 import MobileMenu from '../MobileMenu';
+
+// lang
+import t from '../../translate';
 
 const useMenu = () => {
 	const density = useSelector((state) => state.showDensity);
@@ -51,7 +53,7 @@ const Density = () => {
 	const { density } = useMenu();
 
 	const router = useRouter();
-	const { locale, locales, defaultLocale } = router;
+	const { locale } = router;
 
 	return (
 		<>
@@ -62,7 +64,7 @@ const Density = () => {
 			)}
 
 			<Desktop>
-				<DesktopTitle>Density List</DesktopTitle>
+				<DesktopTitle>{t[locale].densityList}</DesktopTitle>
 				<DesktopContent>
 					<Content />
 				</DesktopContent>

@@ -7,7 +7,10 @@ import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
-import { LANGUAGE } from './const';
+// lang
+import t from '../../translate';
+
+import { LANGUAGE } from '../../enum/lang';
 
 const useMenu = () => {
 	const density = useSelector((state) => state.showDensity);
@@ -64,7 +67,6 @@ const MenuComponent = () => {
 	const { locale } = router;
 
 	const { density, legend, showDensity, showLegend, hideMenu } = useMenu();
-	const [lang, setLang] = useState(LANGUAGE.TH);
 
 	const handleOpenDensity = () => {
 		if (density) {
@@ -83,28 +85,28 @@ const MenuComponent = () => {
 	};
 
 	const handleToggleLanguage = () => {
-		if (lang === LANGUAGE.TH) {
-			setLang(LANGUAGE.EN);
-			router.push('/', '/', { locale: 'en' });
+		const { asPath } = router;
+
+		if (locale === LANGUAGE.TH) {
+			router.push(asPath, asPath, { locale: 'en' });
 		} else {
-			setLang(LANGUAGE.TH);
-			router.push('/', '/', { locale: 'th' });
+			router.push(asPath, asPath, { locale: 'th' });
 		}
 	};
 
 	return (
 		<Wrapper>
 			<Menu onClick={handleOpenDensity}>
-				<span>Density List</span>{' '}
+				<span>{t[locale].densityList}</span>{' '}
 				<IconCaretDown className={density ? 'active' : ''} icon={faCaretDown} />
 			</Menu>
 			<Menu onClick={handleOpenLegend}>
-				<span>Legend</span>{' '}
+				<span>{t[locale].legend.title}</span>{' '}
 				<IconCaretDown className={legend ? 'active' : ''} icon={faCaretDown} />
 			</Menu>
 			<Menu onClick={handleToggleLanguage}>
-				<span className={lang === LANGUAGE.EN ? 'active' : ''}>EN</span>/
-				<span className={lang === LANGUAGE.TH ? 'active' : ''}>TH</span>
+				<span className={locale === LANGUAGE.EN ? 'active' : ''}>EN</span>/
+				<span className={locale === LANGUAGE.TH ? 'active' : ''}>TH</span>
 			</Menu>
 		</Wrapper>
 	);

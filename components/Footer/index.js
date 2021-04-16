@@ -1,7 +1,11 @@
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
 
 // components
 import Menu from './menu';
+
+// lang
+import t from '../../translate';
 
 const StatusWrapper = styled.nav`
 	height: 48px;
@@ -30,13 +34,16 @@ const Status = styled.div`
 `;
 
 const Footer = () => {
+	const router = useRouter();
+	const { locale } = router;
+
 	return (
 		<>
 			<StatusWrapper>
 				<Status>50%</Status>
 				<Status>75%</Status>
 				<Status>100%</Status>
-				<Status>Exceed</Status>
+				<Status>{t[locale].exceed}</Status>
 			</StatusWrapper>
 			<Menu />
 		</>

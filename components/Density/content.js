@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 import dayjs from 'dayjs';
+import { useRouter } from 'next/router';
 
 // components
 import Marker from '../Marker';
+
+// lang
+import t from '../../translate';
 
 const Wrapper = styled.div``;
 
@@ -52,12 +56,16 @@ const mockDensity = [
 const DensityContent = () => {
 	const density = mockDensity;
 
+	const router = useRouter();
+	const { locale } = router;
+
 	return (
 		<Wrapper>
 			<TitleWrapper>
-				<span className='title'>Density List</span>
+				<span className='title'>{t[locale].densityList}</span>
 				<div className='updated-time'>
-					(update {dayjs(Date.now()).format('DD/MM/YYYY , hh:mm a')})
+					({t[locale].update} {dayjs(Date.now()).format('DD/MM/YYYY , hh:mm a')}
+					)
 				</div>
 			</TitleWrapper>
 			{density.map((item, index) => (
