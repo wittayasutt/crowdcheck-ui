@@ -19,6 +19,7 @@ export default {
 	date: 'Date',
 	densityList: 'Density List',
 	detail: 'Detail',
+	email: 'Email',
 	exceed: 'Exceed',
 	id: 'ID',
 	legend: {
@@ -39,6 +40,7 @@ export default {
 	linkDestination: 'Link Destination',
 	locationName: 'Location Name',
 	owner: 'Exhibitor',
+	password: 'Password',
 	pleaseSelectAnImageFile: 'Please select an image file (png or jpg)',
 	pointOfInterest: {
 		cafeAndRestaurant: 'Cafe & Restaurant',
@@ -69,6 +71,8 @@ export default {
 		content: `Distribution of density is an important tool in restricting coronavirus (COVID-19). Op-portunist therefore develop this project as part of the preventive measures and hopefully rebuilding trust in public space as the common ground of city dwellers. Crowd check is a web-base platform which informs crowd density at public venue. Crowd check assists in journey planning, prior to and on site, with real-time density which equally disclosing the information to the public. To do so, it measures the crowd density by capturing real-time Bluetooth signals, representing number of people, and analyse the number in relation to location's capacity.`,
 		title: 'Project Background',
 	},
+	signIn: 'Sign In',
+	somethingWentWrong: 'something went wrong',
 	time: 'Time',
 	travelSuggestion: {
 		content_1: `Check information on the outbreak of COVID 19 in the country from the website of the Department of Disease Control. <a href='https://covid19.ddc.moph.go.th' target='_blank'>https://covid19.ddc.moph.go.th</a>.`,
@@ -91,6 +95,7 @@ export default {
 	},
 	update: 'update',
 	uploadImage: 'Upload Image',
+	username: 'Username',
 	venue: 'Venue',
 	venueName: 'Venue Name',
 };

@@ -20,7 +20,7 @@ const Wrapper = styled.div`
 	z-index: 1000;
 
 	@media (min-width: ${(props) => props.theme.breakpoint}) {
-		height: calc(100vh - 112px);
+		display: none;
 	}
 `;
 

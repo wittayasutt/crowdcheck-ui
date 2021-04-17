@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import Link from 'next/link';
-import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+
+import { service_login } from '../../services';
+import Cookies from 'js-cookie';
 
 // lang
 import t from '../../translate';
@@ -68,9 +70,11 @@ const MenuItem = styled.li`
 	}
 `;
 
-const Navbar = ({ role }) => {
+const Navbar = () => {
 	const router = useRouter();
 	const { locale } = router;
+
+	const [role, setRole] = useState('USER');
 
 	const handleToggleLanguage = () => {
 		const { asPath } = router;
@@ -81,6 +85,17 @@ const Navbar = ({ role }) => {
 			router.push(asPath, asPath, { locale: 'th' });
 		}
 	};
+
+	useEffect(() => {
+		// Not good way to check, should check with api
+
+		const token = Cookies.get('token');
+		const username = Cookies.get('username');
+
+		if (token && username) {
+			setRole('ADMIN');
+		}
+	}, []);
 
 	return (
 		<Wrapper>
@@ -106,15 +121,6 @@ const Navbar = ({ role }) => {
 			</MenuList>
 		</Wrapper>
 	);
-};
-
-Navbar.propTypes = {
-	role: PropTypes.string,
-};
-
-Navbar.defaultProps = {
-	// role: 'USER',
-	role: 'ADMIN',
 };
 
 export default Navbar;
