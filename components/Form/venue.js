@@ -10,7 +10,7 @@ import InputLocation from './inputLocation';
 // lang
 import t from '../../translate';
 
-const AdminFormVenue = ({ data, isView }) => {
+const AdminFormVenue = ({ data, isView, onUpdate }) => {
 	const router = useRouter();
 	const { locale } = router;
 
@@ -30,6 +30,13 @@ const AdminFormVenue = ({ data, isView }) => {
 	const handleSetId = (e) => {
 		setId(e.target.value);
 	};
+
+	useEffect(() => {
+		if (!isView) {
+			const newData = { id, venueName, location };
+			onUpdate(newData);
+		}
+	}, [id, venueName, location]);
 
 	useEffect(() => {
 		if (!data) {
@@ -65,9 +72,8 @@ const AdminFormVenue = ({ data, isView }) => {
 					<div className='control'>
 						<input
 							className='input'
-							type='number'
-							placeholder='1'
-							min='0'
+							type='text'
+							placeholder='A-100'
 							value={id}
 							onChange={handleSetId}
 						/>
@@ -84,7 +90,7 @@ const AdminFormVenue = ({ data, isView }) => {
 			/>
 
 			<InputLocation
-				title={t[locale].locationName}
+				title={t[locale].coordinate}
 				data={location}
 				onChange={(e) => setLocation(e)}
 				isView={isView}
@@ -96,11 +102,13 @@ const AdminFormVenue = ({ data, isView }) => {
 AdminFormVenue.propTypes = {
 	data: PropTypes.object,
 	isView: PropTypes.bool,
+	onUpdate: PropTypes.func,
 };
 
 AdminFormVenue.defaultProps = {
 	data: null,
 	isView: false,
+	onUpdate: () => {},
 };
 
 export default AdminFormVenue;

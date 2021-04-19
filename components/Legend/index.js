@@ -17,7 +17,8 @@ const useMenu = () => {
 
 const MobileTitle = styled.h4`
 	font-size: 14px;
-	margin: 24px 0 16px;
+	font-weight: 600;
+	margin: 24px 0 12px;
 `;
 
 const Desktop = styled.div`
@@ -43,7 +44,7 @@ const DesktopTitle = styled.h4`
 	align-items: center;
 
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: 500;
 	padding: 0 24px;
 `;
 

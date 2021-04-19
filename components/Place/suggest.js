@@ -1,13 +1,17 @@
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
 
 // components
 import Marker from '../Marker';
+
+// lang
+import t from '../../translate';
 
 const Wrapper = styled.div``;
 
 const Title = styled.h4`
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: 500;
 
 	margin-bottom: 8px;
 `;
@@ -20,8 +24,8 @@ const Row = styled.div`
 `;
 
 const PlaceName = styled.div`
-	font-size: 12px;
-	font-weight: 600;
+	font-size: 10px;
+	font-weight: 500;
 
 	margin-left: 8px;
 `;
@@ -33,12 +37,15 @@ const mockSuggest = [
 ];
 
 const Suggest = () => {
+	const router = useRouter();
+	const { locale } = router;
+
 	const suggest = mockSuggest;
 
 	return (
 		suggest && (
 			<Wrapper>
-				<Title>Suggestion Place</Title>
+				<Title>{t[locale].suggestionPlace}</Title>
 				{suggest.map((item, index) => (
 					<Row key={index}>
 						{item.level ? <Marker level={item.level} /> : <Marker level={0} />}

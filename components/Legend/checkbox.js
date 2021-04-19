@@ -48,6 +48,10 @@ const Label = styled.label`
 		height: 100%;
 		background-color: black;
 	}
+
+	.label {
+		font-size: 11px;
+	}
 `;
 
 const Checkbox = ({ label, onChange }) => {
@@ -64,7 +68,7 @@ const Checkbox = ({ label, onChange }) => {
 		<Label className='checkbox'>
 			<input type='checkbox' checked={checked} onChange={handleToggle} />
 			<span className='checkmark'></span>
-			<span>{label}</span>
+			<span className='label'>{label}</span>
 		</Label>
 	);
 };

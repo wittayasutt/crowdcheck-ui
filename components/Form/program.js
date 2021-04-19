@@ -22,7 +22,7 @@ const Col = styled.div`
 	width: 50%;
 `;
 
-const AdminFormProgram = ({ data, isView }) => {
+const AdminFormProgram = ({ data, isView, onUpdate }) => {
 	const router = useRouter();
 	const { locale } = router;
 
@@ -52,6 +52,20 @@ const AdminFormProgram = ({ data, isView }) => {
 	const handleSetLinkSrc = (e) => {
 		setLinkSrc(e.target.value);
 	};
+
+	useEffect(() => {
+		if (!isView) {
+		}
+	}, [
+		programName,
+		programType,
+		owner,
+		link,
+		linkSrc,
+		startDate,
+		endDate,
+		detail,
+	]);
 
 	useEffect(() => {
 		if (!data) {
@@ -193,11 +207,13 @@ const AdminFormProgram = ({ data, isView }) => {
 AdminFormProgram.propTypes = {
 	data: PropTypes.object,
 	isView: PropTypes.bool,
+	onUpdate: PropTypes.func,
 };
 
 AdminFormProgram.defaultProps = {
 	data: null,
 	isView: false,
+	onUpdate: () => {},
 };
 
 export default AdminFormProgram;

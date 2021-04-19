@@ -38,7 +38,7 @@ const DesktopTitle = styled.h4`
 	align-items: center;
 
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: 500;
 	padding: 0 24px;
 `;
 
@@ -64,7 +64,7 @@ const Density = () => {
 			)}
 
 			<Desktop>
-				<DesktopTitle>{t[locale].densityList}</DesktopTitle>
+				<DesktopTitle>{t[locale].densityListTitle}</DesktopTitle>
 				<DesktopContent>
 					<Content />
 				</DesktopContent>

@@ -1,11 +1,11 @@
 import axios from 'axios';
+import Cookies from 'js-cookie';
 
 const url = 'https://crowdcheck-api.df.r.appspot.com';
+const token = Cookies.get('token') || null;
 
-const headers = (token) => {
-	return {
-		Authorization: `Token ${token}`,
-	};
+const headers = {
+	Authorization: `Token ${token}`,
 };
 
 // #region AUTH
@@ -40,12 +40,13 @@ export const service_register = (username, password) => {
 
 // #region VENUE
 
-export const service_get_venue_list = (token) => {
+export const service_get_venue_list = () => {
 	return axios
 		.get(`${url}/api/venues`, {
-			headers: headers(token),
+			headers,
 		})
 		.then((response) => {
+			console.log('response', response);
 			return response.data;
 		});
 };

@@ -25,11 +25,7 @@ const Admin = () => {
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
-		const token = Cookies.get('token');
-
-		console.log('token', token);
-
-		service_get_venue_list(token)
+		service_get_venue_list()
 			.then((res) => {
 				if (res.status === 'success') {
 					console.log('res', res);
@@ -55,7 +51,7 @@ const Admin = () => {
 			</Layout>
 		</>
 	) : (
-		<Loading />
+		<Loading fullpage />
 	);
 };
 

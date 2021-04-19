@@ -42,7 +42,7 @@ const SwitchWrapper = styled.div`
 
 const Title = styled.h4`
 	font-size: 12px;
-	font-weight: 500;
+	font-weight: 600;
 
 	margin: 24px 0 12px;
 `;

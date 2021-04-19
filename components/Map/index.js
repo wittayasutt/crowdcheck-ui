@@ -35,7 +35,9 @@ const Wrapper = styled.nav`
 const mockMap = [
 	{
 		programName: 'Lighting Exhibition',
+		programType: 'Program Type',
 		programImage: '/mock/colosseum.jpeg',
+		owner: 'Exhibitor',
 		detail: 'Lighting Designers Thailand',
 		date: Date.now(),
 		level: 1,
@@ -43,10 +45,16 @@ const mockMap = [
 			lat: 13.746774,
 			lng: 100.5126445,
 		},
+		link: {
+			title: 'BKKDW',
+			to: 'https://www.google.co.th/',
+		},
 	},
 	{
 		programName: 'Lighting Exhibition',
+		programType: 'Program Type',
 		programImage: '/mock/colosseum.jpeg',
+		owner: 'Exhibitor',
 		detail: 'Lighting Designers Thailand',
 		date: Date.now(),
 		level: 2,
@@ -54,10 +62,16 @@ const mockMap = [
 			lat: 13.736774,
 			lng: 100.5326445,
 		},
+		link: {
+			title: 'BKKDW',
+			to: 'https://www.google.co.th/',
+		},
 	},
 	{
 		programName: 'Lighting Exhibition',
+		programType: 'Program Type',
 		programImage: '/mock/colosseum.jpeg',
+		owner: 'Exhibitor',
 		detail: 'Lighting Designers Thailand',
 		date: Date.now(),
 		level: 3,
@@ -65,16 +79,26 @@ const mockMap = [
 			lat: 13.746774,
 			lng: 100.5526445,
 		},
+		link: {
+			title: 'BKKDW',
+			to: 'https://www.google.co.th/',
+		},
 	},
 	{
 		programName: 'Lighting Exhibition',
+		programType: 'Program Type',
 		programImage: '/mock/colosseum.jpeg',
+		owner: 'Exhibitor',
 		detail: 'Lighting Designers Thailand',
 		date: Date.now(),
 		level: 4,
 		location: {
 			lat: 13.756774,
 			lng: 100.5326445,
+		},
+		link: {
+			title: 'BKKDW',
+			to: 'https://www.google.co.th/',
 		},
 	},
 ];

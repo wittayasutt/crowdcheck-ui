@@ -7,6 +7,7 @@ export default {
 	cancel: 'ยกเลิก',
 	chooseAFile: 'เลิอกไฟล์...',
 	confirm: 'ยืนยัน',
+	coordinate: 'พิกัด',
 	credit: {
 		copyrightBy:
 			'ลิขสิทธิ์การจัดทำโดย ปิยา ลิ้มปิติ และ พีรียา บุญชัยพฤกษ์, บริษัท ออพเพอร์ทูนิสต์ จำกัด',
@@ -18,6 +19,7 @@ export default {
 	},
 	date: 'วัน',
 	densityList: 'ความหนาแน่น',
+	densityListTitle: 'รายการความหนาแน่นตามกลุ่ม',
 	detail: 'รายละเอียด',
 	email: 'อีเมล',
 	exceed: 'Exceed',
@@ -25,7 +27,7 @@ export default {
 	legend: {
 		avoid:
 			'เกินความจุของสถานที่ "นี่อาจไม่ใช่เวลาที่เหมาะสม <strong>หลีกเลี่ยง</strong>การเข้าไปร่วมกับฝูงชนในตอนนี้"',
-		find: 'แสดงจุดที่คุณอยู่',
+		find: 'คลิกเพื่อหาจุดที่คุณอยู่',
 		go:
 			'ความจุ 75% ของสถานที่ "พอมีพื้นที่ว่างสามารถ <strong>ไปได้</strong> อย่างสบายใจ"',
 		goAhead:
@@ -34,13 +36,20 @@ export default {
 		title: 'คำอธิบาย',
 		wait:
 			'ความจุสูงสุดของสถานที่ "พื้นที่ค่อนข้างแน่น <strong>รอสักครู่</strong> ก่อนเข้าไปจะดีกว่า"',
-		zoom: 'ซูมในสถานที่เฉพาะ',
+		zoom: 'ขยายเพื่อดูรายละเอียดตำแหน่ง',
 	},
 	link: 'ลิงค์',
 	linkDestination: 'ลิงค์',
+	linkTo: 'ลิงค์ไปยัง',
 	locationName: 'ชื่อสถานที่',
 	owner: 'ผู้จัดแสดง',
 	password: 'รหัสผ่าน',
+	place: {
+		avoid: 'หลีกเลี่ยง',
+		go: 'ไปได้',
+		goAhead: 'ควรไป',
+		wait: 'รอสักครู่',
+	},
 	pleaseSelectAnImageFile: 'กรุณาเลือกไฟล์รูปภาพ (png หรือ jpg)',
 	pointOfInterest: {
 		cafeAndRestaurant: 'ร้านอาหารและคาเฟ่',
@@ -75,6 +84,7 @@ export default {
 	},
 	signIn: 'เข้าสู่ระบบ',
 	somethingWentWrong: 'มีบางอย่างผิดพลาด',
+	suggestionPlace: 'จุดแนะนำ',
 	time: 'เวลา',
 	travelSuggestion: {
 		content_1: `ตรวจสอบข้อมูลข่าวสารการระบาดของโรคโควิด 19 ในประเทศ ได้จากเว็ปไซต์กรมควบคุมโรค <a href='https://covid19.ddc.moph.go.th' target='_blank'>https://covid19.ddc.moph.go.th</a>`,
@@ -94,9 +104,15 @@ export default {
 		title: 'ข้อแนะนำในการท่องเที่ยว',
 		more: `สามารถศึกษาแนวทางปฏิบัติเพื่อการป้องกันโรคติดเชื้อไวรัสโคโรนา 2019 (COVID-19) โดยกรมควบคุมโรค ได้ที่ <a href='https://ddc.moph.go.th/viralpneumonia/file/int_protection/int_protection_070164.pdf' target='_blank'>https://ddc.moph.go.th/viralpneumonia/file/int_protection/int_protection_070164.pdf</a>`,
 	},
+	trend: {
+		daysAgo: 'วันที่แล้ว',
+		today: 'วันนี้',
+		yesterday: 'เมื่อวาน',
+	},
 	update: 'อัปเดต',
 	uploadImage: 'อัปโหลดรูปภาพ',
 	username: 'ชื่อผู้ใช้',
 	venue: 'สถานที่จัดงาน',
 	venueName: 'ชื่อสถานที่จัดงาน',
+	venueTrendRecord: 'รายงานสถานที่จัดงาน',
 };

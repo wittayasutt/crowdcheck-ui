@@ -12,6 +12,7 @@ import { FORM_ACTION, FORM_TYPE } from './const';
 // components
 import VenueForm from './venue';
 import ProgramForm from './program';
+import ErrorText from '../Base/errorText';
 
 // lang
 import t from '../../translate';
@@ -73,7 +74,48 @@ const AdminForm = ({ action, data, formType }) => {
 	const [type, setType] = useState(FORM_TYPE.VENUE);
 	const [title, setTitle] = useState('');
 
-	const handleSubmit = () => {};
+	const [newData, setNewData] = useState(null);
+	const [error, setError] = useState('');
+
+	const handleUpdate = (newData) => {
+		setNewData(newData);
+	};
+
+	const isError = () => {
+		setError('');
+
+		if (newData && newData.id && newData.venueName && newData.location) {
+			return false;
+		} else {
+			setError(t[locale].somethingWentWrong);
+
+			return true;
+		}
+	};
+
+	const handleSubmit = () => {
+		if (!isError()) {
+			const payload = {
+				refId: newData.id,
+				name: [
+					{
+						language: 'EN',
+						content: newData.venueName.en,
+					},
+					{
+						language: 'TH',
+						content: newData.venueName.th,
+					},
+				],
+				location: {
+					latitude: newData.location.lat,
+					longtitude: newData.location.lng,
+				},
+			};
+
+			console.log('payload', payload);
+		}
+	};
 
 	useEffect(() => {
 		if (formType) {
@@ -115,10 +157,13 @@ const AdminForm = ({ action, data, formType }) => {
 			<Title>{title}</Title>
 
 			<Form className='mb-2'>
-				{type === FORM_TYPE.VENUE && <VenueForm data={data} isView={isView} />}
-				{type === FORM_TYPE.PROGRAM && (
-					<ProgramForm data={data} isView={isView} />
+				{type === FORM_TYPE.VENUE && (
+					<VenueForm data={data} isView={isView} onUpdate={handleUpdate} />
 				)}
+				{type === FORM_TYPE.PROGRAM && (
+					<ProgramForm data={data} isView={isView} onUpdate={handleUpdate} />
+				)}
+				{error && <ErrorText>{error}</ErrorText>}
 			</Form>
 
 			{(isAdd || isEdit) && (

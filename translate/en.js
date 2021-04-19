@@ -7,6 +7,7 @@ export default {
 	cancel: 'Cancel',
 	chooseAFile: 'Choose a file...',
 	confirm: 'Confirm',
+	coordinate: 'Coordinate',
 	credit: {
 		copyrightBy:
 			'Copyright by Piya Limpiti & Pheereeya boonchiyapruek, Op-portunist',
@@ -18,6 +19,7 @@ export default {
 	},
 	date: 'Date',
 	densityList: 'Density List',
+	densityListTitle: 'Density List',
 	detail: 'Detail',
 	email: 'Email',
 	exceed: 'Exceed',
@@ -38,9 +40,16 @@ export default {
 	},
 	link: 'Link',
 	linkDestination: 'Link Destination',
+	linkTo: 'Link to',
 	locationName: 'Location Name',
 	owner: 'Exhibitor',
 	password: 'Password',
+	place: {
+		avoid: 'Avoid!',
+		go: 'Go',
+		goAhead: 'Go Ahead!',
+		wait: 'Wait a while',
+	},
 	pleaseSelectAnImageFile: 'Please select an image file (png or jpg)',
 	pointOfInterest: {
 		cafeAndRestaurant: 'Cafe & Restaurant',
@@ -73,6 +82,7 @@ export default {
 	},
 	signIn: 'Sign In',
 	somethingWentWrong: 'something went wrong',
+	suggestionPlace: 'Suggestion Place',
 	time: 'Time',
 	travelSuggestion: {
 		content_1: `Check information on the outbreak of COVID 19 in the country from the website of the Department of Disease Control. <a href='https://covid19.ddc.moph.go.th' target='_blank'>https://covid19.ddc.moph.go.th</a>.`,
@@ -93,9 +103,15 @@ export default {
 		title: 'Travel suggestion',
 		more: `More information on the guidelines for the prevention of COVID-19 by the Department of Disease Control at <a href='https://ddc.moph.go.th/viralpneumonia/file/int_protection/int_protection_070164.pdf' target='_blank'>https://ddc.moph.go.th/viralpneumonia/file/int_protection/int_protection_070164.pdf</a>`,
 	},
+	trend: {
+		daysAgo: 'days ago',
+		today: 'Today',
+		yesterday: 'Yesterday',
+	},
 	update: 'update',
 	uploadImage: 'Upload Image',
 	username: 'Username',
 	venue: 'Venue',
 	venueName: 'Venue Name',
+	venueTrendRecord: 'Venue Trend Record',
 };

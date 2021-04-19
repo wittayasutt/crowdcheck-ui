@@ -1,12 +1,16 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { useRouter } from 'next/router';
 import { getLevelColor } from '../../helpers';
 import dayjs from 'dayjs';
 
 // icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+
+// lang
+import t from '../../translate';
 
 const usePlace = () => {
 	const dispatch = useDispatch();
@@ -16,12 +20,17 @@ const usePlace = () => {
 };
 
 const Wrapper = styled.div`
-	height: 88px;
+	height: 80px;
 	padding: 16px;
 	display: flex;
 	color: ${(props) => props.theme.color.black};
+	position: relative;
 
 	background-color: ${(props) => props.theme.color[props.levelColor]};
+
+	@media (min-width: ${(props) => props.theme.breakpoint}) {
+		height: 56px;
+	}
 `;
 
 const Left = styled.div`
@@ -32,6 +41,11 @@ const Left = styled.div`
 	font-size: 18px;
 	font-weight: 600;
 	line-height: 1.25;
+
+	@media (min-width: ${(props) => props.theme.breakpoint}) {
+		min-width: 64px;
+		font-size: 14px;
+	}
 `;
 
 const Right = styled.div`
@@ -57,6 +71,15 @@ const Right = styled.div`
 			flex: 1;
 		}
 	}
+
+	@media (min-width: ${(props) => props.theme.breakpoint}) {
+		flex-direction: row;
+		align-items: center;
+
+		.updated-time {
+			margin-right: 8px;
+		}
+	}
 `;
 
 const IconCaretDown = styled(FontAwesomeIcon)`
@@ -64,9 +87,18 @@ const IconCaretDown = styled(FontAwesomeIcon)`
 	width: 14px;
 
 	cursor: pointer;
+
+	@media (min-width: ${(props) => props.theme.breakpoint}) {
+		position: absolute;
+		top: 4px;
+		right: 4px;
+	}
 `;
 
 const PlaceTitle = ({ data }) => {
+	const router = useRouter();
+	const { locale } = router;
+
 	const { deselectPlace } = usePlace();
 
 	const handleClosePlace = () => {
@@ -76,13 +108,13 @@ const PlaceTitle = ({ data }) => {
 	const getTitle = (level) => {
 		switch (level) {
 			case 1:
-				return 'Go Ahead!';
+				return t[locale].place.goAhead;
 			case 2:
-				return 'Go Ahead!';
+				return t[locale].place.go;
 			case 3:
-				return 'Avoid';
+				return t[locale].place.wait;
 			case 4:
-				return 'Avoid';
+				return t[locale].place.avoid;
 			default:
 				'';
 		}
@@ -95,7 +127,8 @@ const PlaceTitle = ({ data }) => {
 				<div className='place-name'>{data.programName}</div>
 				<div className='updated-time'>
 					<span>
-						(update {dayjs(data.date).format('DD/MM/YYYY , hh:mm a')})
+						({t[locale].update}{' '}
+						{dayjs(data.date).format('DD/MM/YYYY , hh:mm a')})
 					</span>
 
 					<IconCaretDown icon={faCaretDown} />

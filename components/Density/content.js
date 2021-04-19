@@ -28,6 +28,14 @@ const TitleWrapper = styled.div`
 			flex: 1;
 		}
 	}
+
+	@media (min-width: ${(props) => props.theme.breakpoint}) {
+		margin: 0 0 8px;
+
+		.title {
+			display: none;
+		}
+	}
 `;
 
 const Row = styled.div`
@@ -62,7 +70,7 @@ const DensityContent = () => {
 	return (
 		<Wrapper>
 			<TitleWrapper>
-				<span className='title'>{t[locale].densityList}</span>
+				<span className='title'>{t[locale].densityListTitle}</span>
 				<div className='updated-time'>
 					({t[locale].update} {dayjs(Date.now()).format('DD/MM/YYYY , hh:mm a')}
 					)

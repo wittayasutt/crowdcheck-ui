@@ -1,13 +1,17 @@
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
 import { getLevelColor } from '../../helpers';
 
+// lang
+import t from '../../translate';
+
 const Wrapper = styled.div`
-	margin-bottom: 8px;
+	margin-bottom: 16px;
 `;
 
 const Title = styled.h4`
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: 500;
 
 	margin-bottom: 8px;
 `;
@@ -98,6 +102,9 @@ const mockTrend = [
 ];
 
 const Trend = () => {
+	const router = useRouter();
+	const { locale } = router;
+
 	const timeToIndex = (time) => {
 		// 10 o'clock return to index 0
 		return time - 10;
@@ -119,17 +126,17 @@ const Trend = () => {
 			switch (index) {
 				case 0:
 					return {
-						title: 'Today',
+						title: t[locale].trend.today,
 						data: transformTimeData(item),
 					};
 				case 1:
 					return {
-						title: 'Yesterday',
+						title: t[locale].trend.yesterday,
 						data: transformTimeData(item),
 					};
 				default:
 					return {
-						title: `${index} days ago`,
+						title: `${index} ${t[locale].trend.daysAgo}`,
 						data: transformTimeData(item),
 					};
 			}
@@ -141,7 +148,7 @@ const Trend = () => {
 	return (
 		trendRecord && (
 			<Wrapper>
-				<Title>Venue Trend Record</Title>
+				<Title>{t[locale].venueTrendRecord}</Title>
 				{trendRecord.map((item, index) => (
 					<Row key={index}>
 						<ColTitle>{item.title}</ColTitle>
