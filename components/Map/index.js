@@ -140,6 +140,7 @@ const Map = ({ offset }) => {
 					<Marker
 						key={key}
 						level={item.level}
+						title={item.programName}
 						lat={item.location.lat}
 						lng={item.location.lng}
 						onClick={() => selectPlace(item)}

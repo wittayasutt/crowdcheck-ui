@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import { useDispatch } from 'react-redux';
 
 // components
 import Zoom from '../Base/zoom';
@@ -9,6 +10,13 @@ import Checkbox from './checkbox';
 
 // lang
 import t from '../../translate';
+
+const usePlace = () => {
+	const dispatch = useDispatch();
+	const togglePlaceName = () => dispatch({ type: 'TOGGLE_PLACE_NAME' });
+
+	return { togglePlaceName };
+};
 
 const Wrapper = styled.div``;
 
@@ -51,11 +59,17 @@ const LegendContent = () => {
 	const router = useRouter();
 	const { locale } = router;
 
+	const { togglePlaceName } = usePlace();
+
+	const handleTogglePlaceName = () => {
+		togglePlaceName();
+	};
+
 	return (
 		<Wrapper>
 			<SwitchWrapper>
 				<p>{t[locale].locationName}</p>
-				<Switch onChange={() => {}} />
+				<Switch onChange={handleTogglePlaceName} />
 			</SwitchWrapper>
 			<Row>
 				<Marker level={0} />

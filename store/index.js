@@ -8,6 +8,7 @@ const initialState = {
 	showDensity: false,
 	showLegend: false,
 	place: null,
+	showPlaceName: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -41,6 +42,12 @@ const reducer = (state = initialState, action) => {
 				...state,
 				place: null,
 			};
+		case 'TOGGLE_PLACE_NAME': {
+			return {
+				...state,
+				showPlaceName: !state.showPlaceName,
+			};
+		}
 		default:
 			return state;
 	}

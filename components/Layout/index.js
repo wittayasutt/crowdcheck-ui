@@ -9,16 +9,17 @@ const Wrapper = styled.div`
 
 	display: flex;
 	flex-direction: column;
-	background-color: #f5f5f5;
+	background-color: ${(props) =>
+		props.white ? props.theme.color.white : props.theme.color.gray};
 `;
 
 const Main = styled.main`
 	flex: 1;
 `;
 
-const MainLayout = ({ children }) => {
+const MainLayout = ({ children, white }) => {
 	return (
-		<Wrapper>
+		<Wrapper white={white}>
 			<Navbar />
 			<Main>{children}</Main>
 		</Wrapper>
@@ -27,10 +28,12 @@ const MainLayout = ({ children }) => {
 
 MainLayout.propTypes = {
 	children: PropTypes.node,
+	white: PropTypes.bool,
 };
 
 MainLayout.defaultProps = {
 	children: <></>,
+	white: false,
 };
 
 export default MainLayout;

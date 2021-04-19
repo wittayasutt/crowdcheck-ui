@@ -1,9 +1,13 @@
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 // icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+
+// lang
+import t from '../../translate';
 
 const Wrapper = styled.div`
 	width: ${(props) => props.theme.breakpoint};
@@ -12,23 +16,38 @@ const Wrapper = styled.div`
 	background-color: ${(props) => props.theme.color.white};
 
 	margin: auto;
-	padding: 16px 16px 0;
+	padding: 16px 32px 0;
 
 	h2 {
+		font-size: 18px;
+		font-weight: 500;
+
 		margin-bottom: 16px;
 	}
 
 	p {
+		font-size: 14px;
+		line-height: 1.8;
 		margin-bottom: 32px;
+	}
+
+	a {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.mb-1 {
+		margin-bottom: 8px;
 	}
 `;
 
 const IconCaretDown = styled(FontAwesomeIcon)`
-	height: 24px;
-	width: 24px;
+	height: 16px;
+	width: 16px;
 
 	position: absolute;
-	right: 24px;
+	right: 16px;
 
 	cursor: pointer;
 
@@ -38,6 +57,9 @@ const IconCaretDown = styled(FontAwesomeIcon)`
 `;
 
 const About = () => {
+	const router = useRouter();
+	const { locale } = router;
+
 	return (
 		<Wrapper>
 			<Link href='/'>
@@ -46,29 +68,93 @@ const About = () => {
 				</a>
 			</Link>
 
-			<h2>Project Background</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-				nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-				volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-				ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-				Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-				molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero
-				eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
-				zzri.
-			</p>
+			<h2>{t[locale].projectBackground.title}</h2>
+			<p
+				dangerouslySetInnerHTML={{
+					__html: t[locale].projectBackground.content,
+				}}
+			/>
 
-			<h2>Safety and Privacy</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-				nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-				volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-				ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-				Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-				molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero
-				eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
-				zzri.
-			</p>
+			<h2>{t[locale].privacy.title}</h2>
+			<p
+				dangerouslySetInnerHTML={{
+					__html: t[locale].privacy.content,
+				}}
+			/>
+
+			<h2>{t[locale].travelSuggestion.title}</h2>
+			<p
+				dangerouslySetInnerHTML={{
+					__html: t[locale].travelSuggestion.content_1,
+				}}
+				className='mb-1'
+			/>
+			<p
+				dangerouslySetInnerHTML={{
+					__html: t[locale].travelSuggestion.content_2,
+				}}
+				className='mb-1'
+			/>
+			<p
+				dangerouslySetInnerHTML={{
+					__html: t[locale].travelSuggestion.content_3,
+				}}
+				className='mb-1'
+			/>
+			<p
+				dangerouslySetInnerHTML={{
+					__html: t[locale].travelSuggestion.content_4,
+				}}
+				className='mb-1'
+			/>
+			<p
+				dangerouslySetInnerHTML={{
+					__html: t[locale].travelSuggestion.content_5,
+				}}
+				className='mb-1'
+			/>
+			<p
+				dangerouslySetInnerHTML={{
+					__html: t[locale].travelSuggestion.content_6,
+				}}
+				className='mb-1'
+			/>
+			<p
+				dangerouslySetInnerHTML={{
+					__html: t[locale].travelSuggestion.content_7,
+				}}
+				className='mb-1'
+			/>
+			<p
+				dangerouslySetInnerHTML={{
+					__html: t[locale].travelSuggestion.content_8,
+				}}
+				className='mb-1'
+			/>
+			<p
+				dangerouslySetInnerHTML={{
+					__html: t[locale].travelSuggestion.more,
+				}}
+			/>
+
+			<h2>{t[locale].credit.title}</h2>
+			<p
+				dangerouslySetInnerHTML={{
+					__html: t[locale].credit.copyrightBy,
+				}}
+				className='mb-1'
+			/>
+			<p
+				dangerouslySetInnerHTML={{
+					__html: t[locale].credit.supportedBy,
+				}}
+				className='mb-1'
+			/>
+			<p
+				dangerouslySetInnerHTML={{
+					__html: t[locale].credit.developedBy,
+				}}
+			/>
 		</Wrapper>
 	);
 };
