@@ -47,12 +47,8 @@ const AdminFormProgram = ({ data, isView, onUpdate }) => {
 	const [endDate, setEndDate] = useState(new Date());
 	const [startTime, setStartTime] = useState(new Date());
 	const [endTime, setEndTime] = useState(new Date());
-	const [image, setImage] = useState('/mock/colosseum.jpeg');
+	const [image, setImage] = useState(null);
 	const [detail, setDetail] = useState(initData);
-
-	const handleSetImage = () => {
-		setImage();
-	};
 
 	const lang = (item) => {
 		return item.en && item.th;
@@ -114,7 +110,7 @@ const AdminFormProgram = ({ data, isView, onUpdate }) => {
 					],
 					url: linkSrc,
 				},
-				images: ['https://examplehost.com/images/123456.jpg'],
+				images: [image],
 				openingTime: {
 					dates: {
 						start: dayjs(startDate).format('DD/MM/YYYY'),
@@ -142,6 +138,7 @@ const AdminFormProgram = ({ data, isView, onUpdate }) => {
 		endDate,
 		startTime,
 		endTime,
+		image,
 		detail,
 	]);
 
@@ -195,6 +192,10 @@ const AdminFormProgram = ({ data, isView, onUpdate }) => {
 				setStartTime(formatTime(hours.start));
 				setEndTime(formatTime(hours.end));
 			}
+		}
+
+		if (data.images && data.images[0]) {
+			setImage(data.images[0]);
 		}
 
 		if (data.description) {
@@ -312,8 +313,8 @@ const AdminFormProgram = ({ data, isView, onUpdate }) => {
 				<img src={image} alt={t[locale].programName} />
 			) : (
 				<div className='field mb-2'>
-					<label className='label'>{t[locale].uploadImage}:</label>
-					<UploadImage />
+					<RequiredLabel>{t[locale].uploadImage}</RequiredLabel>
+					<UploadImage image={image} onUploadImage={(e) => setImage(e)} />
 				</div>
 			)}
 

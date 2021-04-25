@@ -18,7 +18,6 @@ const AdminItemAddVenue = () => {
 	const handleUpdate = (payload, updateId, updateSubId, callback) => {
 		service_create_venue(payload)
 			.then((res) => {
-				console.log('res', res);
 				if (res.status === 'success') {
 					router.push('/admin');
 				} else {

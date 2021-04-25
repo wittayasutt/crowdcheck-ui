@@ -11,8 +11,6 @@ const headers = {
 // #region AUTH
 
 export const service_login = (username, password) => {
-	console.log('url', url);
-
 	return axios
 		.post(`${url}/api/users/login`, {
 			user: {
@@ -184,15 +182,9 @@ export const service_remove_program = (venueId, id) => {
 
 export const service_upload_image = (payload) => {
 	return axios
-		.post(
-			`${url}/api/images/upload`,
-			{
-				...payload,
-			},
-			{
-				headers,
-			}
-		)
+		.post(`${url}/api/images/upload`, payload, {
+			headers,
+		})
 		.then((response) => {
 			return response.data;
 		});

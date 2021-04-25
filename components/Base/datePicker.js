@@ -5,10 +5,8 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
 const DatePickerComponent = ({ date, onChange, placeholder, isView }) => {
-	console.log('datedate', date);
-
 	return isView ? (
-		<strong>{dayjs(date).format('d MMMM YYYY')}</strong>
+		<strong>{dayjs(date).format('DD MMMM YYYY')}</strong>
 	) : (
 		<DatePicker
 			className='input date-picker'
