@@ -59,26 +59,28 @@ const AdminItemViewProgram = () => {
 			});
 	}, [id]);
 
-	return !loading ? (
+	return (
 		<>
 			<Header />
-			<Layout>
-				<Wrapper>
-					{data && (
-						<Form
-							action='EDIT'
-							formType='PROGRAM'
-							data={data}
-							updateId={id}
-							updateSubId={programId}
-							onUpdate={handleUpdate}
-						/>
-					)}
-				</Wrapper>
-			</Layout>
+			{!loading ? (
+				<Layout>
+					<Wrapper>
+						{data && (
+							<Form
+								action='EDIT'
+								formType='PROGRAM'
+								data={data}
+								updateId={id}
+								updateSubId={programId}
+								onUpdate={handleUpdate}
+							/>
+						)}
+					</Wrapper>
+				</Layout>
+			) : (
+				<Loading fullpage />
+			)}
 		</>
-	) : (
-		<Loading fullpage />
 	);
 };
 

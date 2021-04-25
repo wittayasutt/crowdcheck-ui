@@ -56,27 +56,29 @@ const AdminItemEditVenue = () => {
 			});
 	}, [id]);
 
-	return !loading ? (
+	return (
 		<>
 			<Header />
-			<Layout>
-				<Wrapper>
+			{!loading ? (
+				<Layout>
 					<Wrapper>
-						{data && (
-							<Form
-								action='EDIT'
-								formType='VENUE'
-								data={data}
-								updateId={id}
-								onUpdate={handleUpdate}
-							/>
-						)}
+						<Wrapper>
+							{data && (
+								<Form
+									action='EDIT'
+									formType='VENUE'
+									data={data}
+									updateId={id}
+									onUpdate={handleUpdate}
+								/>
+							)}
+						</Wrapper>
 					</Wrapper>
-				</Wrapper>
-			</Layout>
+				</Layout>
+			) : (
+				<Loading fullpage />
+			)}
 		</>
-	) : (
-		<Loading fullpage />
 	);
 };
 

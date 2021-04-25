@@ -77,26 +77,28 @@ const Admin = () => {
 		getVenue();
 	}, []);
 
-	return !loading ? (
+	return (
 		<>
 			<Header />
-			<Layout>
-				<Wrapper>
-					<List
-						title={t[locale].venue}
-						data={venue}
-						subData={program}
-						type='venue'
-						onSelect={getProgram}
-						onRemove={removeVenueById}
-						onRemoveSub={removeProgramById}
-					/>
-					{/* <List title='Others' /> */}
-				</Wrapper>
-			</Layout>
+			{!loading ? (
+				<Layout>
+					<Wrapper>
+						<List
+							title={t[locale].venue}
+							data={venue}
+							subData={program}
+							type='venue'
+							onSelect={getProgram}
+							onRemove={removeVenueById}
+							onRemoveSub={removeProgramById}
+						/>
+						{/* <List title='Others' /> */}
+					</Wrapper>
+				</Layout>
+			) : (
+				<Loading fullpage />
+			)}
 		</>
-	) : (
-		<Loading fullpage />
 	);
 };
 

@@ -112,7 +112,8 @@ const LegendContent = () => {
 				/>
 			</Row>
 
-			<Title>{t[locale].pointOfInterest.title}</Title>
+			{/* TODO: waiting for API */}
+			{/* <Title>{t[locale].pointOfInterest.title}</Title>
 			<Checkbox
 				label={t[locale].pointOfInterest.cafeAndRestaurant}
 				onChange={() => {}}
@@ -124,7 +125,7 @@ const LegendContent = () => {
 				onChange={() => {}}
 			/>
 			<Checkbox label={t[locale].pointOfInterest.craft} onChange={() => {}} />
-			<Checkbox label={t[locale].pointOfInterest.fashion} onChange={() => {}} />
+			<Checkbox label={t[locale].pointOfInterest.fashion} onChange={() => {}} /> */}
 		</Wrapper>
 	);
 };

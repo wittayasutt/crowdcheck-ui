@@ -42,17 +42,19 @@ const AdminItemViewVenue = () => {
 			});
 	}, [id]);
 
-	return !loading ? (
+	return (
 		<>
 			<Header />
-			<Layout>
-				<Wrapper>
-					{data && <Form action='VIEW' formType='VENUE' data={data} />}
-				</Wrapper>
-			</Layout>
+			{!loading ? (
+				<Layout>
+					<Wrapper>
+						{data && <Form action='VIEW' formType='VENUE' data={data} />}
+					</Wrapper>
+				</Layout>
+			) : (
+				<Loading fullpage />
+			)}
 		</>
-	) : (
-		<Loading fullpage />
 	);
 };
 
