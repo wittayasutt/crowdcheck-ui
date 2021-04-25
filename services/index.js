@@ -11,6 +11,9 @@ const headers = {
 // #region AUTH
 
 export const service_login = (username, password) => {
+	console.log('process.env.API_BASE_URL', process.env.API_BASE_URL);
+	console.log('url', url);
+
 	return axios
 		.post(`${url}/api/users/login`, {
 			user: {
