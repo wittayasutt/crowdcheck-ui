@@ -13,6 +13,7 @@ const headers = {
 export const service_login = (username, password) => {
 	console.log('process.env.API_BASE_URL', process.env.API_BASE_URL);
 	console.log('url', url);
+	console.log('redeploy');
 
 	return axios
 		.post(`${url}/api/users/login`, {
