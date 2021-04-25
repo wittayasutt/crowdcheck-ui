@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
-const url = 'https://crowdcheck-api.df.r.appspot.com';
+const url = process.env.API_BASE_URL;
 const token = Cookies.get('token') || null;
 
 const headers = {
@@ -11,6 +11,8 @@ const headers = {
 // #region AUTH
 
 export const service_login = (username, password) => {
+	console.log('url', url);
+
 	return axios
 		.post(`${url}/api/users/login`, {
 			user: {
