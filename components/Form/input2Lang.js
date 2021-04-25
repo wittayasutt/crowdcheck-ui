@@ -47,7 +47,7 @@ const AdminFormInput = ({
 		<div className='field mb-2'>
 			{require ? <RequiredLabel>{title}</RequiredLabel> : <div>{title}</div>}
 			<div className='control'>
-				{isView && <strong>{valueTH}</strong>}
+				{isView && <strong>{valueTH || '-'}</strong>}
 				{!isView && !isTextarea && (
 					<input
 						className='input mb-1'
@@ -69,7 +69,7 @@ const AdminFormInput = ({
 
 				{isView && <br />}
 
-				{isView && <strong>{valueEN}</strong>}
+				{isView && <strong>{valueEN || '-'}</strong>}
 				{!isView && !isTextarea && (
 					<input
 						className='input mb-1'

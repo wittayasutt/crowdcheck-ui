@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 
+import { getContent } from '../../helpers';
+
 // components
 import RequiredLabel from '../Base/requiredLabel';
 import Input2Lang from './input2Lang';
@@ -31,10 +33,32 @@ const AdminFormVenue = ({ data, isView, onUpdate }) => {
 		setId(e.target.value);
 	};
 
+	const lang = (item) => {
+		return item.en && item.th;
+	};
+
 	useEffect(() => {
 		if (!isView) {
-			const newData = { id, venueName, location };
-			onUpdate(newData);
+			const payload = {
+				refId: id,
+				name: [
+					{
+						language: 'EN',
+						content: venueName.en,
+					},
+					{
+						language: 'TH',
+						content: venueName.th,
+					},
+				],
+				location: {
+					latitude: location.lat,
+					longtitude: location.lng,
+				},
+			};
+
+			const isError = !id || !lang(venueName) || !location.lat || !location.lng;
+			onUpdate({ payload, isError });
 		}
 	}, [id, venueName, location]);
 
@@ -49,15 +73,15 @@ const AdminFormVenue = ({ data, isView, onUpdate }) => {
 
 		if (data.name) {
 			setVenueName({
-				th: data.name,
-				en: data.name,
+				th: getContent(data.name, 'th'),
+				en: getContent(data.name, 'en'),
 			});
 		}
 
 		if (data.location) {
 			setLocation({
-				lat: data.location.lat,
-				lng: data.location.lng,
+				lat: data.location.latitude,
+				lng: data.location.longtitude,
 			});
 		}
 	}, [data]);

@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
+
+import { service_create_venue } from '../../../services';
 
 // components
 import Header from '../../../components/Header/admin';
@@ -10,12 +13,29 @@ const Wrapper = styled.div`
 `;
 
 const AdminItemAddVenue = () => {
+	const router = useRouter();
+
+	const handleUpdate = (payload, updateId, updateSubId, callback) => {
+		service_create_venue(payload)
+			.then((res) => {
+				console.log('res', res);
+				if (res.status === 'success') {
+					router.push('/admin');
+				} else {
+					callback(true);
+				}
+			})
+			.catch(() => {
+				callback(true);
+			});
+	};
+
 	return (
 		<>
 			<Header />
 			<Layout>
 				<Wrapper>
-					<Form action='ADD' formType='VENUE' />
+					<Form action='ADD' formType='VENUE' onUpdate={handleUpdate} />
 				</Wrapper>
 			</Layout>
 		</>

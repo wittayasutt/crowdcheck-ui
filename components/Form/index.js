@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { getContent } from '../../helpers';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
@@ -63,7 +64,14 @@ const IconAngleLeft = styled(FontAwesomeIcon)`
 	width: 24px;
 `;
 
-const AdminForm = ({ action, data, formType }) => {
+const AdminForm = ({
+	action,
+	formType,
+	data,
+	updateId,
+	updateSubId,
+	onUpdate,
+}) => {
 	const router = useRouter();
 	const { locale } = router;
 
@@ -75,46 +83,25 @@ const AdminForm = ({ action, data, formType }) => {
 	const [title, setTitle] = useState('');
 
 	const [newData, setNewData] = useState(null);
-	const [error, setError] = useState('');
+	const [error, setError] = useState(false);
 
-	const handleUpdate = (newData) => {
-		setNewData(newData);
-	};
-
-	const isError = () => {
-		setError('');
-
-		if (newData && newData.id && newData.venueName && newData.location) {
-			return false;
-		} else {
-			setError(t[locale].somethingWentWrong);
-
-			return true;
-		}
+	const handleUpdate = ({ payload, isError }) => {
+		setNewData({ payload, isError });
 	};
 
 	const handleSubmit = () => {
-		if (!isError()) {
-			const payload = {
-				refId: newData.id,
-				name: [
-					{
-						language: 'EN',
-						content: newData.venueName.en,
-					},
-					{
-						language: 'TH',
-						content: newData.venueName.th,
-					},
-				],
-				location: {
-					latitude: newData.location.lat,
-					longtitude: newData.location.lng,
-				},
-			};
+		if (!newData.payload || newData.isError) {
+			setError(t[locale].somethingWentWrong);
 
-			console.log('payload', payload);
+			return;
 		}
+
+		setError('');
+		onUpdate(newData.payload, updateId, updateSubId, (error) => {
+			if (error) {
+				setError(t[locale].somethingWentWrong);
+			}
+		});
 	};
 
 	useEffect(() => {
@@ -139,9 +126,9 @@ const AdminForm = ({ action, data, formType }) => {
 
 	useEffect(() => {
 		if (action === FORM_ACTION.VIEW || action === FORM_ACTION.EDIT) {
-			setTitle(data.name);
+			setTitle(getContent(data.name, locale));
 		}
-	}, [data]);
+	}, [data, locale]);
 
 	return (
 		<Wrapper>
@@ -181,12 +168,18 @@ AdminForm.propTypes = {
 	action: PropTypes.string,
 	formType: PropTypes.string,
 	data: PropTypes.object,
+	updateId: PropTypes.string,
+	updateSubId: PropTypes.string,
+	onUpdate: PropTypes.func,
 };
 
 AdminForm.defaultProps = {
 	action: 'view',
 	formType: '',
 	data: null,
+	updateId: null,
+	updateSubId: null,
+	onUpdate: () => {},
 };
 
 export default AdminForm;

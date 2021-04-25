@@ -33,7 +33,11 @@ const AdminFormInputProgramType = ({
 			{require ? <RequiredLabel>{title}</RequiredLabel> : <div>{title}</div>}
 			<div className='control'>
 				{isView ? (
-					<strong>{value}</strong>
+					<>
+						<strong>{t['th'].programType[value]}</strong>
+						<br />
+						<strong>{t['en'].programType[value]}</strong>
+					</>
 				) : (
 					<div className='select'>
 						<select onChange={handleChange} value={value}>

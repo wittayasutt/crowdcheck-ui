@@ -1,8 +1,10 @@
 import styled from 'styled-components';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+
+import { getContent } from '../../helpers';
 
 // icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,10 +20,6 @@ import Modal from '../../components/Base/modal';
 
 // lang
 import t from '../../translate';
-
-// mock
-import venueData from '../../mock/venueList';
-import programData from '../../mock/programList';
 
 const Wrapper = styled.div`
 	padding-top: 24px;
@@ -155,27 +153,58 @@ const Icon = styled(FontAwesomeIcon)`
 	width: 12px;
 `;
 
-const List = ({ title, type }) => {
+const List = ({
+	title,
+	type,
+	data,
+	subData,
+	onSelect,
+	onRemove,
+	onRemoveSub,
+}) => {
+	const [loading, setLoading] = useState(true);
+	const [selectId, setSelectId] = useState(null);
 	const [removeId, setRemoveId] = useState(null);
 	const [openModal, setOpenModal] = useState(false);
+	const [openModalSub, setOpenModalSub] = useState(false);
 
 	const router = useRouter();
 	const { locale } = router;
 
-	const openConfimRemoveModal = (id) => {
-		setOpenModal(true);
+	const handleSelect = (id) => {
+		setLoading(true);
+		setSelectId(id);
+		onSelect(id);
+	};
 
-		console.log('remove', id);
-		setRemoveId(id);
+	const openConfimRemoveModal = (id, subId) => {
+		if (!subId) {
+			setOpenModal(true);
+		} else {
+			setOpenModalSub(true);
+		}
+
+		setRemoveId({ id, subId });
 	};
 
 	const closeConfimRemoveModal = () => {
 		setOpenModal(false);
+		setOpenModalSub(false);
 	};
 
-	const confirmRemove = () => {
+	const confirmRemove = (isSub) => {
+		if (!isSub) {
+			onRemove(removeId.id);
+		} else {
+			onRemoveSub(removeId.id, removeId.subId);
+		}
+
 		closeConfimRemoveModal();
 	};
+
+	useEffect(() => {
+		setLoading(false);
+	}, [subData]);
 
 	return (
 		<>
@@ -190,74 +219,82 @@ const List = ({ title, type }) => {
 				</Title>
 				<Content>
 					<ul>
-						{venueData.map((item, index) => (
-							<li key={index}>
-								<details>
-									<Summary>
-										<div className='summary'>
-											<div className='id'>{index + 1}</div>
-											<div className='item'>{item.name}</div>
+						{data.map((item, index) => (
+							<li key={item._id}>
+								<Summary onClick={() => handleSelect(item._id)}>
+									<div className='summary'>
+										<div className='id'>{index + 1}</div>
+										<div className='item'>{getContent(item.name, locale)}</div>
 
-											<Link href={`admin/venue/${item._id}`}>
-												<button className='button button-action'>
-													<Icon icon={faEye} />
-												</button>
-											</Link>
-
-											<Link href={`admin/venue/${item._id}/edit`}>
-												<button className='button button-action'>
-													<Icon icon={faPen} />
-												</button>
-											</Link>
-
-											<button
-												className='button button-action'
-												onClick={() => {
-													openConfimRemoveModal(item._id);
-												}}
-											>
-												<Icon icon={faTrash} />
-												{/* Remove */}
+										<Link href={`admin/venue/${item._id}`}>
+											<button className='button button-action'>
+												<Icon icon={faEye} />
 											</button>
-										</div>
-									</Summary>
-
-									<ul>
-										{programData.map((item, index) => (
-											<Program className='program' key={index}>
-												<div className='item'>{item.name}</div>
-
-												<Link href={`admin/program/${item._id}`}>
-													<button className='button is-primary button-action'>
-														<Icon icon={faEye} />
-													</button>
-												</Link>
-
-												<Link href={`admin/program/${item._id}/edit`}>
-													<button className='button is-primary button-action'>
-														<Icon icon={faPen} />
-													</button>
-												</Link>
-
-												<button
-													className='button is-primary button-action'
-													onClick={() => {
-														openConfimRemoveModal(item._id);
-													}}
-												>
-													<Icon icon={faTrash} />
-													{/* Remove */}
-												</button>
-											</Program>
-										))}
-
-										<Link href={`admin/program`}>
-											<Program className='button-add'>
-												<span>{t[locale].add}</span> <Icon icon={faPlus} />
-											</Program>
 										</Link>
-									</ul>
-								</details>
+
+										<Link href={`admin/venue/${item._id}/edit`}>
+											<button className='button button-action'>
+												<Icon icon={faPen} />
+											</button>
+										</Link>
+
+										<button
+											className='button button-action'
+											onClick={() => {
+												openConfimRemoveModal(item._id);
+											}}
+										>
+											<Icon icon={faTrash} />
+										</button>
+									</div>
+								</Summary>
+
+								{selectId === item._id && (
+									<>
+										{!loading ? (
+											<ul>
+												{subData.map((subItem) => (
+													<Program className='program' key={subItem._id}>
+														<div className='item'>
+															{getContent(subItem.name, locale)}
+														</div>
+
+														<Link
+															href={`admin/venue/${item._id}/program/${subItem._id}`}
+														>
+															<button className='button is-primary button-action'>
+																<Icon icon={faEye} />
+															</button>
+														</Link>
+
+														<Link
+															href={`admin/venue/${item._id}/program/${subItem._id}/edit`}
+														>
+															<button className='button is-primary button-action'>
+																<Icon icon={faPen} />
+															</button>
+														</Link>
+
+														<button
+															className='button is-primary button-action'
+															onClick={() => {
+																openConfimRemoveModal(item._id, subItem._id);
+															}}
+														>
+															<Icon icon={faTrash} />
+														</button>
+													</Program>
+												))}
+
+												<Link href={`admin/venue/${item._id}/program`}>
+													<Program className='button-add'>
+														<span>{t[locale].add}</span> <Icon icon={faPlus} />
+													</Program>
+												</Link>
+											</ul>
+										) : null}
+									</>
+								)}
 							</li>
 						))}
 					</ul>
@@ -267,7 +304,13 @@ const List = ({ title, type }) => {
 			<Modal
 				open={openModal}
 				onClose={closeConfimRemoveModal}
-				onConfirm={confirmRemove}
+				onConfirm={() => confirmRemove(false)}
+			/>
+
+			<Modal
+				open={openModalSub}
+				onClose={closeConfimRemoveModal}
+				onConfirm={() => confirmRemove(true)}
 			/>
 		</>
 	);
@@ -276,11 +319,21 @@ const List = ({ title, type }) => {
 List.propTypes = {
 	title: PropTypes.string,
 	type: PropTypes.string,
+	data: PropTypes.array,
+	subData: PropTypes.array,
+	onSelect: PropTypes.func,
+	onRemove: PropTypes.func,
+	onRemoveSub: PropTypes.func,
 };
 
 List.defaultProps = {
 	title: '',
 	type: '',
+	data: [],
+	subData: [],
+	onSelect: () => {},
+	onRemove: () => {},
+	onRemoveSub: () => {},
 };
 
 export default List;

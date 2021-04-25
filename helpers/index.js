@@ -1,3 +1,8 @@
+import dayjs from 'dayjs';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+
+dayjs.extend(customParseFormat);
+
 export const getLevelColor = (level) => {
 	switch (level) {
 		case 1:
@@ -26,4 +31,27 @@ export const getPeopleNumber = (level) => {
 		default:
 			return 0;
 	}
+};
+
+export const getContent = (content, lang) => {
+	if (!content || !lang) {
+		return null;
+	}
+
+	const apiLang = lang.toUpperCase();
+	const foundItem = content.find((item) => item.language === apiLang);
+
+	return foundItem.content;
+};
+
+export const formatDate = (date) => {
+	const day = dayjs(date, 'DD/MM/YYYY').format();
+
+	return new Date(day);
+};
+
+export const formatTime = (time) => {
+	const day = dayjs(time, 'HH:mm').format();
+
+	return new Date(day);
 };

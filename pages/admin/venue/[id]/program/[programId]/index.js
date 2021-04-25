@@ -2,21 +2,21 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
-import { service_get_venue } from '../../../../services';
+import { service_get_program } from '../../../../../../services';
 
 // components
-import Header from '../../../../components/Header/admin';
-import Layout from '../../../../components/Layout/admin';
-import Form from '../../../../components/Form';
-import Loading from '../../../../components/Loading';
+import Header from '../../../../../../components/Header/admin';
+import Layout from '../../../../../../components/Layout/admin';
+import Form from '../../../../../../components/Form';
+import Loading from '../../../../../../components/Loading';
 
 const Wrapper = styled.div`
 	padding: 16px;
 `;
 
-const AdminItemViewVenue = () => {
+const AdminItemViewProgram = () => {
 	const router = useRouter();
-	const { id } = router.query;
+	const { id, programId } = router.query;
 
 	const [loading, setLoading] = useState(true);
 	const [data, setData] = useState({});
@@ -24,11 +24,11 @@ const AdminItemViewVenue = () => {
 	useEffect(() => {
 		setLoading(true);
 
-		if (!id) {
+		if (!id || !programId) {
 			return;
 		}
 
-		service_get_venue(id)
+		service_get_program(id, programId)
 			.then((res) => {
 				if (res.status === 'success') {
 					setData(res.data);
@@ -47,7 +47,7 @@ const AdminItemViewVenue = () => {
 			<Header />
 			<Layout>
 				<Wrapper>
-					{data && <Form action='VIEW' formType='VENUE' data={data} />}
+					{data && <Form action='VIEW' formType='PROGRAM' data={data} />}
 				</Wrapper>
 			</Layout>
 		</>
@@ -56,4 +56,4 @@ const AdminItemViewVenue = () => {
 	);
 };
 
-export default AdminItemViewVenue;
+export default AdminItemViewProgram;

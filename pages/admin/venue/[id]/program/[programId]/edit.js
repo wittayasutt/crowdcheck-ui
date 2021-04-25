@@ -2,27 +2,30 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
-import { service_get_venue, service_update_venue } from '../../../../services';
+import {
+	service_get_program,
+	service_update_program,
+} from '../../../../../../services';
 
 // components
-import Header from '../../../../components/Header/admin';
-import Layout from '../../../../components/Layout/admin';
-import Form from '../../../../components/Form';
-import Loading from '../../../../components/Loading';
+import Header from '../../../../../../components/Header/admin';
+import Layout from '../../../../../../components/Layout/admin';
+import Form from '../../../../../../components/Form';
+import Loading from '../../../../../../components/Loading';
 
 const Wrapper = styled.div`
 	padding: 16px;
 `;
 
-const AdminItemEditVenue = () => {
+const AdminItemViewProgram = () => {
 	const router = useRouter();
-	const { id } = router.query;
+	const { id, programId } = router.query;
 
 	const [loading, setLoading] = useState(true);
 	const [data, setData] = useState({});
 
 	const handleUpdate = (payload, updateId, updateSubId, callback) => {
-		service_update_venue(payload, updateId)
+		service_update_program(payload, updateId, updateSubId)
 			.then((res) => {
 				if (res.status === 'success') {
 					router.push('/admin');
@@ -38,11 +41,11 @@ const AdminItemEditVenue = () => {
 	useEffect(() => {
 		setLoading(true);
 
-		if (!id) {
+		if (!id || !programId) {
 			return;
 		}
 
-		service_get_venue(id)
+		service_get_program(id, programId)
 			.then((res) => {
 				if (res.status === 'success') {
 					setData(res.data);
@@ -61,17 +64,16 @@ const AdminItemEditVenue = () => {
 			<Header />
 			<Layout>
 				<Wrapper>
-					<Wrapper>
-						{data && (
-							<Form
-								action='EDIT'
-								formType='VENUE'
-								data={data}
-								updateId={id}
-								onUpdate={handleUpdate}
-							/>
-						)}
-					</Wrapper>
+					{data && (
+						<Form
+							action='EDIT'
+							formType='PROGRAM'
+							data={data}
+							updateId={id}
+							updateSubId={programId}
+							onUpdate={handleUpdate}
+						/>
+					)}
 				</Wrapper>
 			</Layout>
 		</>
@@ -80,4 +82,4 @@ const AdminItemEditVenue = () => {
 	);
 };
 
-export default AdminItemEditVenue;
+export default AdminItemViewProgram;

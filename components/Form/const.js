@@ -9,3 +9,14 @@ export const FORM_TYPE = {
 	PROGRAM: 'PROGRAM',
 	OTHER: 'OTHER',
 };
+
+export const FORM_PROGRAM_TYPE = {
+	'Creative market': 'creativeMarket',
+	Event: 'event',
+	Promotion: 'promotion',
+	Showcase: 'showcase',
+	'Showcase & exhibition': 'showcaseAndExhibition',
+	Talk: 'talk',
+	Tour: 'tour',
+	Workshop: 'workshop',
+};

@@ -46,22 +46,21 @@ export const service_get_venue_list = () => {
 			headers,
 		})
 		.then((response) => {
-			console.log('response', response);
 			return response.data;
 		});
 };
 
-export const service_get_venue = (token, id) => {
+export const service_get_venue = (id) => {
 	return axios
 		.get(`${url}/api/venues/${id}`, {
-			headers: headers(token),
+			headers,
 		})
 		.then((response) => {
 			return response.data;
 		});
 };
 
-export const service_create_venue = (token, payload) => {
+export const service_create_venue = (payload) => {
 	return axios
 		.post(
 			`${url}/api/venues`,
@@ -69,7 +68,7 @@ export const service_create_venue = (token, payload) => {
 				...payload,
 			},
 			{
-				headers: headers(token),
+				headers,
 			}
 		)
 		.then((response) => {
@@ -77,15 +76,15 @@ export const service_create_venue = (token, payload) => {
 		});
 };
 
-export const service_update_venue = (token, id, payload) => {
+export const service_update_venue = (payload, id) => {
 	return axios
-		.post(
-			`${url}/api/venues${id}`,
+		.put(
+			`${url}/api/venues/${id}`,
 			{
 				...payload,
 			},
 			{
-				headers: headers(token),
+				headers,
 			}
 		)
 		.then((response) => {
@@ -93,20 +92,20 @@ export const service_update_venue = (token, id, payload) => {
 		});
 };
 
-export const service_remove_venue = (token, id) => {
+export const service_remove_venue = (id) => {
 	return axios
-		.delete(`${url}/api/venues${id}`, null, {
-			headers: headers(token),
+		.delete(`${url}/api/venues/${id}`, {
+			headers,
 		})
 		.then((response) => {
 			return response.data;
 		});
 };
 
-export const service_get_venue_nearby = (token, id) => {
+export const service_get_venue_nearby = (id) => {
 	return axios
 		.get(`${url}/api/venues/suggest/${id}`, {
-			headers: headers(token),
+			headers,
 		})
 		.then((response) => {
 			return response.data;
@@ -117,27 +116,27 @@ export const service_get_venue_nearby = (token, id) => {
 
 // #region PROGRAM
 
-export const service_get_program_list = (token, venueId) => {
+export const service_get_program_list = (venueId) => {
 	return axios
 		.get(`${url}/api/venues/${venueId}/programs`, {
-			headers: headers(token),
+			headers,
 		})
 		.then((response) => {
 			return response.data;
 		});
 };
 
-export const service_get_program = (token, venueId, id) => {
+export const service_get_program = (venueId, id) => {
 	return axios
 		.get(`${url}/api/venues/${venueId}/programs/${id}`, {
-			headers: headers(token),
+			headers,
 		})
 		.then((response) => {
 			return response.data;
 		});
 };
 
-export const service_create_program = (token, venueId, payload) => {
+export const service_create_program = (payload, venueId) => {
 	return axios
 		.post(
 			`${url}/api/venues/${venueId}/programs`,
@@ -145,7 +144,7 @@ export const service_create_program = (token, venueId, payload) => {
 				...payload,
 			},
 			{
-				headers: headers(token),
+				headers,
 			}
 		)
 		.then((response) => {
@@ -153,15 +152,15 @@ export const service_create_program = (token, venueId, payload) => {
 		});
 };
 
-export const service_update_program = (token, venueId, id, payload) => {
+export const service_update_program = (payload, venueId, id) => {
 	return axios
-		.post(
+		.put(
 			`${url}/api/venues/${venueId}/programs/${id}`,
 			{
 				...payload,
 			},
 			{
-				headers: headers(token),
+				headers,
 			}
 		)
 		.then((response) => {
@@ -169,10 +168,10 @@ export const service_update_program = (token, venueId, id, payload) => {
 		});
 };
 
-export const service_remove_program = (token, venueId, id) => {
+export const service_remove_program = (venueId, id) => {
 	return axios
-		.delete(`${url}/api/venues/${venueId}/programs/${id}`, null, {
-			headers: headers(token),
+		.delete(`${url}/api/venues/${venueId}/programs/${id}`, {
+			headers,
 		})
 		.then((response) => {
 			return response.data;
@@ -181,7 +180,7 @@ export const service_remove_program = (token, venueId, id) => {
 
 // #endregion
 
-export const service_upload_image = (token, payload) => {
+export const service_upload_image = (payload) => {
 	return axios
 		.post(
 			`${url}/api/images/upload`,
@@ -189,7 +188,7 @@ export const service_upload_image = (token, payload) => {
 				...payload,
 			},
 			{
-				headers: headers(token),
+				headers,
 			}
 		)
 		.then((response) => {
