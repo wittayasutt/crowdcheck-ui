@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
+import PropTypes from 'prop-types';
 
 // components
 import Content from './content';
@@ -49,7 +50,7 @@ const DesktopContent = styled.div`
 	overflow-y: auto;
 `;
 
-const Density = () => {
+const Density = ({ data, updatedTime }) => {
 	const { density } = useMenu();
 
 	const router = useRouter();
@@ -59,18 +60,31 @@ const Density = () => {
 		<>
 			{density && (
 				<MobileMenu>
-					<Content />
+					<Content data={data} updatedTime={updatedTime} />
 				</MobileMenu>
 			)}
 
 			<Desktop>
 				<DesktopTitle>{t[locale].densityListTitle}</DesktopTitle>
 				<DesktopContent>
-					<Content />
+					<Content data={data} updatedTime={updatedTime} />
 				</DesktopContent>
 			</Desktop>
 		</>
 	);
+};
+
+Density.propTypes = {
+	data: PropTypes.array,
+	updatedTime: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.instanceOf(Date),
+	]),
+};
+
+Density.defaultProps = {
+	data: [],
+	updatedTime: new Date(),
 };
 
 export default Density;

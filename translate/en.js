@@ -52,7 +52,7 @@ export default {
 		zoom: 'Zoom in for spacific location',
 	},
 	link: 'Link',
-	linkDestination: 'Link Destination',
+	linkDestination: 'http://www.crowdcheck.info/',
 	linkTo: 'Link to',
 	locationName: 'Location Name',
 	owner: 'Exhibitor',

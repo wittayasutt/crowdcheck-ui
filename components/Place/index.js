@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 
 // components
 import Content from './content';
@@ -30,26 +31,37 @@ const Desktop = styled.div`
 	}
 `;
 
-const Place = () => {
+const Place = ({ updatedTime }) => {
 	const { place } = usePlace();
 
 	return (
 		<>
 			{place && (
 				<MobileMenuPlace>
-					<PlaceTitle data={place} />
+					<PlaceTitle data={place} updatedTime={updatedTime} />
 					<Content data={place} />
 				</MobileMenuPlace>
 			)}
 
 			{place && (
 				<Desktop>
-					<PlaceTitle data={place} />
+					<PlaceTitle data={place} updatedTime={updatedTime} />
 					<Content data={place} />
 				</Desktop>
 			)}
 		</>
 	);
+};
+
+Place.propTypes = {
+	updatedTime: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.instanceOf(Date),
+	]),
+};
+
+Place.defaultProps = {
+	updatedTime: new Date(),
 };
 
 export default Place;

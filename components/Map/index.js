@@ -1,11 +1,18 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import GoogleMapReact from 'google-map-react';
 
+import {
+	service_get_program_list,
+	service_get_venue_nearby,
+} from '../../services';
+
 import { defaultCenter, defaultZoom } from './const';
 import mapStyles from './theme';
+import { getContent } from '../../helpers';
 
 // components
 import Marker from '../Marker';
@@ -103,7 +110,10 @@ const mockMap = [
 	},
 ];
 
-const Map = ({ offset }) => {
+const Map = ({ data, offset }) => {
+	const router = useRouter();
+	const { locale } = router;
+
 	const { selectPlace } = useMap();
 
 	const [instance, setInstance] = useState(null);
@@ -120,7 +130,16 @@ const Map = ({ offset }) => {
 		});
 	};
 
-	const marker = mockMap;
+	const handleSelectPlace = (id) => {
+		service_get_program_list(id).then((res) => {
+			if (res.status === 'success') {
+				// TODO: find matching time place
+				if (res.data[0]) {
+					selectPlace(res.data[0]);
+				}
+			}
+		});
+	};
 
 	return (
 		<Wrapper offset={offset}>
@@ -136,16 +155,19 @@ const Map = ({ offset }) => {
 				yesIWantToUseGoogleMapApiInternals
 				onGoogleApiLoaded={({ map, maps }) => apiHasLoaded(map, maps)}
 			>
-				{marker.map((item, key) => (
-					<Marker
-						key={key}
-						level={item.level}
-						title={item.programName}
-						lat={item.location.lat}
-						lng={item.location.lng}
-						onClick={() => selectPlace(item)}
-					/>
-				))}
+				{data &&
+					data.map((item) => {
+						return item.location ? (
+							<Marker
+								key={item._id}
+								level={1}
+								title={getContent(item.name, locale)}
+								lat={item.location.latitude}
+								lng={item.location.longtitude}
+								onClick={() => handleSelectPlace(item._id)}
+							/>
+						) : null;
+					})}
 			</GoogleMapReact>
 		</Wrapper>
 	);
@@ -153,10 +175,12 @@ const Map = ({ offset }) => {
 
 Map.propTypes = {
 	offset: PropTypes.string,
+	data: PropTypes.array,
 };
 
 Map.defaultProps = {
 	offset: '0px',
+	data: [],
 };
 
 export default Map;

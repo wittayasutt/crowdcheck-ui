@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
-import { getLevelColor } from '../../helpers';
+import { getContent, getLevelColor } from '../../helpers';
 import dayjs from 'dayjs';
 
 // icon
@@ -95,7 +95,7 @@ const IconCaretDown = styled(FontAwesomeIcon)`
 	}
 `;
 
-const PlaceTitle = ({ data }) => {
+const PlaceTitle = ({ data, updatedTime }) => {
 	const router = useRouter();
 	const { locale } = router;
 
@@ -120,15 +120,16 @@ const PlaceTitle = ({ data }) => {
 		}
 	};
 
+	// TODO: add real level
 	return data ? (
-		<Wrapper levelColor={getLevelColor(data.level)} onClick={handleClosePlace}>
-			<Left>{getTitle(data.level)}</Left>
+		<Wrapper levelColor={getLevelColor(1)} onClick={handleClosePlace}>
+			<Left>{getTitle(1)}</Left>
 			<Right>
-				<div className='place-name'>{data.programName}</div>
+				<div className='place-name'>{getContent(data.name, locale)}</div>
 				<div className='updated-time'>
 					<span>
 						({t[locale].update}{' '}
-						{dayjs(data.date).format('DD/MM/YYYY , hh:mm a')})
+						{dayjs(updatedTime).format('DD/MM/YYYY , hh:mm a')})
 					</span>
 
 					<IconCaretDown icon={faCaretDown} />
@@ -140,10 +141,15 @@ const PlaceTitle = ({ data }) => {
 
 PlaceTitle.propTypes = {
 	data: PropTypes.object,
+	updatedTime: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.instanceOf(Date),
+	]),
 };
 
 PlaceTitle.defaultProps = {
 	data: null,
+	updatedTime: new Date(),
 };
 
 export default PlaceTitle;

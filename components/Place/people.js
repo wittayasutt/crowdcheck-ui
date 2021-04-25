@@ -14,7 +14,7 @@ const Person = styled.img`
 	}
 `;
 
-const People = ({ data }) => {
+const People = ({ level }) => {
 	const MAX_PEOPLE = 6;
 
 	const getLeftPeople = (people) => {
@@ -27,14 +27,14 @@ const People = ({ data }) => {
 		return leftPeople;
 	};
 
-	const people = getPeopleNumber(data.level);
+	const people = getPeopleNumber(level);
 
-	return data ? (
+	return level ? (
 		<Wrapper>
 			{Array.from(Array(people), (e, i) => (
 				<Person
 					key={i}
-					src={`/images/person_${getLevelColor(data.level)}.png`}
+					src={`/images/person_${getLevelColor(level)}.png`}
 					alt='person'
 				/>
 			))}
@@ -47,11 +47,11 @@ const People = ({ data }) => {
 };
 
 People.propTypes = {
-	data: PropTypes.object,
+	level: PropTypes.number,
 };
 
 People.defaultProps = {
-	data: null,
+	level: 1,
 };
 
 export default People;

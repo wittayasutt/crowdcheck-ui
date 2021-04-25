@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
+
+import { getContent, formatDate, formatTime } from '../../helpers';
 
 // components
 import People from './people';
@@ -51,7 +52,7 @@ const SubTitle = styled.p`
 	margin: 4px 0;
 `;
 
-const Date = styled.p`
+const DateTime = styled.p`
 	font-size: 12px;
 	font-weight: 500;
 
@@ -120,32 +121,115 @@ const PlaceContent = ({ data }) => {
 	const router = useRouter();
 	const { locale } = router;
 
+	const getShowDate = (dates) => {
+		const FORMAT_DATE = 'DD MMM';
+
+		const start = formatDate(dates.start, FORMAT_DATE);
+		const end = formatDate(dates.end, FORMAT_DATE);
+
+		if (start === end) {
+			return start;
+		}
+
+		return `${start} - ${end}`;
+	};
+
+	const getShowTime = (hours) => {
+		const FORMAT_TIME = 'HH:mm';
+
+		const start = formatTime(hours.start, FORMAT_TIME);
+		const end = formatTime(hours.end, FORMAT_TIME);
+
+		if (start === end) {
+			return start;
+		}
+
+		return `${start} - ${end}`;
+	};
+
+	const getLink = (website) => {
+		if (!website[0] || !website[0].url) {
+			return;
+		}
+
+		const { url } = website[0];
+		if (url.indexOf('http') === -1) {
+			return `http://${url}`;
+		}
+
+		return url;
+	};
+
+	const getLinkTitle = (website) => {
+		if (!website[0] || !website[0].name) {
+			return;
+		}
+
+		return getContent(website[0].name, locale);
+	};
+
+	const showDate =
+		data.openingTime && data.openingTime.dates
+			? getShowDate(data.openingTime.dates)
+			: null;
+
+	const showTime =
+		data.openingTime && data.openingTime.hours
+			? getShowTime(data.openingTime.hours)
+			: null;
+
+	const link = data.website ? getLink(data.website) : null;
+
+	const linkTitle = data.website ? getLinkTitle(data.website) : null;
+
 	return data ? (
 		<Wrapper>
-			<People data={data} />
-			<Title>{data.programName}</Title>
-			<SubTitle>{data.programType}</SubTitle>
-			<Date>1-9 FEB | 11:00-21:00</Date>
-			<Owner>{data.owner}</Owner>
+			<People level={1} />
+			{data.name && <Title>{getContent(data.name, locale)}</Title>}
+			{data.type && <SubTitle>{getContent(data.type, locale)}</SubTitle>}
+			{(showDate || (showDate && showTime)) && (
+				<DateTime>
+					{showDate}
+					{showTime && ` | ${showTime}`}
+				</DateTime>
+			)}
+			{data.owner && <Owner>{getContent(data.owner, locale)}</Owner>}
 
 			<Bottom>
 				<BottomLeft>
-					<Image src={data.programImage} alt={data.programName} />
-					<Detail className='_hide-mobile'>{data.detail}</Detail>
+					{data.images &&
+						data.images.map((image, index) => (
+							<Image
+								key={index}
+								src={image}
+								alt={getContent(data.name, locale)}
+							/>
+						))}
+					{data.description && (
+						<Detail className='_hide-mobile'>
+							{getContent(data.description, locale)}
+						</Detail>
+					)}
 					<Trend />
 					<Suggest />
 				</BottomLeft>
 
 				<BottomRight>
-					<Detail className='_hide-desktop'>{data.detail}</Detail>
-					<LinkWrapper>
-						<a href={data.link.to} target='_blank'>
-							<IconAngleLeft icon={faCaretRight} />
-							<span>
-								{t[locale].linkTo} {data.link.title}
-							</span>
-						</a>
-					</LinkWrapper>
+					{data.description && (
+						<Detail className='_hide-desktop'>
+							{getContent(data.description, locale)}
+						</Detail>
+					)}
+					{link && linkTitle && (
+						<LinkWrapper>
+							<a href={link} target='_blank'>
+								<IconAngleLeft icon={faCaretRight} />
+								<span>
+									{t[locale].linkTo} {linkTitle}
+								</span>
+							</a>
+						</LinkWrapper>
+					)}
 				</BottomRight>
 			</Bottom>
 		</Wrapper>

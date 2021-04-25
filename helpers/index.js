@@ -44,14 +44,14 @@ export const getContent = (content, lang) => {
 	return foundItem.content;
 };
 
-export const formatDate = (date) => {
-	const day = dayjs(date, 'DD/MM/YYYY').format();
+export const formatDate = (date, format) => {
+	const day = dayjs(date, 'DD/MM/YYYY').format(format);
 
-	return new Date(day);
+	return format ? day : new Date(day);
 };
 
-export const formatTime = (time) => {
-	const day = dayjs(time, 'HH:mm').format();
+export const formatTime = (time, format) => {
+	const day = dayjs(time, 'HH:mm').format(format);
 
-	return new Date(day);
+	return format ? day : new Date(day);
 };

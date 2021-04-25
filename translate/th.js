@@ -52,7 +52,7 @@ export default {
 		zoom: 'ขยายเพื่อดูรายละเอียดตำแหน่ง',
 	},
 	link: 'ลิงค์',
-	linkDestination: 'ลิงค์',
+	linkDestination: 'http://www.crowdcheck.info/',
 	linkTo: 'ลิงค์ไปยัง',
 	locationName: 'เปิดชื่อสถานที่',
 	owner: 'ผู้จัดแสดง',

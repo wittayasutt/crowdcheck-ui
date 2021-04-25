@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import dayjs from 'dayjs';
 import { useRouter } from 'next/router';
+import PropTypes from 'prop-types';
+import { getContent } from '../../helpers';
 
 // components
 import Marker from '../Marker';
@@ -52,18 +54,7 @@ const PlaceName = styled.div`
 	margin-left: 8px;
 `;
 
-const mockDensity = [
-	{ name: 'CROWDED PLACE', level: 4 },
-	{ name: 'CROWDED PLACE', level: 4 },
-	{ name: 'CROWDED PLACE', level: 4 },
-	{ name: 'CROWDED PLACE', level: 4 },
-	{ name: 'BAAN LIM NAME', level: 2 },
-	{ name: 'BAAN Lek Tee Neung ( House No. 1 )', level: 1 },
-];
-
-const DensityContent = () => {
-	const density = mockDensity;
-
+const DensityContent = ({ data, updatedTime }) => {
 	const router = useRouter();
 	const { locale } = router;
 
@@ -72,18 +63,36 @@ const DensityContent = () => {
 			<TitleWrapper>
 				<span className='title'>{t[locale].densityListTitle}</span>
 				<div className='updated-time'>
-					({t[locale].update} {dayjs(Date.now()).format('DD/MM/YYYY , hh:mm a')}
-					)
+					({t[locale].update}{' '}
+					{dayjs(updatedTime).format('DD/MM/YYYY , hh:mm a')})
 				</div>
 			</TitleWrapper>
-			{density.map((item, index) => (
-				<Row key={index}>
-					{item.level ? <Marker level={item.level} /> : <Marker level={0} />}
-					{item.name && <PlaceName>{item.name}</PlaceName>}
-				</Row>
-			))}
+			{data &&
+				data.map((item) => (
+					<Row key={item._id}>
+						{/* {item.level ? <Marker level={item.level} /> : <Marker level={0} />} */}
+						{/* TODO: add real level */}
+						<Marker level={1} />
+						{item.name && (
+							<PlaceName>{getContent(item.name, locale)}</PlaceName>
+						)}
+					</Row>
+				))}
 		</Wrapper>
 	);
+};
+
+DensityContent.propTypes = {
+	data: PropTypes.array,
+	updatedTime: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.instanceOf(Date),
+	]),
+};
+
+DensityContent.defaultProps = {
+	data: [],
+	updatedTime: new Date(),
 };
 
 export default DensityContent;
