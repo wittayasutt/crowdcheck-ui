@@ -55,3 +55,21 @@ export const formatTime = (time, format) => {
 
 	return format ? day : new Date(day);
 };
+
+export const transformCrowdData = (venueData, crowdData) => {
+	if (!venueData || !crowdData) {
+		return null;
+	}
+
+	const crowdDataKeys = Object.keys(crowdData);
+	const foundData = venueData.filter((item) => {
+		return crowdDataKeys.some((key) => key === item.refId);
+	});
+
+	return foundData.map((item) => {
+		return {
+			...item,
+			crowd: crowdData[item.refId],
+		};
+	});
+};

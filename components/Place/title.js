@@ -122,8 +122,8 @@ const PlaceTitle = ({ data, updatedTime }) => {
 
 	// TODO: add real level
 	return data ? (
-		<Wrapper levelColor={getLevelColor(1)} onClick={handleClosePlace}>
-			<Left>{getTitle(1)}</Left>
+		<Wrapper levelColor={getLevelColor(data.level)} onClick={handleClosePlace}>
+			<Left>{getTitle(data.level)}</Left>
 			<Right>
 				<div className='place-name'>{getContent(data.name, locale)}</div>
 				<div className='updated-time'>

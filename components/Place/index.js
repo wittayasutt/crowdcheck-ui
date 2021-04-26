@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 
 // components
 import Content from './content';
 import MobileMenuPlace from '../MobileMenu/place';
 import PlaceTitle from './title';
+
+// lang
+import t from '../../translate';
 
 const useRedux = () => {
 	const place = useSelector((state) => state.place);
@@ -31,22 +35,46 @@ const Desktop = styled.div`
 	}
 `;
 
+const NotFound = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 100%;
+	min-height: 20vh;
+`;
+
 const Place = ({ updatedTime }) => {
+	const router = useRouter();
+	const { locale } = router;
+
 	const { place } = useRedux();
 
 	return (
 		<>
 			{place && (
 				<MobileMenuPlace>
-					<PlaceTitle data={place} updatedTime={updatedTime} />
-					<Content data={place} />
+					{place === 'NO_EVENT' ? (
+						<NotFound>{t[locale].programNotFound}</NotFound>
+					) : (
+						<>
+							<PlaceTitle data={place} updatedTime={updatedTime} />
+							<Content data={place} />
+						</>
+					)}
 				</MobileMenuPlace>
 			)}
 
 			{place && (
 				<Desktop>
-					<PlaceTitle data={place} updatedTime={updatedTime} />
-					<Content data={place} />
+					{place === 'NO_EVENT' ? (
+						<NotFound>{t[locale].programNotFound}</NotFound>
+					) : (
+						<>
+							<PlaceTitle data={place} updatedTime={updatedTime} />
+							<Content data={place} />
+						</>
+					)}
 				</Desktop>
 			)}
 		</>

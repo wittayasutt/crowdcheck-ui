@@ -1,7 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
 
 import { service_get_venue_list, service_get_crowd } from '../services';
+import orderBy from 'lodash/orderBy';
+
+import { getContent, transformCrowdData } from '../helpers';
 
 // components
 import Header from '../components/Header';
@@ -22,17 +27,22 @@ const useRedux = () => {
 	const dispatch = useDispatch();
 	const setCrowdData = (crowdData) =>
 		dispatch({ type: 'SET_CROWD_DATA', crowdData });
+	const crowd = useSelector((state) => state.crowdData);
 
-	return { setCrowdData };
+	return { crowd, setCrowdData };
 };
 
 const HomePage = () => {
-	const { setCrowdData } = useRedux();
+	const router = useRouter();
+	const { locale } = router;
+
+	const { crowd, setCrowdData } = useRedux();
 
 	const [loading, setLoading] = useState(true);
 	const [timeInterval, setTimeInterval] = useState(null);
 	const [updatedTime, setUpdatedTime] = useState(Date.now());
 
+	const [rawVenue, setRawVenue] = useState([]);
 	const [venue, setVenue] = useState([]);
 
 	const getVenue = () => {
@@ -40,17 +50,52 @@ const HomePage = () => {
 
 		service_get_venue_list().then((res) => {
 			if (res.status === 'success') {
-				setVenue(res.data);
-				setLoading(false);
+				setRawVenue(res.data);
+				setVenueData(res.data, crowd);
 			}
 		});
 	};
 
 	const getCrowdData = () => {
 		service_get_crowd().then((res) => {
-			setCrowdData(res);
-			setUpdatedTime(Date.now());
+			if (res) {
+				setCrowdData(res);
+				setUpdatedTime(Date.now());
+			} else {
+				// can't get crowd api, waiting 5 sec and get again
+				setLoading(true);
+
+				const timeout = setTimeout(() => {
+					getCrowdData();
+				}, 5000);
+
+				clearTimeout(timeout);
+			}
 		});
+	};
+
+	const sortData = (data) => {
+		const sortedNameData = orderBy(data, (item) => {
+			return getContent(item.name, locale);
+		});
+
+		return orderBy(
+			sortedNameData,
+			(item) => {
+				return item.crowd.value;
+			},
+			'desc'
+		);
+	};
+
+	const setVenueData = (venueData, crowdData) => {
+		if (crowdData) {
+			const foundData = transformCrowdData(venueData, crowdData);
+			const sortedData = sortData(foundData);
+
+			setVenue(sortedData);
+			setLoading(false);
+		}
 	};
 
 	const interval = () => {
@@ -62,6 +107,10 @@ const HomePage = () => {
 
 		setTimeInterval(interval);
 	};
+
+	useEffect(() => {
+		setVenueData(rawVenue, crowd);
+	}, [crowd]);
 
 	useEffect(() => {
 		getVenue();

@@ -68,16 +68,16 @@ const DensityContent = ({ data, updatedTime }) => {
 				</div>
 			</TitleWrapper>
 			{data &&
-				data.map((item) => (
-					<Row key={item._id}>
-						{/* {item.level ? <Marker level={item.level} /> : <Marker level={0} />} */}
-						{/* TODO: add real level */}
-						<Marker level={1} />
-						{item.name && (
-							<PlaceName>{getContent(item.name, locale)}</PlaceName>
-						)}
-					</Row>
-				))}
+				data.map((item) => {
+					return item.crowd ? (
+						<Row key={item._id}>
+							{item.crowd.value && <Marker level={item.crowd.value} />}
+							{item.name && (
+								<PlaceName>{getContent(item.name, locale)}</PlaceName>
+							)}
+						</Row>
+					) : null;
+				})}
 		</Wrapper>
 	);
 };

@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 
-import { getContent } from '../../helpers';
+import { getContent, transformCrowdData } from '../../helpers';
 
 // components
 import Marker from '../Marker';
@@ -10,6 +12,12 @@ import Loading from '../Loading';
 
 // lang
 import t from '../../translate';
+
+const useRedux = () => {
+	const crowd = useSelector((state) => state.crowdData);
+
+	return { crowd };
+};
 
 const Wrapper = styled.div``;
 
@@ -38,20 +46,40 @@ const Suggest = ({ data }) => {
 	const router = useRouter();
 	const { locale } = router;
 
+	const { crowd } = useRedux();
+
+	const [suggest, setSuggest] = useState(null);
+
+	useEffect(() => {
+		if (data === 'loading') {
+			setSuggest(data);
+			return;
+		}
+
+		const suggestData = transformCrowdData(data, crowd);
+		if (suggestData && suggestData.length > 0) {
+			setSuggest(suggestData);
+		} else {
+			setSuggest(null);
+		}
+	}, [data]);
+
 	return (
-		data && (
+		suggest && (
 			<Wrapper>
 				<Title>{t[locale].suggestionPlace}</Title>
-				{data !== 'loading' ? (
-					data.map((item, index) => (
-						<Row key={index}>
-							{item.level ? <Marker level={1} /> : <Marker level={1} />}
-							{/* {item.level ? <Marker level={1} /> : <Marker level={0} />} */}
-							{item.name && (
-								<PlaceName>{getContent(item.name, locale)}</PlaceName>
-							)}
-						</Row>
-					))
+				{suggest !== 'loading' ? (
+					suggest.map(
+						(item, index) =>
+							item.crowd.value &&
+							item.name && (
+								<Row key={index}>
+									<Marker level={item.crowd.value} />
+
+									<PlaceName>{getContent(item.name, locale)}</PlaceName>
+								</Row>
+							)
+					)
 				) : (
 					<Loading />
 				)}

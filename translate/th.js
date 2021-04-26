@@ -78,6 +78,7 @@ export default {
 		title: 'ความเป็นส่วนตัว',
 	},
 	programName: 'ชื่อกิจกรรม',
+	programNotFound: 'ไม่พบกิจกรรมในเวลานี้',
 	programType: {
 		creativeMarket: 'ตลาด',
 		event: 'อีเวนท์',
