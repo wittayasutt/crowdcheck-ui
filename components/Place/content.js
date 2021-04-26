@@ -184,7 +184,7 @@ const PlaceContent = ({ data }) => {
 
 	return data ? (
 		<Wrapper>
-			<People level={1} />
+			<People level={data.name} />
 			{data.name && <Title>{getContent(data.name, locale)}</Title>}
 			{data.type && <SubTitle>{getContent(data.type, locale)}</SubTitle>}
 			{(showDate || (showDate && showTime)) && (

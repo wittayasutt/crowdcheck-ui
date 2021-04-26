@@ -100,7 +100,7 @@ export default {
 	time: 'Time',
 	travelSuggestion: {
 		content_1: `1. Check information on the outbreak of COVID 19 in the country from the website of the Department of Disease Control. <a href='https://covid19.ddc.moph.go.th' target='_blank'>https://covid19.ddc.moph.go.th</a>.`,
-		content_2: `2. Inform contact information for agencies that assist in the occurrence of illness or emergency while traveling: hospital xx call xx police station xx call xx festival information center call xx`,
+		content_2: `2. Inform contact information for agencies that assist in the occurrence of illness or emergency while traveling: hospital call 02-3539800-1 police station call 02-234-0242, 02-233-7420 festival information center call 02-105-7400`,
 		content_3: `3. People with chronic diseases Immunocompromised, young children and the elderly be cautious when entering crowded areas and in contact with others.`,
 		content_4: `4. Choose accommodation, restaurant or tourist attractions Certified for Safety and Health Administration standard :SHA`,
 		content_5: `5. Recommend traveling on dates and times that are not crowded would reduce the risk of infection from others`,
