@@ -33,6 +33,8 @@ const useRedux = () => {
 };
 
 const HomePage = () => {
+	console.log('crowdcheck.info');
+
 	const router = useRouter();
 	const { locale } = router;
 
