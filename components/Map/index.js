@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
+import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import GoogleMapReact from 'google-map-react';
@@ -23,12 +24,14 @@ const bootstrapURLKeys = {
 	libraries: ['places', 'geometry'],
 };
 
-const useMap = () => {
+const useRedux = () => {
 	const dispatch = useDispatch();
 	const selectPlace = (place) => dispatch({ type: 'SELECT_PLACE', place });
+	const showPlaceName = useSelector((state) => state.showPlaceName);
 
 	return { selectPlace };
 };
+
 
 const Wrapper = styled.nav`
 	height: calc(100vh - 176px);
@@ -39,82 +42,11 @@ const Wrapper = styled.nav`
 	}
 `;
 
-const mockMap = [
-	{
-		programName: 'Lighting Exhibition',
-		programType: 'Program Type',
-		programImage: '/mock/colosseum.jpeg',
-		owner: 'Exhibitor',
-		detail: 'Lighting Designers Thailand',
-		date: Date.now(),
-		level: 1,
-		location: {
-			lat: 13.746774,
-			lng: 100.5126445,
-		},
-		link: {
-			title: 'BKKDW',
-			to: 'https://www.google.co.th/',
-		},
-	},
-	{
-		programName: 'Lighting Exhibition',
-		programType: 'Program Type',
-		programImage: '/mock/colosseum.jpeg',
-		owner: 'Exhibitor',
-		detail: 'Lighting Designers Thailand',
-		date: Date.now(),
-		level: 2,
-		location: {
-			lat: 13.736774,
-			lng: 100.5326445,
-		},
-		link: {
-			title: 'BKKDW',
-			to: 'https://www.google.co.th/',
-		},
-	},
-	{
-		programName: 'Lighting Exhibition',
-		programType: 'Program Type',
-		programImage: '/mock/colosseum.jpeg',
-		owner: 'Exhibitor',
-		detail: 'Lighting Designers Thailand',
-		date: Date.now(),
-		level: 3,
-		location: {
-			lat: 13.746774,
-			lng: 100.5526445,
-		},
-		link: {
-			title: 'BKKDW',
-			to: 'https://www.google.co.th/',
-		},
-	},
-	{
-		programName: 'Lighting Exhibition',
-		programType: 'Program Type',
-		programImage: '/mock/colosseum.jpeg',
-		owner: 'Exhibitor',
-		detail: 'Lighting Designers Thailand',
-		date: Date.now(),
-		level: 4,
-		location: {
-			lat: 13.756774,
-			lng: 100.5326445,
-		},
-		link: {
-			title: 'BKKDW',
-			to: 'https://www.google.co.th/',
-		},
-	},
-];
-
 const Map = ({ data, offset }) => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const { selectPlace } = useMap();
+	const { selectPlace } = useRedux();
 
 	const [instance, setInstance] = useState(null);
 	const [mapApi, setMapApi] = useState({
@@ -135,8 +67,17 @@ const Map = ({ data, offset }) => {
 			if (res.status === 'success') {
 				// TODO: find matching time place
 				if (res.data[0]) {
-					selectPlace(res.data[0]);
+					selectPlace({ ...res.data[0], nearby: 'loading' });
+					handleGetNearlyPlace(id, res.data[0]);
 				}
+			}
+		});
+	};
+
+	const handleGetNearlyPlace = (id, place) => {
+		service_get_venue_nearby(id).then((res) => {
+			if (res.status === 'success') {
+				selectPlace({ ...place, nearby: res.data });
 			}
 		});
 	};

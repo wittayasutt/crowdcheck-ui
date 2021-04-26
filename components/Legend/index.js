@@ -9,7 +9,7 @@ import MobileMenu from '../MobileMenu';
 // lang
 import t from '../../translate';
 
-const useMenu = () => {
+const useRedux = () => {
 	const legend = useSelector((state) => state.showLegend);
 
 	return { legend };
@@ -56,7 +56,7 @@ const DesktopContent = styled.div`
 `;
 
 const Legend = () => {
-	const { legend } = useMenu();
+	const { legend } = useRedux();
 
 	const router = useRouter();
 	const { locale } = router;

@@ -7,7 +7,7 @@ import Content from './content';
 import MobileMenuPlace from '../MobileMenu/place';
 import PlaceTitle from './title';
 
-const usePlace = () => {
+const useRedux = () => {
 	const place = useSelector((state) => state.place);
 
 	return { place };
@@ -32,7 +32,7 @@ const Desktop = styled.div`
 `;
 
 const Place = ({ updatedTime }) => {
-	const { place } = usePlace();
+	const { place } = useRedux();
 
 	return (
 		<>

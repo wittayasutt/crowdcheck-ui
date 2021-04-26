@@ -2,12 +2,14 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
-	height: ${(props) => (props.fullpage ? '100vh' : '100%')};
+	height: ${(props) => (props.fullpage ? '100vh' : 'auto')};
 	width: 100%;
 
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	${(props) => !props.fullpage && 'transform: scale(0.5)'};
 
 	.lds-grid {
 		display: inline-block;

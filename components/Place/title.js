@@ -12,7 +12,7 @@ import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 // lang
 import t from '../../translate';
 
-const usePlace = () => {
+const useRedux = () => {
 	const dispatch = useDispatch();
 	const deselectPlace = () => dispatch({ type: 'DESELECT_PLACE' });
 
@@ -99,7 +99,7 @@ const PlaceTitle = ({ data, updatedTime }) => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const { deselectPlace } = usePlace();
+	const { deselectPlace } = useRedux();
 
 	const handleClosePlace = () => {
 		deselectPlace();

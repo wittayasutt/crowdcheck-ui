@@ -2,6 +2,7 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 
 const url = process.env.API_BASE_URL;
+const crowdUrl = process.env.API_CROWD_URL;
 const token = Cookies.get('token') || null;
 
 const headers = {
@@ -188,4 +189,10 @@ export const service_upload_image = (payload) => {
 		.then((response) => {
 			return response.data;
 		});
+};
+
+export const service_get_crowd = () => {
+	return axios.get(crowdUrl).then((response) => {
+		return response.data;
+	});
 };

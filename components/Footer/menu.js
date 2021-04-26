@@ -12,7 +12,7 @@ import t from '../../translate';
 
 import { LANGUAGE } from '../../enum/lang';
 
-const useMenu = () => {
+const useRedux = () => {
 	const density = useSelector((state) => state.showDensity);
 	const legend = useSelector((state) => state.showLegend);
 
@@ -66,7 +66,7 @@ const MenuComponent = () => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const { density, legend, showDensity, showLegend, hideMenu } = useMenu();
+	const { density, legend, showDensity, showLegend, hideMenu } = useRedux();
 
 	const handleOpenDensity = () => {
 		if (density) {

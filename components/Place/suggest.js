@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import PropTypes from 'prop-types';
+
+import { getContent } from '../../helpers';
 
 // components
 import Marker from '../Marker';
+import Loading from '../Loading';
 
 // lang
 import t from '../../translate';
@@ -30,31 +34,38 @@ const PlaceName = styled.div`
 	margin-left: 8px;
 `;
 
-const mockSuggest = [
-	{ name: 'BAAN Lek Tee Neung ( House No. 1 )', level: 1 },
-	{ name: 'BAAN LIM NAME', level: 2 },
-	{ name: 'CROWDED PLACE', level: 4 },
-];
-
-const Suggest = () => {
+const Suggest = ({ data }) => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const suggest = mockSuggest;
-
 	return (
-		suggest && (
+		data && (
 			<Wrapper>
 				<Title>{t[locale].suggestionPlace}</Title>
-				{suggest.map((item, index) => (
-					<Row key={index}>
-						{item.level ? <Marker level={item.level} /> : <Marker level={0} />}
-						{item.name && <PlaceName>{item.name}</PlaceName>}
-					</Row>
-				))}
+				{data !== 'loading' ? (
+					data.map((item, index) => (
+						<Row key={index}>
+							{item.level ? <Marker level={1} /> : <Marker level={1} />}
+							{/* {item.level ? <Marker level={1} /> : <Marker level={0} />} */}
+							{item.name && (
+								<PlaceName>{getContent(item.name, locale)}</PlaceName>
+							)}
+						</Row>
+					))
+				) : (
+					<Loading />
+				)}
 			</Wrapper>
 		)
 	);
+};
+
+Suggest.propTypes = {
+	data: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+};
+
+Suggest.defaultProps = {
+	data: null,
 };
 
 export default Suggest;

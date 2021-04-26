@@ -10,7 +10,7 @@ import MobileMenu from '../MobileMenu';
 // lang
 import t from '../../translate';
 
-const useMenu = () => {
+const useRedux = () => {
 	const density = useSelector((state) => state.showDensity);
 
 	return { density };
@@ -51,7 +51,7 @@ const DesktopContent = styled.div`
 `;
 
 const Density = ({ data, updatedTime }) => {
-	const { density } = useMenu();
+	const { density } = useRedux();
 
 	const router = useRouter();
 	const { locale } = router;

@@ -13,6 +13,7 @@ module.exports = {
 		GCS_KEYFILE: process.env.GCS_KEYFILE,
 		SUGGESTION_DISTANCE_M: process.env.SUGGESTION_DISTANCE_M,
 		API_BASE_URL: process.env.API_BASE_URL,
+		API_CROWD_URL: process.env.API_CROWD_URL,
 	},
 
 	sassOptions: {

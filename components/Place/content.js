@@ -211,7 +211,7 @@ const PlaceContent = ({ data }) => {
 						</Detail>
 					)}
 					<Trend />
-					<Suggest />
+					{data.nearby && <Suggest data={data.nearby} />}
 				</BottomLeft>
 
 				<BottomRight>

@@ -97,7 +97,7 @@ const AdminFormVenue = ({ data, isView, onUpdate }) => {
 						<input
 							className='input'
 							type='text'
-							placeholder='A-100'
+							placeholder='01-AAA'
 							value={id}
 							onChange={handleSetId}
 						/>

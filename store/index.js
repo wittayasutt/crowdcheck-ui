@@ -9,9 +9,12 @@ const initialState = {
 	showLegend: false,
 	place: null,
 	showPlaceName: false,
+	crowdData: null,
 };
 
 const reducer = (state = initialState, action) => {
+	console.log('action', action);
+
 	switch (action.type) {
 		case 'SHOW_DENSITY':
 			return {
@@ -46,6 +49,12 @@ const reducer = (state = initialState, action) => {
 			return {
 				...state,
 				showPlaceName: !state.showPlaceName,
+			};
+		}
+		case 'SET_CROWD_DATA': {
+			return {
+				...state,
+				crowdData: action.crowdData,
 			};
 		}
 		default:

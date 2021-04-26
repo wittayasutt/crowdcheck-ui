@@ -11,7 +11,7 @@ import Checkbox from './checkbox';
 // lang
 import t from '../../translate';
 
-const usePlace = () => {
+const useRedux = () => {
 	const dispatch = useDispatch();
 	const togglePlaceName = () => dispatch({ type: 'TOGGLE_PLACE_NAME' });
 
@@ -59,7 +59,7 @@ const LegendContent = () => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const { togglePlaceName } = usePlace();
+	const { togglePlaceName } = useRedux();
 
 	const handleTogglePlaceName = () => {
 		togglePlaceName();

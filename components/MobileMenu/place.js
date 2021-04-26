@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 
-const usePlace = () => {
+const useRedux = () => {
 	const dispatch = useDispatch();
 	const deselectPlace = () => dispatch({ type: 'DESELECT_PLACE' });
 
@@ -51,7 +51,7 @@ const ContentWrapper = styled.div`
 `;
 
 const MobileMenuPlace = ({ children }) => {
-	const { deselectPlace } = usePlace();
+	const { deselectPlace } = useRedux();
 
 	const handleClosePlace = () => {
 		deselectPlace();

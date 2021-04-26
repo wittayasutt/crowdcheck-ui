@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
-import { service_get_venue_list } from '../services';
+import { service_get_venue_list, service_get_crowd } from '../services';
 
 // components
 import Header from '../components/Header';
@@ -17,7 +18,17 @@ import Place from '../components/Place';
 // 3 Minutes
 const INTERVAL_TIME = 180000;
 
+const useRedux = () => {
+	const dispatch = useDispatch();
+	const setCrowdData = (crowdData) =>
+		dispatch({ type: 'SET_CROWD_DATA', crowdData });
+
+	return { setCrowdData };
+};
+
 const HomePage = () => {
+	const { setCrowdData } = useRedux();
+
 	const [loading, setLoading] = useState(true);
 	const [timeInterval, setTimeInterval] = useState(null);
 	const [updatedTime, setUpdatedTime] = useState(Date.now());
@@ -36,8 +47,17 @@ const HomePage = () => {
 	};
 
 	const getCrowdData = () => {
-		const interval = setInterval(() => {
+		service_get_crowd().then((res) => {
+			setCrowdData(res);
 			setUpdatedTime(Date.now());
+		});
+	};
+
+	const interval = () => {
+		getCrowdData();
+
+		const interval = setInterval(() => {
+			getCrowdData();
 		}, INTERVAL_TIME);
 
 		setTimeInterval(interval);
@@ -45,7 +65,7 @@ const HomePage = () => {
 
 	useEffect(() => {
 		getVenue();
-		getCrowdData();
+		interval();
 
 		return () => {
 			clearInterval(timeInterval);

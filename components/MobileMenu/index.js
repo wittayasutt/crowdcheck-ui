@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 
-const useMenu = () => {
+const useRedux = () => {
 	const dispatch = useDispatch();
 	const hideMenu = () => dispatch({ type: 'HIDE_MENU' });
 
@@ -53,7 +53,7 @@ const ContentWrapper = styled.div`
 `;
 
 const MobileMenu = ({ children }) => {
-	const { hideMenu } = useMenu();
+	const { hideMenu } = useRedux();
 
 	const handleCloseMenu = () => {
 		hideMenu();

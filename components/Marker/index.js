@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { getLevelColor } from '../../helpers';
 
-const usePlace = () => {
+const useRedux = () => {
 	const showPlaceName = useSelector((state) => state.showPlaceName);
 
 	return { showPlaceName };
@@ -21,7 +21,7 @@ const Span = styled.span`
 `;
 
 const Marker = ({ level, title, onClick }) => {
-	const { showPlaceName } = usePlace();
+	const { showPlaceName } = useRedux();
 	const marker = getLevelColor(level);
 
 	return (
