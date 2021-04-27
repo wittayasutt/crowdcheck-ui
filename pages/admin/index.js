@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 import {
+	service_auth,
 	service_get_venue_list,
 	service_remove_venue,
 	service_get_program_list,
@@ -30,22 +31,30 @@ const Admin = () => {
 	const [venue, setVenue] = useState([]);
 	const [program, setProgram] = useState([]);
 
-	const getVenue = () => {
+	const checkAuth = () => {
 		setLoading(true);
 
-		service_get_venue_list()
+		service_auth()
 			.then((res) => {
 				if (res.status === 'success') {
-					setVenue(res.data);
+					getVenue();
 				} else {
 					router.push('/admin/login');
 				}
-
-				setLoading(false);
 			})
 			.catch(() => {
 				router.push('/admin/login');
 			});
+	};
+
+	const getVenue = () => {
+		service_get_venue_list().then((res) => {
+			if (res.status === 'success') {
+				setVenue(res.data);
+			}
+
+			setLoading(false);
+		});
 	};
 
 	const removeVenueById = (id) => {
@@ -74,7 +83,7 @@ const Admin = () => {
 	};
 
 	useEffect(() => {
-		getVenue();
+		checkAuth();
 	}, []);
 
 	return (

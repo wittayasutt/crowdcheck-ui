@@ -37,6 +37,16 @@ export const service_register = (username, password) => {
 		});
 };
 
+export const service_auth = () => {
+	return axios
+		.get(`${url}/api/user/auth`, {
+			headers,
+		})
+		.then((response) => {
+			return response.data;
+		});
+};
+
 // #endregion
 
 // #region VENUE
