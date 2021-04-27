@@ -39,7 +39,7 @@ export const service_register = (username, password) => {
 
 export const service_auth = () => {
 	return axios
-		.get(`${url}/api/user/auth`, {
+		.get(`${url}/api/users/auth`, {
 			headers,
 		})
 		.then((response) => {
