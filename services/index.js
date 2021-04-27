@@ -3,10 +3,13 @@ import Cookies from 'js-cookie';
 
 const url = process.env.API_BASE_URL;
 const crowdUrl = process.env.API_CROWD_URL;
-const token = Cookies.get('token') || null;
 
-const headers = {
-	Authorization: `Token ${token}`,
+const getHeaders = () => {
+	const token = Cookies.get('token') || null;
+
+	return {
+		Authorization: `Token ${token}`,
+	};
 };
 
 // #region AUTH
@@ -40,7 +43,7 @@ export const service_register = (username, password) => {
 export const service_auth = () => {
 	return axios
 		.get(`${url}/api/users/auth`, {
-			headers,
+			headers: getHeaders(),
 		})
 		.then((response) => {
 			return response.data;
@@ -54,7 +57,7 @@ export const service_auth = () => {
 export const service_get_venue_list = () => {
 	return axios
 		.get(`${url}/api/venues`, {
-			headers,
+			headers: getHeaders(),
 		})
 		.then((response) => {
 			return response.data;
@@ -64,7 +67,7 @@ export const service_get_venue_list = () => {
 export const service_get_venue = (id) => {
 	return axios
 		.get(`${url}/api/venues/${id}`, {
-			headers,
+			headers: getHeaders(),
 		})
 		.then((response) => {
 			return response.data;
@@ -79,7 +82,7 @@ export const service_create_venue = (payload) => {
 				...payload,
 			},
 			{
-				headers,
+				headers: getHeaders(),
 			}
 		)
 		.then((response) => {
@@ -95,7 +98,7 @@ export const service_update_venue = (payload, id) => {
 				...payload,
 			},
 			{
-				headers,
+				headers: getHeaders(),
 			}
 		)
 		.then((response) => {
@@ -106,7 +109,7 @@ export const service_update_venue = (payload, id) => {
 export const service_remove_venue = (id) => {
 	return axios
 		.delete(`${url}/api/venues/${id}`, {
-			headers,
+			headers: getHeaders(),
 		})
 		.then((response) => {
 			return response.data;
@@ -116,7 +119,7 @@ export const service_remove_venue = (id) => {
 export const service_get_venue_nearby = (id) => {
 	return axios
 		.get(`${url}/api/venues/suggest/${id}`, {
-			headers,
+			headers: getHeaders(),
 		})
 		.then((response) => {
 			return response.data;
@@ -130,7 +133,7 @@ export const service_get_venue_nearby = (id) => {
 export const service_get_program_list = (venueId) => {
 	return axios
 		.get(`${url}/api/venues/${venueId}/programs`, {
-			headers,
+			headers: getHeaders(),
 		})
 		.then((response) => {
 			return response.data;
@@ -140,7 +143,7 @@ export const service_get_program_list = (venueId) => {
 export const service_get_program = (venueId, id) => {
 	return axios
 		.get(`${url}/api/venues/${venueId}/programs/${id}`, {
-			headers,
+			headers: getHeaders(),
 		})
 		.then((response) => {
 			return response.data;
@@ -155,7 +158,7 @@ export const service_create_program = (payload, venueId) => {
 				...payload,
 			},
 			{
-				headers,
+				headers: getHeaders(),
 			}
 		)
 		.then((response) => {
@@ -171,7 +174,7 @@ export const service_update_program = (payload, venueId, id) => {
 				...payload,
 			},
 			{
-				headers,
+				headers: getHeaders(),
 			}
 		)
 		.then((response) => {
@@ -182,7 +185,7 @@ export const service_update_program = (payload, venueId, id) => {
 export const service_remove_program = (venueId, id) => {
 	return axios
 		.delete(`${url}/api/venues/${venueId}/programs/${id}`, {
-			headers,
+			headers: getHeaders(),
 		})
 		.then((response) => {
 			return response.data;
@@ -194,7 +197,7 @@ export const service_remove_program = (venueId, id) => {
 export const service_upload_image = (payload) => {
 	return axios
 		.post(`${url}/api/images/upload`, payload, {
-			headers,
+			headers: getHeaders(),
 		})
 		.then((response) => {
 			return response.data;
