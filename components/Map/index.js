@@ -59,20 +59,20 @@ const Map = ({ data, offset }) => {
 		});
 	};
 
-	const handleSelectPlace = (id, venueName, level) => {
+	const handleSelectPlace = (id, venueName, crowd) => {
 		service_get_program_list(id).then((res) => {
 			if (res.status === 'success') {
 				const matchedPrograms = getMatchingProgram(res.data);
 
-				if (matchedPrograms.length > 0) {
+				if (matchedPrograms.length > 0 && crowd.value) {
 					selectPlace({
 						programs: matchedPrograms,
 						venueName,
-						level,
+						crowd,
 						nearby: 'loading',
 					});
 
-					handleGetNearlyPlace(id, matchedPrograms, venueName, level);
+					handleGetNearlyPlace(id, matchedPrograms, venueName, crowd);
 				} else {
 					selectPlace('NO_EVENT');
 				}
@@ -80,13 +80,13 @@ const Map = ({ data, offset }) => {
 		});
 	};
 
-	const handleGetNearlyPlace = (id, programs, venueName, level) => {
+	const handleGetNearlyPlace = (id, programs, venueName, crowd) => {
 		service_get_venue_nearby(id).then((res) => {
 			if (res.status === 'success') {
 				selectPlace({
 					programs,
 					venueName,
-					level,
+					crowd,
 					nearby: res.data,
 				});
 			}
@@ -109,7 +109,7 @@ const Map = ({ data, offset }) => {
 			>
 				{data &&
 					data.map((item) => {
-						return item.crowd.value && item.location ? (
+						return item.crowd && item.crowd.value && item.location ? (
 							<Marker
 								key={item._id}
 								level={item.crowd.value}
@@ -120,7 +120,7 @@ const Map = ({ data, offset }) => {
 									handleSelectPlace(
 										item._id,
 										getContent(item.name, locale),
-										item.crowd.value
+										item.crowd
 									)
 								}
 							/>

@@ -177,7 +177,7 @@ const PlaceContent = ({ data }) => {
 
 	return data ? (
 		<Wrapper>
-			{data.level && <People level={data.level} />}
+			{data.crowd && data.crowd.value && <People level={data.crowd.value} />}
 
 			{data.programs &&
 				data.programs.map((program, index) => {
@@ -251,7 +251,9 @@ const PlaceContent = ({ data }) => {
 					);
 				})}
 
-			<Trend />
+			{data.crowd && data.crowd.historic && (
+				<Trend data={data.crowd.historic} />
+			)}
 			{data.nearby && <Suggest data={data.nearby} />}
 		</Wrapper>
 	) : null;

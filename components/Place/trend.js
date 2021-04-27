@@ -1,6 +1,8 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import { getLevelColor } from '../../helpers';
+import dayjs from 'dayjs';
 
 // lang
 import t from '../../translate';
@@ -43,82 +45,27 @@ const ColText = styled.div`
 	font-size: 8px;
 `;
 
-const mockTrend = [
-	{
-		10: 1,
-		11: 1,
-		12: 2,
-		13: 0,
-		14: 0,
-		15: 0,
-		16: 0,
-		17: 0,
-		18: 0,
-	},
-	{
-		10: 1,
-		11: 1,
-		12: 2,
-		13: 3,
-		14: 4,
-		15: 4,
-		16: 3,
-		17: 1,
-		18: 1,
-	},
-	{
-		10: 1,
-		11: 2,
-		12: 2,
-		13: 3,
-		14: 3,
-		15: 4,
-		16: 4,
-		17: 1,
-		18: 1,
-	},
-	{
-		10: 1,
-		11: 1,
-		12: 2,
-		13: 4,
-		14: 4,
-		15: 2,
-		16: 3,
-		17: 1,
-		18: 2,
-	},
-	{
-		10: 1,
-		11: 1,
-		12: 3,
-		13: 2,
-		14: 4,
-		15: 2,
-		16: 3,
-		17: 1,
-		18: 1,
-	},
-];
-
-const Trend = () => {
+const Trend = ({ data }) => {
 	const router = useRouter();
 	const { locale } = router;
 
 	const timeToIndex = (time) => {
-		// 10 o'clock return to index 0
-		return time - 10;
+		return parseInt(time) - 10;
 	};
 
 	const transformTimeData = (data) => {
-		let array = [];
+		let newDate = [];
 
-		for (const [key, value] of Object.entries(data)) {
-			const index = timeToIndex(key);
-			array[index] = value;
+		for (const item in data) {
+			if (data.hasOwnProperty(item)) {
+				const key = item.substring(0, 2);
+				const index = timeToIndex(key);
+
+				newDate[index] = data[item];
+			}
 		}
 
-		return array;
+		return newDate;
 	};
 
 	const transformDataToTime = (data) => {
@@ -143,7 +90,23 @@ const Trend = () => {
 		});
 	};
 
-	const trendRecord = transformDataToTime(mockTrend);
+	const transformRawData = (data) => {
+		let newDate = [];
+
+		for (const item in data) {
+			if (data.hasOwnProperty(item)) {
+				const diff = dayjs(item).diff(new Date(), 'day');
+				const day = Math.abs(diff);
+
+				newDate[day] = data[item];
+			}
+		}
+
+		return newDate;
+	};
+
+	const transformedData = transformRawData(data);
+	const trendRecord = transformDataToTime(transformedData);
 
 	return (
 		trendRecord && (
@@ -169,6 +132,14 @@ const Trend = () => {
 			</Wrapper>
 		)
 	);
+};
+
+Trend.propTypes = {
+	data: PropTypes.object,
+};
+
+Trend.defaultProps = {
+	data: {},
 };
 
 export default Trend;

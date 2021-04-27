@@ -120,9 +120,12 @@ const PlaceTitle = ({ data, updatedTime }) => {
 		}
 	};
 
-	return data ? (
-		<Wrapper levelColor={getLevelColor(data.level)} onClick={handleClosePlace}>
-			<Left>{getTitle(data.level)}</Left>
+	return data && data.crowd && data.crowd.value ? (
+		<Wrapper
+			levelColor={getLevelColor(data.crowd.value)}
+			onClick={handleClosePlace}
+		>
+			<Left>{getTitle(data.crowd.value)}</Left>
 			<Right>
 				{data.venueName && <div className='place-name'>{data.venueName}</div>}
 				<div className='updated-time'>

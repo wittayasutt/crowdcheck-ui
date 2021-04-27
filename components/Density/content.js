@@ -69,7 +69,7 @@ const DensityContent = ({ data, updatedTime }) => {
 			</TitleWrapper>
 			{data &&
 				data.map((item) => {
-					return item.crowd ? (
+					return item.crowd && item.crowd.value ? (
 						<Row key={item._id}>
 							{item.crowd.value && <Marker level={item.crowd.value} />}
 							{item.name && (
