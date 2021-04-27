@@ -120,12 +120,11 @@ const PlaceTitle = ({ data, updatedTime }) => {
 		}
 	};
 
-	// TODO: add real level
 	return data ? (
 		<Wrapper levelColor={getLevelColor(data.level)} onClick={handleClosePlace}>
 			<Left>{getTitle(data.level)}</Left>
 			<Right>
-				<div className='place-name'>{getContent(data.name, locale)}</div>
+				{data.venueName && <div className='place-name'>{data.venueName}</div>}
 				<div className='updated-time'>
 					<span>
 						({t[locale].update}{' '}

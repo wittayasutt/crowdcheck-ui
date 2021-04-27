@@ -1,28 +1,43 @@
-import PropTypes from 'prop-types'
-import Header from './index'
-import Router from 'next/router'
+import PropTypes from 'prop-types';
+import Header from './index';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+
+import { service_auth } from '../../services';
 
 const AdminHeader = ({ children }) => {
-	// TODO: check permission
+	const router = useRouter();
 
-	// if (process.browser) {
-	// 	Router.push(`/admin/login`)
-	// }
+	const checkAuth = () => {
+		service_auth()
+			.then((res) => {
+				if (!res.status === 'success') {
+					router.push('/admin/login');
+				}
+			})
+			.catch(() => {
+				router.push('/admin/login');
+			});
+	};
+
+	useEffect(() => {
+		checkAuth();
+	}, []);
 
 	return (
 		<Header>
 			<title>Administrator | Crowdcheck.io</title>
 			{children}
 		</Header>
-	)
-}
+	);
+};
 
 AdminHeader.propTypes = {
 	children: PropTypes.node,
-}
+};
 
 AdminHeader.defaultProps = {
 	children: <></>,
-}
+};
 
-export default AdminHeader
+export default AdminHeader;

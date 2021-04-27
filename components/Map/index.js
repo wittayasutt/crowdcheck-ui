@@ -12,7 +12,7 @@ import {
 
 import { defaultCenter, defaultZoom } from './const';
 import mapStyles from './theme';
-import { getContent } from '../../helpers';
+import { getContent, getMatchingProgram } from '../../helpers';
 
 // components
 import Marker from '../Marker';
@@ -59,13 +59,20 @@ const Map = ({ data, offset }) => {
 		});
 	};
 
-	const handleSelectPlace = (id, level) => {
+	const handleSelectPlace = (id, venueName, level) => {
 		service_get_program_list(id).then((res) => {
 			if (res.status === 'success') {
-				// TODO: find matching time place
-				if (res.data[0]) {
-					selectPlace({ ...res.data[0], level, nearby: 'loading' });
-					handleGetNearlyPlace(id, level, res.data[0]);
+				const matchedPrograms = getMatchingProgram(res.data);
+
+				if (matchedPrograms.length > 0) {
+					selectPlace({
+						programs: matchedPrograms,
+						venueName,
+						level,
+						nearby: 'loading',
+					});
+
+					handleGetNearlyPlace(id, matchedPrograms, venueName, level);
 				} else {
 					selectPlace('NO_EVENT');
 				}
@@ -73,10 +80,15 @@ const Map = ({ data, offset }) => {
 		});
 	};
 
-	const handleGetNearlyPlace = (id, level, place) => {
+	const handleGetNearlyPlace = (id, programs, venueName, level) => {
 		service_get_venue_nearby(id).then((res) => {
 			if (res.status === 'success') {
-				selectPlace({ ...place, level, nearby: res.data });
+				selectPlace({
+					programs,
+					venueName,
+					level,
+					nearby: res.data,
+				});
 			}
 		});
 	};
@@ -104,7 +116,13 @@ const Map = ({ data, offset }) => {
 								title={getContent(item.name, locale)}
 								lat={item.location.latitude}
 								lng={item.location.longtitude}
-								onClick={() => handleSelectPlace(item._id, item.crowd.value)}
+								onClick={() =>
+									handleSelectPlace(
+										item._id,
+										getContent(item.name, locale),
+										item.crowd.value
+									)
+								}
 							/>
 						) : null;
 					})}

@@ -39,6 +39,13 @@ const Wrapper = styled.div`
 	}
 `;
 
+const Program = styled.div`
+	margin-bottom: ${(props) => (props.last ? '0' : '8px')};
+	padding-bottom: ${(props) => (props.last ? '0' : '8px')};
+	border-bottom: ${(props) => (props.last ? '0' : '1px')} solid
+		${(props) => props.theme.color.darkGray};
+`;
+
 const Title = styled.h2`
 	font-size: 16px;
 	font-weight: 500;
@@ -168,70 +175,84 @@ const PlaceContent = ({ data }) => {
 		return getContent(website[0].name, locale);
 	};
 
-	const showDate =
-		data.openingTime && data.openingTime.dates
-			? getShowDate(data.openingTime.dates)
-			: null;
-
-	const showTime =
-		data.openingTime && data.openingTime.hours
-			? getShowTime(data.openingTime.hours)
-			: null;
-
-	const link = data.website ? getLink(data.website) : null;
-
-	const linkTitle = data.website ? getLinkTitle(data.website) : null;
-
 	return data ? (
 		<Wrapper>
-			<People level={data.name} />
-			{data.name && <Title>{getContent(data.name, locale)}</Title>}
-			{data.type && <SubTitle>{getContent(data.type, locale)}</SubTitle>}
-			{(showDate || (showDate && showTime)) && (
-				<DateTime>
-					{showDate}
-					{showTime && ` | ${showTime}`}
-				</DateTime>
-			)}
-			{data.owner && <Owner>{getContent(data.owner, locale)}</Owner>}
+			{data.level && <People level={data.level} />}
 
-			<Bottom>
-				<BottomLeft>
-					{data.images &&
-						data.images.map((image, index) => (
-							<Image
-								key={index}
-								src={image}
-								alt={getContent(data.name, locale)}
-							/>
-						))}
-					{data.description && (
-						<Detail className='_hide-mobile'>
-							{getContent(data.description, locale)}
-						</Detail>
-					)}
-					<Trend />
-					{data.nearby && <Suggest data={data.nearby} />}
-				</BottomLeft>
+			{data.programs &&
+				data.programs.map((program, index) => {
+					const link = program.website ? getLink(program.website) : null;
+					const linkTitle = program.website
+						? getLinkTitle(program.website)
+						: null;
+					const showDate =
+						program.openingTime && program.openingTime.dates
+							? getShowDate(program.openingTime.dates)
+							: null;
+					const showTime =
+						program.openingTime && program.openingTime.hours
+							? getShowTime(program.openingTime.hours)
+							: null;
 
-				<BottomRight>
-					{data.description && (
-						<Detail className='_hide-desktop'>
-							{getContent(data.description, locale)}
-						</Detail>
-					)}
-					{link && linkTitle && (
-						<LinkWrapper>
-							<a href={link} target='_blank'>
-								<IconAngleLeft icon={faCaretRight} />
-								<span>
-									{t[locale].linkTo} {linkTitle}
-								</span>
-							</a>
-						</LinkWrapper>
-					)}
-				</BottomRight>
-			</Bottom>
+					return (
+						<Program last={index === data.programs.length - 1} key={index}>
+							{program.name && (
+								<Title>{getContent(program.name, locale)}</Title>
+							)}
+							{program.type && (
+								<SubTitle>{getContent(program.type, locale)}</SubTitle>
+							)}
+							{(showDate || (showDate && showTime)) && (
+								<DateTime>
+									{showDate}
+									{showTime && ` | ${showTime}`}
+								</DateTime>
+							)}
+							{program.owner && (
+								<Owner>{getContent(program.owner, locale)}</Owner>
+							)}
+
+							<Bottom>
+								<BottomLeft>
+									{program.images &&
+										program.images.map((image, index) => (
+											<Image
+												key={index}
+												src={image}
+												alt={getContent(program.name, locale)}
+											/>
+										))}
+									{program.description && (
+										<Detail className='_hide-mobile'>
+											{getContent(program.description, locale)}
+										</Detail>
+									)}
+								</BottomLeft>
+
+								<BottomRight>
+									{program.description && (
+										<Detail className='_hide-desktop'>
+											{getContent(program.description, locale)}
+										</Detail>
+									)}
+									{link && linkTitle && (
+										<LinkWrapper>
+											<a href={link} target='_blank'>
+												<IconAngleLeft icon={faCaretRight} />
+												<span>
+													{t[locale].linkTo} {linkTitle}
+												</span>
+											</a>
+										</LinkWrapper>
+									)}
+								</BottomRight>
+							</Bottom>
+						</Program>
+					);
+				})}
+
+			<Trend />
+			{data.nearby && <Suggest data={data.nearby} />}
 		</Wrapper>
 	) : null;
 };
