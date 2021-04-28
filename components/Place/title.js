@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
-import { getContent, getLevelColor } from '../../helpers';
+import { getLevelColor } from '../../helpers';
 import dayjs from 'dayjs';
 
 // icon

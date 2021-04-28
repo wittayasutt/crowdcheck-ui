@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 const Square = styled.div`
 	height: 20px;
 	width: 20px;
-	border: 1px solid #000;
+	border: 2px solid #000;
 	position: absolute;
 	transform: rotate(45deg);
 	background-color: ${(props) => props.theme.color.white};
@@ -22,8 +22,9 @@ const Square = styled.div`
 
 const Number = styled.div`
 	position: absolute;
-	margin: 0 1px 4px 0;
-	font-size: 11px;
+	margin: 0 1px 0 0;
+	font-size: 12px;
+	font-weight: 600;
 `;
 
 const ZoomComponent = ({ number }) => {
@@ -36,7 +37,7 @@ const ZoomComponent = ({ number }) => {
 };
 
 ZoomComponent.propTypes = {
-	number: PropTypes.string,
+	number: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 ZoomComponent.defaultProps = {

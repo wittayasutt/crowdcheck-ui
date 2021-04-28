@@ -60,6 +60,7 @@ export const formatTime = (time, format) => {
 	return format ? day : new Date(day);
 };
 
+
 export const transformCrowdData = (venueData, crowdData) => {
 	if (!venueData || !crowdData) {
 		return null;
@@ -77,7 +78,6 @@ export const transformCrowdData = (venueData, crowdData) => {
 		};
 	});
 };
-
 // MATCHING DATE
 
 export const checkMatchingDate = (date) => {

@@ -54,26 +54,22 @@ const Place = ({ updatedTime }) => {
 		<>
 			{place && (
 				<MobileMenuPlace>
-					{place === 'NO_EVENT' ? (
+					<PlaceTitle data={place} updatedTime={updatedTime} />
+					{place.programs === 'NO_EVENT' ? (
 						<NotFound>{t[locale].programNotFound}</NotFound>
 					) : (
-						<>
-							<PlaceTitle data={place} updatedTime={updatedTime} />
-							<Content data={place} />
-						</>
+						<Content data={place} />
 					)}
 				</MobileMenuPlace>
 			)}
 
 			{place && (
 				<Desktop>
-					{place === 'NO_EVENT' ? (
+					<PlaceTitle data={place} updatedTime={updatedTime} />
+					{place.programs === 'NO_EVENT' ? (
 						<NotFound>{t[locale].programNotFound}</NotFound>
 					) : (
-						<>
-							<PlaceTitle data={place} updatedTime={updatedTime} />
-							<Content data={place} />
-						</>
+						<Content data={place} />
 					)}
 				</Desktop>
 			)}

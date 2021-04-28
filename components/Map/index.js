@@ -16,6 +16,7 @@ import { getContent, getMatchingProgram } from '../../helpers';
 
 // components
 import Marker from '../Marker';
+import Zoom from '../Base/zoom';
 
 // TODO: add real key
 const bootstrapURLKeys = {
@@ -26,8 +27,9 @@ const bootstrapURLKeys = {
 const useRedux = () => {
 	const dispatch = useDispatch();
 	const selectPlace = (place) => dispatch({ type: 'SELECT_PLACE', place });
+	const setZoom = (zoom) => dispatch({ type: 'SET_ZOOM', zoom });
 
-	return { selectPlace };
+	return { selectPlace, setZoom };
 };
 
 const Wrapper = styled.nav`
@@ -43,9 +45,11 @@ const Map = ({ data, offset }) => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const { selectPlace } = useRedux();
+	const { selectPlace, setZoom } = useRedux();
 
-	const [instance, setInstance] = useState(null);
+	const [instance, setInstance] = useState({
+		zoom: defaultZoom,
+	});
 	const [mapApi, setMapApi] = useState({
 		loaded: false,
 		api: null,
@@ -74,7 +78,11 @@ const Map = ({ data, offset }) => {
 
 					handleGetNearlyPlace(id, matchedPrograms, venueName, crowd);
 				} else {
-					selectPlace('NO_EVENT');
+					selectPlace({
+						programs: 'NO_EVENT',
+						venueName,
+						crowd,
+					});
 				}
 			}
 		});
@@ -93,6 +101,10 @@ const Map = ({ data, offset }) => {
 		});
 	};
 
+	const handleChangeZoom = (zoom) => {
+		setZoom(zoom);
+	};
+
 	return (
 		<Wrapper offset={offset}>
 			<GoogleMapReact
@@ -106,9 +118,21 @@ const Map = ({ data, offset }) => {
 				}}
 				yesIWantToUseGoogleMapApiInternals
 				onGoogleApiLoaded={({ map, maps }) => apiHasLoaded(map, maps)}
+				onZoomAnimationStart={handleChangeZoom}
 			>
 				{data &&
-					data.map((item) => {
+					data.map((item, index) => {
+						if (item.number) {
+							return (
+								<Zoom
+									key={index}
+									number={item.number}
+									lat={item.location.latitude}
+									lng={item.location.longtitude}
+								/>
+							);
+						}
+
 						return item.crowd && item.crowd.value && item.location ? (
 							<Marker
 								key={item._id}

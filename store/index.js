@@ -10,6 +10,7 @@ const initialState = {
 	place: null,
 	showPlaceName: false,
 	crowdData: null,
+	zoom: 12,
 };
 
 const reducer = (state = initialState, action) => {
@@ -53,6 +54,12 @@ const reducer = (state = initialState, action) => {
 			return {
 				...state,
 				crowdData: action.crowdData,
+			};
+		}
+		case 'SET_ZOOM': {
+			return {
+				...state,
+				zoom: action.zoom,
 			};
 		}
 		default:

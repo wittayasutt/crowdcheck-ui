@@ -7,6 +7,7 @@ import { service_get_venue_list, service_get_crowd } from '../services';
 import orderBy from 'lodash/orderBy';
 
 import { getContent, transformCrowdData } from '../helpers';
+import { gatherVenue } from '../helpers/map';
 
 // components
 import Header from '../components/Header';
@@ -28,21 +29,23 @@ const useRedux = () => {
 	const setCrowdData = (crowdData) =>
 		dispatch({ type: 'SET_CROWD_DATA', crowdData });
 	const crowd = useSelector((state) => state.crowdData);
+	const zoom = useSelector((state) => state.zoom);
 
-	return { crowd, setCrowdData };
+	return { crowd, zoom, setCrowdData };
 };
 
 const HomePage = () => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const { crowd, setCrowdData } = useRedux();
+	const { crowd, zoom, setCrowdData } = useRedux();
 
 	const [loading, setLoading] = useState(true);
 	const [timeInterval, setTimeInterval] = useState(null);
 	const [updatedTime, setUpdatedTime] = useState(Date.now());
 
 	const [rawVenue, setRawVenue] = useState([]);
+	const [venueZoomOut, setVenueZoomOut] = useState([]);
 	const [venue, setVenue] = useState([]);
 
 	const getVenue = () => {
@@ -109,6 +112,11 @@ const HomePage = () => {
 	};
 
 	useEffect(() => {
+		const newVenueData = gatherVenue(venue);
+		setVenueZoomOut(newVenueData);
+	}, [venue]);
+
+	useEffect(() => {
 		setVenueData(rawVenue, crowd);
 	}, [crowd]);
 
@@ -121,12 +129,14 @@ const HomePage = () => {
 		};
 	}, []);
 
+	const showVenue = zoom < 14 ? venueZoomOut : venue;
+
 	return (
 		<>
 			<Header />
 			{!loading ? (
 				<Layout>
-					<Map data={venue} />
+					<Map data={showVenue} />
 					<Footer />
 					<Density data={venue} updatedTime={updatedTime} />
 					<Legend />
