@@ -1,4 +1,3 @@
-import clonedeep from 'lodash/clonedeep';
 const OFFSET = 0.005;
 
 export const compare = (val, compareVal) => {
@@ -73,7 +72,7 @@ export const findMatching = (data) => {
 };
 
 export const gatherVenue = (oldData) => {
-	const data = clonedeep(oldData);
+	const data = [...oldData];
 
 	const matchingData = findMatching(data);
 	const mostMatchingData = matchingData
