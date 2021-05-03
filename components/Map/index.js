@@ -18,9 +18,8 @@ import { getContent, getMatchingProgram } from '../../helpers';
 import Marker from '../Marker';
 import Zoom from '../Base/zoom';
 
-// TODO: add real key
 const bootstrapURLKeys = {
-	key: 'AIzaSyCER7hN0p-_U36bIxFR3W_fRD6BZ_Kf3CI',
+	key: 'AIzaSyDNAO9CrN3__3vQ6BEOLAY4QdBEf56GiRk',
 	libraries: ['places', 'geometry'],
 };
 
@@ -193,6 +192,8 @@ const Map = ({ data, offset }) => {
 			});
 		}
 	}, [instance, mapApi.api, navigator, navigator.geolocation]);
+
+	console.log('data', data);
 
 	return (
 		<Wrapper offset={offset}>

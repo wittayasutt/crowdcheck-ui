@@ -19,6 +19,14 @@ export const getLevelColor = (level) => {
 			return 'softRed';
 		case 4:
 			return 'red';
+		case 5:
+			return 'red';
+		case 6:
+			return 'red';
+		case 7:
+			return 'red';
+		case 8:
+			return 'red';
 		default:
 			return 'default';
 	}
@@ -33,6 +41,14 @@ export const getPeopleNumber = (level) => {
 		case 3:
 			return 4;
 		case 4:
+			return 6;
+		case 5:
+			return 6;
+		case 6:
+			return 6;
+		case 7:
+			return 6;
+		case 8:
 			return 6;
 		default:
 			return 0;
@@ -61,7 +77,6 @@ export const formatTime = (time, format) => {
 
 	return format ? day : new Date(day);
 };
-
 
 export const transformCrowdData = (venueData, crowdData) => {
 	if (!venueData || !crowdData) {
