@@ -1,4 +1,4 @@
-const OFFSET = 0.005;
+const OFFSET = 0.002;
 
 export const compare = (val, compareVal) => {
 	return val + OFFSET >= compareVal && val - OFFSET <= compareVal;

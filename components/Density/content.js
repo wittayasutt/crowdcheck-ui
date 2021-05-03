@@ -1,14 +1,27 @@
 import styled from 'styled-components';
 import dayjs from 'dayjs';
 import { useRouter } from 'next/router';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getContent } from '../../helpers';
+import { getContent, getMatchingProgram } from '../../helpers';
+
+import {
+	service_get_program_list,
+	service_get_venue_nearby,
+} from '../../services';
 
 // components
 import Marker from '../Marker';
 
 // lang
 import t from '../../translate';
+
+const useRedux = () => {
+	const dispatch = useDispatch();
+	const selectPlace = (place) => dispatch({ type: 'SELECT_PLACE', place });
+
+	return { selectPlace };
+};
 
 const Wrapper = styled.div``;
 
@@ -58,6 +71,46 @@ const DensityContent = ({ data, updatedTime }) => {
 	const router = useRouter();
 	const { locale } = router;
 
+	const { selectPlace } = useRedux();
+
+	const handleSelectPlace = (id, venueName, crowd) => {
+		service_get_program_list(id).then((res) => {
+			if (res.status === 'success') {
+				const matchedPrograms = getMatchingProgram(res.data);
+
+				if (matchedPrograms.length > 0 && crowd.value) {
+					selectPlace({
+						programs: matchedPrograms,
+						venueName,
+						crowd,
+						nearby: 'loading',
+					});
+
+					handleGetNearlyPlace(id, matchedPrograms, venueName, crowd);
+				} else {
+					selectPlace({
+						programs: 'NO_EVENT',
+						venueName,
+						crowd,
+					});
+				}
+			}
+		});
+	};
+
+	const handleGetNearlyPlace = (id, programs, venueName, crowd) => {
+		service_get_venue_nearby(id).then((res) => {
+			if (res.status === 'success') {
+				selectPlace({
+					programs,
+					venueName,
+					crowd,
+					nearby: res.data,
+				});
+			}
+		});
+	};
+
 	return (
 		<Wrapper>
 			<TitleWrapper>
@@ -70,7 +123,16 @@ const DensityContent = ({ data, updatedTime }) => {
 			{data &&
 				data.map((item) => {
 					return item.crowd && item.crowd.value ? (
-						<Row key={item._id}>
+						<Row
+							key={item._id}
+							onClick={() =>
+								handleSelectPlace(
+									item._id,
+									getContent(item.name, locale),
+									item.crowd
+								)
+							}
+						>
 							{item.crowd.value && <Marker level={item.crowd.value} />}
 							{item.name && (
 								<PlaceName>{getContent(item.name, locale)}</PlaceName>

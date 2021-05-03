@@ -83,7 +83,7 @@ const LegendContent = () => {
 				<Marker level={1} />
 				<p
 					dangerouslySetInnerHTML={{
-						__html: t[locale].legend.avoid,
+						__html: t[locale].legend.goAhead,
 					}}
 				/>
 			</Row>
@@ -99,7 +99,7 @@ const LegendContent = () => {
 				<Marker level={3} />
 				<p
 					dangerouslySetInnerHTML={{
-						__html: t[locale].legend.go,
+						__html: t[locale].legend.wait,
 					}}
 				/>
 			</Row>
@@ -107,7 +107,7 @@ const LegendContent = () => {
 				<Marker level={4} />
 				<p
 					dangerouslySetInnerHTML={{
-						__html: t[locale].legend.goAhead,
+						__html: t[locale].legend.avoid,
 					}}
 				/>
 			</Row>

@@ -61,6 +61,7 @@ const HomePage = () => {
 
 	const getCrowdData = () => {
 		service_get_crowd().then((res) => {
+			console.log('res', res);
 			if (res) {
 				setCrowdData(res);
 				setUpdatedTime(Date.now());
@@ -92,6 +93,9 @@ const HomePage = () => {
 	};
 
 	const setVenueData = (venueData, crowdData) => {
+		console.log('venueData', venueData);
+		console.log('crowdData', crowdData);
+
 		if (crowdData) {
 			const foundData = transformCrowdData(venueData, crowdData);
 			const sortedData = sortData(foundData);

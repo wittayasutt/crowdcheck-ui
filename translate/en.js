@@ -33,6 +33,7 @@ export default {
 	},
 	densityList: 'Density List',
 	densityListTitle: 'Density List',
+	description: `Crowd check assists in journey planning, prior to and on site, with real-time density which equally disclosing the information to the public. To do so, it measures the crowd density by capturing real-time Bluetooth signals, representing number of people, and analyse the number in relation to location's capacity.`,
 	detail: 'Detail',
 	email: 'Email',
 	exceed: 'Exceed',
