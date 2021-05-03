@@ -1,0 +1,1826 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document id="root_doc">
+    <Schema id="Design_Studio" name="Design_Studio">
+      <SimpleField name="id" type="float"/>
+      <SimpleField name="name_th" type="string"/>
+      <SimpleField name="name_en" type="string"/>
+      <SimpleField name="_creativei" type="float"/>
+      <SimpleField name="_creativ_1" type="string"/>
+      <SimpleField name="architec_7" type="string"/>
+      <SimpleField name="design_tag" type="string"/>
+      <SimpleField name="music_tags" type="string"/>
+    </Schema>
+    <Schema id="Design_Studio.schema">
+      <SimpleField name="id" type="float"/>
+      <SimpleField name="name_th" type="string"/>
+      <SimpleField name="name_en" type="string"/>
+    </Schema>
+    <Folder>
+      <name>Design_Studio</name>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">13</SimpleData>
+            <SimpleData name="name_th">Perfect</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516625049059,13.7234690668996,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">45</SimpleData>
+            <SimpleData name="name_th">PT-GALLERY</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">เฟอร์นิเจอร์,การจัดแสดงผลงาน</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.514667364433,13.7278432201885,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">76</SimpleData>
+            <SimpleData name="name_th">Package Display</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">ผลิตภัณฑ์อุตสาหกรรม,การออกแบบบริการ</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.51571541071,13.7294596663289,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">97</SimpleData>
+            <SimpleData name="name_th">S.Cottage</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">ผลิตภัณฑ์อุตสาหกรรม</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515835347824,13.7238472101936,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">115</SimpleData>
+            <SimpleData name="name_th">TR Giftshop</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">ผลิตภัณฑ์อุตสาหกรรม</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516209758504,13.7239314732908,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">130</SimpleData>
+            <SimpleData name="name_th">นาฬิกา หว่าซัน</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">ผลิตภัณฑ์อุตสาหกรรม</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516297139876,13.7245410960395,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">150</SimpleData>
+            <SimpleData name="name_th">สมบุญ เอนเตอร์ไพรล์</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">ผลิตภัณฑ์อุตสาหกรรม</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516726797735,13.722797364164,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">152</SimpleData>
+            <SimpleData name="name_th">Majestic Art Ltd., Part.</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516732808535,13.7227389720191,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">156</SimpleData>
+            <SimpleData name="name_th">Sun Collections</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516744650878,13.7226239291239,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">352</SimpleData>
+            <SimpleData name="name_th">CLOUD 7 SERVICE CO.,LTD</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">การออกแบบบริการ,การออกแบบการสื่อสาร</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.517313309779,13.7238368663573,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">402</SimpleData>
+            <SimpleData name="name_th">HIJAZI CO.,LTD</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">องค์ประกอบทางสถาปัตยกรรม,ตัวแทนจัดจำหน่าย</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.517200732274,13.7235411033242,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">442</SimpleData>
+            <SimpleData name="name_th">SHINING CO,LTD</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">ผลิตภัณฑ์อุตสาหกรรม</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.514811917232,13.721625306362,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">466</SimpleData>
+            <SimpleData name="name_th">อุไรวรรณ ฟลอริซท์</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">การจัดดอกไม้</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515777212908,13.7202352115921,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">551</SimpleData>
+            <SimpleData name="name_th">คุนซิน</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">ผลิตภัณฑ์อุตสาหกรรม</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516595757602,13.7215661932677,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">640</SimpleData>
+            <SimpleData name="name_th">ฮ๊อบบี้</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">การออกแบบบริการ</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516173564249,13.7285127186788,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">818</SimpleData>
+            <SimpleData name="name_th">Oriental Art</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">ผลิตภัณฑ์อุตสาหกรรม,การจัดแสดงผลงาน</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.51624823888,13.7238865425071,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">911</SimpleData>
+            <SimpleData name="name_th">ที เอส เอล</SimpleData>
+            <SimpleData name="name_en">TSL</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">องค์ประกอบทางสถาปัตยกรรม,การรับเหมาก่อสร้าง</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.513964837124,13.7350931374799,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">938</SimpleData>
+            <SimpleData name="name_th">วินเซนท์ฮาร์ดแวร์</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">ตัวแทนจัดจำหน่าย</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.514904794068,13.7365858525309,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">989</SimpleData>
+            <SimpleData name="name_th">ดี แอนด์ ซัน แมชชีนเนอรี่</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">องค์ประกอบทางสถาปัตยกรรม,การรับเหมาก่อสร้าง</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.514339280613,13.7367465773608,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">996</SimpleData>
+            <SimpleData name="name_th">จิวเลี่ยงฮวด (1986)</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">การรับเหมาก่อสร้าง</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.513870827826,13.7371511126463,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1014</SimpleData>
+            <SimpleData name="name_th">กว้างง่วนเฮง</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">องค์ประกอบทางสถาปัตยกรรม,การรับเหมาก่อสร้าง</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.513889101656,13.7364375383528,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1118</SimpleData>
+            <SimpleData name="name_th"><![CDATA[World Antiques&Coins]]></SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">ผลิตภัณฑ์อุตสาหกรรม,การจัดแสดงผลงาน</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516261217533,13.7264487086236,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1119</SimpleData>
+            <SimpleData name="name_th">เบ๊ ฮก หลี</SimpleData>
+            <SimpleData name="_creativei">9</SimpleData>
+            <SimpleData name="_creativ_1">ดนตรี</SimpleData>
+            <SimpleData name="music_tags">เครื่องดนตรี</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516271076056,13.7263912468656,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1131</SimpleData>
+            <SimpleData name="name_th">P.B.T Wrold Handware จำกัด</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">ตัวแทนจัดจำหน่าย</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.517063299114,13.7264375240882,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1147</SimpleData>
+            <SimpleData name="name_th"><![CDATA[SONNY'S]]></SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516532608473,13.7258368145868,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1316</SimpleData>
+            <SimpleData name="name_th">เอี้ยวไท้อ้วน วัสดุก่อสร้าง</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.514398212871,13.7375891401498,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1377</SimpleData>
+            <SimpleData name="name_th">anyroom</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">เฟอร์นิเจอร์,การจัดแสดงผลงาน</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.510362427508,13.7294055305467,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1379</SimpleData>
+            <SimpleData name="name_th">The Jam factory</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">สถาปัตยกรรม</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.510322361562,13.729259816222,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1380</SimpleData>
+            <SimpleData name="name_th">ดวงฤทธิ์บุนนาค จำกัด</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">สถาปัตยกรรม</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.510378465424,13.7293459321175,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1404</SimpleData>
+            <SimpleData name="name_th">eastern antique</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516141319998,13.726013206351,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1547</SimpleData>
+            <SimpleData name="name_th">Bata</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">ผลิตภัณฑ์อุตสาหกรรม,ตัวแทนจัดจำหน่าย</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.51525403803,13.7190010697601,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1552</SimpleData>
+            <SimpleData name="name_th">วีอาร์พี เอ็นจิเนียริ่ง แอนด์ เทรดดิ้ง</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516666637077,13.7314564509877,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1554</SimpleData>
+            <SimpleData name="name_th">Boffi Studio Bangkok</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515606077223,13.7313532796157,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1564</SimpleData>
+            <SimpleData name="name_th">Creative Crews</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">สถาปัตยกรรม,สถาปัตยกรรมภายใน,ภูมิสถาปัตยกรรม,ผังเมือง,องค์ประกอบทางสถาปัตยกรรม,การเขียนแ</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.514910497006,13.7347458383569,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1565</SimpleData>
+            <SimpleData name="name_th">STU/D/O</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515261878427,13.7376496674978,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1566</SimpleData>
+            <SimpleData name="name_th">AA Design</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515273296198,13.7373144202499,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1567</SimpleData>
+            <SimpleData name="name_th">Archive Studio</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">สถาปัตยกรรม,สถาปัตยกรรมภายใน,องค์ประกอบทางสถาปัตยกรรม,การเขียนแบบ ดราฟแมน</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515276198023,13.7372317701377,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1568</SimpleData>
+            <SimpleData name="name_th">In Contrast Studio</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">สถาปัตยกรรม,องค์ประกอบทางสถาปัตยกรรม,การเขียนแบบ ดราฟแมน,หุ่นจำลอง โมเดล</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515269366292,13.7374263522608,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1569</SimpleData>
+            <SimpleData name="name_th">Physicalist</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">สถาปัตยกรรม,สถาปัตยกรรมภายใน,องค์ประกอบทางสถาปัตยกรรม</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515266745299,13.7375010036578,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1572</SimpleData>
+            <SimpleData name="name_th">Bouquet Floral Studio 2nd floor</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">การจัดดอกไม้,การจัดแสดงผลงาน</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516083098049,13.7251341640482,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1577</SimpleData>
+            <SimpleData name="name_th">Field Landscape</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">ภูมิสถาปัตยกรรม</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515263124753,13.7375813899569,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1620</SimpleData>
+            <SimpleData name="name_th">PAW-DEE</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">ผลิตภัณฑ์อุตสาหกรรม</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516076633642,13.7251754952444,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1622</SimpleData>
+            <SimpleData name="name_th">Bexample</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515991862595,13.7253737315531,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1623</SimpleData>
+            <SimpleData name="name_th">VIVI Decorative</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516024771642,13.7251843118644,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1627</SimpleData>
+            <SimpleData name="name_th">Inverse Lighting Design 2nd floor</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">แสงสว่าง</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515993133304,13.7253813000482,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1701</SimpleData>
+            <SimpleData name="name_th">ปั้นเมือง</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">ผังเมือง</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.511874521643,13.7345473114721,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1702</SimpleData>
+            <SimpleData name="name_th">ไซต์ สเปซิฟิค</SimpleData>
+            <SimpleData name="name_en"><![CDATA[Site-Specific : Architecture & Research]]></SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">สถาปัตยกรรม,สถาปัตยกรรมภายใน,ภูมิสถาปัตยกรรม,องค์ประกอบทางสถาปัตยกรรม,การเขียนแบบ ดราฟแม</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.51414582614,13.7396372768573,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1775</SimpleData>
+            <SimpleData name="name_th">56thStudio</SimpleData>
+            <SimpleData name="name_en">56thStudio</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">การออกแบบบริการ,การออกแบบประสบการณ์,การออกแบบการสื่อสาร</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515134052645,13.7328789462965,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">1902</SimpleData>
+            <SimpleData name="name_th">เบิ้ล ดีซายสตูดิโอ</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">การออกแบบบริการ</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.518125013692,13.7319613946088,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">2057</SimpleData>
+            <SimpleData name="name_th">สตูดิโอ​ อาร์ต</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">การออกแบบบริการ</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.510635389407,13.7221140462627,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">2099</SimpleData>
+            <SimpleData name="name_th">เป็ด​ ห้องซ้อมดนตรี</SimpleData>
+            <SimpleData name="_creativei">9</SimpleData>
+            <SimpleData name="_creativ_1">ดนตรี</SimpleData>
+            <SimpleData name="music_tags">การบันทึกเสียง</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.510162935118,13.7240456060498,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">2101</SimpleData>
+            <SimpleData name="name_th">สอนกีต้าร์​</SimpleData>
+            <SimpleData name="_creativei">9</SimpleData>
+            <SimpleData name="_creativ_1">ดนตรี</SimpleData>
+            <SimpleData name="music_tags">การฝึกสอน ให้ความรู้</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.511072082562,13.7241144696477,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">2250</SimpleData>
+            <SimpleData name="name_th">ง้วน ฮวด เฮง</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.514143503536,13.7340613382512,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">2419</SimpleData>
+            <SimpleData name="name_th">เอ.เอ็ม.พี. เซอร์วิส แอนด์ ซัพพลาย</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">การรับเหมาก่อสร้าง</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515038746566,13.7359143612592,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">2423</SimpleData>
+            <SimpleData name="name_th">เกท ออฟ เวลธ์</SimpleData>
+            <SimpleData name="name_en">GATE OF WEALTH COMPANY LIMITED</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">องค์ประกอบทางสถาปัตยกรรม,การรับเหมาก่อสร้าง</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515067902714,13.7340731137924,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">2546</SimpleData>
+            <SimpleData name="name_th">วิวัฒน์ประเสริฐ</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">การรับเหมาก่อสร้าง</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.511443637614,13.7362587591332,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">2558</SimpleData>
+            <SimpleData name="name_th">อุปกรณ์ก่อสร้าง</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">การรับเหมาก่อสร้าง</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.512554791773,13.7360135448643,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">2576</SimpleData>
+            <SimpleData name="name_th">ภาฉัต</SimpleData>
+            <SimpleData name="name_en">Bharchad</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">ผลิตภัณฑ์อุตสาหกรรม</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.513683055761,13.7302966310748,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">2598</SimpleData>
+            <SimpleData name="name_th">GETHA</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">ผลิตภัณฑ์อุตสาหกรรม,เฟอร์นิเจอร์</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.513343956035,13.7305935752786,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">2631</SimpleData>
+            <SimpleData name="name_th">SMELL LEMONGRASS</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">ผลิตภัณฑ์อุตสาหกรรม</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.513562434062,13.7305901544095,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">2661</SimpleData>
+            <SimpleData name="name_th">แฟบคาเฟ่ บางกอก</SimpleData>
+            <SimpleData name="name_en">FabCafe Bangkok</SimpleData>
+            <SimpleData name="_creativei">4</SimpleData>
+            <SimpleData name="_creativ_1">สถาปัตยกรรม</SimpleData>
+            <SimpleData name="architec_7">สถาปัตยกรรม,องค์ประกอบทางสถาปัตยกรรม,หุ่นจำลอง โมเดล,การฝึกสอน ให้ความรู้</SimpleData>
+            <SimpleData name="design_tag">ผลิตภัณฑ์อุตสาหกรรม,การฝึกสอน ให้ความรู้</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515165175376,13.7269729032248,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio">
+            <SimpleData name="id">2682</SimpleData>
+            <SimpleData name="name_th">Heliconia</SimpleData>
+            <SimpleData name="name_en">Heliconia</SimpleData>
+            <SimpleData name="_creativei">8</SimpleData>
+            <SimpleData name="_creativ_1">การออกแบบ</SimpleData>
+            <SimpleData name="design_tag">การจัดดอกไม้</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516151670677,13.7242640738479,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Document id="Design_Studio">
+      <name>Design Studio</name>
+      <Placemark id="Design_Studio.1">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">13</SimpleData>
+            <SimpleData name="name_th">Perfect</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516625049059,13.7234690668996,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.2">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">45</SimpleData>
+            <SimpleData name="name_th">PT-GALLERY</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.514667364433,13.7278432201885,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.3">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">76</SimpleData>
+            <SimpleData name="name_th">Package Display</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.51571541071,13.7294596663289,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.4">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">97</SimpleData>
+            <SimpleData name="name_th">S.Cottage</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515835347824,13.7238472101936,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.5">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">115</SimpleData>
+            <SimpleData name="name_th">TR Giftshop</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516209758504,13.7239314732908,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.6">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">130</SimpleData>
+            <SimpleData name="name_th">นาฬิกา หว่าซัน</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516297139876,13.7245410960395,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.7">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">150</SimpleData>
+            <SimpleData name="name_th">สมบุญ เอนเตอร์ไพรล์</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516726797735,13.722797364164,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.8">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">152</SimpleData>
+            <SimpleData name="name_th">Majestic Art Ltd., Part.</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516732808535,13.7227389720191,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.9">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">156</SimpleData>
+            <SimpleData name="name_th">Sun Collections</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516744650878,13.7226239291239,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.10">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">352</SimpleData>
+            <SimpleData name="name_th">CLOUD 7 SERVICE CO.,LTD</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.517313309779,13.7238368663573,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.11">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">402</SimpleData>
+            <SimpleData name="name_th">HIJAZI CO.,LTD</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.517200732274,13.7235411033242,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.12">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">442</SimpleData>
+            <SimpleData name="name_th">SHINING CO,LTD</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.514811917232,13.721625306362,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.13">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">466</SimpleData>
+            <SimpleData name="name_th">อุไรวรรณ ฟลอริซท์</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515777212908,13.7202352115921,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.14">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">551</SimpleData>
+            <SimpleData name="name_th">คุนซิน</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516595757602,13.7215661932677,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.15">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">640</SimpleData>
+            <SimpleData name="name_th">ฮ๊อบบี้</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516173564249,13.7285127186788,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.16">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">818</SimpleData>
+            <SimpleData name="name_th">Oriental Art</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.51624823888,13.7238865425071,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.17">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">911</SimpleData>
+            <SimpleData name="name_th">ที เอส เอล</SimpleData>
+            <SimpleData name="name_en">TSL</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.513964837124,13.7350931374799,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.18">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">938</SimpleData>
+            <SimpleData name="name_th">วินเซนท์ฮาร์ดแวร์</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.514904794068,13.7365858525309,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.19">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">989</SimpleData>
+            <SimpleData name="name_th">ดี แอนด์ ซัน แมชชีนเนอรี่</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.514339280613,13.7367465773608,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.20">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">996</SimpleData>
+            <SimpleData name="name_th">จิวเลี่ยงฮวด (1986)</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.513870827826,13.7371511126463,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.21">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1014</SimpleData>
+            <SimpleData name="name_th">กว้างง่วนเฮง</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.513889101656,13.7364375383528,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.22">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1118</SimpleData>
+            <SimpleData name="name_th"><![CDATA[World Antiques&Coins]]></SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516261217533,13.7264487086236,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.23">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1119</SimpleData>
+            <SimpleData name="name_th">เบ๊ ฮก หลี</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516271076056,13.7263912468656,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.24">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1131</SimpleData>
+            <SimpleData name="name_th">P.B.T Wrold Handware จำกัด</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.517063299114,13.7264375240882,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.25">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1147</SimpleData>
+            <SimpleData name="name_th"><![CDATA[SONNY'S]]></SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516532608473,13.7258368145868,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.26">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1316</SimpleData>
+            <SimpleData name="name_th">เอี้ยวไท้อ้วน วัสดุก่อสร้าง</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.514398212871,13.7375891401498,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.27">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1377</SimpleData>
+            <SimpleData name="name_th">anyroom</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.510362427508,13.7294055305467,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.28">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1379</SimpleData>
+            <SimpleData name="name_th">The Jam factory</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.510322361562,13.729259816222,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.29">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1380</SimpleData>
+            <SimpleData name="name_th">ดวงฤทธิ์บุนนาค จำกัด</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.510378465424,13.7293459321175,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.30">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1404</SimpleData>
+            <SimpleData name="name_th">eastern antique</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516141319998,13.726013206351,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.31">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1547</SimpleData>
+            <SimpleData name="name_th">Bata</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.51525403803,13.7190010697601,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.32">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1552</SimpleData>
+            <SimpleData name="name_th">วีอาร์พี เอ็นจิเนียริ่ง แอนด์ เทรดดิ้ง</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516666637077,13.7314564509877,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.33">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1554</SimpleData>
+            <SimpleData name="name_th">Boffi Studio Bangkok</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515606077223,13.7313532796157,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.34">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1564</SimpleData>
+            <SimpleData name="name_th">Creative Crews</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.514910497006,13.7347458383569,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.35">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1565</SimpleData>
+            <SimpleData name="name_th">STU/D/O</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515261878427,13.7376496674978,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.36">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1566</SimpleData>
+            <SimpleData name="name_th">AA Design</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515273296198,13.7373144202499,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.37">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1567</SimpleData>
+            <SimpleData name="name_th">Archive Studio</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515276198023,13.7372317701377,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.38">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1568</SimpleData>
+            <SimpleData name="name_th">In Contrast Studio</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515269366292,13.7374263522608,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.39">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1569</SimpleData>
+            <SimpleData name="name_th">Physicalist</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515266745299,13.7375010036578,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.40">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1572</SimpleData>
+            <SimpleData name="name_th">Bouquet Floral Studio 2nd floor</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516083098049,13.7251341640482,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.41">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1577</SimpleData>
+            <SimpleData name="name_th">Field Landscape</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515263124753,13.7375813899569,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.42">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1620</SimpleData>
+            <SimpleData name="name_th">PAW-DEE</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516076633642,13.7251754952444,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.43">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1622</SimpleData>
+            <SimpleData name="name_th">Bexample</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515991862595,13.7253737315531,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.44">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1623</SimpleData>
+            <SimpleData name="name_th">VIVI Decorative</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516024771642,13.7251843118644,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.45">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1627</SimpleData>
+            <SimpleData name="name_th">Inverse Lighting Design 2nd floor</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515993133304,13.7253813000482,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.46">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1701</SimpleData>
+            <SimpleData name="name_th">ปั้นเมือง</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.511874521643,13.7345473114721,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.47">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1702</SimpleData>
+            <SimpleData name="name_th">ไซต์ สเปซิฟิค</SimpleData>
+            <SimpleData name="name_en"><![CDATA[Site-Specific : Architecture & Research]]></SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.51414582614,13.7396372768573,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.48">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1775</SimpleData>
+            <SimpleData name="name_th">56thStudio</SimpleData>
+            <SimpleData name="name_en">56thStudio</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515134052645,13.7328789462965,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.49">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">1902</SimpleData>
+            <SimpleData name="name_th">เบิ้ล ดีซายสตูดิโอ</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.518125013692,13.7319613946088,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.50">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">2057</SimpleData>
+            <SimpleData name="name_th">สตูดิโอ​ อาร์ต</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.510635389407,13.7221140462627,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.51">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">2099</SimpleData>
+            <SimpleData name="name_th">เป็ด​ ห้องซ้อมดนตรี</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.510162935118,13.7240456060498,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.52">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">2101</SimpleData>
+            <SimpleData name="name_th">สอนกีต้าร์​</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.511072082562,13.7241144696477,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.53">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">2250</SimpleData>
+            <SimpleData name="name_th">ง้วน ฮวด เฮง</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.514143503536,13.7340613382512,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.54">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">2419</SimpleData>
+            <SimpleData name="name_th">เอ.เอ็ม.พี. เซอร์วิส แอนด์ ซัพพลาย</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515038746566,13.7359143612592,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.55">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">2423</SimpleData>
+            <SimpleData name="name_th">เกท ออฟ เวลธ์</SimpleData>
+            <SimpleData name="name_en">GATE OF WEALTH COMPANY LIMITED</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515067902714,13.7340731137924,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.56">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">2546</SimpleData>
+            <SimpleData name="name_th">วิวัฒน์ประเสริฐ</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.511443637614,13.7362587591332,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.57">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">2558</SimpleData>
+            <SimpleData name="name_th">อุปกรณ์ก่อสร้าง</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.512554791773,13.7360135448643,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.58">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">2576</SimpleData>
+            <SimpleData name="name_th">ภาฉัต</SimpleData>
+            <SimpleData name="name_en">Bharchad</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.513683055761,13.7302966310748,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.59">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">2598</SimpleData>
+            <SimpleData name="name_th">GETHA</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.513343956035,13.7305935752786,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.60">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">2631</SimpleData>
+            <SimpleData name="name_th">SMELL LEMONGRASS</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.513562434062,13.7305901544095,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.61">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">2661</SimpleData>
+            <SimpleData name="name_th">แฟบคาเฟ่ บางกอก</SimpleData>
+            <SimpleData name="name_en">FabCafe Bangkok</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.515165175376,13.7269729032248,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="Design_Studio.62">
+        <ExtendedData>
+          <SchemaData schemaUrl="#Design_Studio.schema">
+            <SimpleData name="id">2682</SimpleData>
+            <SimpleData name="name_th">Heliconia</SimpleData>
+            <SimpleData name="name_en">Heliconia</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            100.516151670677,13.7242640738479,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Document>
+  </Document>
+</kml>

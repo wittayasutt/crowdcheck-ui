@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -24,12 +24,40 @@ const bootstrapURLKeys = {
 	libraries: ['places', 'geometry'],
 };
 
+const POI_DATA = [
+	{
+		title: 'cafeAndRestaurant',
+		data: 'https://crowdcheck.info/POI/gastronomy.kml',
+	},
+	{
+		title: 'parking',
+		data: 'https://crowdcheck.info/POI/parking.kml',
+	},
+	{
+		title: 'gallery',
+		data: 'https://crowdcheck.info/POI/gallery.kml',
+	},
+	{
+		title: 'designStudio',
+		data: 'https://crowdcheck.info/POI/design_studio.kml',
+	},
+	{
+		title: 'craft',
+		data: 'https://crowdcheck.info/POI/craft.kml',
+	},
+	{
+		title: 'fashion',
+		data: 'https://crowdcheck.info/POI/fashion.kml',
+	},
+];
+
 const useRedux = () => {
 	const dispatch = useDispatch();
 	const selectPlace = (place) => dispatch({ type: 'SELECT_PLACE', place });
 	const setZoom = (zoom) => dispatch({ type: 'SET_ZOOM', zoom });
+	const poi = useSelector((state) => state.poi);
 
-	return { selectPlace, setZoom };
+	return { selectPlace, setZoom, poi };
 };
 
 const Wrapper = styled.nav`
@@ -45,7 +73,7 @@ const Map = ({ data, offset }) => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const { selectPlace, setZoom } = useRedux();
+	const { selectPlace, setZoom, poi } = useRedux();
 
 	const [instance, setInstance] = useState({
 		zoom: defaultZoom,
@@ -54,6 +82,9 @@ const Map = ({ data, offset }) => {
 		loaded: false,
 		api: null,
 	});
+
+	const [kmlLayers, setKmlLayers] = useState(null);
+	const [userLocation, setUserLocation] = useState(null);
 
 	const apiHasLoaded = (instance, api) => {
 		setInstance(instance);
@@ -105,6 +136,53 @@ const Map = ({ data, offset }) => {
 		setZoom(zoom);
 	};
 
+	useEffect(() => {
+		if (mapApi.api) {
+			const kmlLayers = POI_DATA.map((item) => {
+				const kmlLayer = new mapApi.api.KmlLayer(item.data, {
+					suppressInfoWindows: false,
+					preserveViewport: true,
+				});
+
+				return { title: item.title, kmlLayer };
+			});
+
+			setKmlLayers(kmlLayers);
+		}
+	}, [mapApi.api]);
+
+	useEffect(() => {
+		if (kmlLayers) {
+			kmlLayers.forEach((item) => {
+				item.kmlLayer.setMap(null);
+			});
+		}
+
+		if (kmlLayers && poi) {
+			poi.forEach((poiItem) => {
+				const found = kmlLayers.find((item) => item.title === poiItem);
+				found.kmlLayer.setMap(instance);
+			});
+		}
+	}, [instance, kmlLayers, poi]);
+
+	useEffect(() => {
+		if (navigator && navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition((position) => {
+				if (
+					position.coords &&
+					position.coords.latitude &&
+					position.coords.longitude
+				) {
+					setUserLocation({
+						latitude: position.coords.latitude,
+						longitude: position.coords.longitude,
+					});
+				}
+			});
+		}
+	}, [navigator, navigator.geolocation]);
+
 	return (
 		<Wrapper offset={offset}>
 			<GoogleMapReact
@@ -120,6 +198,15 @@ const Map = ({ data, offset }) => {
 				onGoogleApiLoaded={({ map, maps }) => apiHasLoaded(map, maps)}
 				onZoomAnimationStart={handleChangeZoom}
 			>
+				{userLocation && userLocation.latitude && userLocation.longtitude && (
+					<Marker
+						key='user-current-location'
+						level={0}
+						lat={userLocation.latitude}
+						lng={userLocation.longitude}
+					/>
+				)}
+
 				{data &&
 					data.map((item, index) => {
 						if (item.number) {

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 // components
 import Zoom from '../Base/zoom';
@@ -14,8 +14,10 @@ import t from '../../translate';
 const useRedux = () => {
 	const dispatch = useDispatch();
 	const togglePlaceName = () => dispatch({ type: 'TOGGLE_PLACE_NAME' });
+	const setPoi = (poi) => dispatch({ type: 'SET_POI', poi });
+	const poi = useSelector((state) => state.poi);
 
-	return { togglePlaceName };
+	return { togglePlaceName, poi, setPoi };
 };
 
 const Wrapper = styled.div``;
@@ -59,10 +61,27 @@ const LegendContent = () => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const { togglePlaceName } = useRedux();
+	const { togglePlaceName, poi, setPoi } = useRedux();
 
 	const handleTogglePlaceName = () => {
 		togglePlaceName();
+	};
+
+	const handleSetPoi = (newPoi) => {
+		if (!poi) {
+			return;
+		}
+
+		const found = poi.find((item) => item === newPoi);
+
+		let updatedPoi = [];
+		if (found) {
+			updatedPoi = poi.filter((item) => item !== newPoi);
+		} else {
+			updatedPoi = [...poi, newPoi];
+		}
+
+		setPoi(updatedPoi);
 	};
 
 	return (
@@ -112,20 +131,43 @@ const LegendContent = () => {
 				/>
 			</Row>
 
-			{/* TODO: waiting for API */}
-			{/* <Title>{t[locale].pointOfInterest.title}</Title>
+			<Title>{t[locale].pointOfInterest.title}</Title>
 			<Checkbox
 				label={t[locale].pointOfInterest.cafeAndRestaurant}
-				onChange={() => {}}
+				onChange={() => {
+					handleSetPoi('cafeAndRestaurant');
+				}}
 			/>
-			<Checkbox label={t[locale].pointOfInterest.parking} onChange={() => {}} />
-			<Checkbox label={t[locale].pointOfInterest.gallery} onChange={() => {}} />
+			<Checkbox
+				label={t[locale].pointOfInterest.parking}
+				onChange={() => {
+					handleSetPoi('parking');
+				}}
+			/>
+			<Checkbox
+				label={t[locale].pointOfInterest.gallery}
+				onChange={() => {
+					handleSetPoi('gallery');
+				}}
+			/>
 			<Checkbox
 				label={t[locale].pointOfInterest.designStudio}
-				onChange={() => {}}
+				onChange={() => {
+					handleSetPoi('designStudio');
+				}}
 			/>
-			<Checkbox label={t[locale].pointOfInterest.craft} onChange={() => {}} />
-			<Checkbox label={t[locale].pointOfInterest.fashion} onChange={() => {}} /> */}
+			<Checkbox
+				label={t[locale].pointOfInterest.craft}
+				onChange={() => {
+					handleSetPoi('craft');
+				}}
+			/>
+			<Checkbox
+				label={t[locale].pointOfInterest.fashion}
+				onChange={() => {
+					handleSetPoi('fashion');
+				}}
+			/>
 		</Wrapper>
 	);
 };

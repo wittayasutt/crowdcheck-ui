@@ -11,6 +11,7 @@ const initialState = {
 	showPlaceName: false,
 	crowdData: null,
 	zoom: 12,
+	poi: [],
 };
 
 const reducer = (state = initialState, action) => {
@@ -60,6 +61,12 @@ const reducer = (state = initialState, action) => {
 			return {
 				...state,
 				zoom: action.zoom,
+			};
+		}
+		case 'SET_POI': {
+			return {
+				...state,
+				poi: action.poi,
 			};
 		}
 		default:

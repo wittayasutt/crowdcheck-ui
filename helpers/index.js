@@ -9,6 +9,8 @@ dayjs.extend(isSameOrAfter);
 
 export const getLevelColor = (level) => {
 	switch (level) {
+		case 0:
+			return 'default';
 		case 1:
 			return 'green';
 		case 2:

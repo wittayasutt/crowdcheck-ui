@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="Parking" id="Parking">
+	<SimpleField name="descriptio" type="string"></SimpleField>
+</Schema>
+<Folder><name>Parking</name>
+  <Placemark>
+	<name>CAT Tower</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">20 บาท/ชม.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5141092,13.7267545,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ลานกรวดข้างหลังอาคารไปรษณีย์กลาง</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">20 บาท/ชม.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5148455,13.727044,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>วัดม่วงแค</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">20 บาท/ ชม.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5144881,13.7263312,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Mandarin Oriental Hotel</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">200 บาท/ชม. หรือประทับตรา</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5142709,13.723968,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>OP Garden</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">30 บาท/ชม. หรือ ประทับตรา&lt;br&gt;3,000 บาท/เดือน</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5151747,13.724835,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>OP Place</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">30 บาท/ ชม. หรือ ประทับตรา</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5157754,13.7244139,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>วัดสวนพลู</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">40 บาท/ชม. 100 บาท/วัน</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5152828,13.7215647,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Shangri-La Hotel</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">50 บาท/ชม. หรือ ประทับตรา</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5141365,13.7214186,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>โรบินสัน บางรัก</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">ฟรี 2 ชม. แรก ชม.ถัดไป ชม.ละ 20 บาท หรือ ประทับตรา</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5149902,13.7197681,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ใต้ทางด่วน ซ.เจริญกรุง 43</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">20 บาท/ชม. 100 บาท/วัน &lt;br&gt;2,000 บาท/เดือน</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5174042,13.7283105,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>State Tower</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">50 บาท/ชม. หรือ ประทับตรา จอดฟรี 4 ชม.&lt;br&gt;2000 บาท/เดือน</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5166378,13.7215027,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>วัดยานนาวา</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">20 บาท/ชม.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5142503,13.7173976,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ที่จอดรถร้านแสนยอดโภชนา</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">30 บาท/ชม.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5176205,13.718672,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ที่จอดรถในซอยเจริญเวียง</name>
+      <Point><coordinates>100.5162982,13.71956,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>River City Bangkok</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">มีตราประทับ จอดฟรี 2 ชม. ชม.ถัดไป 40 บาท/ชม.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.513364,13.730469,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ที่จอดรถบ้านเลขที่ 1</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">10 บาท/ 30 นาที&lt;br&gt;เกิน 6 ชม. เหมาจ่าย 120 บาท&lt;br&gt;จอดหลัง 24.00 เหมาจ่ายวันละ 200 บาท</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5140522,13.7297379,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Royal Orchid Sheraton Hotel</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">50 บาท/ชม. หรือประทับตรา</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5137009,13.7292361,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Warehouse 30</name>
+      <Point><coordinates>100.5146047,13.7278239,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>วัดมหาพฤฒารามวรวิหาร</name>
+      <Point><coordinates>100.5162647,13.7328101,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ยิบอินซอย</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">20 บาท/ชม.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5156563,13.7318872,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>อาคารเกียรตินาคิน</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">30 บาท/ชม. ฟรี 20 นาทีแรก</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5149121,13.7285543,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Loftel 22 Hostel</name>
+      <Point><coordinates>100.5143729,13.7331589,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>บน ถ.เจริญกรุง หน้าตลาดน้อย</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">ฝั่งซ้าย วันคู่&lt;br&gt;06.00-09.00, 16.00-20.00&lt;br&gt;ฝั่งขวา วันคี่ &lt;br&gt;06.00-09.00, 16.00-20.00</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5145781,13.7327967,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ธนาคารไทยพาณิชย์ สาขา ตลาดน้อย</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">20 บาท/ชม. (หากไม่ใช่ลูกค้าธนาคาร)</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5129642,13.7319976,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>วัดอภัยราชบำรุง</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">20 บาท/ชม.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5132667,13.7349472,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>อาคารณัฐภูมิ</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">20 บาท/ชม.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5135843,13.7358212,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>วัดไตรมิตรวิทยารามวรวิหาร</name>
+      <Point><coordinates>100.5136671,13.7376071,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Prime Hotel Central Station Bangkok</name>
+      <Point><coordinates>100.5153609,13.7373917,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ตึกสำนักงานโอเดียน พลาซ่า</name>
+      <Point><coordinates>100.5123892,13.736916,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ศาลเจ้าโจวซือกง</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">20 บาท/ชม. 200 บาท/วัน</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5116029,13.7345486,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>วัดปทุมคงคาราชวรวิหาร</name>
+      <Point><coordinates>100.5106394,13.7363573,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ลานจอดรถริมน้ำ</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">35 บาท/ชม.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.50915,13.7371304,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>วัชรโพธิสถานมงคลธัญ</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">30 บาท/ชม.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5083067,13.7370932,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>โรงเรียนเผยอิง-ศาลเจ้าเล่าปุ่นเถ้ากง - </name>
+      <Point><coordinates>100.5066637,13.7389939,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ที่จอดรถแยกเฉลิมบุรี เยาวราช</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">30 บาท/ชม.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5119449,13.7396863,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ที่จอดรถ เท็กซัส สุกี้</name>
+      <Point><coordinates>100.5110709,13.7406302,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Hotel Royal Bangkok Chinatown</name>
+      <Point><coordinates>100.509906,13.740443,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ที่จอดรถโรงงิ้วเก่า เยาวราช</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">ติดห้างทองเลี่ยงเซ่งเฮง</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5089576,13.7408661,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Grand China Hotel Bangkok</name>
+      <Point><coordinates>100.5069981,13.7426971,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ลานจอดรถถนนทรงสวัสดิ์</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">ใกล้วัดสัมพันธวงศาราม</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5109721,13.7390208,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>วัดชนะสงคราม (วัดตึก)</name>
+      <Point><coordinates>100.5056018,13.7442949,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>China World</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">ลิฟท์จอดรถ</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5017971,13.745281,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>อาคารรวมทนุไทย</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">อาคารสีน้ำเงินตรงข้ามเมก้าพล่าซ่า</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5030422,13.7450527,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ดิโอลด์สยามพลาซ่า</name>
+      <Point><coordinates>100.5002813,13.7455447,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>India Emporium</name>
+      <Point><coordinates>100.5015507,13.7434606,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ลานจอดรถข้างการไฟฟ้าวัดเลียบ</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">40 บาท/ชม.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5008573,13.7426823,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ลานจอดรถพาหุรัด พลาซ่า</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">30 บาท/ชม.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.4998385,13.7440107,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>วัดจักรวรรดิราชาวาสวรมหาวิหาร</name>
+      <Point><coordinates>100.5038541,13.7423604,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ที่จอดรถซอยแป้งมัน</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">ทางเข้าติดธนาคารธอส</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5061101,13.7388353,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ลานจอดรถกาญจนทัตทาวเวอร์</name>
+	<ExtendedData><SchemaData schemaUrl="#Parking">
+		<SimpleData name="descriptio">ทางเข้าติดภัตตาคารเชียงการีล่า</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>100.5071656,13.7420658,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>วัดชัยภูมิการาม</name>
+      <Point><coordinates>100.5089938,13.7403804,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ธนาคารกรุงเทพ เยาวราช</name>
+      <Point><coordinates>100.5093506,13.740366,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>วัดคณิกาผล</name>
+      <Point><coordinates>100.5104512,13.7443289,0</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>

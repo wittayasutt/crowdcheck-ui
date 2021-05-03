@@ -28,52 +28,49 @@ const useRedux = () => {
 	const dispatch = useDispatch();
 	const setCrowdData = (crowdData) =>
 		dispatch({ type: 'SET_CROWD_DATA', crowdData });
-	const crowd = useSelector((state) => state.crowdData);
 	const zoom = useSelector((state) => state.zoom);
 
-	return { crowd, zoom, setCrowdData };
+	return { zoom, setCrowdData };
 };
 
 const HomePage = () => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const { crowd, zoom, setCrowdData } = useRedux();
+	const { zoom, setCrowdData } = useRedux();
 
 	const [loading, setLoading] = useState(true);
 	const [timeInterval, setTimeInterval] = useState(null);
 	const [updatedTime, setUpdatedTime] = useState(Date.now());
 
-	const [rawVenue, setRawVenue] = useState([]);
 	const [venueZoomOut, setVenueZoomOut] = useState([]);
 	const [venue, setVenue] = useState([]);
 
-	const getVenue = () => {
+	const getData = async () => {
 		setLoading(true);
 
-		service_get_venue_list().then((res) => {
+		const venueData = await getVenue();
+		const crowdData = await getCrowdData();
+
+		Promise.all([venueData, crowdData]).then(() => {
+			setCrowdData(crowdData);
+			setVenueData(venueData, crowdData);
+			setUpdatedTime(Date.now());
+		});
+	};
+
+	const getVenue = () => {
+		return service_get_venue_list().then((res) => {
 			if (res.status === 'success') {
-				setRawVenue(res.data);
-				setVenueData(res.data, crowd);
+				return res.data;
 			}
 		});
 	};
 
 	const getCrowdData = () => {
-		service_get_crowd().then((res) => {
-			console.log('res', res);
+		return service_get_crowd().then((res) => {
 			if (res) {
-				setCrowdData(res);
-				setUpdatedTime(Date.now());
-			} else {
-				// can't get crowd api, waiting 5 sec and get again
-				setLoading(true);
-
-				const timeout = setTimeout(() => {
-					getCrowdData();
-				}, 5000);
-
-				clearTimeout(timeout);
+				return res;
 			}
 		});
 	};
@@ -93,9 +90,6 @@ const HomePage = () => {
 	};
 
 	const setVenueData = (venueData, crowdData) => {
-		console.log('venueData', venueData);
-		console.log('crowdData', crowdData);
-
 		if (crowdData) {
 			const foundData = transformCrowdData(venueData, crowdData);
 			const sortedData = sortData(foundData);
@@ -106,10 +100,10 @@ const HomePage = () => {
 	};
 
 	const interval = () => {
-		getCrowdData();
+		getData();
 
 		const interval = setInterval(() => {
-			getCrowdData();
+			getData();
 		}, INTERVAL_TIME);
 
 		setTimeInterval(interval);
@@ -121,11 +115,6 @@ const HomePage = () => {
 	}, [venue]);
 
 	useEffect(() => {
-		setVenueData(rawVenue, crowd);
-	}, [crowd]);
-
-	useEffect(() => {
-		getVenue();
 		interval();
 
 		return () => {
