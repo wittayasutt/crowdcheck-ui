@@ -167,7 +167,7 @@ const Map = ({ data, offset }) => {
 	}, [instance, kmlLayers, poi]);
 
 	useEffect(() => {
-		if (navigator && navigator.geolocation) {
+		if (instance && mapApi.api && navigator && navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition((position) => {
 				if (
 					position.coords &&
@@ -178,10 +178,21 @@ const Map = ({ data, offset }) => {
 						latitude: position.coords.latitude,
 						longitude: position.coords.longitude,
 					});
+
+					var goldenGatePosition = {
+						lat: position.coords.latitude,
+						lng: position.coords.longitude,
+					};
+					var marker = new mapApi.api.Marker({
+						position: goldenGatePosition,
+						icon: '/images/default.png',
+					});
+
+					marker.setMap(instance);
 				}
 			});
 		}
-	}, [navigator, navigator.geolocation]);
+	}, [instance, mapApi.api, navigator, navigator.geolocation]);
 
 	return (
 		<Wrapper offset={offset}>

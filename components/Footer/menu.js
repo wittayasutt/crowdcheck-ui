@@ -29,6 +29,7 @@ const Wrapper = styled.div`
 	height: 64px;
 	width: 100%;
 	position: fixed;
+	bottom: 0;
 	background-color: ${(props) => props.theme.color.white};
 
 	@media (min-width: ${(props) => props.theme.breakpoint}) {
