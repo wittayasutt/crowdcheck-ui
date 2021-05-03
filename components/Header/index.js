@@ -20,9 +20,12 @@ const Header = ({ children }) => {
 			<meta name='keywords' content='crowdcheck, crowd check' />
 
 			<meta property='og:site_name' content='Crowdcheck.io' />
-			<meta property='og:title' content={t[locale].description} />
+			<meta property='og:title' content={title} />
 			<meta property='og:description' content={t[locale].description} />
-			<meta property='og:image' content='https://crowdcheck.info/crowdcheck.jpg' />
+			<meta
+				property='og:image'
+				content='https://crowdcheck.info/crowdcheck.jpg'
+			/>
 			{children}
 		</Head>
 	);
