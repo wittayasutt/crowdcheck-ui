@@ -6,16 +6,16 @@
 			<SimpleField name="name_th" type="string"></SimpleField>
 			<SimpleField name="name_en" type="string"></SimpleField>
 		</Schema>
-		<Style>
-			<IconStyle>
-				<scale>1.3</scale>
-				<Icon>
-					<href>https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg</href>
-				</Icon>
-			</IconStyle>
-		</Style>
 		<Folder>
 			<name>Craft</name>
+			<Style>
+				<IconStyle>
+					<scale>1.3</scale>
+					<Icon>
+						<href>https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg</href>
+					</Icon>
+				</IconStyle>
+			</Style>
 			<Placemark>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
