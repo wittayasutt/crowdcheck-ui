@@ -8,7 +8,7 @@
 		</Schema>
 		<Folder>
 			<name>Craft</name>
-			<Style id="pin">
+			<Style id="Craft">
 				<IconStyle id="mystyle">
 					<Icon>
 						<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
@@ -17,9 +17,11 @@
 				</IconStyle>
 			</Style>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#Craft</styleUrl>
 				<ExtendedData>
+					<styleUrl>#Craft</styleUrl>
 					<SchemaData schemaUrl="#Craft">
+						<styleUrl>#Craft</styleUrl>
 						<SimpleData name="id">139</SimpleData>
 						<SimpleData name="name_th">IGI</SimpleData>
 					</SchemaData>
