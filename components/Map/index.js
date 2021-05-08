@@ -54,9 +54,11 @@ const useRedux = () => {
 	const dispatch = useDispatch();
 	const selectPlace = (place) => dispatch({ type: 'SELECT_PLACE', place });
 	const setZoom = (zoom) => dispatch({ type: 'SET_ZOOM', zoom });
+	const toLocation = (coord) => dispatch({ type: 'TO_LOCATION', coord });
 	const poi = useSelector((state) => state.poi);
+	const coord = useSelector((state) => state.coord);
 
-	return { selectPlace, setZoom, poi };
+	return { selectPlace, setZoom, poi, coord, toLocation };
 };
 
 const Wrapper = styled.nav`
@@ -72,7 +74,7 @@ const Map = ({ data, offset }) => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const { selectPlace, setZoom, poi } = useRedux();
+	const { selectPlace, setZoom, poi, coord, toLocation } = useRedux();
 
 	const [instance, setInstance] = useState({
 		zoom: defaultZoom,
@@ -175,16 +177,15 @@ const Map = ({ data, offset }) => {
 				) {
 					setUserLocation({
 						latitude: position.coords.latitude,
-						longitude: position.coords.longitude,
+						longtitude: position.coords.longitude,
 					});
 
-					var goldenGatePosition = {
-						lat: position.coords.latitude,
-						lng: position.coords.longitude,
-					};
-					var marker = new mapApi.api.Marker({
-						position: goldenGatePosition,
-						icon: '/images/default.png',
+					const marker = new mapApi.api.Marker({
+						position: {
+							lat: position.coords.latitude,
+							lng: position.coords.longitude,
+						},
+						icon: '/images/user.png',
 					});
 
 					marker.setMap(instance);
@@ -192,6 +193,28 @@ const Map = ({ data, offset }) => {
 			});
 		}
 	}, [instance, mapApi.api, navigator, navigator.geolocation]);
+
+	useEffect(() => {
+		if (coord && mapApi.api && userLocation) {
+			const bounds = new mapApi.api.LatLngBounds();
+
+			const toLatitude =
+				coord === 'CURRENT' ? userLocation.latitude : coord.latitude;
+			const toLongtitude =
+				coord === 'CURRENT' ? userLocation.longtitude : coord.longtitude;
+
+			const marker = new mapApi.api.Marker({
+				position: new mapApi.api.LatLng(toLatitude, toLongtitude),
+			});
+
+			bounds.extend(marker.getPosition());
+
+			instance.fitBounds(bounds);
+			instance.setZoom(14);
+
+			toLocation(null);
+		}
+	}, [coord]);
 
 	return (
 		<Wrapper offset={offset}>
@@ -208,15 +231,6 @@ const Map = ({ data, offset }) => {
 				onGoogleApiLoaded={({ map, maps }) => apiHasLoaded(map, maps)}
 				onZoomAnimationStart={handleChangeZoom}
 			>
-				{userLocation && userLocation.latitude && userLocation.longtitude && (
-					<Marker
-						key='user-current-location'
-						level={100}
-						lat={userLocation.latitude}
-						lng={userLocation.longitude}
-					/>
-				)}
-
 				{data &&
 					data.map((item, index) => {
 						if (item.number) {

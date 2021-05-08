@@ -60,7 +60,7 @@ const AdminFormInputLocation = ({ title, data, onChange, isView }) => {
 					<input
 						className='input mb-1'
 						type='number'
-						placeholder='longitude'
+						placeholder='longtitude'
 						value={lng}
 						onChange={handleChangeLng}
 					/>

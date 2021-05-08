@@ -133,8 +133,6 @@ export const getRenderVenue = (oldData) => {
 		});
 	});
 
-	console.log('allPin', allPin);
-
 	const adjustedVenueList = uniq([].concat.apply([], adjustedVenue));
 
 	return {

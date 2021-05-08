@@ -15,9 +15,10 @@ const useRedux = () => {
 	const dispatch = useDispatch();
 	const togglePlaceName = () => dispatch({ type: 'TOGGLE_PLACE_NAME' });
 	const setPoi = (poi) => dispatch({ type: 'SET_POI', poi });
+	const toLocation = () => dispatch({ type: 'TO_LOCATION', coord: 'CURRENT' });
 	const poi = useSelector((state) => state.poi);
 
-	return { togglePlaceName, poi, setPoi };
+	return { togglePlaceName, poi, setPoi, toLocation };
 };
 
 const Wrapper = styled.div``;
@@ -70,7 +71,7 @@ const LegendContent = () => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const { togglePlaceName, poi, setPoi } = useRedux();
+	const { togglePlaceName, poi, setPoi, toLocation } = useRedux();
 
 	const handleTogglePlaceName = () => {
 		togglePlaceName();
@@ -100,7 +101,7 @@ const LegendContent = () => {
 				<Switch onChange={handleTogglePlaceName} />
 			</SwitchWrapper>
 			<Row>
-				<Marker level={0} />
+				<Marker level={0} onClick={toLocation} />
 				<p>{t[locale].legend.find}</p>
 			</Row>
 			<Row>

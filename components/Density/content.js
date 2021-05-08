@@ -19,8 +19,9 @@ import t from '../../translate';
 const useRedux = () => {
 	const dispatch = useDispatch();
 	const selectPlace = (place) => dispatch({ type: 'SELECT_PLACE', place });
+	const toLocation = (coord) => dispatch({ type: 'TO_LOCATION', coord });
 
-	return { selectPlace };
+	return { selectPlace, toLocation };
 };
 
 const Wrapper = styled.div``;
@@ -71,7 +72,7 @@ const DensityContent = ({ data, updatedTime }) => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const { selectPlace } = useRedux();
+	const { selectPlace, toLocation } = useRedux();
 
 	const handleSelectPlace = (id, venueName, crowd) => {
 		service_get_program_list(id).then((res) => {
@@ -125,13 +126,15 @@ const DensityContent = ({ data, updatedTime }) => {
 					return item.crowd && item.crowd.value ? (
 						<Row
 							key={item._id}
-							onClick={() =>
+							onClick={() => {
 								handleSelectPlace(
 									item._id,
 									getContent(item.name, locale),
 									item.crowd
-								)
-							}
+								);
+
+								toLocation(item.location);
+							}}
 						>
 							{item.crowd.value && <Marker level={item.crowd.value} />}
 							{item.name && (

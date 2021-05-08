@@ -12,6 +12,7 @@ const initialState = {
 	crowdData: null,
 	zoom: 12,
 	poi: [],
+	coord: null,
 };
 
 const reducer = (state = initialState, action) => {
@@ -67,6 +68,12 @@ const reducer = (state = initialState, action) => {
 			return {
 				...state,
 				poi: action.poi,
+			};
+		}
+		case 'TO_LOCATION': {
+			return {
+				...state,
+				coord: action.coord,
 			};
 		}
 		default:
