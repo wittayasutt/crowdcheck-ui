@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 	<Document id="root_doc">
+		<Style id="randomColorIcon">
+			<IconStyle>
+				<color>ff00ff00</color>
+				<colorMode>random</colorMode>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pal3/icon21.png</href>
+				</Icon>
+			</IconStyle>
+		</Style>
 		<Schema name="Craft" id="Craft">
 			<SimpleField name="id" type="float"></SimpleField>
 			<SimpleField name="name_th" type="string"></SimpleField>
@@ -8,20 +18,12 @@
 		</Schema>
 		<Folder>
 			<name>Craft</name>
-			<Style id="Craft">
-				<IconStyle id="mystyle">
-					<Icon>
-						<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
-						<scale>1.0</scale>
-					</Icon>
-				</IconStyle>
-			</Style>
 			<Placemark>
-				<styleUrl>#Craft</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
-					<styleUrl>#Craft</styleUrl>
+					<styleUrl>#randomColorIcon</styleUrl>
 					<SchemaData schemaUrl="#Craft">
-						<styleUrl>#Craft</styleUrl>
+						<styleUrl>#randomColorIcon</styleUrl>
 						<SimpleData name="id">139</SimpleData>
 						<SimpleData name="name_th">IGI</SimpleData>
 					</SchemaData>
@@ -31,7 +33,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">160</SimpleData>
@@ -43,7 +45,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">241</SimpleData>
@@ -55,7 +57,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">254</SimpleData>
@@ -67,7 +69,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">292</SimpleData>
@@ -79,7 +81,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">363</SimpleData>
@@ -91,7 +93,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">390</SimpleData>
@@ -103,7 +105,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">400</SimpleData>
@@ -115,7 +117,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">478</SimpleData>
@@ -127,7 +129,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">542</SimpleData>
@@ -139,7 +141,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">589</SimpleData>
@@ -151,7 +153,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">730</SimpleData>
@@ -163,7 +165,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">761</SimpleData>
@@ -175,7 +177,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">774</SimpleData>
@@ -187,7 +189,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">780</SimpleData>
@@ -199,7 +201,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">912</SimpleData>
@@ -211,7 +213,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">947</SimpleData>
@@ -223,7 +225,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">953</SimpleData>
@@ -235,7 +237,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">974</SimpleData>
@@ -248,7 +250,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">979</SimpleData>
@@ -260,7 +262,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">987</SimpleData>
@@ -272,7 +274,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">992</SimpleData>
@@ -284,7 +286,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">993</SimpleData>
@@ -296,7 +298,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">995</SimpleData>
@@ -308,7 +310,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1012</SimpleData>
@@ -320,7 +322,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1013</SimpleData>
@@ -332,7 +334,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1015</SimpleData>
@@ -344,7 +346,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1018</SimpleData>
@@ -356,7 +358,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1025</SimpleData>
@@ -368,7 +370,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1027</SimpleData>
@@ -380,7 +382,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1029</SimpleData>
@@ -392,7 +394,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1035</SimpleData>
@@ -404,7 +406,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1036</SimpleData>
@@ -416,7 +418,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1040</SimpleData>
@@ -428,7 +430,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1052</SimpleData>
@@ -440,7 +442,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1056</SimpleData>
@@ -452,7 +454,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1057</SimpleData>
@@ -464,7 +466,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1059</SimpleData>
@@ -476,7 +478,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1071</SimpleData>
@@ -488,7 +490,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1074</SimpleData>
@@ -500,7 +502,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1075</SimpleData>
@@ -512,7 +514,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1113</SimpleData>
@@ -524,7 +526,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1114</SimpleData>
@@ -536,7 +538,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1116</SimpleData>
@@ -548,7 +550,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1126</SimpleData>
@@ -560,7 +562,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1141</SimpleData>
@@ -572,7 +574,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1142</SimpleData>
@@ -584,7 +586,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1145</SimpleData>
@@ -596,7 +598,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1162</SimpleData>
@@ -608,7 +610,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1163</SimpleData>
@@ -620,7 +622,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1212</SimpleData>
@@ -632,7 +634,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1301</SimpleData>
@@ -644,7 +646,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1303</SimpleData>
@@ -656,7 +658,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1304</SimpleData>
@@ -668,7 +670,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1310</SimpleData>
@@ -680,7 +682,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1329</SimpleData>
@@ -692,7 +694,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1344</SimpleData>
@@ -704,7 +706,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1364</SimpleData>
@@ -716,7 +718,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1474</SimpleData>
@@ -728,7 +730,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1476</SimpleData>
@@ -740,7 +742,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1484</SimpleData>
@@ -752,7 +754,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1617</SimpleData>
@@ -764,7 +766,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1625</SimpleData>
@@ -776,7 +778,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1626</SimpleData>
@@ -788,7 +790,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1742</SimpleData>
@@ -800,7 +802,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1743</SimpleData>
@@ -812,7 +814,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1748</SimpleData>
@@ -825,7 +827,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1749</SimpleData>
@@ -837,7 +839,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1751</SimpleData>
@@ -849,7 +851,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1752</SimpleData>
@@ -861,7 +863,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1772</SimpleData>
@@ -874,7 +876,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1773</SimpleData>
@@ -887,7 +889,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1784</SimpleData>
@@ -899,7 +901,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1794</SimpleData>
@@ -911,7 +913,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1795</SimpleData>
@@ -923,7 +925,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1803</SimpleData>
@@ -935,7 +937,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1812</SimpleData>
@@ -947,7 +949,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1818</SimpleData>
@@ -959,11 +961,11 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1821</SimpleData>
-						<SimpleData name="name_th">Pinky gems</SimpleData>
+						<SimpleData name="name_th">randomColorIconky gems</SimpleData>
 					</SchemaData>
 				</ExtendedData>
 				<Point>
@@ -971,7 +973,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1822</SimpleData>
@@ -983,7 +985,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1823</SimpleData>
@@ -995,7 +997,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1824</SimpleData>
@@ -1007,7 +1009,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1826</SimpleData>
@@ -1019,7 +1021,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1828</SimpleData>
@@ -1031,7 +1033,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1831</SimpleData>
@@ -1043,7 +1045,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1834</SimpleData>
@@ -1055,7 +1057,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1837</SimpleData>
@@ -1067,7 +1069,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1840</SimpleData>
@@ -1079,7 +1081,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1841</SimpleData>
@@ -1091,7 +1093,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1842</SimpleData>
@@ -1103,7 +1105,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1844</SimpleData>
@@ -1115,7 +1117,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1845</SimpleData>
@@ -1127,7 +1129,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1846</SimpleData>
@@ -1139,7 +1141,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1847</SimpleData>
@@ -1151,7 +1153,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1848</SimpleData>
@@ -1163,7 +1165,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1849</SimpleData>
@@ -1175,7 +1177,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1850</SimpleData>
@@ -1187,7 +1189,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1851</SimpleData>
@@ -1199,7 +1201,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1854</SimpleData>
@@ -1211,7 +1213,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1857</SimpleData>
@@ -1223,7 +1225,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1881</SimpleData>
@@ -1235,7 +1237,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1883</SimpleData>
@@ -1247,7 +1249,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1885</SimpleData>
@@ -1259,7 +1261,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1886</SimpleData>
@@ -1271,7 +1273,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1891</SimpleData>
@@ -1283,7 +1285,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1895</SimpleData>
@@ -1295,7 +1297,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1897</SimpleData>
@@ -1307,7 +1309,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1901</SimpleData>
@@ -1319,7 +1321,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1903</SimpleData>
@@ -1331,7 +1333,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1906</SimpleData>
@@ -1343,7 +1345,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1909</SimpleData>
@@ -1355,7 +1357,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1911</SimpleData>
@@ -1367,7 +1369,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1913</SimpleData>
@@ -1379,7 +1381,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1916</SimpleData>
@@ -1391,7 +1393,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1918</SimpleData>
@@ -1404,7 +1406,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1920</SimpleData>
@@ -1417,7 +1419,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1927</SimpleData>
@@ -1429,7 +1431,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1928</SimpleData>
@@ -1441,7 +1443,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1930</SimpleData>
@@ -1453,7 +1455,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1935</SimpleData>
@@ -1465,7 +1467,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1936</SimpleData>
@@ -1477,7 +1479,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1937</SimpleData>
@@ -1489,7 +1491,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1939</SimpleData>
@@ -1501,7 +1503,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1941</SimpleData>
@@ -1513,7 +1515,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1944</SimpleData>
@@ -1525,7 +1527,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1947</SimpleData>
@@ -1537,7 +1539,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1948</SimpleData>
@@ -1549,7 +1551,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1950</SimpleData>
@@ -1561,7 +1563,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1953</SimpleData>
@@ -1573,7 +1575,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1955</SimpleData>
@@ -1585,7 +1587,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1956</SimpleData>
@@ -1597,7 +1599,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1957</SimpleData>
@@ -1609,7 +1611,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1958</SimpleData>
@@ -1621,7 +1623,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1959</SimpleData>
@@ -1633,7 +1635,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1960</SimpleData>
@@ -1645,7 +1647,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1962</SimpleData>
@@ -1657,7 +1659,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1963</SimpleData>
@@ -1669,7 +1671,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1965</SimpleData>
@@ -1681,7 +1683,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1966</SimpleData>
@@ -1693,7 +1695,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1967</SimpleData>
@@ -1705,7 +1707,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1968</SimpleData>
@@ -1717,7 +1719,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1969</SimpleData>
@@ -1729,7 +1731,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1970</SimpleData>
@@ -1741,7 +1743,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1971</SimpleData>
@@ -1753,7 +1755,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1972</SimpleData>
@@ -1765,7 +1767,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1974</SimpleData>
@@ -1777,7 +1779,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1975</SimpleData>
@@ -1789,7 +1791,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1977</SimpleData>
@@ -1801,7 +1803,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1978</SimpleData>
@@ -1813,7 +1815,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1979</SimpleData>
@@ -1825,7 +1827,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1980</SimpleData>
@@ -1837,7 +1839,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1981</SimpleData>
@@ -1849,7 +1851,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1982</SimpleData>
@@ -1861,7 +1863,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1983</SimpleData>
@@ -1873,7 +1875,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1987</SimpleData>
@@ -1885,7 +1887,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1988</SimpleData>
@@ -1897,7 +1899,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1989</SimpleData>
@@ -1909,7 +1911,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1990</SimpleData>
@@ -1921,7 +1923,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1991</SimpleData>
@@ -1933,7 +1935,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1992</SimpleData>
@@ -1945,7 +1947,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1993</SimpleData>
@@ -1957,7 +1959,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1994</SimpleData>
@@ -1969,7 +1971,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1995</SimpleData>
@@ -1981,7 +1983,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1996</SimpleData>
@@ -1993,7 +1995,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1997</SimpleData>
@@ -2005,7 +2007,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1998</SimpleData>
@@ -2017,7 +2019,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">1999</SimpleData>
@@ -2029,7 +2031,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2000</SimpleData>
@@ -2041,7 +2043,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2001</SimpleData>
@@ -2053,7 +2055,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2002</SimpleData>
@@ -2065,7 +2067,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2003</SimpleData>
@@ -2077,7 +2079,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2004</SimpleData>
@@ -2089,7 +2091,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2005</SimpleData>
@@ -2101,7 +2103,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2006</SimpleData>
@@ -2113,7 +2115,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2007</SimpleData>
@@ -2125,7 +2127,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2009</SimpleData>
@@ -2137,7 +2139,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2010</SimpleData>
@@ -2149,7 +2151,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2011</SimpleData>
@@ -2161,7 +2163,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2012</SimpleData>
@@ -2173,7 +2175,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2013</SimpleData>
@@ -2185,7 +2187,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2014</SimpleData>
@@ -2197,7 +2199,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2015</SimpleData>
@@ -2209,7 +2211,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2016</SimpleData>
@@ -2221,7 +2223,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2017</SimpleData>
@@ -2233,7 +2235,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2018</SimpleData>
@@ -2245,7 +2247,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2019</SimpleData>
@@ -2257,7 +2259,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2020</SimpleData>
@@ -2269,7 +2271,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2021</SimpleData>
@@ -2281,7 +2283,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2022</SimpleData>
@@ -2293,7 +2295,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2037</SimpleData>
@@ -2305,7 +2307,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2048</SimpleData>
@@ -2317,7 +2319,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2055</SimpleData>
@@ -2329,7 +2331,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2071</SimpleData>
@@ -2341,7 +2343,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2093</SimpleData>
@@ -2353,7 +2355,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2095</SimpleData>
@@ -2365,7 +2367,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2109</SimpleData>
@@ -2377,7 +2379,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2124</SimpleData>
@@ -2389,7 +2391,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2158</SimpleData>
@@ -2401,7 +2403,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2178</SimpleData>
@@ -2413,7 +2415,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2179</SimpleData>
@@ -2425,7 +2427,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2253</SimpleData>
@@ -2437,7 +2439,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2290</SimpleData>
@@ -2449,7 +2451,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2307</SimpleData>
@@ -2461,7 +2463,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2308</SimpleData>
@@ -2473,7 +2475,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2309</SimpleData>
@@ -2485,7 +2487,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2313</SimpleData>
@@ -2497,7 +2499,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2314</SimpleData>
@@ -2509,7 +2511,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2318</SimpleData>
@@ -2521,7 +2523,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2321</SimpleData>
@@ -2533,7 +2535,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2347</SimpleData>
@@ -2545,7 +2547,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2348</SimpleData>
@@ -2557,7 +2559,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2349</SimpleData>
@@ -2569,7 +2571,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2350</SimpleData>
@@ -2582,7 +2584,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2351</SimpleData>
@@ -2594,7 +2596,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2352</SimpleData>
@@ -2606,7 +2608,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2353</SimpleData>
@@ -2618,7 +2620,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2354</SimpleData>
@@ -2630,7 +2632,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2355</SimpleData>
@@ -2642,7 +2644,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2383</SimpleData>
@@ -2654,7 +2656,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2402</SimpleData>
@@ -2666,7 +2668,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2408</SimpleData>
@@ -2678,7 +2680,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2526</SimpleData>
@@ -2690,7 +2692,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2529</SimpleData>
@@ -2702,7 +2704,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2530</SimpleData>
@@ -2714,7 +2716,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2531</SimpleData>
@@ -2726,7 +2728,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2532</SimpleData>
@@ -2738,7 +2740,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2533</SimpleData>
@@ -2750,7 +2752,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2535</SimpleData>
@@ -2762,7 +2764,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2536</SimpleData>
@@ -2774,7 +2776,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2538</SimpleData>
@@ -2786,7 +2788,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2539</SimpleData>
@@ -2798,7 +2800,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2540</SimpleData>
@@ -2810,7 +2812,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2542</SimpleData>
@@ -2822,7 +2824,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2543</SimpleData>
@@ -2834,7 +2836,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2550</SimpleData>
@@ -2846,7 +2848,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2553</SimpleData>
@@ -2858,7 +2860,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2555</SimpleData>
@@ -2870,7 +2872,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2561</SimpleData>
@@ -2882,7 +2884,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2568</SimpleData>
@@ -2894,7 +2896,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2569</SimpleData>
@@ -2906,7 +2908,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2578</SimpleData>
@@ -2919,7 +2921,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2587</SimpleData>
@@ -2931,7 +2933,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2588</SimpleData>
@@ -2943,7 +2945,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2591</SimpleData>
@@ -2955,7 +2957,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2593</SimpleData>
@@ -2967,7 +2969,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2601</SimpleData>
@@ -2979,7 +2981,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2612</SimpleData>
@@ -2991,7 +2993,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2626</SimpleData>
@@ -3003,7 +3005,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2656</SimpleData>
@@ -3015,7 +3017,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<styleUrl>#pin</styleUrl>
+				<styleUrl>#randomColorIcon</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">2659</SimpleData>
