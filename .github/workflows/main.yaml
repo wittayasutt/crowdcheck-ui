@@ -17,4 +17,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: wannadev/crowdcheck:ui-${GITHUB_SHA::8}
+          tags: wannadev/crowdcheck:ui-${env.GITHUB_SHA::8}
