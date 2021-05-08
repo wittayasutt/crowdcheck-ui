@@ -1,7 +1,11 @@
-const OFFSET = 0.002;
+import uniq from 'lodash/uniq';
+import uniqBy from 'lodash/uniqBy';
+
+const RADIUS_OFFSET = 0.002;
+const PLUS_OFFSET = 0.0005;
 
 export const compare = (val, compareVal) => {
-	return val + OFFSET >= compareVal && val - OFFSET <= compareVal;
+	return val + RADIUS_OFFSET >= compareVal && val - RADIUS_OFFSET <= compareVal;
 };
 
 export const compareLocation = (val, compareVal) => {
@@ -71,7 +75,7 @@ export const findMatching = (data) => {
 		});
 };
 
-export const gatherVenue = (oldData) => {
+export const getRenderVenue = (oldData) => {
 	const data = [...oldData];
 
 	const matchingData = findMatching(data);
@@ -83,22 +87,58 @@ export const gatherVenue = (oldData) => {
 		item.map((pin) => pin.refId)
 	);
 
-	const matchingLocation = mostMatchingData.map((item) =>
-		item.map((pin) => pin.location)
-	);
-
-	const allPin = matchingLocation.map((item) => {
+	const matchingRefIdAndLocation = mostMatchingData.map((item) => {
 		return {
-			number: item.length,
-			location: centerLocation(item),
+			refIds: item.map((pin) => pin.refId),
+			location: item.map((pin) => pin.location),
 		};
 	});
 
-	const matchingRefIdList = [...new Set([].concat.apply([], matchingRefId))];
+	const uniqMatching = uniqBy(matchingRefIdAndLocation, JSON.stringify);
+	const uniqMatchingWithLocation = uniqMatching.map((item) => {
+		return {
+			...item,
+			location: centerLocation(item.location),
+		};
+	});
+
+	const allPin = uniqMatching.map((item) => {
+		return {
+			number: item.location.length,
+			location: centerLocation(item.location),
+		};
+	});
+
+	const matchingRefIdList = uniq([].concat.apply([], matchingRefId));
 
 	let newData = data.filter((item) => {
 		return !matchingRefIdList.some((refId) => refId === item.refId);
 	});
 
-	return [...newData, ...allPin];
+	const adjustedVenue = uniqMatchingWithLocation.map((item) => {
+		const location = item.location;
+
+		return item.refIds.map((refId, index) => {
+			const found = data.find((venue) => {
+				return venue.refId === refId;
+			});
+
+			return {
+				...found,
+				location: {
+					...location,
+					latitude: location.latitude + PLUS_OFFSET * index,
+				},
+			};
+		});
+	});
+
+	console.log('allPin', allPin);
+
+	const adjustedVenueList = uniq([].concat.apply([], adjustedVenue));
+
+	return {
+		zoomIn: [...newData, ...adjustedVenueList],
+		zoomOut: [...newData, ...allPin],
+	};
 };

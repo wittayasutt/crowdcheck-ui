@@ -13,9 +13,7 @@ export default {
 	coordinate: 'Coordinate',
 	credit: {
 		copyrightBy:
-			'Copyright by Piya Limpiti & Pheereeya boonchiyapruek, Op-portunist',
-		developedBy:
-			'Developed by Nitipak Samsen/ Ratthapon Wittayasattikul/ Tapanon Amatayakul',
+			'Developed by Piya Limpiti, Pheereeya boonchiyapruek, Nitipak Samsen, Ratthapon Wittayasattikul, Tapanon Amatayakul',
 		supportedBy:
 			'Supported by Creative Economy Agency (Public Organization) x True Cooperation in BKKDW2021',
 		title: 'Credit',

@@ -7,9 +7,11 @@ const Wrapper = styled.div`
 `;
 
 const Person = styled.img`
+	height: 30px;
 	width: 18px;
 
 	@media (min-width: ${(props) => props.theme.breakpoint}) {
+		height: 33px;
 		width: 20px;
 	}
 `;

@@ -27,6 +27,8 @@ export const getLevelColor = (level) => {
 			return 'red';
 		case 8:
 			return 'red';
+		case 100:
+			return 'user';
 		default:
 			return 'default';
 	}

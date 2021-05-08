@@ -7,7 +7,7 @@ import { service_get_venue_list, service_get_crowd } from '../services';
 import orderBy from 'lodash/orderBy';
 
 import { getContent, transformCrowdData } from '../helpers';
-import { gatherVenue } from '../helpers/map';
+import { getRenderVenue } from '../helpers/map';
 
 // components
 import Header from '../components/Header';
@@ -44,6 +44,7 @@ const HomePage = () => {
 	const [updatedTime, setUpdatedTime] = useState(Date.now());
 
 	const [venueZoomOut, setVenueZoomOut] = useState([]);
+	const [venueZoomIn, setVenueZoomIn] = useState([]);
 	const [venue, setVenue] = useState([]);
 
 	const getData = async () => {
@@ -110,8 +111,15 @@ const HomePage = () => {
 	};
 
 	useEffect(() => {
-		const newVenueData = gatherVenue(venue);
-		setVenueZoomOut(newVenueData);
+		const { zoomIn, zoomOut } = getRenderVenue(venue);
+
+		if (zoomIn) {
+			setVenueZoomIn(zoomIn);
+		}
+
+		if (zoomOut) {
+			setVenueZoomOut(zoomOut);
+		}
 	}, [venue]);
 
 	useEffect(() => {
@@ -122,7 +130,7 @@ const HomePage = () => {
 		};
 	}, []);
 
-	const showVenue = zoom < 14 ? venueZoomOut : venue;
+	const showVenue = zoom < 14 ? venueZoomOut : venueZoomIn;
 
 	return (
 		<>

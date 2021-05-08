@@ -193,8 +193,6 @@ const Map = ({ data, offset }) => {
 		}
 	}, [instance, mapApi.api, navigator, navigator.geolocation]);
 
-	console.log('data', data);
-
 	return (
 		<Wrapper offset={offset}>
 			<GoogleMapReact
@@ -213,7 +211,7 @@ const Map = ({ data, offset }) => {
 				{userLocation && userLocation.latitude && userLocation.longtitude && (
 					<Marker
 						key='user-current-location'
-						level={0}
+						level={100}
 						lat={userLocation.latitude}
 						lng={userLocation.longitude}
 					/>

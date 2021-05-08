@@ -148,12 +148,6 @@ const About = () => {
 				dangerouslySetInnerHTML={{
 					__html: t[locale].credit.supportedBy,
 				}}
-				className='mb-1'
-			/>
-			<p
-				dangerouslySetInnerHTML={{
-					__html: t[locale].credit.developedBy,
-				}}
 			/>
 		</Wrapper>
 	);

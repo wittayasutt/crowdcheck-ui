@@ -57,6 +57,15 @@ const Title = styled.h4`
 	margin: 24px 0 12px;
 `;
 
+const poiList = [
+	'cafeAndRestaurant',
+	'parking',
+	'gallery',
+	'designStudio',
+	'craft',
+	'fashion',
+];
+
 const LegendContent = () => {
 	const router = useRouter();
 	const { locale } = router;
@@ -110,7 +119,7 @@ const LegendContent = () => {
 				<Marker level={2} />
 				<p
 					dangerouslySetInnerHTML={{
-						__html: t[locale].legend.wait,
+						__html: t[locale].legend.go,
 					}}
 				/>
 			</Row>
@@ -132,42 +141,14 @@ const LegendContent = () => {
 			</Row>
 
 			<Title>{t[locale].pointOfInterest.title}</Title>
-			<Checkbox
-				label={t[locale].pointOfInterest.cafeAndRestaurant}
-				onChange={() => {
-					handleSetPoi('cafeAndRestaurant');
-				}}
-			/>
-			<Checkbox
-				label={t[locale].pointOfInterest.parking}
-				onChange={() => {
-					handleSetPoi('parking');
-				}}
-			/>
-			<Checkbox
-				label={t[locale].pointOfInterest.gallery}
-				onChange={() => {
-					handleSetPoi('gallery');
-				}}
-			/>
-			<Checkbox
-				label={t[locale].pointOfInterest.designStudio}
-				onChange={() => {
-					handleSetPoi('designStudio');
-				}}
-			/>
-			<Checkbox
-				label={t[locale].pointOfInterest.craft}
-				onChange={() => {
-					handleSetPoi('craft');
-				}}
-			/>
-			<Checkbox
-				label={t[locale].pointOfInterest.fashion}
-				onChange={() => {
-					handleSetPoi('fashion');
-				}}
-			/>
+			{poiList.map((item, index) => (
+				<Checkbox
+					key={`${item}-${index}`}
+					label={t[locale].pointOfInterest[item]}
+					checked={poi.some((poiItem) => poiItem === item)}
+					onChange={() => handleSetPoi(item)}
+				/>
+			))}
 		</Wrapper>
 	);
 };

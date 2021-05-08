@@ -16,8 +16,12 @@ const Image = styled.img`
 const Span = styled.span`
 	display: flex;
 	font-size: 14px;
-	font-weight: 400;
+	font-weight: 600;
 	text-shadow: 1px 1px 4px ${(props) => props.theme.color.white};
+
+	position: absolute;
+	top: 8px;
+	left: 36px;
 `;
 
 const Marker = ({ level, title, onClick }) => {

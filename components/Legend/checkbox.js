@@ -54,13 +54,9 @@ const Label = styled.label`
 	}
 `;
 
-const Checkbox = ({ label, onChange }) => {
-	const [checked, setChecked] = useState(false);
-
+const Checkbox = ({ label, checked, onChange }) => {
 	const handleToggle = () => {
 		const newChecked = !checked;
-
-		setChecked(newChecked);
 		onChange(newChecked);
 	};
 
@@ -75,11 +71,13 @@ const Checkbox = ({ label, onChange }) => {
 
 Checkbox.propTypes = {
 	label: PropTypes.string,
+	checked: PropTypes.bool,
 	onChange: PropTypes.func,
 };
 
 Checkbox.defaultProps = {
 	label: '',
+	checked: false,
 	onChange: () => {},
 };
 
