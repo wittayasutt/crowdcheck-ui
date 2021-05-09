@@ -1,4 +1,4 @@
-https://github.com/wittayasutt/crowdcheck-ui/actions/workflows/main.yaml/badge.svg
+![github action badge](https://github.com/wittayasutt/crowdcheck-ui/actions/workflows/main.yaml/badge.svg)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
