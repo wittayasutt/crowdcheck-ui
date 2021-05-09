@@ -2,7 +2,7 @@ name: build-and-push
 on:
   push:
     branches:
-      - "ci-fix-push"
+      - "main"
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
