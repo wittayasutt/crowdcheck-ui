@@ -15,6 +15,7 @@ const Image = styled.img`
 
 const Span = styled.span`
 	display: flex;
+	width: max-content;
 	font-size: 14px;
 	font-weight: 600;
 	text-shadow: 1px 1px 4px ${(props) => props.theme.color.white};
