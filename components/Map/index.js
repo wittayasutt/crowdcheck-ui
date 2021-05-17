@@ -210,7 +210,7 @@ const Map = ({ data, offset }) => {
 			bounds.extend(marker.getPosition());
 
 			instance.fitBounds(bounds);
-			instance.setZoom(14);
+			instance.setZoom(17);
 
 			toLocation(null);
 		}

@@ -1,914 +1,2771 @@
-<kml>
-  <Document>
-    <name>KML Samples</name>
-    <open>1</open>
-    <description>Unleash your creativity with the help of these examples!</description>
-    <Style id="downArrowIcon">
-      <IconStyle>
-        <Icon>
-          <href>http://maps.google.com/mapfiles/kml/pal4/icon28.png</href>
-        </Icon>
-      </IconStyle>
-    </Style>
-    <Style id="globeIcon">
-      <IconStyle>
-        <Icon>
-          <href>http://maps.google.com/mapfiles/kml/pal3/icon19.png</href>
-        </Icon>
-      </IconStyle>
-      <LineStyle>
-        <width>2</width>
-      </LineStyle>
-    </Style>
-    <Style id="transPurpleLineGreenPoly">
-      <LineStyle>
-        <color>7fff00ff</color>
-        <width>4</width>
-      </LineStyle>
-      <PolyStyle>
-        <color>7f00ff00</color>
-      </PolyStyle>
-    </Style>
-    <Style id="yellowLineGreenPoly">
-      <LineStyle>
-        <color>7f00ffff</color>
-        <width>4</width>
-      </LineStyle>
-      <PolyStyle>
-        <color>7f00ff00</color>
-      </PolyStyle>
-    </Style>
-    <Style id="thickBlackLine">
-      <LineStyle>
-        <color>87000000</color>
-        <width>10</width>
-      </LineStyle>
-    </Style>
-    <Style id="redLineBluePoly">
-      <LineStyle>
-        <color>ff0000ff</color>
-      </LineStyle>
-      <PolyStyle>
-        <color>ffff0000</color>
-      </PolyStyle>
-    </Style>
-    <Style id="blueLineRedPoly">
-      <LineStyle>
-        <color>ffff0000</color>
-      </LineStyle>
-      <PolyStyle>
-        <color>ff0000ff</color>
-      </PolyStyle>
-    </Style>
-    <Style id="transRedPoly">
-      <LineStyle>
-        <width>1.5</width>
-      </LineStyle>
-      <PolyStyle>
-        <color>7d0000ff</color>
-      </PolyStyle>
-    </Style>
-    <Style id="transBluePoly">
-      <LineStyle>
-        <width>1.5</width>
-      </LineStyle>
-      <PolyStyle>
-        <color>7dff0000</color>
-      </PolyStyle>
-    </Style>
-    <Style id="transGreenPoly">
-      <LineStyle>
-        <width>1.5</width>
-      </LineStyle>
-      <PolyStyle>
-        <color>7d00ff00</color>
-      </PolyStyle>
-    </Style>
-    <Style id="transYellowPoly">
-      <LineStyle>
-        <width>1.5</width>
-      </LineStyle>
-      <PolyStyle>
-        <color>7d00ffff</color>
-      </PolyStyle>
-    </Style>
-    <Style id="noDrivingDirections">
-      <BalloonStyle>
-        <text>
-         &lt;b&gt;$[name]&lt;/b&gt;
-         &lt;br /&gt;&lt;br /&gt;
-         $[description]
-       </text>
-      </BalloonStyle>
-    </Style>
-    <Folder>
-      <name>Placemarks</name>
-      <description>These are just some of the different kinds of placemarks with
-       which you can mark your favorite places</description>
-      <LookAt>
-        <longitude>-122.0839597145766</longitude>
-        <latitude>37.42222904525232</latitude>
-        <altitude>0</altitude>
-        <heading>-148.4122922628044</heading>
-        <tilt>40.5575073395506</tilt>
-        <range>500.6566641072245</range>
-      </LookAt>
-      <Placemark>
-        <name>Simple placemark</name>
-        <description>Attached to the ground. Intelligently places itself at the
-         height of the underlying terrain.</description>
-        <Point>
-          <coordinates>-122.0822035425683,37.42228990140251,0</coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>Floating placemark</name>
-        <visibility>0</visibility>
-        <description>Floats a defined distance above the ground.</description>
-        <LookAt>
-          <longitude>-122.0839597145766</longitude>
-          <latitude>37.42222904525232</latitude>
-          <altitude>0</altitude>
-          <heading>-148.4122922628044</heading>
-          <tilt>40.5575073395506</tilt>
-          <range>500.6566641072245</range>
-        </LookAt>
-        <styleUrl>#downArrowIcon</styleUrl>
-        <Point>
-          <altitudeMode>relativeToGround</altitudeMode>
-          <coordinates>-122.084075,37.4220033612141,50</coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>Extruded placemark</name>
-        <visibility>0</visibility>
-        <description>Tethered to the ground by a customizable
-         "tail"</description>
-        <LookAt>
-          <longitude>-122.0845787421525</longitude>
-          <latitude>37.42215078737763</latitude>
-          <altitude>0</altitude>
-          <heading>-148.4126684946234</heading>
-          <tilt>40.55750733918048</tilt>
-          <range>365.2646606980322</range>
-        </LookAt>
-        <styleUrl>#globeIcon</styleUrl>
-        <Point>
-          <extrude>1</extrude>
-          <altitudeMode>relativeToGround</altitudeMode>
-          <coordinates>-122.0857667006183,37.42156927867553,50</coordinates>
-        </Point>
-      </Placemark>
-    </Folder>
-    <Folder>
-      <name>Styles and Markup</name>
-      <visibility>0</visibility>
-      <description>With KML it is easy to create rich, descriptive markup to
-       annotate and enrich your placemarks</description>
-      <LookAt>
-        <longitude>-122.0845787422371</longitude>
-        <latitude>37.42215078726837</latitude>
-        <altitude>0</altitude>
-        <heading>-148.4126777488172</heading>
-        <tilt>40.55750733930874</tilt>
-        <range>365.2646826292919</range>
-      </LookAt>
-      <styleUrl>#noDrivingDirections</styleUrl>
-      <Document>
-        <name>Highlighted Icon</name>
-        <visibility>0</visibility>
-        <description>Place your mouse over the icon to see it display the new
-         icon</description>
-        <LookAt>
-          <longitude>-122.0856552124024</longitude>
-          <latitude>37.4224281311035</latitude>
-          <altitude>0</altitude>
-          <heading>0</heading>
-          <tilt>0</tilt>
-          <range>265.8520424250024</range>
-        </LookAt>
-        <Style id="highlightPlacemark">
-          <IconStyle>
-            <Icon>
-              <href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href>
-            </Icon>
-          </IconStyle>
-        </Style>
-        <Style id="normalPlacemark">
-          <IconStyle>
-            <Icon>
-              <href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href>
-            </Icon>
-          </IconStyle>
-        </Style>
-        <StyleMap id="exampleStyleMap">
-          <Pair>
-            <key>normal</key>
-            <styleUrl>#normalPlacemark</styleUrl>
-          </Pair>
-          <Pair>
-            <key>highlight</key>
-            <styleUrl>#highlightPlacemark</styleUrl>
-          </Pair>
-        </StyleMap>
-        <Placemark>
-          <name>Roll over this icon</name>
-          <visibility>0</visibility>
-          <styleUrl>#exampleStyleMap</styleUrl>
-          <Point>
-            <coordinates>-122.0856545755255,37.42243077405461,0</coordinates>
-          </Point>
-        </Placemark>
-      </Document>
-      <Placemark>
-        <name>Descriptive HTML</name>
-        <visibility>0</visibility>
-        <description>Click on the blue link!&lt;br&gt;&lt;br&gt;
-Placemark descriptions can be enriched by using many standard HTML tags.&lt;br&gt;
-For example:
-&lt;hr&gt;
-Styles:&lt;br&gt;
-&lt;i&gt;Italics&lt;/i&gt;, 
-&lt;b&gt;Bold&lt;/b&gt;, 
-&lt;u&gt;Underlined&lt;/u&gt;, 
-&lt;s&gt;Strike Out&lt;/s&gt;, 
-subscript&lt;sub&gt;subscript&lt;/sub&gt;, 
-superscript&lt;sup&gt;superscript&lt;/sup&gt;, 
-&lt;big&gt;Big&lt;/big&gt;, 
-&lt;small&gt;Small&lt;/small&gt;, 
-&lt;tt&gt;Typewriter&lt;/tt&gt;, 
-&lt;em&gt;Emphasized&lt;/em&gt;, 
-&lt;strong&gt;Strong&lt;/strong&gt;, 
-&lt;code&gt;Code&lt;/code&gt;
-&lt;hr&gt;
-Fonts:&lt;br&gt; 
-&lt;font color="red"&gt;red by name&lt;/font&gt;, 
-&lt;font color="#408010"&gt;leaf green by hexadecimal RGB&lt;/font&gt;
-&lt;br&gt;
-&lt;font size=1&gt;size 1&lt;/font&gt;, 
-&lt;font size=2&gt;size 2&lt;/font&gt;, 
-&lt;font size=3&gt;size 3&lt;/font&gt;, 
-&lt;font size=4&gt;size 4&lt;/font&gt;, 
-&lt;font size=5&gt;size 5&lt;/font&gt;, 
-&lt;font size=6&gt;size 6&lt;/font&gt;, 
-&lt;font size=7&gt;size 7&lt;/font&gt;
-&lt;br&gt;
-&lt;font face=times&gt;Times&lt;/font&gt;, 
-&lt;font face=verdana&gt;Verdana&lt;/font&gt;, 
-&lt;font face=arial&gt;Arial&lt;/font&gt;&lt;br&gt;
-&lt;hr&gt;
-Links: 
-&lt;br&gt;
-&lt;a href="http://earth.google.com/"&gt;Google Earth!&lt;/a&gt;
-&lt;br&gt;
-or:  Check out our website at www.google.com
-&lt;hr&gt;
-Alignment:&lt;br&gt;
-&lt;p align=left&gt;left&lt;/p&gt;
-&lt;p align=center&gt;center&lt;/p&gt;
-&lt;p align=right&gt;right&lt;/p&gt;
-&lt;hr&gt;
-Ordered Lists:&lt;br&gt;
-&lt;ol&gt;&lt;li&gt;First&lt;/li&gt;&lt;li&gt;Second&lt;/li&gt;&lt;li&gt;Third&lt;/li&gt;&lt;/ol&gt;
-&lt;ol type="a"&gt;&lt;li&gt;First&lt;/li&gt;&lt;li&gt;Second&lt;/li&gt;&lt;li&gt;Third&lt;/li&gt;&lt;/ol&gt;
-&lt;ol type="A"&gt;&lt;li&gt;First&lt;/li&gt;&lt;li&gt;Second&lt;/li&gt;&lt;li&gt;Third&lt;/li&gt;&lt;/ol&gt;
-&lt;hr&gt;
-Unordered Lists:&lt;br&gt;
-&lt;ul&gt;&lt;li&gt;A&lt;/li&gt;&lt;li&gt;B&lt;/li&gt;&lt;li&gt;C&lt;/li&gt;&lt;/ul&gt;
-&lt;ul type="circle"&gt;&lt;li&gt;A&lt;/li&gt;&lt;li&gt;B&lt;/li&gt;&lt;li&gt;C&lt;/li&gt;&lt;/ul&gt;
-&lt;ul type="square"&gt;&lt;li&gt;A&lt;/li&gt;&lt;li&gt;B&lt;/li&gt;&lt;li&gt;C&lt;/li&gt;&lt;/ul&gt;
-&lt;hr&gt;
-Definitions:&lt;br&gt;
-&lt;dl&gt;
-&lt;dt&gt;Google:&lt;/dt&gt;&lt;dd&gt;The best thing since sliced bread&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;hr&gt;
-Centered:&lt;br&gt;&lt;center&gt;
-Time present and time past&lt;br&gt;
-Are both perhaps present in time future,&lt;br&gt;
-And time future contained in time past.&lt;br&gt;
-If all time is eternally present&lt;br&gt;
-All time is unredeemable.&lt;br&gt;
-&lt;/center&gt;
-&lt;hr&gt;
-Block Quote:
-&lt;br&gt;
-&lt;blockquote&gt;
-We shall not cease from exploration&lt;br&gt;
-And the end of all our exploring&lt;br&gt;
-Will be to arrive where we started&lt;br&gt;
-And know the place for the first time.&lt;br&gt;
-&lt;i&gt;-- T.S. Eliot&lt;/i&gt;
-&lt;/blockquote&gt;
-&lt;br&gt;
-&lt;hr&gt;
-Headings:&lt;br&gt;
-&lt;h1&gt;Header 1&lt;/h1&gt;
-&lt;h2&gt;Header 2&lt;/h2&gt;
-&lt;h3&gt;Header 3&lt;/h3&gt;
-&lt;h3&gt;Header 4&lt;/h4&gt;
-&lt;h3&gt;Header 5&lt;/h5&gt;
-&lt;hr&gt;
-Images:&lt;br&gt;
-&lt;i&gt;Remote image&lt;/i&gt;&lt;br&gt;
-&lt;img src="//developers.google.com/kml/documentation/images/googleSample.png"&gt;&lt;br&gt;
-&lt;i&gt;Scaled image&lt;/i&gt;&lt;br&gt;
-&lt;img src="//developers.google.com/kml/documentation/images/googleSample.png" width=100&gt;&lt;br&gt;
-&lt;hr&gt;
-Simple Tables:&lt;br&gt;
-&lt;table border="1" padding="1"&gt;
-&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;a&lt;/td&gt;&lt;td&gt;b&lt;/td&gt;&lt;td&gt;c&lt;/td&gt;&lt;td&gt;d&lt;/td&gt;&lt;td&gt;e&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-&lt;br&gt;
-[Did you notice that double-clicking on the placemark doesn't cause the viewer to take you anywhere? This is because it is possible to directly author a "placeless placemark". If you look at the code for this example, you will see that it has neither a point coordinate nor a LookAt element.]</description>
-      </Placemark>
-    </Folder>
-    <Folder>
-      <name>Ground Overlays</name>
-      <visibility>0</visibility>
-      <description>Examples of ground overlays</description>
-      <GroundOverlay>
-        <name>Large-scale overlay on terrain</name>
-        <visibility>0</visibility>
-        <description>Overlay shows Mount Etna erupting on July 13th, 2001.</description>
-        <LookAt>
-          <longitude>15.02468937557116</longitude>
-          <latitude>37.67395167941667</latitude>
-          <altitude>0</altitude>
-          <heading>-16.5581842842829</heading>
-          <tilt>58.31228652890705</tilt>
-          <range>30350.36838438907</range>
-        </LookAt>
-        <Icon>
-          <href>http://developers.google.com/kml/documentation/images/etna.jpg</href>
-        </Icon>
-        <LatLonBox>
-          <north>37.91904192681665</north>
-          <south>37.46543388598137</south>
-          <east>15.35832653742206</east>
-          <west>14.60128369746704</west>
-          <rotation>-0.1556640799496235</rotation>
-        </LatLonBox>
-      </GroundOverlay>
-    </Folder>
-    <Folder>
-      <name>Screen Overlays</name>
-      <visibility>0</visibility>
-      <description>Screen overlays have to be authored directly in KML. These
-       examples illustrate absolute and dynamic positioning in screen space.</description>
-      <ScreenOverlay>
-        <name>Simple crosshairs</name>
-        <visibility>0</visibility>
-        <description>This screen overlay uses fractional positioning to put the
-         image in the exact center of the screen</description>
-        <Icon>
-          <href>http://developers.google.com/kml/documentation/images/crosshairs.png</href>
-        </Icon>
-        <overlayXY x="0.5" y="0.5" xunits="fraction" yunits="fraction" />
-        <screenXY x="0.5" y="0.5" xunits="fraction" yunits="fraction" />
-        <rotationXY x="0.5" y="0.5" xunits="fraction" yunits="fraction" />
-        <size x="0" y="0" xunits="pixels" yunits="pixels" />
-      </ScreenOverlay>
-      <ScreenOverlay>
-        <name>Absolute Positioning: Top left</name>
-        <visibility>0</visibility>
-        <Icon>
-          <href>http://developers.google.com/kml/documentation/images/top_left.jpg</href>
-        </Icon>
-        <overlayXY x="0" y="1" xunits="fraction" yunits="fraction" />
-        <screenXY x="0" y="1" xunits="fraction" yunits="fraction" />
-        <rotationXY x="0" y="0" xunits="fraction" yunits="fraction" />
-        <size x="0" y="0" xunits="fraction" yunits="fraction" />
-      </ScreenOverlay>
-      <ScreenOverlay>
-        <name>Absolute Positioning: Top right</name>
-        <visibility>0</visibility>
-        <Icon>
-          <href>http://developers.google.com/kml/documentation/images/top_right.jpg</href>
-        </Icon>
-        <overlayXY x="1" y="1" xunits="fraction" yunits="fraction" />
-        <screenXY x="1" y="1" xunits="fraction" yunits="fraction" />
-        <rotationXY x="0" y="0" xunits="fraction" yunits="fraction" />
-        <size x="0" y="0" xunits="fraction" yunits="fraction" />
-      </ScreenOverlay>
-      <ScreenOverlay>
-        <name>Absolute Positioning: Bottom left</name>
-        <visibility>0</visibility>
-        <Icon>
-          <href>http://developers.google.com/kml/documentation/images/bottom_left.jpg</href>
-        </Icon>
-        <overlayXY x="0" y="-1" xunits="fraction" yunits="fraction" />
-        <screenXY x="0" y="0" xunits="fraction" yunits="fraction" />
-        <rotationXY x="0" y="0" xunits="fraction" yunits="fraction" />
-        <size x="0" y="0" xunits="fraction" yunits="fraction" />
-      </ScreenOverlay>
-      <ScreenOverlay>
-        <name>Absolute Positioning: Bottom right</name>
-        <visibility>0</visibility>
-        <Icon>
-          <href>http://developers.google.com/kml/documentation/images/bottom_right.jpg</href>
-        </Icon>
-        <overlayXY x="1" y="-1" xunits="fraction" yunits="fraction" />
-        <screenXY x="1" y="0" xunits="fraction" yunits="fraction" />
-        <rotationXY x="0" y="0" xunits="fraction" yunits="fraction" />
-        <size x="0" y="0" xunits="fraction" yunits="fraction" />
-      </ScreenOverlay>
-      <ScreenOverlay>
-        <name>Dynamic Positioning: Top of screen</name>
-        <visibility>0</visibility>
-        <Icon>
-          <href>http://developers.google.com/kml/documentation/images/dynamic_screenoverlay.jpg</href>
-        </Icon>
-        <overlayXY x="0" y="1" xunits="fraction" yunits="fraction" />
-        <screenXY x="0" y="1" xunits="fraction" yunits="fraction" />
-        <rotationXY x="0" y="0" xunits="fraction" yunits="fraction" />
-        <size x="1" y="0.2" xunits="fraction" yunits="fraction" />
-      </ScreenOverlay>
-      <ScreenOverlay>
-        <name>Dynamic Positioning: Right of screen</name>
-        <visibility>0</visibility>
-        <Icon>
-          <href>http://developers.google.com/kml/documentation/images/dynamic_right.jpg</href>
-        </Icon>
-        <overlayXY x="1" y="1" xunits="fraction" yunits="fraction" />
-        <screenXY x="1" y="1" xunits="fraction" yunits="fraction" />
-        <rotationXY x="0" y="0" xunits="fraction" yunits="fraction" />
-        <size x="0" y="1" xunits="fraction" yunits="fraction" />
-      </ScreenOverlay>
-    </Folder>
-    <Folder>
-      <name>Paths</name>
-      <visibility>0</visibility>
-      <description>Examples of paths. Note that the tessellate tag is by default
-       set to 0. If you want to create tessellated lines, they must be authored
-       (or edited) directly in KML.</description>
-      <Placemark>
-        <name>Tessellated</name>
-        <visibility>0</visibility>
-        <description>If the &lt;tessellate&gt; tag has a value of 1, the line will contour to the underlying terrain</description>
-        <LookAt>
-          <longitude>-112.0822680013139</longitude>
-          <latitude>36.09825589333556</latitude>
-          <altitude>0</altitude>
-          <heading>103.8120432044965</heading>
-          <tilt>62.04855796276328</tilt>
-          <range>2889.145007690472</range>
-        </LookAt>
-        <LineString>
-          <tessellate>1</tessellate>
-          <coordinates> -112.0814237830345,36.10677870477137,0
-           -112.0870267752693,36.0905099328766,0 </coordinates>
-        </LineString>
-      </Placemark>
-      <Placemark>
-        <name>Untessellated</name>
-        <visibility>0</visibility>
-        <description>If the &lt;tessellate&gt; tag has a value of 0, the line follow a simple straight-line path from point to point</description>
-        <LookAt>
-          <longitude>-112.0822680013139</longitude>
-          <latitude>36.09825589333556</latitude>
-          <altitude>0</altitude>
-          <heading>103.8120432044965</heading>
-          <tilt>62.04855796276328</tilt>
-          <range>2889.145007690472</range>
-        </LookAt>
-        <LineString>
-          <tessellate>0</tessellate>
-          <coordinates> -112.080622229595,36.10673460007995,0
-           -112.085242575315,36.09049598612422,0 </coordinates>
-        </LineString>
-      </Placemark>
-      <Placemark>
-        <name>Absolute</name>
-        <visibility>0</visibility>
-        <description>Transparent purple line</description>
-        <LookAt>
-          <longitude>-112.2719329043177</longitude>
-          <latitude>36.08890633450894</latitude>
-          <altitude>0</altitude>
-          <heading>-106.8161545998597</heading>
-          <tilt>44.60763714063257</tilt>
-          <range>2569.386744398339</range>
-        </LookAt>
-        <styleUrl>#transPurpleLineGreenPoly</styleUrl>
-        <LineString>
-          <tessellate>1</tessellate>
-          <altitudeMode>absolute</altitudeMode>
-          <coordinates> -112.265654928602,36.09447672602546,2357
-           -112.2660384528238,36.09342608838671,2357
-           -112.2668139013453,36.09251058776881,2357
-           -112.2677826834445,36.09189827357996,2357
-           -112.2688557510952,36.0913137941187,2357
-           -112.2694810717219,36.0903677207521,2357
-           -112.2695268555611,36.08932171487285,2357
-           -112.2690144567276,36.08850916060472,2357
-           -112.2681528815339,36.08753813597956,2357
-           -112.2670588176031,36.08682685262568,2357
-           -112.2657374587321,36.08646312301303,2357 </coordinates>
-        </LineString>
-      </Placemark>
-      <Placemark>
-        <name>Absolute Extruded</name>
-        <visibility>0</visibility>
-        <description>Transparent green wall with yellow outlines</description>
-        <LookAt>
-          <longitude>-112.2643334742529</longitude>
-          <latitude>36.08563154742419</latitude>
-          <altitude>0</altitude>
-          <heading>-125.7518698668815</heading>
-          <tilt>44.61038665812578</tilt>
-          <range>4451.842204068102</range>
-        </LookAt>
-        <styleUrl>#yellowLineGreenPoly</styleUrl>
-        <LineString>
-          <extrude>1</extrude>
-          <tessellate>1</tessellate>
-          <altitudeMode>absolute</altitudeMode>
-          <coordinates> -112.2550785337791,36.07954952145647,2357
-           -112.2549277039738,36.08117083492122,2357
-           -112.2552505069063,36.08260761307279,2357
-           -112.2564540158376,36.08395660588506,2357
-           -112.2580238976449,36.08511401044813,2357
-           -112.2595218489022,36.08584355239394,2357
-           -112.2608216347552,36.08612634548589,2357
-           -112.262073428656,36.08626019085147,2357
-           -112.2633204928495,36.08621519860091,2357
-           -112.2644963846444,36.08627897945274,2357
-           -112.2656969554589,36.08649599090644,2357 </coordinates>
-        </LineString>
-      </Placemark>
-      <Placemark>
-        <name>Relative</name>
-        <visibility>0</visibility>
-        <description>Black line (10 pixels wide), height tracks terrain</description>
-        <LookAt>
-          <longitude>-112.2580438551384</longitude>
-          <latitude>36.1072674824385</latitude>
-          <altitude>0</altitude>
-          <heading>4.947421249553717</heading>
-          <tilt>44.61324882043339</tilt>
-          <range>2927.61105910266</range>
-        </LookAt>
-        <styleUrl>#thickBlackLine</styleUrl>
-        <LineString>
-          <tessellate>1</tessellate>
-          <altitudeMode>relativeToGround</altitudeMode>
-          <coordinates> -112.2532845153347,36.09886943729116,645
-           -112.2540466121145,36.09919570465255,645
-           -112.254734666947,36.09984998366178,645
-           -112.255493345654,36.10051310621746,645
-           -112.2563157098468,36.10108441943419,645
-           -112.2568033076439,36.10159722088088,645
-           -112.257494011321,36.10204323542867,645
-           -112.2584106072308,36.10229131995655,645
-           -112.2596588987972,36.10240001286358,645
-           -112.2610581199487,36.10213176873407,645
-           -112.2626285262793,36.10157011437219,645 </coordinates>
-        </LineString>
-      </Placemark>
-      <Placemark>
-        <name>Relative Extruded</name>
-        <visibility>0</visibility>
-        <description>Opaque blue walls with red outline, height tracks terrain</description>
-        <LookAt>
-          <longitude>-112.2683594333433</longitude>
-          <latitude>36.09884362144909</latitude>
-          <altitude>0</altitude>
-          <heading>-72.24271551768405</heading>
-          <tilt>44.60855445139561</tilt>
-          <range>2184.193522571467</range>
-        </LookAt>
-        <styleUrl>#redLineBluePoly</styleUrl>
-        <LineString>
-          <extrude>1</extrude>
-          <tessellate>1</tessellate>
-          <altitudeMode>relativeToGround</altitudeMode>
-          <coordinates> -112.2656634181359,36.09445214722695,630
-           -112.2652238941097,36.09520916122063,630
-           -112.2645079986395,36.09580763864907,630
-           -112.2638827428817,36.09628572284063,630
-           -112.2635746835406,36.09679275951239,630
-           -112.2635711822407,36.09740038871899,630
-           -112.2640296531825,36.09804913435539,630
-           -112.264327720538,36.09880337400301,630
-           -112.2642436562271,36.09963644790288,630
-           -112.2639148687042,36.10055381117246,630
-           -112.2626894973474,36.10149062823369,630 </coordinates>
-        </LineString>
-      </Placemark>
-    </Folder>
-    <Folder>
-      <name>Polygons</name>
-      <visibility>0</visibility>
-      <description>Examples of polygon shapes</description>
-      <Folder>
-        <name>Google Campus</name>
-        <visibility>0</visibility>
-        <description>A collection showing how easy it is to create 3-dimensional
-         buildings</description>
-        <LookAt>
-          <longitude>-122.084120030116</longitude>
-          <latitude>37.42174011925477</latitude>
-          <altitude>0</altitude>
-          <heading>-34.82469740081282</heading>
-          <tilt>53.454348562403</tilt>
-          <range>276.7870053764046</range>
-        </LookAt>
-        <Placemark>
-          <name>Building 40</name>
-          <visibility>0</visibility>
-          <styleUrl>#transRedPoly</styleUrl>
-          <Polygon>
-            <extrude>1</extrude>
-            <altitudeMode>relativeToGround</altitudeMode>
-            <outerBoundaryIs>
-              <LinearRing>
-                <coordinates> -122.0848938459612,37.42257124044786,17
-                 -122.0849580979198,37.42211922626856,17
-                 -122.0847469573047,37.42207183952619,17
-                 -122.0845725380962,37.42209006729676,17
-                 -122.0845954886723,37.42215932700895,17
-                 -122.0838521118269,37.42227278564371,17
-                 -122.083792243335,37.42203539112084,17
-                 -122.0835076656616,37.42209006957106,17
-                 -122.0834709464152,37.42200987395161,17
-                 -122.0831221085748,37.4221046494946,17
-                 -122.0829247374572,37.42226503990386,17
-                 -122.0829339169385,37.42231242843094,17
-                 -122.0833837359737,37.42225046087618,17
-                 -122.0833607854248,37.42234159228745,17
-                 -122.0834204551642,37.42237075460644,17
-                 -122.083659133885,37.42251292011001,17
-                 -122.0839758438952,37.42265873093781,17
-                 -122.0842374743331,37.42265143972521,17
-                 -122.0845036949503,37.4226514386435,17
-                 -122.0848020460801,37.42261133916315,17
-                 -122.0847882750515,37.42256395055121,17
-                 -122.0848938459612,37.42257124044786,17 </coordinates>
-              </LinearRing>
-            </outerBoundaryIs>
-          </Polygon>
-        </Placemark>
-        <Placemark>
-          <name>Building 41</name>
-          <visibility>0</visibility>
-          <styleUrl>#transBluePoly</styleUrl>
-          <Polygon>
-            <extrude>1</extrude>
-            <altitudeMode>relativeToGround</altitudeMode>
-            <outerBoundaryIs>
-              <LinearRing>
-                <coordinates> -122.0857412771483,37.42227033155257,17
-                 -122.0858169768481,37.42231408832346,17
-                 -122.085852582875,37.42230337469744,17
-                 -122.0858799945639,37.42225686138789,17
-                 -122.0858860101409,37.4222311076138,17
-                 -122.0858069157288,37.42220250173855,17
-                 -122.0858379542653,37.42214027058678,17
-                 -122.0856732640519,37.42208690214408,17
-                 -122.0856022926407,37.42214885429042,17
-                 -122.0855902778436,37.422128290487,17
-                 -122.0855841672237,37.42208171967246,17
-                 -122.0854852065741,37.42210455874995,17
-                 -122.0855067264352,37.42214267949824,17
-                 -122.0854430712915,37.42212783846172,17
-                 -122.0850990714904,37.42251282407603,17
-                 -122.0856769818632,37.42281815323651,17
-                 -122.0860162273783,37.42244918858722,17
-                 -122.0857260327004,37.42229239604253,17
-                 -122.0857412771483,37.42227033155257,17 </coordinates>
-              </LinearRing>
-            </outerBoundaryIs>
-          </Polygon>
-        </Placemark>
-        <Placemark>
-          <name>Building 42</name>
-          <visibility>0</visibility>
-          <styleUrl>#transGreenPoly</styleUrl>
-          <Polygon>
-            <extrude>1</extrude>
-            <altitudeMode>relativeToGround</altitudeMode>
-            <outerBoundaryIs>
-              <LinearRing>
-                <coordinates> -122.0857862287242,37.42136208886969,25
-                 -122.0857312990603,37.42136935989481,25
-                 -122.0857312992918,37.42140934910903,25
-                 -122.0856077073679,37.42138390166565,25
-                 -122.0855802426516,37.42137299550869,25
-                 -122.0852186221971,37.42137299504316,25
-                 -122.0852277765639,37.42161656508265,25
-                 -122.0852598189347,37.42160565894403,25
-                 -122.0852598185499,37.42168200156,25
-                 -122.0852369311478,37.42170017860346,25
-                 -122.0852643957828,37.42176197982575,25
-                 -122.0853239032746,37.42176198013907,25
-                 -122.0853559454324,37.421852864452,25
-                 -122.0854108752463,37.42188921823734,25
-                 -122.0854795379357,37.42189285337048,25
-                 -122.0855436229819,37.42188921797546,25
-                 -122.0856260178042,37.42186013499926,25
-                 -122.085937287963,37.42186013453605,25
-                 -122.0859428718666,37.42160898590042,25
-                 -122.0859655469861,37.42157992759144,25
-                 -122.0858640462341,37.42147115002957,25
-                 -122.0858548911215,37.42140571326184,25
-                 -122.0858091162768,37.4214057134039,25
-                 -122.0857862287242,37.42136208886969,25 </coordinates>
-              </LinearRing>
-            </outerBoundaryIs>
-          </Polygon>
-        </Placemark>
-        <Placemark>
-          <name>Building 43</name>
-          <visibility>0</visibility>
-          <styleUrl>#transYellowPoly</styleUrl>
-          <Polygon>
-            <extrude>1</extrude>
-            <altitudeMode>relativeToGround</altitudeMode>
-            <outerBoundaryIs>
-              <LinearRing>
-                <coordinates> -122.0844371128284,37.42177253003091,19
-                 -122.0845118855746,37.42191111542896,19
-                 -122.0850470999805,37.42178755121535,19
-                 -122.0850719913391,37.42143663023161,19
-                 -122.084916406232,37.42137237822116,19
-                 -122.0842193868167,37.42137237801626,19
-                 -122.08421938659,37.42147617161496,19
-                 -122.0838086419991,37.4214613409357,19
-                 -122.0837899728564,37.42131306410796,19
-                 -122.0832796534698,37.42129328840593,19
-                 -122.0832609819207,37.42139213944298,19
-                 -122.0829373621737,37.42137236399876,19
-                 -122.0829062425667,37.42151569778871,19
-                 -122.0828502269665,37.42176282576465,19
-                 -122.0829435788635,37.42176776969635,19
-                 -122.083217411188,37.42179248552686,19
-                 -122.0835970430103,37.4217480074456,19
-                 -122.0839455556771,37.42169364237603,19
-                 -122.0840077894637,37.42176283815853,19
-                 -122.084113587521,37.42174801104392,19
-                 -122.0840762473784,37.42171341292375,19
-                 -122.0841447047739,37.42167881534569,19
-                 -122.084144704223,37.42181720660197,19
-                 -122.0842503333074,37.4218170700446,19
-                 -122.0844371128284,37.42177253003091,19 </coordinates>
-              </LinearRing>
-            </outerBoundaryIs>
-          </Polygon>
-        </Placemark>
-      </Folder>
-      <Folder>
-        <name>Extruded Polygon</name>
-        <description>A simple way to model a building</description>
-        <Placemark>
-          <name>The Pentagon</name>
-          <LookAt>
-            <longitude>-77.05580139178142</longitude>
-            <latitude>38.870832443487</latitude>
-            <heading>59.88865561738225</heading>
-            <tilt>48.09646074797388</tilt>
-            <range>742.0552506670548</range>
-          </LookAt>
-          <Polygon>
-            <extrude>1</extrude>
-            <altitudeMode>relativeToGround</altitudeMode>
-            <outerBoundaryIs>
-              <LinearRing>
-                <coordinates> -77.05788457660967,38.87253259892824,100
-                 -77.05465973756702,38.87291016281703,100
-                 -77.05315536854791,38.87053267794386,100
-                 -77.05552622493516,38.868757801256,100
-                 -77.05844056290393,38.86996206506943,100
-                 -77.05788457660967,38.87253259892824,100 </coordinates>
-              </LinearRing>
-            </outerBoundaryIs>
-            <innerBoundaryIs>
-              <LinearRing>
-                <coordinates> -77.05668055019126,38.87154239798456,100
-                 -77.05542625960818,38.87167890344077,100
-                 -77.05485125901024,38.87076535397792,100
-                 -77.05577677433152,38.87008686581446,100
-                 -77.05691162017543,38.87054446963351,100
-                 -77.05668055019126,38.87154239798456,100 </coordinates>
-              </LinearRing>
-            </innerBoundaryIs>
-          </Polygon>
-        </Placemark>
-      </Folder>
-      <Folder>
-        <name>Absolute and Relative</name>
-        <visibility>0</visibility>
-        <description>Four structures whose roofs meet exactly. Turn on/off
-         terrain to see the difference between relative and absolute
-         positioning.</description>
-        <LookAt>
-          <longitude>-112.3348969157552</longitude>
-          <latitude>36.14845533214919</latitude>
-          <altitude>0</altitude>
-          <heading>-86.91235037566909</heading>
-          <tilt>49.30695423894192</tilt>
-          <range>990.6761201087104</range>
-        </LookAt>
-        <Placemark>
-          <name>Absolute</name>
-          <visibility>0</visibility>
-          <styleUrl>#transBluePoly</styleUrl>
-          <Polygon>
-            <tessellate>1</tessellate>
-            <altitudeMode>absolute</altitudeMode>
-            <outerBoundaryIs>
-              <LinearRing>
-                <coordinates> -112.3372510731295,36.14888505105317,1784
-                 -112.3356128688403,36.14781540589019,1784
-                 -112.3368169371048,36.14658677734382,1784
-                 -112.3384408457543,36.14762778914076,1784
-                 -112.3372510731295,36.14888505105317,1784 </coordinates>
-              </LinearRing>
-            </outerBoundaryIs>
-          </Polygon>
-        </Placemark>
-        <Placemark>
-          <name>Absolute Extruded</name>
-          <visibility>0</visibility>
-          <styleUrl>#transRedPoly</styleUrl>
-          <Polygon>
-            <extrude>1</extrude>
-            <tessellate>1</tessellate>
-            <altitudeMode>absolute</altitudeMode>
-            <outerBoundaryIs>
-              <LinearRing>
-                <coordinates> -112.3396586818843,36.14637618647505,1784
-                 -112.3380597654315,36.14531751871353,1784
-                 -112.3368254237788,36.14659596244607,1784
-                 -112.3384555043203,36.14762621763982,1784
-                 -112.3396586818843,36.14637618647505,1784 </coordinates>
-              </LinearRing>
-            </outerBoundaryIs>
-          </Polygon>
-        </Placemark>
-        <Placemark>
-          <name>Relative</name>
-          <visibility>0</visibility>
-          <LookAt>
-            <longitude>-112.3350152490417</longitude>
-            <latitude>36.14943123077423</latitude>
-            <altitude>0</altitude>
-            <heading>-118.9214100848499</heading>
-            <tilt>37.92486261093203</tilt>
-            <range>345.5169113679813</range>
-          </LookAt>
-          <styleUrl>#transGreenPoly</styleUrl>
-          <Polygon>
-            <tessellate>1</tessellate>
-            <altitudeMode>relativeToGround</altitudeMode>
-            <outerBoundaryIs>
-              <LinearRing>
-                <coordinates> -112.3349463145932,36.14988705767721,100
-                 -112.3354019540677,36.14941108398372,100
-                 -112.3344428289146,36.14878490381308,100
-                 -112.3331289492913,36.14780840132443,100
-                 -112.3317019516947,36.14680755678357,100
-                 -112.331131440106,36.1474173426228,100
-                 -112.332616324338,36.14845453364654,100
-                 -112.3339876620524,36.14926570522069,100
-                 -112.3349463145932,36.14988705767721,100 </coordinates>
-              </LinearRing>
-            </outerBoundaryIs>
-          </Polygon>
-        </Placemark>
-        <Placemark>
-          <name>Relative Extruded</name>
-          <visibility>0</visibility>
-          <LookAt>
-            <longitude>-112.3351587892382</longitude>
-            <latitude>36.14979247129029</latitude>
-            <altitude>0</altitude>
-            <heading>-55.42811560891606</heading>
-            <tilt>56.10280503739589</tilt>
-            <range>401.0997279712519</range>
-          </LookAt>
-          <styleUrl>#transYellowPoly</styleUrl>
-          <Polygon>
-            <extrude>1</extrude>
-            <tessellate>1</tessellate>
-            <altitudeMode>relativeToGround</altitudeMode>
-            <outerBoundaryIs>
-              <LinearRing>
-                <coordinates> -112.3348783983763,36.1514008468736,100
-                 -112.3372535345629,36.14888517553886,100
-                 -112.3356068927954,36.14781612679284,100
-                 -112.3350034807972,36.14846469024177,100
-                 -112.3358353861232,36.1489624162954,100
-                 -112.3345888301373,36.15026229372507,100
-                 -112.3337937856278,36.14978096026463,100
-                 -112.3331798208424,36.1504472788618,100
-                 -112.3348783983763,36.1514008468736,100 </coordinates>
-              </LinearRing>
-            </outerBoundaryIs>
-          </Polygon>
-        </Placemark>
-      </Folder>
-    </Folder>
-  </Document>
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+	<Document id="root_doc">
+		<Schema name="Craft" id="Craft">
+			<SimpleField name="id" type="float"></SimpleField>
+			<SimpleField name="name_th" type="string"></SimpleField>
+			<SimpleField name="name_en" type="string"></SimpleField>
+		</Schema>
+		<Folder>
+			<name>Craft</name>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">139</SimpleData>
+						<SimpleData name="name_th">IGI</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.515905427079,13.7248630263564</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">160</SimpleData>
+						<SimpleData name="name_th">ก้องเกียรติ</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517110156782,13.7231994359923</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">241</SimpleData>
+						<SimpleData name="name_th">A.U.T. INTERNATIONAL CO.,LTD</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51713679868,13.7239095186521</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">254</SimpleData>
+						<SimpleData name="name_th">Clinic Jeweler</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.514924105916,13.7217414227011</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">292</SimpleData>
+						<SimpleData name="name_th">ADVANCE CUTTING CENTER</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.516715999428,13.7238389851241</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">363</SimpleData>
+						<SimpleData name="name_th">FINE COLOURS CO.,LTD</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517158250199,13.7235328494666</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">390</SimpleData>
+						<SimpleData name="name_th">house of gem</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.516197037709,13.7255237128395</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">400</SimpleData>
+						<SimpleData name="name_th">PRECIOUS CHAIN FINDING &amp; ALLOY CO.,LTD</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517013811138,13.723684170141</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">478</SimpleData>
+						<SimpleData name="name_th">Tattoos</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51495789438,13.7189066555492</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">542</SimpleData>
+						<SimpleData name="name_th">รับซ่อมเครื่องประดับ</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.516416606782,13.7211475446107</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">589</SimpleData>
+						<SimpleData name="name_th">ทงง้วน เฟอร์นิเจอร์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517105668638,13.7303173159325</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">730</SimpleData>
+						<SimpleData name="name_th">ตั้งเฮียบเส็ง</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.515564282984,13.7305820004763</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">761</SimpleData>
+						<SimpleData name="name_th">วาฮิด จิเวลเลอร์ส จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.516571427938,13.7226406613414</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">774</SimpleData>
+						<SimpleData name="name_th">ห้างไท้ฮง</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.516132945113,13.7206514078104</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">780</SimpleData>
+						<SimpleData name="name_th">ห้างทองมุ้ยเฮง</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.516161270435,13.7207174762385</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">912</SimpleData>
+						<SimpleData name="name_th">ศรีไทยเจริญโลหะกิจ</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.515007196003,13.735267678748</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">947</SimpleData>
+						<SimpleData name="name_th">จิวเป็งเซ็ง</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.514393535636,13.7364096692858</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">953</SimpleData>
+						<SimpleData name="name_th">กิมกกโลหะภัณฑ์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.513686745235,13.7362062478561</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">974</SimpleData>
+						<SimpleData name="name_th">พงษ์เกียรติชัยวิบูลย์</SimpleData>
+						<SimpleData name="name_en">PONG KIAT CHAI VIBOON</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.513761474012,13.7357329344466</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">979</SimpleData>
+						<SimpleData name="name_th">Audi design จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517561256949,13.7233373997739</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">987</SimpleData>
+						<SimpleData name="name_th">บุญเจริญโลหะ</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.514386334487,13.7366102980743</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">992</SimpleData>
+						<SimpleData name="name_th">โลหะเจริญพานิชย์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.514233147351,13.7370539647046</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">993</SimpleData>
+						<SimpleData name="name_th">กิตติเมธี</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.514213230345,13.7371116491247</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">995</SimpleData>
+						<SimpleData name="name_th">สิงห์ไพบูลย์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.513938986573,13.7371686694779</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1012</SimpleData>
+						<SimpleData name="name_th">กว้างง่วนเส็งจั่น</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.513841186857,13.7364220189246</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1013</SimpleData>
+						<SimpleData name="name_th">เสรีเจริญโลหะ</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.5138633146,13.7364291860197</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1015</SimpleData>
+						<SimpleData name="name_th">เพญ นิติบุคคล กว้างง่วนเส็ง</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.513964552238,13.7364620397954</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1018</SimpleData>
+						<SimpleData name="name_th">Infinity Silver</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.516543837464,13.724136444889</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1025</SimpleData>
+						<SimpleData name="name_th">สมชาย</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51716410087,13.7242341841234</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1027</SimpleData>
+						<SimpleData name="name_th">ซาชิเจมส์แอนด์ทูล จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51736183126,13.7242584191427</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1029</SimpleData>
+						<SimpleData name="name_th">Prayong Tanason</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517117259466,13.7245374505486</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1035</SimpleData>
+						<SimpleData name="name_th">มายเจมส์เลเซอร์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517031712016,13.7243578732896</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1036</SimpleData>
+						<SimpleData name="name_th">G.S.Jewelry</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517020145074,13.7244469343964</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1040</SimpleData>
+						<SimpleData name="name_th">KU.CHECK</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517323413523,13.724512236952</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1052</SimpleData>
+						<SimpleData name="name_th">Daramond Jewely</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51666037122,13.7246338880933</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1056</SimpleData>
+						<SimpleData name="name_th">P&amp;P Sunsky GEMS CO.,LTD</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517292996545,13.7245085088649</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1057</SimpleData>
+						<SimpleData name="name_th">MANUT GOLD SMITH</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.5172635661,13.7245049016934</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1059</SimpleData>
+						<SimpleData name="name_th">AKE LASER SERVICE</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517167599964,13.7244931395094</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1071</SimpleData>
+						<SimpleData name="name_th">รอยัลไทยซิลเวอร์ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51653780539,13.7271410757739</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1074</SimpleData>
+						<SimpleData name="name_th">Eammano (Thailand). CO.,LTD</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.516182524078,13.7270750565585</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1075</SimpleData>
+						<SimpleData name="name_th">Monplaisir</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.516148220065,13.7272448689544</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1113</SimpleData>
+						<SimpleData name="name_th">ELITE</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.516224907259,13.7268122764606</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1114</SimpleData>
+						<SimpleData name="name_th">PENTA CREATION</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51622914139,13.7267790822566</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1116</SimpleData>
+						<SimpleData name="name_th">ยูหลิม ซิลเวอร์แฟตตอรี่.จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.516746574964,13.7267968597682</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1126</SimpleData>
+						<SimpleData name="name_th">AAA PLATING</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.516899009492,13.7269723684358</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1141</SimpleData>
+						<SimpleData name="name_th">ช่างจิวเวลรี่</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.516554321294,13.726147434453</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1142</SimpleData>
+						<SimpleData name="name_th">อาคาร ซุปเปอร์สตาร์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51629008385,13.7262026432352</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1145</SimpleData>
+						<SimpleData name="name_th">JEWELRY HUB</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.516344478502,13.725912795268</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1162</SimpleData>
+						<SimpleData name="name_th">Ten billion</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.516829849709,13.7255404385511</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1163</SimpleData>
+						<SimpleData name="name_th">SUN MARCASITE</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.516765764805,13.7255324570049</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1212</SimpleData>
+						<SimpleData name="name_th">คิงตัดผม B407</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.50910394977,13.7222470183137</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1301</SimpleData>
+						<SimpleData name="name_th">แลงโลหะภัณฑ์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.514861444402,13.7368637996084</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1303</SimpleData>
+						<SimpleData name="name_th">ชัยเจริญ สตีล</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.514936626314,13.7368838076724</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1304</SimpleData>
+						<SimpleData name="name_th">เอี่ยมโลหะ</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.515076345685,13.7369209910064</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1310</SimpleData>
+						<SimpleData name="name_th">มงคลพาณิชย์การเหล็ก</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.514418984793,13.7370252665072</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1329</SimpleData>
+						<SimpleData name="name_th">สุทธิรัชต์สหกิจ</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.514697095876,13.7369826865372</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1344</SimpleData>
+						<SimpleData name="name_th">จือใช้ เทรดดิ้ง</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.514888660652,13.7384313189159</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1364</SimpleData>
+						<SimpleData name="name_th">ริเวอร์ไซด์ อ๊อคชั่นเฮ้าส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.514453315493,13.7321395877759</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1474</SimpleData>
+						<SimpleData name="name_th">ฮุ่งฮวดพลาสติก</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.514425054829,13.733075499622</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1476</SimpleData>
+						<SimpleData name="name_th">รับทำเครื่องประดับทุกชนิด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.513360982301,13.7325532306078</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1484</SimpleData>
+						<SimpleData name="name_th">ประมวลโลหะกิจ</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.514766980107,13.7325355869105</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1617</SimpleData>
+						<SimpleData name="name_th">Rinyu and company</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.515897880598,13.7251567979952</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1625</SimpleData>
+						<SimpleData name="name_th">Coronet By Isarej 2nd floor</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.516051067149,13.7251341526433</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1626</SimpleData>
+						<SimpleData name="name_th">Petchseeg Thai</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.515924521737,13.7251584155219</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1742</SimpleData>
+						<SimpleData name="name_th">นำศิริมงคล</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.512845750307,13.736217746438</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1743</SimpleData>
+						<SimpleData name="name_th">ตั้งเว่งเส็ง</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51296571816,13.7361576298988</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1748</SimpleData>
+						<SimpleData name="name_th">ฮะเซ่งจั่น (1995)</SimpleData>
+						<SimpleData name="name_en">Hah seng chan (1995)</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.513147811356,13.7369013170855</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1749</SimpleData>
+						<SimpleData name="name_th">จิวฮะเฮง</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.512862855205,13.7363670866715</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1751</SimpleData>
+						<SimpleData name="name_th">ลิ้มโลหะภัณฑ์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51287180456,13.7364451726016</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1752</SimpleData>
+						<SimpleData name="name_th">จิวเต็กเซ้ง (1978)</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.512879704214,13.7365141640105</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1772</SimpleData>
+						<SimpleData name="name_th">โอ้วเฮียบเซ่งเชียง</SimpleData>
+						<SimpleData name="name_en">Ow Hiap Seng Chiang</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.513830149574,13.735498096513</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1773</SimpleData>
+						<SimpleData name="name_th">โอ้วเฮียบเซ้งเฮง</SimpleData>
+						<SimpleData name="name_en">Ow Hiap Seng Heng</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.513820236499,13.7355319945418</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1784</SimpleData>
+						<SimpleData name="name_th">อีสเทอร์น เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.516044364831,13.7280220005265</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1794</SimpleData>
+						<SimpleData name="name_th">ซีเฟค จิวเวอรี่</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518782714342,13.7211848055997</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1795</SimpleData>
+						<SimpleData name="name_th">ออสสิริส</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518892455406,13.7211932571264</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1803</SimpleData>
+						<SimpleData name="name_th">989 เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.519098169554,13.7229529118187</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1812</SimpleData>
+						<SimpleData name="name_th">ดี จิวเวอรี่</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518810417145,13.7231347101396</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1818</SimpleData>
+						<SimpleData name="name_th">สีดา</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.519146009657,13.7234162971611</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1821</SimpleData>
+						<SimpleData name="name_th">Pinky gems</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517468531554,13.7239781926539</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1822</SimpleData>
+						<SimpleData name="name_th">แสงมณีเจมส์ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.519133336389,13.7235110484488</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1823</SimpleData>
+						<SimpleData name="name_th">ไม่มีชื่อ</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.519089475904,13.7236369097594</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1824</SimpleData>
+						<SimpleData name="name_th">ที.เอช.เค.ชุบ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517497011547,13.7237822432417</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1826</SimpleData>
+						<SimpleData name="name_th">ฮ่องกง เลเซอร์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517502465954,13.7237447155659</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1828</SimpleData>
+						<SimpleData name="name_th">Zeer Casting</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517516499722,13.723651186553</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1831</SimpleData>
+						<SimpleData name="name_th">ไม่ทราบ</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518682804566,13.7236029181635</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1834</SimpleData>
+						<SimpleData name="name_th">ไม่มีชื่อ เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518558450488,13.7235890751361</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1837</SimpleData>
+						<SimpleData name="name_th">สิริมณี</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518345878944,13.7235666406928</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1840</SimpleData>
+						<SimpleData name="name_th">เอสทีดี เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517957219308,13.723664917953</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1841</SimpleData>
+						<SimpleData name="name_th">มณีไทย</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518156177203,13.7236495844347</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1842</SimpleData>
+						<SimpleData name="name_th">มเหลักข์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518271916984,13.7236652599957</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1844</SimpleData>
+						<SimpleData name="name_th">ไทเกอร์ แบรอน อิมเพค จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518874776668,13.7237480240302</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1845</SimpleData>
+						<SimpleData name="name_th">ไม่มีชื่อ เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518646620371,13.7237245277135</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1846</SimpleData>
+						<SimpleData name="name_th">อาร์.เอ.เอส.เจมส์ อินเตอร์เนชั่นแนล</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518713180658,13.723730521196</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1847</SimpleData>
+						<SimpleData name="name_th">เจ.รัตนา จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.5187784849,13.7237364042852</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1848</SimpleData>
+						<SimpleData name="name_th">ไม่มีชื่อ</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.519074370146,13.7238374543512</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1849</SimpleData>
+						<SimpleData name="name_th">STD gems</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.519012979723,13.7240309668378</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1850</SimpleData>
+						<SimpleData name="name_th">ไม่มีชื่อ เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518878147526,13.7240175057592</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1851</SimpleData>
+						<SimpleData name="name_th">จาคอบส์จิวเวลรี่ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518780990446,13.7240068246167</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1854</SimpleData>
+						<SimpleData name="name_th">ซี. ไซมีซเจ็มส์ เอ็กซ์ปอร์ต จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518514032803,13.7239680878621</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1857</SimpleData>
+						<SimpleData name="name_th">บุญเจริญเจมส์ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518324581365,13.7239393452896</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1881</SimpleData>
+						<SimpleData name="name_th">เจริญสุข จิวเวลรี่</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518575352956,13.7244845611896</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1883</SimpleData>
+						<SimpleData name="name_th">เจมพลาซ่า</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.519024126736,13.7242069850319</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1885</SimpleData>
+						<SimpleData name="name_th">ซี ซี แอนด์ เอส เอส เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518863162443,13.7241258757892</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1886</SimpleData>
+						<SimpleData name="name_th">คิงส์ สตาร์ เจมส์ เซ็นเตอร์ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518481037835,13.7240794785315</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1891</SimpleData>
+						<SimpleData name="name_th">กิลด์ (กรุงเทพ) จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517927186548,13.724247281714</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1895</SimpleData>
+						<SimpleData name="name_th">เนชั่น เจมส์ เทส เซนเตอร์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518123221356,13.7242823077739</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1897</SimpleData>
+						<SimpleData name="name_th">ที อาร์ เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518366381648,13.7243287371169</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1901</SimpleData>
+						<SimpleData name="name_th">ซั้ง</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518551132459,13.7243609689386</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1903</SimpleData>
+						<SimpleData name="name_th">พูนมณี</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518990258186,13.7246287805215</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1906</SimpleData>
+						<SimpleData name="name_th">เคเอสวาย จิวเวลรี่ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518970163122,13.724734644726</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1909</SimpleData>
+						<SimpleData name="name_th">เจฟ เจมส์ แอนด์ จิวเวลรี่</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518946607466,13.7249724554324</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1911</SimpleData>
+						<SimpleData name="name_th">แกรนด์ โปรเกรส เทรดดิ้ง จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518969586037,13.7247742785878</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1913</SimpleData>
+						<SimpleData name="name_th">จิว เวอร์ ทูลส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518965396628,13.7248106351935</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1916</SimpleData>
+						<SimpleData name="name_th">จิวเวอรี่  เรเชส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518961208143,13.72484699196</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1918</SimpleData>
+						<SimpleData name="name_th">วาย.เอ.เจมส์ กรุ๊ป จำกัด</SimpleData>
+						<SimpleData name="name_en">Y.A.GEMS GROUP COMPANY LIMITED</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518956945619,13.7248833493404</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1920</SimpleData>
+						<SimpleData name="name_th">เอส ซี เจมส์</SimpleData>
+						<SimpleData name="name_en">SC JAMES COMPANY LIMITED</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518952755309,13.7249197059538</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1927</SimpleData>
+						<SimpleData name="name_th">โลตัสวอรี่</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518679603839,13.724501662515</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1928</SimpleData>
+						<SimpleData name="name_th">สิทธิพันธ์ คอลเลคชั่น</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517980721961,13.7284566417781</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1930</SimpleData>
+						<SimpleData name="name_th">อิเทลลิเคม จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518762024359,13.7245182119334</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1935</SimpleData>
+						<SimpleData name="name_th">ทราย วันซ์ เจมส์ แอนด์ จิวเวลรี่ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518487442631,13.7244675070737</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1936</SimpleData>
+						<SimpleData name="name_th">อัญมณี</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518177821313,13.7278136915443</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1937</SimpleData>
+						<SimpleData name="name_th">บางกอกโอปอลเจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518464504649,13.7244630569274</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1939</SimpleData>
+						<SimpleData name="name_th">บี เค เจ เจมส์ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51839270278,13.7244491239291</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1941</SimpleData>
+						<SimpleData name="name_th">เบลลี่โรโพ่ เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518234293553,13.7244222486855</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1944</SimpleData>
+						<SimpleData name="name_th">แพลตตินั่ม แอนด์ พาลาเดียม รูเซล</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518113857043,13.7244007371706</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1947</SimpleData>
+						<SimpleData name="name_th">โจเวล จิวเวลรี่</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518404827599,13.7259656532701</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1948</SimpleData>
+						<SimpleData name="name_th">เอ ดี เยมส์ อินเตอร์เนชั่นแนล จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517923917503,13.724380150829</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1950</SimpleData>
+						<SimpleData name="name_th">ดามานี่ จิวเวอร์ไทย</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517894337833,13.7243833051946</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1953</SimpleData>
+						<SimpleData name="name_th">ไม่มีชื่อ</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518487987779,13.7247940494059</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1955</SimpleData>
+						<SimpleData name="name_th">พรีเมียร์ จิวเวอรี่ แมนูแฟคเชอริ่ง จํากัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51822178529,13.7253259487</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1956</SimpleData>
+						<SimpleData name="name_th">สุดา จิวเวลส์ กรุงเทพ</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518917282991,13.7251195049593</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1957</SimpleData>
+						<SimpleData name="name_th">เบนสัน จิวเวลรี่</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518053680722,13.7257092795657</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1958</SimpleData>
+						<SimpleData name="name_th">ไทยรงค์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518913683488,13.7251524232798</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1959</SimpleData>
+						<SimpleData name="name_th">สว่างเอ็กซ์ปอร์ต</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518141910171,13.7257388244675</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1960</SimpleData>
+						<SimpleData name="name_th">เดอะเนเชอรัลซิลค์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518907115125,13.7252124786548</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1962</SimpleData>
+						<SimpleData name="name_th">เอส ที ดี เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.5189036709,13.7252439697337</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1963</SimpleData>
+						<SimpleData name="name_th">อัลลู จิวเวลรี่</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518314739659,13.7244356933892</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1965</SimpleData>
+						<SimpleData name="name_th">ไม่มีชื่อ</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518083993607,13.7242778868456</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1966</SimpleData>
+						<SimpleData name="name_th">31 เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518194215187,13.7242926514973</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1967</SimpleData>
+						<SimpleData name="name_th">เกรซเวย์ อินเตอร์เนชั่นแนล</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518897773389,13.7252978915275</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1968</SimpleData>
+						<SimpleData name="name_th">27 เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518270705477,13.724303658797</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1969</SimpleData>
+						<SimpleData name="name_th">เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518473057414,13.7243422687506</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1970</SimpleData>
+						<SimpleData name="name_th">เอล เอส  เองเกิล อีส</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518893671534,13.7253353950571</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1971</SimpleData>
+						<SimpleData name="name_th">เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518629674468,13.7243705933484</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1972</SimpleData>
+						<SimpleData name="name_th">เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518670737399,13.7243755809324</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1974</SimpleData>
+						<SimpleData name="name_th">เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.5187092185,13.7243802500633</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1975</SimpleData>
+						<SimpleData name="name_th">136 เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518789705392,13.7243900160932</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1977</SimpleData>
+						<SimpleData name="name_th">150 เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518829334654,13.7241225866541</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1978</SimpleData>
+						<SimpleData name="name_th">เอสดับบลิวดี อิมปอร์ตเอ็กซ์ปอร์ต</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.519046070383,13.7232139878716</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1979</SimpleData>
+						<SimpleData name="name_th">152 เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518796694231,13.7241193664768</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1980</SimpleData>
+						<SimpleData name="name_th">เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518765247084,13.724116261963</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1981</SimpleData>
+						<SimpleData name="name_th">บลู เจมส์ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51912127296,13.7232397471927</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1982</SimpleData>
+						<SimpleData name="name_th">เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518662375217,13.7241040870215</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1983</SimpleData>
+						<SimpleData name="name_th">อาลี ชาห์ อิมเป็กซ์ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51915575,13.7233620122642</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1987</SimpleData>
+						<SimpleData name="name_th">174 เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518308280032,13.7240583707542</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1988</SimpleData>
+						<SimpleData name="name_th">176 เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518346582519,13.7240633734642</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1989</SimpleData>
+						<SimpleData name="name_th">184 เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518179436311,13.7240414539197</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1990</SimpleData>
+						<SimpleData name="name_th">182 เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518140155557,13.7240362169251</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1991</SimpleData>
+						<SimpleData name="name_th">สยาม เซ็นทรัล เจมส์ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518877957739,13.7236408087662</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1992</SimpleData>
+						<SimpleData name="name_th">186 เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518090445306,13.7240278697509</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1993</SimpleData>
+						<SimpleData name="name_th">บราโว เจมส์ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518987221143,13.7236526391553</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1994</SimpleData>
+						<SimpleData name="name_th">ไม่มีชื่อ</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517910509459,13.7240761448535</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1995</SimpleData>
+						<SimpleData name="name_th">194 เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517950826843,13.723867579725</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1996</SimpleData>
+						<SimpleData name="name_th">เอ็น วาย เจมส์ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518816336829,13.7236340896943</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1997</SimpleData>
+						<SimpleData name="name_th">บี ซี เจมส์ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51876006932,13.7236280147233</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1998</SimpleData>
+						<SimpleData name="name_th">สิทธิกร</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518153549174,13.7239268568947</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">1999</SimpleData>
+						<SimpleData name="name_th">VTR Jams</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518286089063,13.7239282235808</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2000</SimpleData>
+						<SimpleData name="name_th">เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518401010947,13.7239506505683</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2001</SimpleData>
+						<SimpleData name="name_th">เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51844296547,13.7239556046758</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2002</SimpleData>
+						<SimpleData name="name_th">เฮง.ดับบลิว.ปริ้นเซส เจมส์ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51862288627,13.7235956339263</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2003</SimpleData>
+						<SimpleData name="name_th">เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518558944154,13.723972983829</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2004</SimpleData>
+						<SimpleData name="name_th">Amorn Gems</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51859525964,13.7239769427199</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2005</SimpleData>
+						<SimpleData name="name_th">อควาเชียเจมส์​</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518462491372,13.7235793978991</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2006</SimpleData>
+						<SimpleData name="name_th">JRS Jams</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518630477759,13.7239807491586</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2007</SimpleData>
+						<SimpleData name="name_th">ธนพัฒน์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518423793656,13.7235746987487</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2009</SimpleData>
+						<SimpleData name="name_th">โกลเด้น เอ็ม</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518243648777,13.7235542163589</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2010</SimpleData>
+						<SimpleData name="name_th">ไม่มีชื่อ เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.519056535827,13.7239845236799</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2011</SimpleData>
+						<SimpleData name="name_th">เอ็นจี เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518055184912,13.7235287494327</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2012</SimpleData>
+						<SimpleData name="name_th">ไม่มีชื่อ เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.519061691535,13.7239420074082</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2013</SimpleData>
+						<SimpleData name="name_th">ไม่มีชื่อ เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.519065446582,13.7239110427175</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2014</SimpleData>
+						<SimpleData name="name_th">ไม่มีชื่อ เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51906959451,13.7238768358806</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2015</SimpleData>
+						<SimpleData name="name_th">รามาจิวเวลรี่</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51921937499,13.7228139262415</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2016</SimpleData>
+						<SimpleData name="name_th">ป.รัตนากร</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518522426252,13.7237098975133</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2017</SimpleData>
+						<SimpleData name="name_th">มเหสักข์ เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518466447033,13.7237034778586</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2018</SimpleData>
+						<SimpleData name="name_th">สยามเซมโก้ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.519022433045,13.722909075912</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2019</SimpleData>
+						<SimpleData name="name_th">ไม่มีชื่อ เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518208476026,13.7236566498886</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2020</SimpleData>
+						<SimpleData name="name_th">ไม่มีชื่อ เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517940813191,13.7237833131704</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2021</SimpleData>
+						<SimpleData name="name_th">เบอร์​เฟอร์​รี่​บางกอก</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.519053522225,13.7229372120239</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2022</SimpleData>
+						<SimpleData name="name_th">ไม่มีชื่อ เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.517949634965,13.7237196514306</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2037</SimpleData>
+						<SimpleData name="name_th">พลัสเลเซอร์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51854357078,13.7221116427003</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2048</SimpleData>
+						<SimpleData name="name_th">เจมส์​ เจมส์​</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518998410526,13.7244029889761</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2055</SimpleData>
+						<SimpleData name="name_th">ทอม​ ซอ​้ยอร์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.510395463607,13.7221462684236</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2071</SimpleData>
+						<SimpleData name="name_th">สมาคมช่างทองไทย</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.50951650319,13.7226858292639</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2093</SimpleData>
+						<SimpleData name="name_th">นัดก่อนสวย</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.509426664566,13.7239729653783</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2095</SimpleData>
+						<SimpleData name="name_th">ANB GARMENT</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.509728344031,13.7222999335606</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2109</SimpleData>
+						<SimpleData name="name_th">ต้นแบบ</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.511145521729,13.7241142457021</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2124</SimpleData>
+						<SimpleData name="name_th">รับเกาะสลักหินอ่อน แกรนิต</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.510900199824,13.7240928821316</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2158</SimpleData>
+						<SimpleData name="name_th">สมาคมผู้ส่งออก</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.519422065997,13.7212482262431</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2178</SimpleData>
+						<SimpleData name="name_th">โซลิต้า เจมส์ แอนด์ จิวเวลรี่</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518193588097,13.7255488658659</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2179</SimpleData>
+						<SimpleData name="name_th">ไม่มีชื่อ เจมส์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518824567206,13.7245306907127</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2253</SimpleData>
+						<SimpleData name="name_th">ฝ่อกี่ ตลาดน้อย</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.514083742305,13.7342666629521</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2290</SimpleData>
+						<SimpleData name="name_th">แอลเอสเค</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.514052243985,13.7333503071041</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2307</SimpleData>
+						<SimpleData name="name_th">บวรโลหะพาณิชย์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.512033278173,13.7367215716238</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2308</SimpleData>
+						<SimpleData name="name_th">ยงไทยโลหะภัณฑ์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.512005358591,13.7363067109216</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2309</SimpleData>
+						<SimpleData name="name_th">เอชเอสที สตีล</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.511840500225,13.7363048884772</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2313</SimpleData>
+						<SimpleData name="name_th">ก้วงโลหะกิจ</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.511546722944,13.735994262015</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2314</SimpleData>
+						<SimpleData name="name_th">จารุรังสีพาณิชย์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.511378072001,13.7362761451079</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2318</SimpleData>
+						<SimpleData name="name_th">ตั้งจุ้นฮวด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.512108939758,13.7361280772634</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2321</SimpleData>
+						<SimpleData name="name_th">ยงเซ่งฮวด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.512655909689,13.7356461993551</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2347</SimpleData>
+						<SimpleData name="name_th">จันทมณี จิวเวลรี่จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518989291074,13.7246338737886</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2348</SimpleData>
+						<SimpleData name="name_th">สตาร์ไดมอนด์ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518977632929,13.7245596005771</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2349</SimpleData>
+						<SimpleData name="name_th">วาทซาล เอ็นเตอร์ไพรส์ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518980863285,13.7246781250096</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2350</SimpleData>
+						<SimpleData name="name_th">ฮาไลท์ เทรดดิ้ง จำกัด</SimpleData>
+						<SimpleData name="name_en">HALITE TRADING CO.,LTD.</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51899242684,13.7245829802209</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2351</SimpleData>
+						<SimpleData name="name_th">ดิวา จิเวล</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518964326842,13.7245571458961</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2352</SimpleData>
+						<SimpleData name="name_th">มาดากาสเจมส์ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518930674414,13.7245509377614</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2353</SimpleData>
+						<SimpleData name="name_th">เอสเทรลล่า ไดมอนด์ จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518903650076,13.7245459523643</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2354</SimpleData>
+						<SimpleData name="name_th">บริลเลี่ยนท์ เจมส์ อินเตอร์เนชั่นแนล จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518096357825,13.7239187580317</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2355</SimpleData>
+						<SimpleData name="name_th">เจมส์ไอแมค จำกัด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.518193761917,13.7239325029705</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2383</SimpleData>
+						<SimpleData name="name_th">ว่องไววิทย์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.514384749318,13.7337713360197</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2402</SimpleData>
+						<SimpleData name="name_th">ตุ่นเฮงหลง</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.515566010622,13.7344237966761</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2408</SimpleData>
+						<SimpleData name="name_th">กิ้มเฮงเชียง เม็ททอล</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.514552407695,13.7354472250522</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2526</SimpleData>
+						<SimpleData name="name_th">กว้างง่วนเส็งจั่น</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51275759262,13.7364752445062</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2529</SimpleData>
+						<SimpleData name="name_th">เอี่ยมฮวด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.512029764753,13.7364119221845</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2530</SimpleData>
+						<SimpleData name="name_th">เจียงเส็งโลหะกิจ</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.512213720847,13.736558312602</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2531</SimpleData>
+						<SimpleData name="name_th">ง.สงวนสินวานิช</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.512040557225,13.7364792888123</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2532</SimpleData>
+						<SimpleData name="name_th">ง.สงวนสินวานิช</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.512053085955,13.7365576002873</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2533</SimpleData>
+						<SimpleData name="name_th">วสุรัชสหกิจ</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.512065204624,13.7366331573053</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2535</SimpleData>
+						<SimpleData name="name_th">บ่วยกี่</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51173984861,13.7366088950403</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2536</SimpleData>
+						<SimpleData name="name_th">ง่วน เฮง หลี สิบกี่</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.511656867121,13.7365768635055</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2538</SimpleData>
+						<SimpleData name="name_th">ฮกเส็ง</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.511588876858,13.7365494270714</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2539</SimpleData>
+						<SimpleData name="name_th">เจริญโลหะภัณฑ์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.511487155245,13.7365051086696</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2540</SimpleData>
+						<SimpleData name="name_th">คงช่างกล</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.511523735174,13.7365210689058</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2542</SimpleData>
+						<SimpleData name="name_th">ไทยเลิศ เทรดดิ้ง</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.511405825518,13.7364085378312</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2543</SimpleData>
+						<SimpleData name="name_th">ยงไทย โลหะภัณฑ์</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.511557782436,13.7360738015922</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2550</SimpleData>
+						<SimpleData name="name_th">โชคมงคล</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51207364469,13.7361359269502</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2553</SimpleData>
+						<SimpleData name="name_th">เตียฮั่วอัน</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.511900834456,13.7361743624443</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2555</SimpleData>
+						<SimpleData name="name_th">เตียฮั่วอัน(สำนักงาน)</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.511707342369,13.7362098043486</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2561</SimpleData>
+						<SimpleData name="name_th">จิวเลี่ยงฮวด</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.512205539241,13.7356069520459</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2568</SimpleData>
+						<SimpleData name="name_th">อะไหล่ยนต์ กลึงเครื่องเหล็ก</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.513358903504,13.7341349495304</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2569</SimpleData>
+						<SimpleData name="name_th">อะไหล่ยนต์ กลึงเครื่องเหล็ก</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.513399041479,13.7341455908489</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2578</SimpleData>
+						<SimpleData name="name_th">มีสฟลอรา</SimpleData>
+						<SimpleData name="name_en">Miss flora</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.513663661448,13.73034875345</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2587</SimpleData>
+						<SimpleData name="name_th">Thai citigems</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.513524232144,13.7301853461838</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2588</SimpleData>
+						<SimpleData name="name_th">Bongkot gems</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.513570646639,13.7303270517114</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2591</SimpleData>
+						<SimpleData name="name_th">KENG SOUVENIR</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.51343218016,13.730203863513</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2593</SimpleData>
+						<SimpleData name="name_th">MASTERPIECE BY MORAKOT GALLERY</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.513234453381,13.7305422881247</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2601</SimpleData>
+						<SimpleData name="name_th">355 ANTIQUE</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.513220765547,13.7306144700413</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2612</SimpleData>
+						<SimpleData name="name_th">DOREEN</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.513203166906,13.7299800282191</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2626</SimpleData>
+						<SimpleData name="name_th">CHAIYO</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.513429227272,13.7303462809517</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2656</SimpleData>
+						<SimpleData name="name_th">THE CONNOISSEUR</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.513385019536,13.730418819004</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<ExtendedData>
+					<SchemaData schemaUrl="#Craft">
+						<SimpleData name="id">2659</SimpleData>
+						<SimpleData name="name_th">THE VERANDAH AND BEYOND</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point>
+					<coordinates>100.513081931824,13.7305935752792</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Document>
 </kml>
