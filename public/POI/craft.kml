@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document id="root_doc">
-    <Style id="randomColorIcon">
+    <Style id="Craft_XY_NEW">
       <IconStyle>
         <color>ff00ff00</color>
         <colorMode>random</colorMode>
@@ -15,7 +15,7 @@
       <SimpleField name="X" type="float"></SimpleField>
       <SimpleField name="Y" type="float"></SimpleField>
       <SimpleField name="name_th" type="string"></SimpleField>
-      <Style id="randomColorIcon">
+      <Style id="Craft_XY_NEW">
         <IconStyle>
           <color>ff00ff00</color>
           <colorMode>random</colorMode>
@@ -31,7 +31,7 @@
       <Placemark>
         <ExtendedData>
           <SchemaData schemaUrl="#Craft_XY_NEW">
-            <Style id="randomColorIcon">
+            <Style id="Craft_XY_NEW">
               <IconStyle>
                 <color>ff00ff00</color>
                 <colorMode>random</colorMode>
