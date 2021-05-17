@@ -29,6 +29,7 @@
     <Folder>
       <name>Craft_XY_NEW</name>
       <Placemark>
+        <styleUrl>#Craft_XY_NEW</styleUrl>
         <ExtendedData>
           <SchemaData schemaUrl="#Craft_XY_NEW">
             <Style id="Craft_XY_NEW">
@@ -51,6 +52,7 @@
         </Point>
       </Placemark>
       <Placemark>
+        <styleUrl>#Craft_XY_NEW</styleUrl>
         <ExtendedData>
           <SchemaData schemaUrl="#Craft_XY_NEW">
             <SimpleData name="X">100.517110156782</SimpleData>
