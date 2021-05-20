@@ -1,499 +1,867 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
-<Document id="root_doc">
-<Schema name="fashion" id="fashion">
-	<SimpleField name="name_th" type="string"></SimpleField>
-	<SimpleField name="name_en" type="string"></SimpleField>
-	<SimpleField name="fashion_ta" type="string"></SimpleField>
-</Schema>
-<Folder><name>fashion</name>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Lonely two-legged creature</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.514768643766,13.7277949118155</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Horse unit</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การตัดเย็บ,วัสดุตกแต่ง,ตัวแทนจัดจำหน่าย</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.514704011189,13.7279925023814</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">บ.เบ็ตตี้ไหมไทย&amp;จูเอ็ลเลอร์ จำกัด</SimpleData>
-		<SimpleData name="fashion_ta">สิ่งทอ,เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.517007439542,13.7224208358615</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">อารีภรณ์</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.515620863592,13.729999354284</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Classic suit</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.515655406777,13.7297963325616</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Step one costom talor for ladie and gents</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.515721612883,13.7294195772563</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">อุตสาหกรรมไทยโบราณ</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.515421687823,13.7237543632842</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">RICH 1274</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516353596983,13.7242366670583</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Sun Bespoke</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,ผ้าผืน,ตัวแทนจัดจำหน่าย</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516395871196,13.7240542840392</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">A song tailor</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516100228884,13.7243234834821</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">N.Y.THAI SLIK</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน,วัสดุตกแต่ง</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.515969814155,13.724443625093</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Cotton House</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.515949741297,13.7245804429118</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">VICTOR</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516741708551,13.722652512484</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">S. Glory</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.514756943545,13.7218344928867</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">PRAISE</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516174525253,13.7210700540786</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Dream</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.515236880603,13.7209701387493</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Stylist</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.515200110067,13.7214240965038</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">MILANO COSTUME</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.515749360109,13.7211494720458</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">นานา บูติค</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516707616621,13.7218275906745</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">World group</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516514999068,13.723490611379</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">A20-22</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การตัดเย็บ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.517053490911,13.7303074890656</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Alex's il Sarto</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.514582988951,13.7211449969351</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">สาทร สูท</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.518066262018,13.719429652678</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">launly service</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.515211651381,13.7301323303851</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">แสงเจริญ</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.515966567866,13.720254880597</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Sin Do Tailor</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516445963257,13.7236634626182</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">AHSUN TAILOR</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516375986852,13.72389658176</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">แมน เทเลอร์</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.517905169074,13.7197943386021</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">สยาม พริทตี้</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516237639919,13.7212792473281</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Boos Colection</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.51570828381,13.7213238559427</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Suda Tahisilk</SimpleData>
-		<SimpleData name="fashion_ta">สิ่งทอ,เครื่องแต่งกาย,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516026570368,13.7213074291789</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">น่ำเซ็งเฮง</SimpleData>
-		<SimpleData name="fashion_ta">ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513790992888,13.7356319938556</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">แฮนด์ซัน เทลเลอร์</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.517550234005,13.723414680119</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">AHSONG TAILOR</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516396219578,13.7250305662388</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">มีดอกซ์ Internationnal</SimpleData>
-		<SimpleData name="fashion_ta">ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516676124913,13.7262355115689</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Intense fashion Gallery</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516994873984,13.7255609917365</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">เรนโบว์</SimpleData>
-		<SimpleData name="fashion_ta">การตัดเย็บ</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.508732824849,13.7208190886784</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">เมืองทอง เท็กซ์ไทล์</SimpleData>
-		<SimpleData name="fashion_ta">สิ่งทอ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.515519623379,13.7193222691219</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">อ.เฮงหลีพาณิชย์</SimpleData>
-		<SimpleData name="fashion_ta">สิ่งทอ,เส้นใยเส้นด้าย,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.515504567416,13.7192876976159</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">ซ. เจริญ</SimpleData>
-		<SimpleData name="fashion_ta">ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.515615398164,13.7195474451992</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">ก.สหผลซิววิ้ง</SimpleData>
-		<SimpleData name="fashion_ta">สิ่งทอ,การตัดเย็บ,เส้นใยเส้นด้าย</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.514389013019,13.7388243671646</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">A23-12</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การตัดเย็บ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.515627230442,13.7299573819625</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">ส.ไทยฟ้าพานิช</SimpleData>
-		<SimpleData name="fashion_ta">สิ่งทอ,การตัดเย็บ,เส้นใยเส้นด้าย</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.514035425199,13.7390794840462</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">elegance</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.508761079398,13.7217046557768</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Silky</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516275807354,13.7238920160785</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Mazzaro</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,ผ้าผืน,วัสดุตกแต่ง</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.51613531037,13.7214042893702</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">ชาญเท็กซ์</SimpleData>
-		<SimpleData name="fashion_ta">ลายผ้า ลายผ้าทอ</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.509606848253,13.725369338868</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">พี เอ็น เทพเจริญ</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.50964534128,13.7253701850343</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Naraya</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.510217261821,13.7263625608446</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Hermes Paris</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.509778821587,13.7260815165229</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Patek Philippe</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.510053407314,13.7261040098917</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Alexander Mcqueen</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.509628473309,13.7264865660456</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Salvatone Feregaus</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.510406346785,13.7261466506536</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Bally</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.51030118445,13.726175938792</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">D11-Klongsan Plaza Online</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.510941281937,13.7290513357287</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">ออนไทม์</SimpleData>
-		<SimpleData name="name_en">On time</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.514892190114,13.7389164887585</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Green cotton</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513647950356,13.7303205839725</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">นารายา</SimpleData>
-		<SimpleData name="name_en">Naraya</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513538394923,13.7304484401621</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Pink Elephant</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.51367955592,13.7304224374635</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">เอเอ็นเอส อินเตอร์เนชั่นแนล คัสตอม เทเลอร์</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การตัดเย็บ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513680930707,13.7303684954283</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">ชบาติก</SimpleData>
-		<SimpleData name="fashion_ta">ลายผ้า ลายผ้าทอ,สิ่งทอ,เครื่องแต่งกาย,การตัดเย็บ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513410791227,13.7302611978528</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Elegancia</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513605387717,13.7302973006812</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Fashion galleria</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การตัดเย็บ</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513547573256,13.7304062971804</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">Jean L.C Design</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การตัดเย็บ,ตัวแทนจัดจำหน่าย</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513483579938,13.7301401863181</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">New nice silk</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การตัดเย็บ</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513572578382,13.7302535741834</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">CHABATIK</SimpleData>
-		<SimpleData name="fashion_ta">สิ่งทอ,การตัดเย็บ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513592019565,13.7303674986793</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">EYE CLASS BY TOPCHAROEN</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513514228533,13.730278496909</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">KOR POR OR</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การตัดเย็บ</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513328936446,13.7301818677465</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">SIAM LEATHER GOODS</SimpleData>
-		<SimpleData name="fashion_ta">เครื่องแต่งกาย,การตัดเย็บ</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513381552101,13.7303303253985</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">SILK COLLECTION</SimpleData>
-		<SimpleData name="fashion_ta">สิ่งทอ,เครื่องแต่งกาย,การตัดเย็บ,ผ้าผืน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513409605028,13.7301204548155</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">LAMPION</SimpleData>
-		<SimpleData name="fashion_ta">สิ่งทอ,ผ้าผืน,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513386974938,13.7305061971572</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#fashion">
-		<SimpleData name="name_th">KASHMIR HOUSE</SimpleData>
-		<SimpleData name="fashion_ta">ลายผ้า ลายผ้าทอ,สิ่งทอ,ผ้าผืน,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513328312803,13.7304530104587</coordinates></Point>
-  </Placemark>
-</Folder>
-</Document></kml>
+	<Document id="root_doc">
+		<Style id="fashionIcon">
+			<IconStyle>
+				<Icon>
+					<href>https://crowdcheckinfo.herokuapp.com/POI/fashion.png</href>
+				</Icon>
+			</IconStyle>
+		</Style>
+		<StyleMap id="styleMap">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#fashionIcon</styleUrl>
+			</Pair>
+		</StyleMap>
+		<name>fashion</name>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Lonely two-legged creature</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.514768643766,13.7277949118155</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Horse unit</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การตัดเย็บ,วัสดุตกแต่ง,ตัวแทนจัดจำหน่าย</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.514704011189,13.7279925023814</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">บ.เบ็ตตี้ไหมไทย&amp;จูเอ็ลเลอร์ จำกัด</SimpleData>
+					<SimpleData name="fashion_ta">สิ่งทอ,เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.517007439542,13.7224208358615</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">อารีภรณ์</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.515620863592,13.729999354284</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Classic suit</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.515655406777,13.7297963325616</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Step one costom talor for ladie and gents</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.515721612883,13.7294195772563</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">อุตสาหกรรมไทยโบราณ</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.515421687823,13.7237543632842</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">RICH 1274</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516353596983,13.7242366670583</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Sun Bespoke</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,ผ้าผืน,ตัวแทนจัดจำหน่าย</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516395871196,13.7240542840392</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">A song tailor</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516100228884,13.7243234834821</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">N.Y.THAI SLIK</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน,วัสดุตกแต่ง</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.515969814155,13.724443625093</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Cotton House</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.515949741297,13.7245804429118</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">VICTOR</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516741708551,13.722652512484</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">S. Glory</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.514756943545,13.7218344928867</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">PRAISE</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516174525253,13.7210700540786</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Dream</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.515236880603,13.7209701387493</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Stylist</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.515200110067,13.7214240965038</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">MILANO COSTUME</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.515749360109,13.7211494720458</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">นานา บูติค</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516707616621,13.7218275906745</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">World group</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516514999068,13.723490611379</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">A20-22</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การตัดเย็บ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.517053490911,13.7303074890656</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Alex's il Sarto</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.514582988951,13.7211449969351</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">สาทร สูท</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.518066262018,13.719429652678</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">launly service</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.515211651381,13.7301323303851</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">แสงเจริญ</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.515966567866,13.720254880597</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Sin Do Tailor</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516445963257,13.7236634626182</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">AHSUN TAILOR</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516375986852,13.72389658176</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">แมน เทเลอร์</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.517905169074,13.7197943386021</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">สยาม พริทตี้</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516237639919,13.7212792473281</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Boos Colection</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.51570828381,13.7213238559427</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Suda Tahisilk</SimpleData>
+					<SimpleData name="fashion_ta">สิ่งทอ,เครื่องแต่งกาย,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516026570368,13.7213074291789</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">น่ำเซ็งเฮง</SimpleData>
+					<SimpleData name="fashion_ta">ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513790992888,13.7356319938556</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">แฮนด์ซัน เทลเลอร์</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.517550234005,13.723414680119</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">AHSONG TAILOR</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516396219578,13.7250305662388</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">มีดอกซ์ Internationnal</SimpleData>
+					<SimpleData name="fashion_ta">ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516676124913,13.7262355115689</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Intense fashion Gallery</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516994873984,13.7255609917365</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">เรนโบว์</SimpleData>
+					<SimpleData name="fashion_ta">การตัดเย็บ</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.508732824849,13.7208190886784</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">เมืองทอง เท็กซ์ไทล์</SimpleData>
+					<SimpleData name="fashion_ta">สิ่งทอ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.515519623379,13.7193222691219</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">อ.เฮงหลีพาณิชย์</SimpleData>
+					<SimpleData name="fashion_ta">สิ่งทอ,เส้นใยเส้นด้าย,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.515504567416,13.7192876976159</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">ซ. เจริญ</SimpleData>
+					<SimpleData name="fashion_ta">ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.515615398164,13.7195474451992</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">ก.สหผลซิววิ้ง</SimpleData>
+					<SimpleData name="fashion_ta">สิ่งทอ,การตัดเย็บ,เส้นใยเส้นด้าย</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.514389013019,13.7388243671646</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">A23-12</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การตัดเย็บ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.515627230442,13.7299573819625</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">ส.ไทยฟ้าพานิช</SimpleData>
+					<SimpleData name="fashion_ta">สิ่งทอ,การตัดเย็บ,เส้นใยเส้นด้าย</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.514035425199,13.7390794840462</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">elegance</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.508761079398,13.7217046557768</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Silky</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516275807354,13.7238920160785</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Mazzaro</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,ผ้าผืน,วัสดุตกแต่ง</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.51613531037,13.7214042893702</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">ชาญเท็กซ์</SimpleData>
+					<SimpleData name="fashion_ta">ลายผ้า ลายผ้าทอ</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.509606848253,13.725369338868</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">พี เอ็น เทพเจริญ</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การดูแลการผลิตถึงการขาย Merchandiser,การตัดเย็บ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.50964534128,13.7253701850343</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Naraya</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.510217261821,13.7263625608446</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Hermes Paris</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.509778821587,13.7260815165229</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Patek Philippe</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.510053407314,13.7261040098917</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Alexander Mcqueen</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.509628473309,13.7264865660456</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Salvatone Feregaus</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.510406346785,13.7261466506536</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Bally</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.51030118445,13.726175938792</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">D11-Klongsan Plaza Online</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.510941281937,13.7290513357287</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">ออนไทม์</SimpleData>
+					<SimpleData name="name_en">On time</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.514892190114,13.7389164887585</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Green cotton</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513647950356,13.7303205839725</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">นารายา</SimpleData>
+					<SimpleData name="name_en">Naraya</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513538394923,13.7304484401621</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Pink Elephant</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.51367955592,13.7304224374635</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">เอเอ็นเอส อินเตอร์เนชั่นแนล คัสตอม เทเลอร์</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การตัดเย็บ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513680930707,13.7303684954283</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">ชบาติก</SimpleData>
+					<SimpleData name="fashion_ta">ลายผ้า ลายผ้าทอ,สิ่งทอ,เครื่องแต่งกาย,การตัดเย็บ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513410791227,13.7302611978528</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Elegancia</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513605387717,13.7302973006812</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Fashion galleria</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การตัดเย็บ</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513547573256,13.7304062971804</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">Jean L.C Design</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การตัดเย็บ,ตัวแทนจัดจำหน่าย</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513483579938,13.7301401863181</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">New nice silk</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การตัดเย็บ</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513572578382,13.7302535741834</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">CHABATIK</SimpleData>
+					<SimpleData name="fashion_ta">สิ่งทอ,การตัดเย็บ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513592019565,13.7303674986793</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">EYE CLASS BY TOPCHAROEN</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513514228533,13.730278496909</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">KOR POR OR</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การตัดเย็บ</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513328936446,13.7301818677465</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">SIAM LEATHER GOODS</SimpleData>
+					<SimpleData name="fashion_ta">เครื่องแต่งกาย,การตัดเย็บ</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513381552101,13.7303303253985</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">SILK COLLECTION</SimpleData>
+					<SimpleData name="fashion_ta">สิ่งทอ,เครื่องแต่งกาย,การตัดเย็บ,ผ้าผืน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513409605028,13.7301204548155</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">LAMPION</SimpleData>
+					<SimpleData name="fashion_ta">สิ่งทอ,ผ้าผืน,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513386974938,13.7305061971572</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#fashion">
+					<SimpleData name="name_th">KASHMIR HOUSE</SimpleData>
+					<SimpleData name="fashion_ta">ลายผ้า ลายผ้าทอ,สิ่งทอ,ผ้าผืน,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513328312803,13.7304530104587</coordinates>
+			</Point>
+		</Placemark>
+	</Document>
+</kml>

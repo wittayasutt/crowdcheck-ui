@@ -1,545 +1,892 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
-<Document id="root_doc">
-<Schema name="Gallery" id="Gallery">
-	<SimpleField name="id" type="float"></SimpleField>
-	<SimpleField name="name_th" type="string"></SimpleField>
-	<SimpleField name="name_en" type="string"></SimpleField>
-	<SimpleField name="visualar_7" type="string"></SimpleField>
-</Schema>
-<Folder><name>Gallery</name>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">32</SimpleData>
-		<SimpleData name="name_th">Autum Gallery</SimpleData>
-		<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.514618246192,13.7282519401903</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">87</SimpleData>
-		<SimpleData name="name_th">Lek Gallery Art</SimpleData>
-		<SimpleData name="visualar_7">ภาพสีน้ำมัน,ประติมากรรม,ศิลปะจัดวาง,ภาพพิมพ์,ภาพถ่าย,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.515309613632,13.7288846317453</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">88</SimpleData>
-		<SimpleData name="name_th">ATT19</SimpleData>
-		<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.515219590169,13.7288336221045</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">91</SimpleData>
-		<SimpleData name="name_th">ASIA COLLECTION.CO.,LTD.</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.51433325709,13.728521860963</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">92</SimpleData>
-		<SimpleData name="name_th">Rama art gallery and jewelry store</SimpleData>
-		<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.514312609093,13.7290643123371</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">112</SimpleData>
-		<SimpleData name="name_th">MT Gallery</SimpleData>
-		<SimpleData name="visualar_7">ภาพลายเส้น,ภาพพิมพ์,ตัวแทนจัดจำหน่าย,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516387889832,13.7240887179228</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">122</SimpleData>
-		<SimpleData name="name_th">Rama Art-Gallery</SimpleData>
-		<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516246812152,13.7248932415892</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">143</SimpleData>
-		<SimpleData name="name_th">OP Place</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.515482381636,13.7245857113198</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">147</SimpleData>
-		<SimpleData name="name_th">Gallery 13 บริษัท โฟร์ซิสเตอร์ จำกัด</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516715984458,13.722902410151</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">169</SimpleData>
-		<SimpleData name="name_th">Lek Gallery</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516641902953,13.7233490696481</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">316</SimpleData>
-		<SimpleData name="name_th">จักรวาลโฟโต้ดิจิตอล</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516163821122,13.7210458481196</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">561</SimpleData>
-		<SimpleData name="name_th">ศรีเวียง ทำกรอบรูป</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.51677153234,13.7219769517991</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">719</SimpleData>
-		<SimpleData name="name_th">soy sauce factory</SimpleData>
-		<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.514629911484,13.7314821870747</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">795</SimpleData>
-		<SimpleData name="name_th">Film House</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.5164540244,13.7236251466189</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">1106</SimpleData>
-		<SimpleData name="name_th">GALERIE ADLER(BKK-PARIS)</SimpleData>
-		<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516543995497,13.727391778918</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">1570</SimpleData>
-		<SimpleData name="name_th">The Nestle Living and Gallery</SimpleData>
-		<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516468282381,13.7274275707354</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">1571</SimpleData>
-		<SimpleData name="name_th">Ilford Gallery</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.51704002921,13.72556661566</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">1610</SimpleData>
-		<SimpleData name="name_th">Serindia Gallery</SimpleData>
-		<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516024771642,13.7251843118644</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">1611</SimpleData>
-		<SimpleData name="name_th">Nisan ong</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516053325723,13.7251767171035</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">1612</SimpleData>
-		<SimpleData name="name_th">Atta Gallery</SimpleData>
-		<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.516108602879,13.7251773476971</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">1800</SimpleData>
-		<SimpleData name="name_th">333 Gallery</SimpleData>
-		<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.519269163011,13.7224334223421</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">1832</SimpleData>
-		<SimpleData name="name_th">ประดิษฐ์ศิลป์เซ็นเตอร์ จำกัด</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.517522663485,13.7236079732564</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">1926</SimpleData>
-		<SimpleData name="name_th">พิพิธภัณฑ์ชาวบางกอก</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.518177489903,13.7282413255123</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2438</SimpleData>
-		<SimpleData name="name_th">MOST Gallery</SimpleData>
-		<SimpleData name="visualar_7">ภาพถ่าย</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.51520718188,13.7302605566075</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2602</SimpleData>
-		<SimpleData name="name_th">AGATA</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.51311806828,13.7303207766085</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2603</SimpleData>
-		<SimpleData name="name_th">AMATA COLLECTION</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,ตัวแทนจัดจำหน่าย,การจั</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513263784449,13.7305897762304</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2604</SimpleData>
-		<SimpleData name="name_th">ANGKOR ANTIQUES</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.51327747228,13.7306391638525</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2605</SimpleData>
-		<SimpleData name="name_th">ANTIQUE BY DAO</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513230610782,13.7302807610156</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2606</SimpleData>
-		<SimpleData name="name_th">AUGUST 9</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513341108512,13.7300594378879</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2607</SimpleData>
-		<SimpleData name="name_th">AVA ANTIQUE</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513124950722,13.7306410633759</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2608</SimpleData>
-		<SimpleData name="name_th">BB ANTIQUES</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.51323836419,13.7303922256466</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2609</SimpleData>
-		<SimpleData name="name_th">BEYOND THE MASKS</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513081795403,13.7304191282282</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2610</SimpleData>
-		<SimpleData name="name_th">CHARLIE'S COLLECTION</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513267846392,13.7300991606975</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2611</SimpleData>
-		<SimpleData name="name_th">CHUSAK</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513315181789,13.7299704545191</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2613</SimpleData>
-		<SimpleData name="name_th">FRIDAY</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513327953451,13.7302539437813</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2614</SimpleData>
-		<SimpleData name="name_th">GRAND ANTIQUES</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,ศิลปะจัดวาง,ตัวแทนจัดจ</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513339033416,13.7301444589007</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2615</SimpleData>
-		<SimpleData name="name_th">GUAY SILOM</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513149581842,13.7301594509118</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2616</SimpleData>
-		<SimpleData name="name_th">HIMALAYA HANDICRAFT</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ศิลปะจัดวาง,ตัวแทนจัดจำหน่าย,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513229891092,13.730160091108</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2617</SimpleData>
-		<SimpleData name="name_th">HIMALAYAN TREASURES</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การประมูลสินค้า,ตัวแทน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513181714301,13.7302373921668</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2618</SimpleData>
-		<SimpleData name="name_th">HONG ANTIQUES</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,ศิลปะจัดวาง,การจัดแสดง</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513290136935,13.7303427164921</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2619</SimpleData>
-		<SimpleData name="name_th">HUMMING BIRD</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513283759132,13.7304273889555</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2620</SimpleData>
-		<SimpleData name="name_th">INGON GALLERY</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513166404057,13.7304174863354</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2621</SimpleData>
-		<SimpleData name="name_th">333 BABABA GALLERY</SimpleData>
-		<SimpleData name="visualar_7">ภาพลายเส้น,ภาพสีน้ำ,ภาพสีโปสเตอร์,ภาพสีอะคริลิก,ภาพฝาผนัง,ประติมากรรม,ศิลปะจัดวาง,ภาพวาดด�</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.51364481862,13.7304030794454</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2622</SimpleData>
-		<SimpleData name="name_th">956 CONTEMPORARY ART</SimpleData>
-		<SimpleData name="visualar_7">ภาพสีน้ำมัน,ภาพสีอะคริลิก,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513479985993,13.7303207566061</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2624</SimpleData>
-		<SimpleData name="name_th">B&amp;J ART WORK</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ศิลปะจัดวาง,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513464820456,13.7304506317248</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2625</SimpleData>
-		<SimpleData name="name_th">BAAN SILOM</SimpleData>
-		<SimpleData name="visualar_7">ภาพสีน้ำ,ภาพสีน้ำมัน,ภาพสีโปสเตอร์,ภาพสีอะคริลิก,การจัดแสดงผลงาน,การฝึกสอน ให้ความรู้</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513190929659,13.7303424126012</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2627</SimpleData>
-		<SimpleData name="name_th">CREATE ARTIST STUDIO</SimpleData>
-		<SimpleData name="visualar_7">ภาพสีอะคริลิก,การจัดแสดงผลงาน,การฝึกสอน ให้ความรู้</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513379426163,13.7304480407704</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2628</SimpleData>
-		<SimpleData name="name_th">DARLENE</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513298981732,13.7305631828918</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2629</SimpleData>
-		<SimpleData name="name_th">ELEPHANT PARADE</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนสูง,การจัดแสดงผลงาน,การฝึกสอน ให้ความรู้</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513590337948,13.7304429315067</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2630</SimpleData>
-		<SimpleData name="name_th">GALLERY KALYANI</SimpleData>
-		<SimpleData name="visualar_7">ภาพสีน้ำมัน,ภาพสีอะคริลิก</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513279507261,13.7302456529014</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2632</SimpleData>
-		<SimpleData name="name_th">TANG CONTEMPORARY ART</SimpleData>
-		<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513500604405,13.7305678212642</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2633</SimpleData>
-		<SimpleData name="name_th">THE FINE ARTS</SimpleData>
-		<SimpleData name="visualar_7">ภาพสีน้ำมัน,ภาพสีอะคริลิก,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513293223006,13.7304822318604</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2640</SimpleData>
-		<SimpleData name="name_th">PAGODA</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513543407297,13.7304985990604</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2641</SimpleData>
-		<SimpleData name="name_th">MY COLLECTION</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.51350625461,13.7305422881263</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2642</SimpleData>
-		<SimpleData name="name_th">MORITA JAPAN ARTS</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513474968144,13.7304017232763</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2643</SimpleData>
-		<SimpleData name="name_th">MORAKOT GALLERY</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513414350603,13.7305479866975</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2644</SimpleData>
-		<SimpleData name="name_th">MOO LAIKRAM</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513465191122,13.7305118957314</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2645</SimpleData>
-		<SimpleData name="name_th">MANO GALLERY</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,ศิลปะจัดวาง,ตัวแทนจัดจ</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513265739854,13.7305612833678</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2646</SimpleData>
-		<SimpleData name="name_th">LOTUS GALLERY</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513340045227,13.7305612833678</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2649</SimpleData>
-		<SimpleData name="name_th">PATINA ANTIQUE</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513183612863,13.7305612833681</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2650</SimpleData>
-		<SimpleData name="name_th">PRASERT</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,ศิลปะจัดวาง,การจัดแสดง</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513247892076,13.7304830626127</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2651</SimpleData>
-		<SimpleData name="name_th">PUI ANTIQUES</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513379153317,13.7305631828918</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2652</SimpleData>
-		<SimpleData name="name_th">RAT SHOP</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513418261407,13.7304131204287</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2654</SimpleData>
-		<SimpleData name="name_th">T &amp; A GALLERY</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513187523671,13.7305859771822</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2655</SimpleData>
-		<SimpleData name="name_th">สมาคมเผยแพร่และส่งเสริมศิลปวัตถุ</SimpleData>
-		<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513161113276,13.7304973649986</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2657</SimpleData>
-		<SimpleData name="name_th">SIAM CERAMIC HAND MADE</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513134727748,13.7305992738502</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2658</SimpleData>
-		<SimpleData name="name_th">THE OLD TIME</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513136683153,13.7305764795623</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<ExtendedData><SchemaData schemaUrl="#Gallery">
-		<SimpleData name="id">2660</SimpleData>
-		<SimpleData name="name_th">UNIQUE MERCHANDISE</SimpleData>
-		<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>100.513060422377,13.7305669819421</coordinates></Point>
-  </Placemark>
-</Folder>
-</Document></kml>
+	<Document id="root_doc">
+		<Style id="galleryIcon">
+			<IconStyle>
+				<Icon>
+					<href>https://crowdcheckinfo.herokuapp.com/POI/gallery.png</href>
+				</Icon>
+			</IconStyle>
+		</Style>
+		<StyleMap id="styleMap">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#galleryIcon</styleUrl>
+			</Pair>
+		</StyleMap>
+		<name>Gallery</name>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">32</SimpleData>
+					<SimpleData name="name_th">Autum Gallery</SimpleData>
+					<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.514618246192,13.7282519401903</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">87</SimpleData>
+					<SimpleData name="name_th">Lek Gallery Art</SimpleData>
+					<SimpleData name="visualar_7">ภาพสีน้ำมัน,ประติมากรรม,ศิลปะจัดวาง,ภาพพิมพ์,ภาพถ่าย,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.515309613632,13.7288846317453</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">88</SimpleData>
+					<SimpleData name="name_th">ATT19</SimpleData>
+					<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.515219590169,13.7288336221045</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">91</SimpleData>
+					<SimpleData name="name_th">ASIA COLLECTION.CO.,LTD.</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.51433325709,13.728521860963</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">92</SimpleData>
+					<SimpleData name="name_th">Rama art gallery and jewelry store</SimpleData>
+					<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.514312609093,13.7290643123371</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">112</SimpleData>
+					<SimpleData name="name_th">MT Gallery</SimpleData>
+					<SimpleData name="visualar_7">ภาพลายเส้น,ภาพพิมพ์,ตัวแทนจัดจำหน่าย,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516387889832,13.7240887179228</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">122</SimpleData>
+					<SimpleData name="name_th">Rama Art-Gallery</SimpleData>
+					<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516246812152,13.7248932415892</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">143</SimpleData>
+					<SimpleData name="name_th">OP Place</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.515482381636,13.7245857113198</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">147</SimpleData>
+					<SimpleData name="name_th">Gallery 13 บริษัท โฟร์ซิสเตอร์ จำกัด</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516715984458,13.722902410151</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">169</SimpleData>
+					<SimpleData name="name_th">Lek Gallery</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516641902953,13.7233490696481</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">316</SimpleData>
+					<SimpleData name="name_th">จักรวาลโฟโต้ดิจิตอล</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516163821122,13.7210458481196</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">561</SimpleData>
+					<SimpleData name="name_th">ศรีเวียง ทำกรอบรูป</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.51677153234,13.7219769517991</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">719</SimpleData>
+					<SimpleData name="name_th">soy sauce factory</SimpleData>
+					<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.514629911484,13.7314821870747</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">795</SimpleData>
+					<SimpleData name="name_th">Film House</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.5164540244,13.7236251466189</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">1106</SimpleData>
+					<SimpleData name="name_th">GALERIE ADLER(BKK-PARIS)</SimpleData>
+					<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516543995497,13.727391778918</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">1570</SimpleData>
+					<SimpleData name="name_th">The Nestle Living and Gallery</SimpleData>
+					<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516468282381,13.7274275707354</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">1571</SimpleData>
+					<SimpleData name="name_th">Ilford Gallery</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.51704002921,13.72556661566</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">1610</SimpleData>
+					<SimpleData name="name_th">Serindia Gallery</SimpleData>
+					<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516024771642,13.7251843118644</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">1611</SimpleData>
+					<SimpleData name="name_th">Nisan ong</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516053325723,13.7251767171035</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">1612</SimpleData>
+					<SimpleData name="name_th">Atta Gallery</SimpleData>
+					<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.516108602879,13.7251773476971</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">1800</SimpleData>
+					<SimpleData name="name_th">333 Gallery</SimpleData>
+					<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.519269163011,13.7224334223421</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">1832</SimpleData>
+					<SimpleData name="name_th">ประดิษฐ์ศิลป์เซ็นเตอร์ จำกัด</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.517522663485,13.7236079732564</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">1926</SimpleData>
+					<SimpleData name="name_th">พิพิธภัณฑ์ชาวบางกอก</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.518177489903,13.7282413255123</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2438</SimpleData>
+					<SimpleData name="name_th">MOST Gallery</SimpleData>
+					<SimpleData name="visualar_7">ภาพถ่าย</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.51520718188,13.7302605566075</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2602</SimpleData>
+					<SimpleData name="name_th">AGATA</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.51311806828,13.7303207766085</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2603</SimpleData>
+					<SimpleData name="name_th">AMATA COLLECTION</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,ตัวแทนจัดจำหน่าย,การจั</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513263784449,13.7305897762304</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2604</SimpleData>
+					<SimpleData name="name_th">ANGKOR ANTIQUES</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.51327747228,13.7306391638525</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2605</SimpleData>
+					<SimpleData name="name_th">ANTIQUE BY DAO</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513230610782,13.7302807610156</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2606</SimpleData>
+					<SimpleData name="name_th">AUGUST 9</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513341108512,13.7300594378879</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2607</SimpleData>
+					<SimpleData name="name_th">AVA ANTIQUE</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513124950722,13.7306410633759</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2608</SimpleData>
+					<SimpleData name="name_th">BB ANTIQUES</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.51323836419,13.7303922256466</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2609</SimpleData>
+					<SimpleData name="name_th">BEYOND THE MASKS</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513081795403,13.7304191282282</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2610</SimpleData>
+					<SimpleData name="name_th">CHARLIE'S COLLECTION</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513267846392,13.7300991606975</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2611</SimpleData>
+					<SimpleData name="name_th">CHUSAK</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513315181789,13.7299704545191</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2613</SimpleData>
+					<SimpleData name="name_th">FRIDAY</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513327953451,13.7302539437813</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2614</SimpleData>
+					<SimpleData name="name_th">GRAND ANTIQUES</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,ศิลปะจัดวาง,ตัวแทนจัดจ</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513339033416,13.7301444589007</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2615</SimpleData>
+					<SimpleData name="name_th">GUAY SILOM</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513149581842,13.7301594509118</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2616</SimpleData>
+					<SimpleData name="name_th">HIMALAYA HANDICRAFT</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ศิลปะจัดวาง,ตัวแทนจัดจำหน่าย,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513229891092,13.730160091108</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2617</SimpleData>
+					<SimpleData name="name_th">HIMALAYAN TREASURES</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การประมูลสินค้า,ตัวแทน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513181714301,13.7302373921668</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2618</SimpleData>
+					<SimpleData name="name_th">HONG ANTIQUES</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,ศิลปะจัดวาง,การจัดแสดง</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513290136935,13.7303427164921</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2619</SimpleData>
+					<SimpleData name="name_th">HUMMING BIRD</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513283759132,13.7304273889555</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2620</SimpleData>
+					<SimpleData name="name_th">INGON GALLERY</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513166404057,13.7304174863354</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2621</SimpleData>
+					<SimpleData name="name_th">333 BABABA GALLERY</SimpleData>
+					<SimpleData name="visualar_7">ภาพลายเส้น,ภาพสีน้ำ,ภาพสีโปสเตอร์,ภาพสีอะคริลิก,ภาพฝาผนัง,ประติมากรรม,ศิลปะจัดวาง,ภาพวาดด�</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.51364481862,13.7304030794454</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2622</SimpleData>
+					<SimpleData name="name_th">956 CONTEMPORARY ART</SimpleData>
+					<SimpleData name="visualar_7">ภาพสีน้ำมัน,ภาพสีอะคริลิก,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513479985993,13.7303207566061</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2624</SimpleData>
+					<SimpleData name="name_th">B&amp;J ART WORK</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ศิลปะจัดวาง,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513464820456,13.7304506317248</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2625</SimpleData>
+					<SimpleData name="name_th">BAAN SILOM</SimpleData>
+					<SimpleData name="visualar_7">ภาพสีน้ำ,ภาพสีน้ำมัน,ภาพสีโปสเตอร์,ภาพสีอะคริลิก,การจัดแสดงผลงาน,การฝึกสอน ให้ความรู้</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513190929659,13.7303424126012</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2627</SimpleData>
+					<SimpleData name="name_th">CREATE ARTIST STUDIO</SimpleData>
+					<SimpleData name="visualar_7">ภาพสีอะคริลิก,การจัดแสดงผลงาน,การฝึกสอน ให้ความรู้</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513379426163,13.7304480407704</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2628</SimpleData>
+					<SimpleData name="name_th">DARLENE</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513298981732,13.7305631828918</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2629</SimpleData>
+					<SimpleData name="name_th">ELEPHANT PARADE</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนสูง,การจัดแสดงผลงาน,การฝึกสอน ให้ความรู้</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513590337948,13.7304429315067</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2630</SimpleData>
+					<SimpleData name="name_th">GALLERY KALYANI</SimpleData>
+					<SimpleData name="visualar_7">ภาพสีน้ำมัน,ภาพสีอะคริลิก</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513279507261,13.7302456529014</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2632</SimpleData>
+					<SimpleData name="name_th">TANG CONTEMPORARY ART</SimpleData>
+					<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513500604405,13.7305678212642</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2633</SimpleData>
+					<SimpleData name="name_th">THE FINE ARTS</SimpleData>
+					<SimpleData name="visualar_7">ภาพสีน้ำมัน,ภาพสีอะคริลิก,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513293223006,13.7304822318604</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2640</SimpleData>
+					<SimpleData name="name_th">PAGODA</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513543407297,13.7304985990604</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2641</SimpleData>
+					<SimpleData name="name_th">MY COLLECTION</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.51350625461,13.7305422881263</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2642</SimpleData>
+					<SimpleData name="name_th">MORITA JAPAN ARTS</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513474968144,13.7304017232763</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2643</SimpleData>
+					<SimpleData name="name_th">MORAKOT GALLERY</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513414350603,13.7305479866975</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2644</SimpleData>
+					<SimpleData name="name_th">MOO LAIKRAM</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513465191122,13.7305118957314</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2645</SimpleData>
+					<SimpleData name="name_th">MANO GALLERY</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,ศิลปะจัดวาง,ตัวแทนจัดจ</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513265739854,13.7305612833678</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2646</SimpleData>
+					<SimpleData name="name_th">LOTUS GALLERY</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513340045227,13.7305612833678</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2649</SimpleData>
+					<SimpleData name="name_th">PATINA ANTIQUE</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513183612863,13.7305612833681</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2650</SimpleData>
+					<SimpleData name="name_th">PRASERT</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,ศิลปะจัดวาง,การจัดแสดง</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513247892076,13.7304830626127</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2651</SimpleData>
+					<SimpleData name="name_th">PUI ANTIQUES</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513379153317,13.7305631828918</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2652</SimpleData>
+					<SimpleData name="name_th">RAT SHOP</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513418261407,13.7304131204287</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2654</SimpleData>
+					<SimpleData name="name_th">T &amp; A GALLERY</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513187523671,13.7305859771822</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2655</SimpleData>
+					<SimpleData name="name_th">สมาคมเผยแพร่และส่งเสริมศิลปวัตถุ</SimpleData>
+					<SimpleData name="visualar_7">การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513161113276,13.7304973649986</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2657</SimpleData>
+					<SimpleData name="name_th">SIAM CERAMIC HAND MADE</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513134727748,13.7305992738502</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2658</SimpleData>
+					<SimpleData name="name_th">THE OLD TIME</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513136683153,13.7305764795623</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#styleMap</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#Gallery">
+					<SimpleData name="id">2660</SimpleData>
+					<SimpleData name="name_th">UNIQUE MERCHANDISE</SimpleData>
+					<SimpleData name="visualar_7">ประติมากรรม,ประติมากรรมนูนต่ำ,ประติมากรรมนูนสูง,ประติมากรรมลอยตัว,การจัดแสดงผลงาน</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>100.513060422377,13.7305669819421</coordinates>
+			</Point>
+		</Placemark>
+	</Document>
+</kml>
