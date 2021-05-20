@@ -146,6 +146,7 @@ const LegendContent = () => {
 				<Checkbox
 					key={`${item}-${index}`}
 					label={t[locale].pointOfInterest[item]}
+					logo={`/POI/${item}.png`}
 					checked={poi.some((poiItem) => poiItem === item)}
 					onChange={() => handleSetPoi(item)}
 				/>

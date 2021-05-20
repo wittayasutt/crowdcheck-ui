@@ -1,6 +1,17 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+
+const Wrapper = styled.div`
+	display: flex;
+	align-items: center;
+`;
+
+const Logo = styled.img`
+	height: 22px;
+	width: 22px;
+
+	margin-right: 8px;
+`;
 
 const Label = styled.label`
 	display: flex;
@@ -54,23 +65,27 @@ const Label = styled.label`
 	}
 `;
 
-const Checkbox = ({ label, checked, onChange }) => {
+const Checkbox = ({ label, logo, checked, onChange }) => {
 	const handleToggle = () => {
 		const newChecked = !checked;
 		onChange(newChecked);
 	};
 
 	return (
-		<Label className='checkbox'>
-			<input type='checkbox' checked={checked} onChange={handleToggle} />
-			<span className='checkmark'></span>
-			<span className='label'>{label}</span>
-		</Label>
+		<Wrapper>
+			<Logo className='logo' src={logo} alt={label} />
+			<Label className='checkbox'>
+				<input type='checkbox' checked={checked} onChange={handleToggle} />
+				<span className='checkmark'></span>
+				<span className='label'>{label}</span>
+			</Label>
+		</Wrapper>
 	);
 };
 
 Checkbox.propTypes = {
 	label: PropTypes.string,
+	logo: PropTypes.string,
 	checked: PropTypes.bool,
 	onChange: PropTypes.func,
 };
