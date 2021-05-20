@@ -19,11 +19,7 @@
 				<Style>
 					<IconStyle>
 						<Icon>
-							<href>root://icons/palette-3.png</href>
-							<x>0</x>
-							<y>0</y>
-							<w>32</w>
-							<h>32</h>
+							<href>https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg</href>
 						</Icon>
 					</IconStyle>
 				</Style>
@@ -41,7 +37,7 @@
 				<Style>
 					<IconStyle>
 						<Icon>
-							<href>root://icons/palette-3.png</href>
+							<href>https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg</href>
 							<x>32</x>
 							<y>0</y>
 							<w>32</w>
