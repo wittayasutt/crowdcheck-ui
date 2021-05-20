@@ -8,19 +8,21 @@
 		</Schema>
 		<Folder>
 			<name>Craft</name>
+			<Style id="normalPlacemark">
+				<IconStyle>
+					<Icon>
+						<href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<StyleMap id="exampleStyleMap">
+				<Pair>
+					<key>normal</key>
+					<styleUrl>#normalPlacemark</styleUrl>
+				</Pair>
+			</StyleMap>
 			<Placemark>
-				<Style>
-					<IconStyle>
-						<Icon>
-							<href>root://icons/palette-3.png</href>
-							<x>0</x>
-							<y>0</y>
-							<w>32</w>
-							<h>32</h>
-						</Icon>
-					</IconStyle>
-				</Style>
-
+				<styleUrl>#exampleStyleMap</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">139</SimpleData>
@@ -32,18 +34,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<Style>
-					<IconStyle>
-						<Icon>
-							<href>root://icons/palette-3.png</href>
-							<x>32</x>
-							<y>0</y>
-							<w>32</w>
-							<h>32</h>
-						</Icon>
-					</IconStyle>
-				</Style>
-
+				<styleUrl>#exampleStyleMap</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">160</SimpleData>
@@ -55,14 +46,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<Style>
-					<IconStyle>
-						<Icon>
-							<href>root://icons/palette-3.png</href>
-						</Icon>
-					</IconStyle>
-				</Style>
-
+				<styleUrl>#exampleStyleMap</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">241</SimpleData>
