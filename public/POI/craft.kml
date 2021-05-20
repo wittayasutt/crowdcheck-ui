@@ -16,13 +16,6 @@
 		<Folder>
 			<name>Craft</name>
 			<Placemark>
-				<Style>
-					<IconStyle>
-						<Icon>
-							<href>https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg</href>
-						</Icon>
-					</IconStyle>
-				</Style>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">139</SimpleData>
