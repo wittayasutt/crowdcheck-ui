@@ -22,6 +22,14 @@
 				</Pair>
 			</StyleMap>
 			<Placemark>
+				<name>Roll over this icon</name>
+				<visibility>0</visibility>
+				<styleUrl>#exampleStyleMap</styleUrl>
+				<Point>
+				  <coordinates>100.517905427079,13.7248630263564</coordinates>
+				</Point>
+			  </Placemark>
+			<Placemark>
 				<styleUrl>#exampleStyleMap</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
