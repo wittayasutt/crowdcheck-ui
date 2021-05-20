@@ -6,6 +6,13 @@
 			<SimpleField name="name_th" type="string"></SimpleField>
 			<SimpleField name="name_en" type="string"></SimpleField>
 		</Schema>
+		<Style id="exampleBalloonStyle">
+			<BalloonStyle>
+				<!-- a background color for the balloon -->
+				<bgColor>ffffffbb</bgColor>
+				<!-- styling of the balloon text -->
+			</BalloonStyle>
+		</Style>
 		<Folder>
 			<name>Craft</name>
 			<Placemark>
@@ -20,6 +27,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
+				<styleUrl>#exampleBalloonStyle</styleUrl>
 				<ExtendedData>
 					<SchemaData schemaUrl="#Craft">
 						<SimpleData name="id">160</SimpleData>

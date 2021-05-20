@@ -14,6 +14,7 @@ module.exports = {
 		SUGGESTION_DISTANCE_M: process.env.SUGGESTION_DISTANCE_M,
 		API_BASE_URL: process.env.API_BASE_URL,
 		API_CROWD_URL: process.env.API_CROWD_URL,
+		PUBLIC_URL: process.env.PUBLIC_URL,
 	},
 
 	sassOptions: {
