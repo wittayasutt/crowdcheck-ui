@@ -42,7 +42,7 @@ const POI_DATA = [
 	},
 	{
 		title: 'craft',
-		data: 'http://crowdcheckinfo.herokuapp.com/POI/craft.kml',
+		data: 'https://crowdcheckinfo.herokuapp.com/POI/craft.kml',
 	},
 	{
 		title: 'fashion',
