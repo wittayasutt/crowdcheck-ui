@@ -9,7 +9,7 @@ const Header = ({ children }) => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const title = 'Crowdcheck.io';
+	const title = 'Crowdcheck.info';
 
 	return (
 		<Head>
@@ -19,7 +19,7 @@ const Header = ({ children }) => {
 			<meta name='description' content={t[locale].description} />
 			<meta name='keywords' content='crowdcheck, crowd check' />
 
-			<meta property='og:site_name' content='Crowdcheck.io' />
+			<meta property='og:site_name' content='Crowdcheck.info' />
 			<meta property='og:title' content={title} />
 			<meta property='og:description' content={t[locale].description} />
 			<meta

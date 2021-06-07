@@ -1,7 +1,10 @@
 import uniq from 'lodash/uniq';
 import uniqBy from 'lodash/uniqBy';
 
-const RADIUS_OFFSET = 0.002;
+// Calculated value
+const RADIUS_OFFSET = 0.0005;
+
+// Show value
 const PLUS_OFFSET = 0.0005;
 
 export const compare = (val, compareVal) => {

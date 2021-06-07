@@ -26,7 +26,7 @@ const AdminHeader = ({ children }) => {
 
 	return (
 		<Header>
-			<title>Administrator | Crowdcheck.io</title>
+			<title>Administrator | Crowdcheck.info</title>
 			{children}
 		</Header>
 	);

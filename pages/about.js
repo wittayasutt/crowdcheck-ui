@@ -7,7 +7,7 @@ const AboutPage = () => {
 	return (
 		<>
 			<Header>
-				<title>About Us | Crowdcheck.io</title>
+				<title>About Us | Crowdcheck.info</title>
 			</Header>
 			<Layout white>
 				<About />
