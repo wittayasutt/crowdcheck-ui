@@ -130,7 +130,7 @@ const HomePage = () => {
 		};
 	}, []);
 
-	const showVenue = zoom < 14 ? venueZoomOut : venueZoomIn;
+	const showVenue = zoom < 18 ? venueZoomOut : venueZoomIn;
 
 	return (
 		<>

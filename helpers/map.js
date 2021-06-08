@@ -1,14 +1,23 @@
 import uniq from 'lodash/uniq';
 import uniqBy from 'lodash/uniqBy';
+import Big from 'big.js';
+
+Big.strict = true;
 
 // Calculated value
-const RADIUS_OFFSET = 0.0005;
+const RADIUS_OFFSET = 0.0001;
 
 // Show value
-const PLUS_OFFSET = 0.0005;
+const PLUS_OFFSET = 0.0001;
 
 export const compare = (val, compareVal) => {
-	return val + RADIUS_OFFSET >= compareVal && val - RADIUS_OFFSET <= compareVal;
+	const bigVal = new Big(val.toString());
+	const bigOffset = new Big(RADIUS_OFFSET.toString());
+
+	return (
+		bigVal.plus(bigOffset).toPrecision() >= compareVal &&
+		bigVal.minus(bigOffset).toPrecision() <= compareVal
+	);
 };
 
 export const compareLocation = (val, compareVal) => {
@@ -23,18 +32,27 @@ export const compareLocation = (val, compareVal) => {
 };
 
 export const centerLocation = (locations) => {
-	const length = locations.length;
+	const length = new Big(locations.length.toString());
 
 	let location = locations.reduce((acc, cur) => {
+		const bigAccLatitude = new Big(acc.latitude.toString());
+		const bigAccLongtitude = new Big(acc.longtitude.toString());
+
+		const bigCurLatitude = new Big(cur.latitude.toString());
+		const bigCurtitude = new Big(cur.longtitude.toString());
+
 		return {
-			latitude: acc.latitude + cur.latitude,
-			longtitude: acc.longtitude + cur.longtitude,
+			latitude: bigAccLatitude.plus(bigCurLatitude).toPrecision(),
+			longtitude: bigAccLongtitude.plus(bigCurtitude).toPrecision(),
 		};
 	});
 
+	const bigLatitude = new Big(location.latitude.toString());
+	const bigLongtitude = new Big(location.longtitude.toString());
+
 	return {
-		latitude: location.latitude / length,
-		longtitude: location.longtitude / length,
+		latitude: bigLatitude.div(length).toPrecision(),
+		longtitude: bigLongtitude.div(length).toPrecision(),
 	};
 };
 
@@ -79,7 +97,10 @@ export const findMatching = (data) => {
 };
 
 export const getRenderVenue = (oldData) => {
-	const data = [...oldData];
+	const tempData = [...oldData];
+	const data = tempData.filter(
+		(item) => item && item.crowd && item.crowd.rawValue && item.crowd.value
+	);
 
 	const matchingData = findMatching(data);
 	const mostMatchingData = matchingData
@@ -126,11 +147,17 @@ export const getRenderVenue = (oldData) => {
 				return venue.refId === refId;
 			});
 
+			const bigOffset = new Big(PLUS_OFFSET.toString());
+			const bigIndex = new Big(index.toString());
+			const offset = bigOffset.times(bigIndex);
+
+			const bigLatitude = new Big(location.latitude.toString());
+
 			return {
 				...found,
 				location: {
 					...location,
-					latitude: location.latitude + PLUS_OFFSET * index,
+					latitude: bigLatitude.plus(offset).toPrecision(),
 				},
 			};
 		});
