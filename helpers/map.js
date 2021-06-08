@@ -157,7 +157,7 @@ export const getRenderVenue = (oldData) => {
 				...found,
 				location: {
 					...location,
-					latitude: bigLatitude.plus(offset).toPrecision(),
+					latitude: bigLatitude.minus(offset).toPrecision(),
 				},
 			};
 		});
