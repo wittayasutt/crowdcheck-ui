@@ -61,7 +61,8 @@ export const service_get_venue_list = () => {
 		})
 		.then((response) => {
 			return response.data;
-		});
+		})
+		.catch((err) => err);
 };
 
 export const service_get_venue = (id) => {
@@ -71,7 +72,8 @@ export const service_get_venue = (id) => {
 		})
 		.then((response) => {
 			return response.data;
-		});
+		})
+		.catch((err) => err);
 };
 
 export const service_create_venue = (payload) => {
@@ -87,7 +89,8 @@ export const service_create_venue = (payload) => {
 		)
 		.then((response) => {
 			return response.data;
-		});
+		})
+		.catch((err) => err);
 };
 
 export const service_update_venue = (payload, id) => {
@@ -103,7 +106,8 @@ export const service_update_venue = (payload, id) => {
 		)
 		.then((response) => {
 			return response.data;
-		});
+		})
+		.catch((err) => err);
 };
 
 export const service_remove_venue = (id) => {
@@ -113,7 +117,8 @@ export const service_remove_venue = (id) => {
 		})
 		.then((response) => {
 			return response.data;
-		});
+		})
+		.catch((err) => err);
 };
 
 export const service_get_venue_nearby = (id) => {
@@ -123,7 +128,8 @@ export const service_get_venue_nearby = (id) => {
 		})
 		.then((response) => {
 			return response.data;
-		});
+		})
+		.catch((err) => err);
 };
 
 // #endregion
@@ -137,7 +143,8 @@ export const service_get_program_list = (venueId) => {
 		})
 		.then((response) => {
 			return response.data;
-		});
+		})
+		.catch((err) => err);
 };
 
 export const service_get_program = (venueId, id) => {
@@ -147,7 +154,8 @@ export const service_get_program = (venueId, id) => {
 		})
 		.then((response) => {
 			return response.data;
-		});
+		})
+		.catch((err) => err);
 };
 
 export const service_create_program = (payload, venueId) => {
@@ -163,7 +171,8 @@ export const service_create_program = (payload, venueId) => {
 		)
 		.then((response) => {
 			return response.data;
-		});
+		})
+		.catch((err) => err);
 };
 
 export const service_update_program = (payload, venueId, id) => {
@@ -179,7 +188,8 @@ export const service_update_program = (payload, venueId, id) => {
 		)
 		.then((response) => {
 			return response.data;
-		});
+		})
+		.catch((err) => err);
 };
 
 export const service_remove_program = (venueId, id) => {
@@ -189,7 +199,8 @@ export const service_remove_program = (venueId, id) => {
 		})
 		.then((response) => {
 			return response.data;
-		});
+		})
+		.catch((err) => err);
 };
 
 // #endregion
@@ -201,11 +212,15 @@ export const service_upload_image = (payload) => {
 		})
 		.then((response) => {
 			return response.data;
-		});
+		})
+		.catch((err) => err);
 };
 
 export const service_get_crowd = () => {
-	return axios.get(crowdUrl).then((response) => {
-		return response.data;
-	});
+	return axios
+		.get(crowdUrl)
+		.then((response) => {
+			return response.data;
+		})
+		.catch((err) => err);
 };

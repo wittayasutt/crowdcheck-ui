@@ -59,7 +59,9 @@ const HomePage = () => {
 				setVenueData(venueData, crowdData);
 				setUpdatedTime(Date.now());
 			});
-		} catch {}
+		} catch {
+			setLoading(true);
+		}
 	};
 
 	const getVenue = () => {
