@@ -4,7 +4,7 @@
 		<Style id="cafeAndRestaurantIcon">
 			<IconStyle>
 				<Icon>
-					<href>https://crowdcheckinfo.herokuapp.com/POI/cafeAndRestaurant.png</href>
+					<href>https://crowdcheck.info/POI/cafeAndRestaurant.png</href>
 				</Icon>
 			</IconStyle>
 		</Style>
