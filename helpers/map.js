@@ -97,10 +97,7 @@ export const findMatching = (data) => {
 };
 
 export const getRenderVenue = (oldData) => {
-	const tempData = [...oldData];
-	const data = tempData.filter(
-		(item) => item && item.crowd && item.crowd.rawValue && item.crowd.value
-	);
+	const data = [...oldData];
 
 	const matchingData = findMatching(data);
 	const mostMatchingData = matchingData

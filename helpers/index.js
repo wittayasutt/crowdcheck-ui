@@ -90,12 +90,14 @@ export const transformCrowdData = (venueData, crowdData) => {
 		return crowdDataKeys.some((key) => key === item.refId);
 	});
 
-	return foundData.map((item) => {
-		return {
-			...item,
-			crowd: crowdData[item.refId],
-		};
-	});
+	return foundData
+		.map((item) => {
+			return {
+				...item,
+				crowd: crowdData[item.refId],
+			};
+		})
+		.filter((item) => item && item.crowd && item.crowd.value);
 };
 // MATCHING DATE
 

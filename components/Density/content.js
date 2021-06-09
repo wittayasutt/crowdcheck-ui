@@ -59,6 +59,7 @@ const Row = styled.div`
 	align-items: center;
 
 	margin-bottom: 8px;
+	cursor: pointer;
 `;
 
 const PlaceName = styled.div`
