@@ -50,14 +50,16 @@ const HomePage = () => {
 	const getData = async () => {
 		setLoading(true);
 
-		const venueData = await getVenue();
-		const crowdData = await getCrowdData();
+		try {
+			const venueData = await getVenue();
+			const crowdData = await getCrowdData();
 
-		Promise.all([venueData, crowdData]).then(() => {
-			setCrowdData(crowdData);
-			setVenueData(venueData, crowdData);
-			setUpdatedTime(Date.now());
-		});
+			Promise.all([venueData, crowdData]).then(() => {
+				setCrowdData(crowdData);
+				setVenueData(venueData, crowdData);
+				setUpdatedTime(Date.now());
+			});
+		} catch {}
 	};
 
 	const getVenue = () => {
