@@ -28,18 +28,22 @@ const AdminItemViewProgram = () => {
 			return;
 		}
 
-		service_get_program(id, programId)
-			.then((res) => {
-				if (res.status === 'success') {
-					setData(res.data);
-					setLoading(false);
-				} else {
+		try {
+			service_get_program(id, programId)
+				.then((res) => {
+					if (res.status === 'success') {
+						setData(res.data);
+						setLoading(false);
+					} else {
+						router.push('/admin');
+					}
+				})
+				.catch(() => {
 					router.push('/admin');
-				}
-			})
-			.catch(() => {
-				router.push('/admin');
-			});
+				});
+		} catch {
+			router.push('/admin');
+		}
 	}, [id]);
 
 	return (

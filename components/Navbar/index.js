@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
-import { service_login } from '../../services';
 import Cookies from 'js-cookie';
 
 // lang

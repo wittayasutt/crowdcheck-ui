@@ -31,20 +31,24 @@ const LoginBox = () => {
 		e.preventDefault();
 		setError('');
 
-		service_login(username, password)
-			.then((res) => {
-				if (res.status === 'success') {
-					Cookies.set('token', res.data.token);
-					Cookies.set('username', res.data.username);
+		try {
+			service_login(username, password)
+				.then((res) => {
+					if (res.status === 'success') {
+						Cookies.set('token', res.data.token);
+						Cookies.set('username', res.data.username);
 
-					router.push('/admin');
-				} else {
+						router.push('/admin');
+					} else {
+						setError(t[locale].somethingWentWrong);
+					}
+				})
+				.catch(() => {
 					setError(t[locale].somethingWentWrong);
-				}
-			})
-			.catch(() => {
-				setError(t[locale].somethingWentWrong);
-			});
+				});
+		} catch {
+			setError(t[locale].somethingWentWrong);
+		}
 	};
 
 	return (

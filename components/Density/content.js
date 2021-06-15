@@ -76,41 +76,45 @@ const DensityContent = ({ data, updatedTime }) => {
 	const { selectPlace, toLocation } = useRedux();
 
 	const handleSelectPlace = (id, venueName, crowd) => {
-		service_get_program_list(id).then((res) => {
-			if (res.status === 'success') {
-				const matchedPrograms = getMatchingProgram(res.data);
+		try {
+			service_get_program_list(id).then((res) => {
+				if (res.status === 'success') {
+					const matchedPrograms = getMatchingProgram(res.data);
 
-				if (matchedPrograms.length > 0 && crowd.value) {
-					selectPlace({
-						programs: matchedPrograms,
-						venueName,
-						crowd,
-						nearby: 'loading',
-					});
+					if (matchedPrograms.length > 0 && crowd.value) {
+						selectPlace({
+							programs: matchedPrograms,
+							venueName,
+							crowd,
+							nearby: 'loading',
+						});
 
-					handleGetNearlyPlace(id, matchedPrograms, venueName, crowd);
-				} else {
-					selectPlace({
-						programs: 'NO_EVENT',
-						venueName,
-						crowd,
-					});
+						handleGetNearlyPlace(id, matchedPrograms, venueName, crowd);
+					} else {
+						selectPlace({
+							programs: 'NO_EVENT',
+							venueName,
+							crowd,
+						});
+					}
 				}
-			}
-		});
+			});
+		} catch {}
 	};
 
 	const handleGetNearlyPlace = (id, programs, venueName, crowd) => {
-		service_get_venue_nearby(id).then((res) => {
-			if (res.status === 'success') {
-				selectPlace({
-					programs,
-					venueName,
-					crowd,
-					nearby: res.data,
-				});
-			}
-		});
+		try {
+			service_get_venue_nearby(id).then((res) => {
+				if (res.status === 'success') {
+					selectPlace({
+						programs,
+						venueName,
+						crowd,
+						nearby: res.data,
+					});
+				}
+			});
+		} catch {}
 	};
 
 	return (

@@ -22,17 +22,21 @@ const AdminItemEditVenue = () => {
 	const [data, setData] = useState({});
 
 	const handleUpdate = (payload, updateId, updateSubId, callback) => {
-		service_update_venue(payload, updateId)
-			.then((res) => {
-				if (res.status === 'success') {
-					router.push('/admin');
-				} else {
+		try {
+			service_update_venue(payload, updateId)
+				.then((res) => {
+					if (res.status === 'success') {
+						router.push('/admin');
+					} else {
+						callback(true);
+					}
+				})
+				.catch(() => {
 					callback(true);
-				}
-			})
-			.catch(() => {
-				callback(true);
-			});
+				});
+		} catch {
+			callback(true);
+		}
 	};
 
 	useEffect(() => {
@@ -42,18 +46,22 @@ const AdminItemEditVenue = () => {
 			return;
 		}
 
-		service_get_venue(id)
-			.then((res) => {
-				if (res.status === 'success') {
-					setData(res.data);
-					setLoading(false);
-				} else {
+		try {
+			service_get_venue(id)
+				.then((res) => {
+					if (res.status === 'success') {
+						setData(res.data);
+						setLoading(false);
+					} else {
+						router.push('/admin');
+					}
+				})
+				.catch(() => {
 					router.push('/admin');
-				}
-			})
-			.catch(() => {
-				router.push('/admin');
-			});
+				});
+		} catch {
+			router.push('/admin');
+		}
 	}, [id]);
 
 	return (

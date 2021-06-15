@@ -16,17 +16,21 @@ const AdminItemAddVenue = () => {
 	const router = useRouter();
 
 	const handleUpdate = (payload, updateId, updateSubId, callback) => {
-		service_create_venue(payload)
-			.then((res) => {
-				if (res.status === 'success') {
-					router.push('/admin');
-				} else {
+		try {
+			service_create_venue(payload)
+				.then((res) => {
+					if (res.status === 'success') {
+						router.push('/admin');
+					} else {
+						callback(true);
+					}
+				})
+				.catch(() => {
 					callback(true);
-				}
-			})
-			.catch(() => {
-				callback(true);
-			});
+				});
+		} catch {
+			callback(true);
+		}
 	};
 
 	return (

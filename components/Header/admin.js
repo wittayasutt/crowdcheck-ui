@@ -9,15 +9,19 @@ const AdminHeader = ({ children }) => {
 	const router = useRouter();
 
 	const checkAuth = () => {
-		service_auth()
-			.then((res) => {
-				if (!res.status === 'success') {
+		try {
+			service_auth()
+				.then((res) => {
+					if (!res.status === 'success') {
+						router.push('/admin/login');
+					}
+				})
+				.catch(() => {
 					router.push('/admin/login');
-				}
-			})
-			.catch(() => {
-				router.push('/admin/login');
-			});
+				});
+		} catch {
+			router.push('/admin/login');
+		}
 	};
 
 	useEffect(() => {

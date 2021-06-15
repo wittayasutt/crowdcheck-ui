@@ -47,15 +47,20 @@ const UploadImage = ({ image, onUploadImage }) => {
 				const formData = new FormData();
 				formData.append('file', file);
 
-				service_upload_image(formData)
-					.then((res) => {
-						onUploadImage(res.data[0].path);
-						setError(false);
-					})
-					.catch(() => {
-						onUploadImage(null);
-						setError(true);
-					});
+				try {
+					service_upload_image(formData)
+						.then((res) => {
+							onUploadImage(res.data[0].path);
+							setError(false);
+						})
+						.catch(() => {
+							onUploadImage(null);
+							setError(true);
+						});
+				} catch {
+					onUploadImage(null);
+					setError(true);
+				}
 			} else {
 				onUploadImage(null);
 				setError(true);

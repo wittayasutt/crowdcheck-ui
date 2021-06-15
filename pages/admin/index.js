@@ -34,52 +34,64 @@ const Admin = () => {
 	const checkAuth = () => {
 		setLoading(true);
 
-		service_auth()
-			.then((res) => {
-				if (res.status === 'success') {
-					getVenue();
-				} else {
+		try {
+			service_auth()
+				.then((res) => {
+					if (res.status === 'success') {
+						getVenue();
+					} else {
+						router.push('/admin/login');
+					}
+				})
+				.catch(() => {
 					router.push('/admin/login');
-				}
-			})
-			.catch(() => {
-				router.push('/admin/login');
-			});
+				});
+		} catch {
+			router.push('/admin/login');
+		}
 	};
 
 	const getVenue = () => {
-		service_get_venue_list().then((res) => {
-			if (res.status === 'success') {
-				setVenue(res.data);
-			}
+		try {
+			service_get_venue_list().then((res) => {
+				if (res.status === 'success') {
+					setVenue(res.data);
+				}
 
-			setLoading(false);
-		});
+				setLoading(false);
+			});
+		} catch {}
 	};
 
 	const removeVenueById = (id) => {
-		service_remove_venue(id).then((res) => {
-			if (res.status === 'success') {
-				getVenue();
-			}
-		});
+		try {
+			service_remove_venue(id).then((res) => {
+				if (res.status === 'success') {
+					getVenue();
+				}
+			});
+		} catch {}
 	};
 
 	const getProgram = (id) => {
-		service_get_program_list(id).then((res) => {
-			if (res.status === 'success') {
-				setProgram(res.data);
-			}
-		});
+		try {
+			service_get_program_list(id).then((res) => {
+				if (res.status === 'success') {
+					setProgram(res.data);
+				}
+			});
+		} catch {}
 	};
 
 	const removeProgramById = (id, subId) => {
-		service_remove_program(id, subId).then((res) => {
-			if (res.status === 'success') {
-				getVenue();
-				getProgram(id);
-			}
-		});
+		try {
+			service_remove_program(id, subId).then((res) => {
+				if (res.status === 'success') {
+					getVenue();
+					getProgram(id);
+				}
+			});
+		} catch {}
 	};
 
 	useEffect(() => {
