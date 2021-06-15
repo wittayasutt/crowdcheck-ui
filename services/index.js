@@ -5,7 +5,7 @@ const url = process.env.API_BASE_URL;
 const crowdUrl = process.env.API_CROWD_URL;
 
 let $axios = axios.create();
-$axios.defaults.timeout = 5000;
+$axios.defaults.timeout = 60000;
 
 const getHeaders = () => {
 	const token = Cookies.get('token') || null;
