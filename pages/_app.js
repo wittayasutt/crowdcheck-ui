@@ -1,6 +1,7 @@
 import { Provider } from 'react-redux';
 import { useStore } from '../store';
 import { ThemeProvider } from 'styled-components';
+import { ModalProvider } from 'styled-react-modal';
 import theme from '../config/theme';
 
 import '../styles/globals.scss';
@@ -11,7 +12,9 @@ const App = ({ Component, pageProps }) => {
 	return (
 		<Provider store={store}>
 			<ThemeProvider theme={theme}>
-				<Component {...pageProps} />
+				<ModalProvider>
+					<Component {...pageProps} />
+				</ModalProvider>
 			</ThemeProvider>
 		</Provider>
 	);

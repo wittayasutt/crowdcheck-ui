@@ -20,6 +20,7 @@ import Loading from '../components/Loading';
 import Density from '../components/Density';
 import Legend from '../components/Legend';
 import Place from '../components/Place';
+import WelcomeModal from '../components/Modal/welcome';
 
 // 3 Minutes
 const INTERVAL_TIME = 180000;
@@ -150,6 +151,8 @@ const HomePage = () => {
 			) : (
 				<Loading fullpage />
 			)}
+
+			<WelcomeModal />
 		</>
 	);
 };

@@ -29,7 +29,8 @@
 		"redux": "^4.0.5",
 		"redux-devtools-extension": "^2.13.9",
 		"sass": "^1.32.8",
-		"styled-components": "^5.2.1"
+		"styled-components": "^5.2.1",
+		"styled-react-modal": "^2.1.0"
 	},
 	"devDependencies": {
 		"babel-plugin-styled-components": "^1.12.0"

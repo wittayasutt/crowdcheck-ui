@@ -141,7 +141,8 @@ const LegendContent = () => {
 				/>
 			</Row>
 
-			<Title>{t[locale].pointOfInterest.title}</Title>
+			{/* NOTE: For Bangkok Event */}
+			{/* <Title>{t[locale].pointOfInterest.title}</Title>
 			{poiList.map((item, index) => (
 				<Checkbox
 					key={`${item}-${index}`}
@@ -150,7 +151,7 @@ const LegendContent = () => {
 					checked={poi.some((poiItem) => poiItem === item)}
 					onChange={() => handleSetPoi(item)}
 				/>
-			))}
+			))} */}
 		</Wrapper>
 	);
 };

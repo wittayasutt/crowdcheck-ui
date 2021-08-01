@@ -14,8 +14,7 @@ export default {
 	credit: {
 		copyrightBy:
 			'Developed by Piya Limpiti, Pheereeya boonchiyapruek, Nitipak Samsen, Ratthapon Wittayasattikul, Tapanon Amatayakul',
-		supportedBy:
-			'Supported by Creative Economy Agency (Public Organization) x True Cooperation in BKKDW2021',
+		supportedBy: 'Supported by Creative Economy Agency (Public Organization)',
 		title: 'Credit',
 	},
 	date: 'Date',
@@ -40,14 +39,12 @@ export default {
 		avoid:
 			'Exceed capacity of the venue. "Now is not the right time, <strong>AVOID</strong> joining the crowd"',
 		find: 'Find where you are',
-		go:
-			'75% capacity of the venue. "Enough space, <strong>GO</strong> and have some fun"',
+		go: '75% capacity of the venue. "Enough space, <strong>GO</strong> and have some fun"',
 		goAhead:
 			'50% capacity of the venue. "Plenty of space, <strong>GO AHEAD!</strong>, best time for a good shot"',
 		legendAndSuggestion: 'Legend and suggested action',
 		title: 'Legend',
-		wait:
-			'Max capacity of the venue. "Compact space, <strong>WAIT A WHILE</strong> before entry"',
+		wait: 'Max capacity of the venue. "Compact space, <strong>WAIT A WHILE</strong> before entry"',
 		zoom: 'Zoom in for spacific location',
 	},
 	link: 'Link',
