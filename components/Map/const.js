@@ -6,4 +6,4 @@ export const defaultCenter = {
 	lng: CENTER_OF_BANGKOK_LNG,
 }
 
-export const defaultZoom = 16
+export const defaultZoom = 14
