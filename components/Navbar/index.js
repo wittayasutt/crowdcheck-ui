@@ -5,6 +5,9 @@ import { useRouter } from 'next/router';
 
 import Cookies from 'js-cookie';
 
+// components
+import DropdownExplore from './dropdownExplore';
+
 // lang
 import t from '../../translate';
 
@@ -17,7 +20,6 @@ const Wrapper = styled.nav`
 	display: flex;
 	align-items: center;
 	background-color: ${(props) => props.theme.color.white};
-	overflow-y: hidden;
 
 	padding: 0 16px 0 0;
 `;
@@ -34,6 +36,10 @@ const Logo = styled.a`
 
 const Center = styled.div`
 	flex: 1;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 `;
 
 const MenuList = styled.ul`
@@ -103,7 +109,9 @@ const Navbar = () => {
 					<img src='/logo.png' alt='logo' />
 				</Logo>
 			</Link>
-			<Center />
+			<Center>
+				<DropdownExplore />
+			</Center>
 			<MenuList>
 				{role === 'ADMIN' && (
 					<Link href='/admin'>

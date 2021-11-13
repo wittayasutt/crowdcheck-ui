@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
-import DatePicker from 'react-datepicker'
-import 'react-datepicker/dist/react-datepicker.css'
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const DateTimePicker = ({ date, onChange, placeholder }) => {
 	return (
@@ -14,19 +14,19 @@ const DateTimePicker = ({ date, onChange, placeholder }) => {
 			showTimeSelect
 			onChange={onChange}
 		/>
-	)
-}
+	);
+};
 
 DateTimePicker.propTypes = {
 	date: PropTypes.instanceOf(Date),
 	onChange: PropTypes.func,
 	placeholder: PropTypes.string,
-}
+};
 
 DateTimePicker.defaultProps = {
 	date: new Date(),
 	onChange: () => {},
 	placeholder: '',
-}
+};
 
-export default DateTimePicker
+export default DateTimePicker;

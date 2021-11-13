@@ -34,6 +34,7 @@ export default {
 	detail: 'Detail',
 	email: 'Email',
 	exceed: 'Exceed',
+	exploreArea: 'Explore Area',
 	id: 'ID',
 	legend: {
 		avoid:

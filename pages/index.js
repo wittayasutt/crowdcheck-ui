@@ -27,8 +27,7 @@ const INTERVAL_TIME = 180000;
 
 const useRedux = () => {
 	const dispatch = useDispatch();
-	const setCrowdData = (crowdData) =>
-		dispatch({ type: 'SET_CROWD_DATA', crowdData });
+	const setCrowdData = (crowdData) => dispatch({ type: 'SET_CROWD_DATA', crowdData });
 	const zoom = useSelector((state) => state.zoom);
 
 	return { zoom, setCrowdData };
@@ -152,7 +151,8 @@ const HomePage = () => {
 				<Loading fullpage />
 			)}
 
-			<WelcomeModal />
+			{/* Don't show welcome modal, pull it back when want to use it again */}
+			{false && <WelcomeModal />}
 		</>
 	);
 };

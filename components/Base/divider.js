@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Divider = styled.div`
 	height: 1px;
@@ -6,10 +6,10 @@ const Divider = styled.div`
 	margin: 16px 0;
 
 	background-color: ${(props) => props.theme.color.darkGray};
-`
+`;
 
 const DividerComponent = () => {
-	return <Divider />
-}
+	return <Divider />;
+};
 
-export default DividerComponent
+export default DividerComponent;

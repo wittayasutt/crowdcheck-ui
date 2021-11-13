@@ -36,6 +36,7 @@ export default {
 	detail: 'รายละเอียด',
 	email: 'อีเมล',
 	exceed: 'Exceed',
+	exploreArea: 'จุดสำรวจ',
 	id: 'ไอดี',
 	legend: {
 		avoid:

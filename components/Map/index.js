@@ -5,10 +5,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import GoogleMapReact from 'google-map-react';
 
-import {
-	service_get_program_list,
-	service_get_venue_nearby,
-} from '../../services';
+import { service_get_program_list, service_get_venue_nearby } from '../../services';
 
 import { defaultCenter, defaultZoom } from './const';
 import mapStyles from './theme';
@@ -174,11 +171,7 @@ const Map = ({ data, offset }) => {
 	useEffect(() => {
 		if (instance && mapApi.api && navigator && navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition((position) => {
-				if (
-					position.coords &&
-					position.coords.latitude &&
-					position.coords.longitude
-				) {
+				if (position.coords && position.coords.latitude && position.coords.longitude) {
 					setUserLocation({
 						latitude: position.coords.latitude,
 						longtitude: position.coords.longitude,
@@ -202,10 +195,8 @@ const Map = ({ data, offset }) => {
 		if (coord && mapApi.api && userLocation) {
 			const bounds = new mapApi.api.LatLngBounds();
 
-			const toLatitude =
-				coord === 'CURRENT' ? userLocation.latitude : coord.latitude;
-			const toLongtitude =
-				coord === 'CURRENT' ? userLocation.longtitude : coord.longtitude;
+			const toLatitude = coord === 'CURRENT' ? userLocation.latitude : coord.latitude;
+			const toLongtitude = coord === 'CURRENT' ? userLocation.longtitude : coord.longtitude;
 
 			const marker = new mapApi.api.Marker({
 				position: new mapApi.api.LatLng(toLatitude, toLongtitude),
@@ -239,12 +230,7 @@ const Map = ({ data, offset }) => {
 					data.map((item, index) => {
 						if (item.number) {
 							return (
-								<Zoom
-									key={index}
-									number={item.number}
-									lat={item.location.latitude}
-									lng={item.location.longtitude}
-								/>
+								<Zoom key={index} number={item.number} lat={item.location.latitude} lng={item.location.longtitude} />
 							);
 						}
 
@@ -255,13 +241,7 @@ const Map = ({ data, offset }) => {
 								title={getContent(item.name, locale)}
 								lat={item.location.latitude}
 								lng={item.location.longtitude}
-								onClick={() =>
-									handleSelectPlace(
-										item._id,
-										getContent(item.name, locale),
-										item.crowd
-									)
-								}
+								onClick={() => handleSelectPlace(item._id, getContent(item.name, locale), item.crowd)}
 							/>
 						) : null;
 					})}
