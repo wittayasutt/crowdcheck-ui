@@ -21,6 +21,10 @@ const Wrapper = styled.div`
 `;
 
 const InformationText = ({ text }) => {
+	if (!text || text === '') {
+		return null;
+	}
+
 	return <Wrapper>{text}</Wrapper>;
 };
 

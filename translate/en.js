@@ -1,5 +1,4 @@
-const tab =
-	'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+const tab = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
 
 export default {
 	aboutUs: 'About Us',
@@ -35,14 +34,13 @@ export default {
 	email: 'Email',
 	exceed: 'Exceed',
 	exploreArea: 'Explore Area',
+	iam: "I'm",
 	id: 'ID',
 	legend: {
-		avoid:
-			'Exceed capacity of the venue. "Now is not the right time, <strong>AVOID</strong> joining the crowd"',
+		avoid: 'Exceed capacity of the venue. "Now is not the right time, <strong>AVOID</strong> joining the crowd"',
 		find: 'Find where you are',
 		go: '75% capacity of the venue. "Enough space, <strong>GO</strong> and have some fun"',
-		goAhead:
-			'50% capacity of the venue. "Plenty of space, <strong>GO AHEAD!</strong>, best time for a good shot"',
+		goAhead: '50% capacity of the venue. "Plenty of space, <strong>GO AHEAD!</strong>, best time for a good shot"',
 		legendAndSuggestion: 'Legend and suggested action',
 		title: 'Legend',
 		wait: 'Max capacity of the venue. "Compact space, <strong>WAIT A WHILE</strong> before entry"',
