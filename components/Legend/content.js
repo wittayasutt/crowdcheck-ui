@@ -14,11 +14,14 @@ import t from '../../translate';
 const useRedux = () => {
 	const dispatch = useDispatch();
 	const togglePlaceName = () => dispatch({ type: 'TOGGLE_PLACE_NAME' });
+	const setFilter = (filter) => dispatch({ type: 'SET_FILTER', filter });
 	const setPoi = (poi) => dispatch({ type: 'SET_POI', poi });
 	const toLocation = () => dispatch({ type: 'TO_LOCATION', coord: 'CURRENT' });
+
+	const filter = useSelector((state) => state.filter);
 	const poi = useSelector((state) => state.poi);
 
-	return { togglePlaceName, poi, setPoi, toLocation };
+	return { togglePlaceName, filter, setFilter, poi, setPoi, toLocation };
 };
 
 const Wrapper = styled.div``;
@@ -43,6 +46,7 @@ const Row = styled.div`
 const SwitchWrapper = styled.div`
 	display: flex;
 	align-items: center;
+	margin-top: 12px;
 
 	p {
 		font-size: 11px;
@@ -52,29 +56,38 @@ const SwitchWrapper = styled.div`
 `;
 
 const Title = styled.h4`
-	font-size: 12px;
-	font-weight: 600;
-
-	margin: 24px 0 12px;
+	font-size: 11px;
+	margin-bottom: 12px;
 `;
 
-const poiList = [
-	'cafeAndRestaurant',
-	'parking',
-	'gallery',
-	'designStudio',
-	'craft',
-	'fashion',
-];
+const filterList = ['atk', 'notRequire', 'requireOne', 'requireTwo'];
+const poiList = ['cafeAndRestaurant', 'parking', 'gallery', 'designStudio', 'craft', 'fashion'];
 
 const LegendContent = () => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const { togglePlaceName, poi, setPoi, toLocation } = useRedux();
+	const { togglePlaceName, filter, setFilter, poi, setPoi, toLocation } = useRedux();
 
 	const handleTogglePlaceName = () => {
 		togglePlaceName();
+	};
+
+	const handleSetFilter = (newFilter) => {
+		if (!newFilter) {
+			return;
+		}
+
+		const found = filter.find((item) => item === newFilter);
+
+		let updatedFilter = [];
+		if (found) {
+			updatedFilter = filter.filter((item) => item !== newFilter);
+		} else {
+			updatedFilter = [...filter, newFilter];
+		}
+
+		setFilter(updatedFilter);
 	};
 
 	const handleSetPoi = (newPoi) => {
@@ -96,6 +109,17 @@ const LegendContent = () => {
 
 	return (
 		<Wrapper>
+			<Title>{t[locale].filter.title}</Title>
+			{filterList.map((item, index) => (
+				<Checkbox
+					key={`${item}-${index}`}
+					label={t[locale].filter[item]}
+					logo={`/images/filter/${item}.svg`}
+					checked={filter.some((filterItem) => filterItem === item)}
+					onChange={() => handleSetFilter(item)}
+				/>
+			))}
+
 			<SwitchWrapper>
 				<p>{t[locale].locationName}</p>
 				<Switch onChange={handleTogglePlaceName} />

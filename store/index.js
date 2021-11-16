@@ -11,6 +11,7 @@ const initialState = {
 	showPlaceName: false,
 	crowdData: null,
 	zoom: 12,
+	filter: [],
 	poi: [],
 	coord: null,
 };
@@ -64,6 +65,12 @@ const reducer = (state = initialState, action) => {
 				zoom: action.zoom,
 			};
 		}
+		case 'SET_FILTER': {
+			return {
+				...state,
+				filter: action.filter,
+			};
+		}
 		case 'SET_POI': {
 			return {
 				...state,
@@ -82,11 +89,7 @@ const reducer = (state = initialState, action) => {
 };
 
 function initStore(preloadedState = initialState) {
-	return createStore(
-		reducer,
-		preloadedState,
-		composeWithDevTools(applyMiddleware())
-	);
+	return createStore(reducer, preloadedState, composeWithDevTools(applyMiddleware()));
 }
 
 export const initializeStore = (preloadedState) => {

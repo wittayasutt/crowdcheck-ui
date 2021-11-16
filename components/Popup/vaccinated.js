@@ -49,9 +49,8 @@ const VaccinatedPopup = ({ vaccinated }) => {
 		<Wrapper>
 			<Iam>{t[locale].iam}</Iam>
 			<VaccineWrapper>
-				{[...Array(vaccinated)].map((_, index) => (
-					<Image key={index} src={'/images/vaccine.svg'} alt='vaccine' style={{ height: '16px', width: '16px' }} />
-				))}
+				{vaccinated === 1 && <Image src={'/images/filter/requireOne.svg'} alt='vaccine' style={{ height: '16px' }} />}
+				{vaccinated === 2 && <Image src={'/images/filter/requireTwo.svg'} alt='vaccine' style={{ height: '16px' }} />}
 			</VaccineWrapper>
 		</Wrapper>
 	);

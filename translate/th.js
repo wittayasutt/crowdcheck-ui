@@ -34,6 +34,13 @@ export default {
 	email: 'อีเมล',
 	exceed: 'Exceed',
 	exploreArea: 'จุดสำรวจ',
+	filter: {
+		atk: 'Require ATK test result',
+		notRequire: 'Does not require vaccination',
+		requireOne: 'Require at least 1 dose vaccination',
+		requireTwo: 'Require fully vaccinated',
+		title: 'Venue’s condition filter',
+	},
 	iam: "I'm",
 	id: 'ไอดี',
 	legend: {
