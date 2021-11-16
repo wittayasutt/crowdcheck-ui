@@ -47,8 +47,10 @@ const HomePage = () => {
 	const [venueZoomIn, setVenueZoomIn] = useState([]);
 	const [venue, setVenue] = useState([]);
 
-	const getData = async () => {
-		setLoading(true);
+	const getData = async (isInit) => {
+		if (isInit) {
+			setLoading(true);
+		}
 
 		try {
 			const venueData = await getVenue();
@@ -105,10 +107,10 @@ const HomePage = () => {
 	};
 
 	const interval = () => {
-		getData();
+		getData(true);
 
 		const interval = setInterval(() => {
-			getData();
+			getData(false);
 		}, INTERVAL_TIME);
 
 		setTimeInterval(interval);

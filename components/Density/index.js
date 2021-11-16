@@ -30,6 +30,8 @@ const Desktop = styled.div`
 		width: 480px;
 		max-width: 25vw;
 		background-color: ${(props) => props.theme.color.white};
+
+		z-index: 2;
 	}
 `;
 
@@ -76,10 +78,7 @@ const Density = ({ data, updatedTime }) => {
 
 Density.propTypes = {
 	data: PropTypes.array,
-	updatedTime: PropTypes.oneOfType([
-		PropTypes.number,
-		PropTypes.instanceOf(Date),
-	]),
+	updatedTime: PropTypes.oneOfType([PropTypes.number, PropTypes.instanceOf(Date)]),
 };
 
 Density.defaultProps = {

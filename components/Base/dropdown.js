@@ -19,6 +19,8 @@ const Title = styled.div`
 	text-align: center;
 
 	font-size: 14px;
+	font-weight: 500;
+	text-decoration: underline;
 	cursor: pointer;
 `;
 

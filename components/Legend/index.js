@@ -35,6 +35,8 @@ const Desktop = styled.div`
 		width: 480px;
 		max-width: 25vw;
 		background-color: ${(props) => props.theme.color.white};
+
+		z-index: 2;
 	}
 `;
 

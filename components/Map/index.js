@@ -12,6 +12,7 @@ import mapStyles from './theme';
 import { getContent, getMatchingProgram } from '../../helpers';
 
 // components
+import InformationText from '../InformationText';
 import Marker from '../Marker';
 import Zoom from '../Base/zoom';
 
@@ -58,9 +59,10 @@ const useRedux = () => {
 	return { selectPlace, setZoom, poi, coord, toLocation };
 };
 
-const Wrapper = styled.nav`
+const Wrapper = styled.div`
 	height: calc(100vh - 176px);
 	width: 100%;
+	position: relative;
 
 	@media (min-width: ${(props) => props.theme.breakpoint}) {
 		height: calc(100vh - 112px);
@@ -211,8 +213,12 @@ const Map = ({ data, offset }) => {
 		}
 	}, [coord]);
 
+	// TODO: remove when integrate
+	const informationText = 'BKKDW 2022 Now between 20 Jan - 27 Jan';
+
 	return (
 		<Wrapper offset={offset}>
+			{informationText && <InformationText text={informationText} />}
 			<GoogleMapReact
 				bootstrapURLKeys={bootstrapURLKeys}
 				defaultCenter={defaultCenter}
