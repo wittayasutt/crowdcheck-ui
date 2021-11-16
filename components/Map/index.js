@@ -220,7 +220,7 @@ const Map = ({ data, offset }) => {
 	return (
 		<Wrapper offset={offset}>
 			<InformationText text={informationText} />
-			<VaccinatedPopup vaccinated={1} />
+			<VaccinatedPopup />
 			<GoogleMapReact
 				bootstrapURLKeys={bootstrapURLKeys}
 				defaultCenter={defaultCenter}

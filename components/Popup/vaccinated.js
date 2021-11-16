@@ -1,9 +1,14 @@
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import { useSelector } from 'react-redux';
 
 // lang
 import t from '../../translate';
+
+const useRedux = () => {
+	const filter = useSelector((state) => state.filter);
+	return { filter };
+};
 
 const Wrapper = styled.div`
 	min-height: 48px;
@@ -37,9 +42,18 @@ const VaccineWrapper = styled.div`
 
 const Image = styled.img``;
 
-const VaccinatedPopup = ({ vaccinated }) => {
+const VaccinatedPopup = () => {
 	const router = useRouter();
 	const { locale } = router;
+
+	const { filter } = useRedux();
+
+	let vaccinated = 0;
+	if (filter.some((item) => item === 'requireTwo')) {
+		vaccinated = 2;
+	} else if (filter.some((item) => item === 'requireOne')) {
+		vaccinated = 1;
+	}
 
 	if (!vaccinated || vaccinated === 0) {
 		return null;
@@ -54,14 +68,6 @@ const VaccinatedPopup = ({ vaccinated }) => {
 			</VaccineWrapper>
 		</Wrapper>
 	);
-};
-
-VaccinatedPopup.propTypes = {
-	vaccinated: PropTypes.number,
-};
-
-VaccinatedPopup.defaultProps = {
-	c: 0,
 };
 
 export default VaccinatedPopup;

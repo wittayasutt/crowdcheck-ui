@@ -43,6 +43,26 @@ export default {
 	},
 	iam: "I'm",
 	id: 'ไอดี',
+	informationModal: {
+		attention: {
+			content: 'บนมือถือของท่านเพื่อการใช้งานเว็บอย่างสมบูรณ์ แต่จะไม่ได้มีการเข้าถึงข้อมูลส่วนตัวฃของผู้ใช้งาน',
+			header: 'โปรดเปิด Bluetooth',
+			title: 'Attention',
+		},
+		betterCovid: {
+			full: 'a full doser',
+			halfWay: 'half way there',
+			title: 'Better Covid Experience',
+			waiting: 'waiting for my first jab',
+		},
+		continue: 'Continue',
+		explore: {
+			content:
+				'Click <strong>Explore Area</strong> button to search for crowd density information on venue in city and district level.',
+			title: 'Explore Area',
+		},
+		skip: 'Skip',
+	},
 	legend: {
 		avoid: 'เกินความจุของสถานที่ "นี่อาจไม่ใช่เวลาที่เหมาะสม <strong>หลีกเลี่ยง</strong>การเข้าไปร่วมกับฝูงชนในตอนนี้"',
 		find: 'คลิกเพื่อหาจุดที่คุณอยู่',

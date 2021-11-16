@@ -3,11 +3,7 @@ import PropTypes from 'prop-types';
 
 const ModalComponent = ({ isOpen, onDismiss, children }) => {
 	return (
-		<Modal
-			isOpen={isOpen}
-			onBackgroundClick={onDismiss}
-			onEscapeKeydown={onDismiss}
-		>
+		<Modal isOpen={isOpen} onBackgroundClick={onDismiss} onEscapeKeydown={onDismiss}>
 			{children}
 		</Modal>
 	);
@@ -20,7 +16,7 @@ ModalComponent.propTypes = {
 };
 
 ModalComponent.defaultProps = {
-	isOpen: '',
+	isOpen: false,
 	onDismiss: false,
 	children: <></>,
 };

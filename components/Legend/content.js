@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -83,8 +84,10 @@ const LegendContent = () => {
 		let updatedFilter = [];
 		if (found) {
 			updatedFilter = filter.filter((item) => item !== newFilter);
+			localStorage.removeItem(newFilter);
 		} else {
 			updatedFilter = [...filter, newFilter];
+			localStorage.setItem(newFilter, true);
 		}
 
 		setFilter(updatedFilter);
@@ -106,6 +109,29 @@ const LegendContent = () => {
 
 		setPoi(updatedPoi);
 	};
+
+	useEffect(() => {
+		const atk = localStorage.getItem('atk');
+		const notRequire = localStorage.getItem('notRequire');
+		const requireOne = localStorage.getItem('requireOne');
+		const requireTwo = localStorage.getItem('requireTwo');
+
+		const updatedFilter = [];
+		if (atk) {
+			updatedFilter.push('atk');
+		}
+		if (notRequire) {
+			updatedFilter.push('notRequire');
+		}
+		if (requireOne) {
+			updatedFilter.push('requireOne');
+		}
+		if (requireTwo) {
+			updatedFilter.push('requireTwo');
+		}
+
+		setFilter(updatedFilter);
+	}, []);
 
 	return (
 		<Wrapper>

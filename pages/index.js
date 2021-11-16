@@ -20,7 +20,12 @@ import Loading from '../components/Loading';
 import Density from '../components/Density';
 import Legend from '../components/Legend';
 import Place from '../components/Place';
+
+// Modals
 import WelcomeModal from '../components/Modal/welcome';
+import AttentionModal from '../components/Modal/attention';
+import VaccinatedModal from '../components/Modal/vaccinated';
+import ExploreModal from '../components/Modal/explore';
 
 // 3 Minutes
 const INTERVAL_TIME = 180000;
@@ -46,6 +51,8 @@ const HomePage = () => {
 	const [venueZoomOut, setVenueZoomOut] = useState([]);
 	const [venueZoomIn, setVenueZoomIn] = useState([]);
 	const [venue, setVenue] = useState([]);
+
+	const [modalStep, setModalStep] = useState(0);
 
 	const getData = async (isInit) => {
 		if (isInit) {
@@ -116,6 +123,10 @@ const HomePage = () => {
 		setTimeInterval(interval);
 	};
 
+	const onClickNextModal = () => {
+		setModalStep(modalStep + 1);
+	};
+
 	useEffect(() => {
 		const { zoomIn, zoomOut } = getRenderVenue(venue);
 
@@ -136,6 +147,24 @@ const HomePage = () => {
 		};
 	}, []);
 
+	useEffect(() => {
+		const isOpenAttentionModal = localStorage.getItem('isOpenAttentionModal');
+		const isOpenVaccinatedModal = localStorage.getItem('isOpenVaccinatedModal');
+		const isOpenExploreModal = localStorage.getItem('isOpenExploreModal');
+
+		if (isOpenAttentionModal) {
+			setModalStep(1);
+		}
+
+		if (isOpenVaccinatedModal) {
+			setModalStep(2);
+		}
+
+		if (isOpenExploreModal) {
+			setModalStep(3);
+		}
+	}, []);
+
 	const showVenue = zoom < 18 ? venueZoomOut : venueZoomIn;
 
 	return (
@@ -152,6 +181,10 @@ const HomePage = () => {
 			) : (
 				<Loading fullpage />
 			)}
+
+			{modalStep === 0 && <AttentionModal onClickNext={onClickNextModal} />}
+			{modalStep === 1 && <VaccinatedModal onClickNext={onClickNextModal} />}
+			{modalStep === 2 && <ExploreModal onClickNext={onClickNextModal} />}
 
 			{/* Don't show welcome modal, pull it back when want to use it again */}
 			{false && <WelcomeModal />}

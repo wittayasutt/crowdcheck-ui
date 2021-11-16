@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 // hooks
@@ -28,7 +28,7 @@ const Content = styled.div`
 	min-width: 120px;
 	position: absolute;
 	background-color: ${(props) => props.theme.color.white};
-	z-index: 1;
+	z-index: 2;
 `;
 
 const Dropdown = ({ title, onClose, children }) => {
