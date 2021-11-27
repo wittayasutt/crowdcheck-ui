@@ -13,6 +13,8 @@ import { FORM_ACTION, FORM_TYPE } from './const';
 // components
 import VenueForm from './venue';
 import ProgramForm from './program';
+import AreaForm from './area';
+import EventForm from './event';
 import ErrorText from '../Base/errorText';
 
 // lang
@@ -64,14 +66,7 @@ const IconAngleLeft = styled(FontAwesomeIcon)`
 	width: 24px;
 `;
 
-const AdminForm = ({
-	action,
-	formType,
-	data,
-	updateId,
-	updateSubId,
-	onUpdate,
-}) => {
+const AdminForm = ({ action, formType, data, updateId, updateSubId, onUpdate }) => {
 	const router = useRouter();
 	const { locale } = router;
 
@@ -144,11 +139,11 @@ const AdminForm = ({
 			<Title>{title}</Title>
 
 			<Form className='mb-2'>
-				{type === FORM_TYPE.VENUE && (
-					<VenueForm data={data} isView={isView} onUpdate={handleUpdate} />
-				)}
-				{type === FORM_TYPE.PROGRAM && (
-					<ProgramForm data={data} isView={isView} onUpdate={handleUpdate} />
+				{type === FORM_TYPE.VENUE && <VenueForm data={data} isView={isView} onUpdate={handleUpdate} />}
+				{type === FORM_TYPE.PROGRAM && <ProgramForm data={data} isView={isView} onUpdate={handleUpdate} />}
+				{type === FORM_TYPE.AREA && <AreaForm data={data} isView={isView} onUpdate={handleUpdate} />}
+				{type === FORM_TYPE.EVENT && (
+					<EventForm data={data} areaId={updateId} isView={isView} onUpdate={handleUpdate} />
 				)}
 				{error && <ErrorText>{error}</ErrorText>}
 			</Form>

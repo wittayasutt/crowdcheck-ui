@@ -5,6 +5,8 @@ export default {
 	add: 'ADD',
 	admin: 'Admin',
 	areYouSure: 'Are you sure?',
+	area: 'Area',
+	areaName: 'Area name',
 	atkRequired: 'ATK Required',
 	back: 'back',
 	boolean: {
@@ -37,6 +39,8 @@ export default {
 	description: `Crowd check assists in journey planning, prior to and on site, with real-time density which equally disclosing the information to the public. To do so, it measures the crowd density by capturing real-time Bluetooth signals, representing number of people, and analyse the number in relation to location's capacity.`,
 	detail: 'Detail',
 	email: 'Email',
+	event: 'Event',
+	eventName: 'Event name',
 	exceed: 'Exceed',
 	exploreArea: 'Explore Area',
 	filter: {
@@ -150,4 +154,5 @@ export default {
 	venues: 'Venues',
 	venueName: 'Venue Name',
 	venueTrendRecord: 'Venue Trend Record',
+	zoomLevel: 'Zoom level',
 };

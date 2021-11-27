@@ -8,13 +8,7 @@ import RequiredLabel from '../Base/requiredLabel';
 // lang
 import t from '../../translate';
 
-const AdminFormInputProgramType = ({
-	title,
-	require,
-	data,
-	onChange,
-	isView,
-}) => {
+const AdminFormInputProgramType = ({ title, require, data, onChange, isView }) => {
 	const router = useRouter();
 	const { locale } = router;
 
@@ -42,19 +36,13 @@ const AdminFormInputProgramType = ({
 					<div className='select'>
 						<select onChange={handleChange} value={value}>
 							<option value='showcase'>{t[locale].programType.showcase}</option>
-							<option value='showcaseAndExhibition'>
-								{t[locale].programType.showcaseAndExhibition}
-							</option>
-							<option value='creativeMarket'>
-								{t[locale].programType.creativeMarket}
-							</option>
+							<option value='showcaseAndExhibition'>{t[locale].programType.showcaseAndExhibition}</option>
+							<option value='creativeMarket'>{t[locale].programType.creativeMarket}</option>
 							<option value='workshop'>{t[locale].programType.workshop}</option>
 							<option value='talk'>{t[locale].programType.talk}</option>
 							<option value='event'>{t[locale].programType.event}</option>
 							<option value='tour'>{t[locale].programType.tour}</option>
-							<option value='promotion'>
-								{t[locale].programType.promotion}
-							</option>
+							<option value='promotion'>{t[locale].programType.promotion}</option>
 						</select>
 					</div>
 				)}
@@ -74,7 +62,7 @@ AdminFormInputProgramType.propTypes = {
 AdminFormInputProgramType.defaultProps = {
 	title: '',
 	require: false,
-	data: {},
+	data: '',
 	onChange: () => {},
 	isView: false,
 };

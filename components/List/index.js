@@ -8,12 +8,7 @@ import { getContent } from '../../helpers';
 
 // icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-	faEye,
-	faPen,
-	faTrash,
-	faPlus,
-} from '@fortawesome/free-solid-svg-icons';
+import { faEye, faPen, faTrash, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 // components
 import Modal from '../../components/Base/modal';
@@ -128,7 +123,7 @@ const Summary = styled.summary`
 	}
 `;
 
-const Program = styled.li`
+const SubType = styled.li`
 	display: flex;
 	align-items: center;
 	height: 48px;
@@ -153,15 +148,7 @@ const Icon = styled(FontAwesomeIcon)`
 	width: 12px;
 `;
 
-const List = ({
-	title,
-	type,
-	data,
-	subData,
-	onSelect,
-	onRemove,
-	onRemoveSub,
-}) => {
+const List = ({ title, onSelect, type, data, onRemove, subType, subData, onRemoveSub }) => {
 	const [loading, setLoading] = useState(true);
 	const [selectId, setSelectId] = useState(null);
 	const [removeId, setRemoveId] = useState(null);
@@ -172,6 +159,10 @@ const List = ({
 	const { locale } = router;
 
 	const handleSelect = (id) => {
+		if (!subType) {
+			return;
+		}
+
 		setLoading(true);
 		setSelectId(id);
 		onSelect(id);
@@ -211,7 +202,7 @@ const List = ({
 			<Wrapper>
 				<Title>
 					<h2>{title}</h2>
-					<Link href={`admin/venue`}>
+					<Link href={`admin/${type}`}>
 						<Button className='button button-add is-primary'>
 							<span>{t[locale].add}</span> <Icon icon={faPlus} />
 						</Button>
@@ -226,13 +217,13 @@ const List = ({
 										<div className='id'>{index + 1}</div>
 										<div className='item'>{getContent(item.name, locale)}</div>
 
-										<Link href={`admin/venue/${item._id}`}>
+										<Link href={`admin/${type}/${item._id}`}>
 											<button className='button button-action'>
 												<Icon icon={faEye} />
 											</button>
 										</Link>
 
-										<Link href={`admin/venue/${item._id}/edit`}>
+										<Link href={`admin/${type}/${item._id}/edit`}>
 											<button className='button button-action'>
 												<Icon icon={faPen} />
 											</button>
@@ -249,27 +240,22 @@ const List = ({
 									</div>
 								</Summary>
 
-								{selectId === item._id && (
+								{/* SUB DATA */}
+								{subType && selectId === item._id && (
 									<>
 										{!loading ? (
 											<ul>
 												{subData.map((subItem) => (
-													<Program className='program' key={subItem._id}>
-														<div className='item'>
-															{getContent(subItem.name, locale)}
-														</div>
+													<SubType key={subItem._id}>
+														<div className='item'>{getContent(subItem.name, locale)}</div>
 
-														<Link
-															href={`admin/venue/${item._id}/program/${subItem._id}`}
-														>
+														<Link href={`admin/${type}/${item._id}/${subType}/${subItem._id}`}>
 															<button className='button is-primary button-action'>
 																<Icon icon={faEye} />
 															</button>
 														</Link>
 
-														<Link
-															href={`admin/venue/${item._id}/program/${subItem._id}/edit`}
-														>
+														<Link href={`admin/${type}/${item._id}/${subType}/${subItem._id}/edit`}>
 															<button className='button is-primary button-action'>
 																<Icon icon={faPen} />
 															</button>
@@ -283,13 +269,13 @@ const List = ({
 														>
 															<Icon icon={faTrash} />
 														</button>
-													</Program>
+													</SubType>
 												))}
 
-												<Link href={`admin/venue/${item._id}/program`}>
-													<Program className='button-add'>
+												<Link href={`admin/${type}/${item._id}/${subType}`}>
+													<SubType className='button-add'>
 														<span>{t[locale].add}</span> <Icon icon={faPlus} />
-													</Program>
+													</SubType>
 												</Link>
 											</ul>
 										) : null}
@@ -301,17 +287,9 @@ const List = ({
 				</Content>
 			</Wrapper>
 
-			<Modal
-				open={openModal}
-				onClose={closeConfimRemoveModal}
-				onConfirm={() => confirmRemove(false)}
-			/>
+			<Modal open={openModal} onClose={closeConfimRemoveModal} onConfirm={() => confirmRemove(false)} />
 
-			<Modal
-				open={openModalSub}
-				onClose={closeConfimRemoveModal}
-				onConfirm={() => confirmRemove(true)}
-			/>
+			<Modal open={openModalSub} onClose={closeConfimRemoveModal} onConfirm={() => confirmRemove(true)} />
 		</>
 	);
 };
@@ -319,20 +297,26 @@ const List = ({
 List.propTypes = {
 	title: PropTypes.string,
 	type: PropTypes.string,
-	data: PropTypes.array,
-	subData: PropTypes.array,
 	onSelect: PropTypes.func,
+
+	data: PropTypes.array,
 	onRemove: PropTypes.func,
+
+	subType: PropTypes.string,
+	subData: PropTypes.array,
 	onRemoveSub: PropTypes.func,
 };
 
 List.defaultProps = {
 	title: '',
+	onSelect: () => {},
+
 	type: '',
 	data: [],
-	subData: [],
-	onSelect: () => {},
 	onRemove: () => {},
+
+	subType: '',
+	subData: [],
 	onRemoveSub: () => {},
 };
 

@@ -7,6 +7,8 @@ export const FORM_ACTION = {
 export const FORM_TYPE = {
 	VENUE: 'VENUE',
 	PROGRAM: 'PROGRAM',
+	AREA: 'AREA',
+	EVENT: 'EVENT',
 	OTHER: 'OTHER',
 };
 
