@@ -81,6 +81,9 @@ const Navbar = () => {
 
 	const [role, setRole] = useState('USER');
 
+	// roles
+	const isAdminPage = router.route.includes('admin');
+
 	const handleToggleLanguage = () => {
 		const { asPath } = router;
 
@@ -109,9 +112,7 @@ const Navbar = () => {
 					<img src='/logo.png' alt='logo' />
 				</Logo>
 			</Link>
-			<Center>
-				<DropdownExplore />
-			</Center>
+			<Center>{!isAdminPage && <DropdownExplore />}</Center>
 			<MenuList>
 				{role === 'ADMIN' && (
 					<Link href='/admin'>

@@ -8,6 +8,8 @@ import { getContent } from '../../helpers';
 import RequiredLabel from '../Base/requiredLabel';
 import Input2Lang from './input2Lang';
 import InputLocation from './inputLocation';
+import InputBoolean from './inputBoolean';
+import InputNumber from './inputNumber';
 
 // lang
 import t from '../../translate';
@@ -28,6 +30,8 @@ const AdminFormVenue = ({ data, isView, onUpdate }) => {
 		lat: '',
 		lng: '',
 	});
+	const [atkRequired, setAtkRequired] = useState(false);
+	const [vaccineDosesRequired, setVaccineDosesRequired] = useState(0);
 
 	const handleSetId = (e) => {
 		setId(e.target.value);
@@ -55,12 +59,21 @@ const AdminFormVenue = ({ data, isView, onUpdate }) => {
 					latitude: location.lat,
 					longtitude: location.lng,
 				},
+				covid19Conditions: {
+					isATKRequired: atkRequired,
+					numberOfVaccineDosesRequired: vaccineDosesRequired || 0,
+				},
 			};
 
-			const isError = !id || !lang(venueName) || !location.lat || !location.lng;
+			const isError =
+				!id ||
+				!lang(venueName) ||
+				!location.lat ||
+				!location.lng ||
+				(!vaccineDosesRequired && vaccineDosesRequired !== 0);
 			onUpdate({ payload, isError });
 		}
-	}, [id, venueName, location]);
+	}, [id, venueName, location, atkRequired, vaccineDosesRequired]);
 
 	useEffect(() => {
 		if (!data) {
@@ -84,6 +97,16 @@ const AdminFormVenue = ({ data, isView, onUpdate }) => {
 				lng: data.location.longtitude,
 			});
 		}
+
+		if (data.covid19Conditions) {
+			if (data.covid19Conditions.isATKRequired) {
+				setAtkRequired(data.covid19Conditions.isATKRequired);
+			}
+
+			if (data.covid19Conditions.numberOfVaccineDosesRequired) {
+				setVaccineDosesRequired(data.covid19Conditions.numberOfVaccineDosesRequired);
+			}
+		}
 	}, [data]);
 
 	return (
@@ -94,13 +117,7 @@ const AdminFormVenue = ({ data, isView, onUpdate }) => {
 					<strong>{id}</strong>
 				) : (
 					<div className='control'>
-						<input
-							className='input'
-							type='text'
-							placeholder='01-AAA'
-							value={id}
-							onChange={handleSetId}
-						/>
+						<input className='input' type='text' placeholder='01-AAA' value={id} onChange={handleSetId} />
 					</div>
 				)}
 			</div>
@@ -113,11 +130,24 @@ const AdminFormVenue = ({ data, isView, onUpdate }) => {
 				require
 			/>
 
-			<InputLocation
-				title={t[locale].coordinate}
-				data={location}
-				onChange={(e) => setLocation(e)}
+			<InputLocation title={t[locale].coordinate} data={location} onChange={(e) => setLocation(e)} isView={isView} />
+
+			<InputBoolean
+				title={t[locale].atkRequired}
+				data={atkRequired}
+				onChange={(e) => setAtkRequired(e)}
 				isView={isView}
+				require
+			/>
+
+			<InputNumber
+				title={t[locale].vaccineDosesRequired}
+				data={vaccineDosesRequired}
+				onChange={(e) => setVaccineDosesRequired(e)}
+				isView={isView}
+				min={0}
+				max={2}
+				require
 			/>
 		</>
 	);

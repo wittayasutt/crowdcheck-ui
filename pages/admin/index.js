@@ -105,7 +105,7 @@ const Admin = () => {
 				<Layout>
 					<Wrapper>
 						<List
-							title={t[locale].venue}
+							title={t[locale].venues}
 							data={venue}
 							subData={program}
 							type='venue'
@@ -113,7 +113,6 @@ const Admin = () => {
 							onRemove={removeVenueById}
 							onRemoveSub={removeProgramById}
 						/>
-						{/* <List title='Others' /> */}
 					</Wrapper>
 				</Layout>
 			) : (

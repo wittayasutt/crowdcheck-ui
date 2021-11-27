@@ -5,7 +5,12 @@ export default {
 	add: 'ADD',
 	admin: 'Admin',
 	areYouSure: 'Are you sure?',
+	atkRequired: 'ATK Required',
 	back: 'back',
+	boolean: {
+		no: 'No',
+		yes: 'Yes',
+	},
 	cancel: 'Cancel',
 	chooseAFile: 'Choose a file...',
 	confirm: 'Confirm',
@@ -140,7 +145,9 @@ export default {
 	update: 'update',
 	uploadImage: 'Upload Image',
 	username: 'Username',
+	vaccineDosesRequired: 'Number of vaccine doses required',
 	venue: 'Venue',
+	venues: 'Venues',
 	venueName: 'Venue Name',
 	venueTrendRecord: 'Venue Trend Record',
 };

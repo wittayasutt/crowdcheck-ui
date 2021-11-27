@@ -5,7 +5,12 @@ export default {
 	add: 'เพิ่ม',
 	admin: 'ธุรการ',
 	areYouSure: 'คุณแน่ใจไหม?',
+	atkRequired: 'จำเป็นต้องตรวจ ATK',
 	back: 'กลับ',
+	boolean: {
+		no: 'ไม่',
+		yes: 'ใช่',
+	},
 	cancel: 'ยกเลิก',
 	chooseAFile: 'เลิอกไฟล์...',
 	confirm: 'ยืนยัน',
@@ -140,7 +145,9 @@ export default {
 	update: 'อัปเดต',
 	uploadImage: 'อัปโหลดรูปภาพ',
 	username: 'ชื่อผู้ใช้',
+	vaccineDosesRequired: 'จำนวนวัคซีนขั้นต่ำที่ต้องฉีด',
 	venue: 'สถานที่จัดงาน',
+	venues: 'สถานที่จัดงาน',
 	venueName: 'ชื่อสถานที่จัดงาน',
 	venueTrendRecord: 'รายงานสถานที่จัดงาน',
 };
