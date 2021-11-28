@@ -10,6 +10,7 @@ import Input2Lang from './input2Lang';
 import InputLocation from './inputLocation';
 import InputBoolean from './inputBoolean';
 import InputNumber from './inputNumber';
+import InputEvent from './inputEvent';
 
 // lang
 import t from '../../translate';
@@ -32,6 +33,7 @@ const AdminFormVenue = ({ data, isView, onUpdate }) => {
 	});
 	const [atkRequired, setAtkRequired] = useState(false);
 	const [vaccineDosesRequired, setVaccineDosesRequired] = useState(0);
+	const [event, setEvent] = useState(null);
 
 	const handleSetId = (e) => {
 		setId(e.target.value);
@@ -63,6 +65,7 @@ const AdminFormVenue = ({ data, isView, onUpdate }) => {
 					isATKRequired: atkRequired,
 					numberOfVaccineDosesRequired: vaccineDosesRequired || 0,
 				},
+				event: event,
 			};
 
 			const isError =
@@ -73,7 +76,7 @@ const AdminFormVenue = ({ data, isView, onUpdate }) => {
 				(!vaccineDosesRequired && vaccineDosesRequired !== 0);
 			onUpdate({ payload, isError });
 		}
-	}, [id, venueName, location, atkRequired, vaccineDosesRequired]);
+	}, [id, venueName, location, atkRequired, vaccineDosesRequired, event]);
 
 	useEffect(() => {
 		if (!data) {
@@ -106,6 +109,10 @@ const AdminFormVenue = ({ data, isView, onUpdate }) => {
 			if (data.covid19Conditions.numberOfVaccineDosesRequired) {
 				setVaccineDosesRequired(data.covid19Conditions.numberOfVaccineDosesRequired);
 			}
+		}
+
+		if (data.event) {
+			setEvent(data.event);
 		}
 	}, [data]);
 
@@ -149,6 +156,8 @@ const AdminFormVenue = ({ data, isView, onUpdate }) => {
 				max={2}
 				require
 			/>
+
+			<InputEvent title={t[locale].event} data={event} onChange={(e) => setEvent(e)} isView={isView} />
 		</>
 	);
 };

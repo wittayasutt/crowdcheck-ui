@@ -9,7 +9,6 @@ import { defaultZoom } from '../Map/const';
 import Input2Lang from './input2Lang';
 import InputLocation from './inputLocation';
 import InputNumber from './inputNumber';
-import InputArea from './inputArea';
 
 // lang
 import t from '../../translate';
@@ -100,8 +99,6 @@ const AdminFormEvent = ({ data, areaId, isView, onUpdate }) => {
 				max={19}
 				require
 			/>
-
-			{/* <InputArea title={t[locale].areaName} data={area} onChange={(e) => setArea(e)} isView={isView} require /> */}
 		</>
 	);
 };

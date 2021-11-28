@@ -1,31 +1,41 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
-import { service_get_area_list } from '../../services';
+import { service_get_area_and_event } from '../../services';
 import { getContent } from '../../helpers';
 
 // components
 import RequiredLabel from '../Base/requiredLabel';
 
-const AdminFormInputSelect = ({ title, require, data, onChange, isView }) => {
+const AdminFormInputEvent = ({ title, require, data, onChange, isView }) => {
 	const router = useRouter();
 	const { locale } = router;
 
 	const [loading, setLoading] = useState(true);
 	const [value, setValue] = useState('');
 	const [viewValue, setViewValue] = useState({});
-	const [areaList, setAreaList] = useState([]);
+	const [eventList, setEventList] = useState([]);
 	const [option, setOption] = useState([]);
 
 	const handleChange = (e) => {
 		onChange(e.target.value);
 	};
 
-	const getArea = () => {
+	const flattenEvent = (res) => {
+		if (!res) {
+			return [];
+		}
+
+		const events = res.map((item) => item.events);
+		return events.reduce((acc, val) => acc.concat(val), []);
+	};
+
+	const getEvent = () => {
 		try {
-			service_get_area_list().then((res) => {
+			service_get_area_and_event().then((res) => {
 				if (res.status === 'success') {
-					setAreaList(res.data);
+					const flattedEvent = flattenEvent(res.data);
+					setEventList(flattedEvent);
 				}
 
 				setLoading(false);
@@ -34,11 +44,15 @@ const AdminFormInputSelect = ({ title, require, data, onChange, isView }) => {
 	};
 
 	useEffect(() => {
-		getArea();
+		getEvent();
 	}, []);
 
 	useEffect(() => {
-		const optionList = areaList.map((item) => {
+		const optionList = eventList.map((item) => {
+			if (!item) {
+				return null;
+			}
+
 			return {
 				id: item._id,
 				name: {
@@ -49,7 +63,7 @@ const AdminFormInputSelect = ({ title, require, data, onChange, isView }) => {
 		});
 
 		setOption(optionList);
-	}, [areaList, locale]);
+	}, [eventList, locale]);
 
 	useEffect(() => {
 		if (data) {
@@ -80,23 +94,29 @@ const AdminFormInputSelect = ({ title, require, data, onChange, isView }) => {
 						<br />
 						<strong>{viewValue['en'] || '-'}</strong>
 					</>
-				) : (
+				) : option ? (
 					<div className='select'>
 						<select onChange={handleChange} value={value}>
-							{option.map((item, index) => (
-								<option key={index} value={item.id}>
-									{item[locale].name}
-								</option>
-							))}
+							{option.map((item, index) => {
+								if (!item || !locale) {
+									return;
+								}
+
+								return (
+									<option key={index} value={item.id}>
+										{item.name[locale]}
+									</option>
+								);
+							})}
 						</select>
 					</div>
-				)}
+				) : null}
 			</div>
 		</div>
 	);
 };
 
-AdminFormInputSelect.propTypes = {
+AdminFormInputEvent.propTypes = {
 	title: PropTypes.string,
 	require: PropTypes.bool,
 	data: PropTypes.string,
@@ -104,7 +124,7 @@ AdminFormInputSelect.propTypes = {
 	isView: PropTypes.bool,
 };
 
-AdminFormInputSelect.defaultProps = {
+AdminFormInputEvent.defaultProps = {
 	title: '',
 	require: false,
 	data: '',
@@ -112,4 +132,4 @@ AdminFormInputSelect.defaultProps = {
 	isView: false,
 };
 
-export default AdminFormInputSelect;
+export default AdminFormInputEvent;
