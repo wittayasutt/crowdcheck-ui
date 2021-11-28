@@ -14,6 +14,8 @@ const initialState = {
 	filter: [],
 	poi: [],
 	coord: null,
+	vaccinated: 0,
+	openVaccinatedModal: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -81,6 +83,24 @@ const reducer = (state = initialState, action) => {
 			return {
 				...state,
 				coord: action.coord,
+			};
+		}
+		case 'SET_VACCINATED': {
+			return {
+				...state,
+				vaccinated: action.vaccinated,
+			};
+		}
+		case 'SET_VACCINATED': {
+			return {
+				...state,
+				vaccinated: action.vaccinated,
+			};
+		}
+		case 'SET_OPEN_VACCINATED_MODAL': {
+			return {
+				...state,
+				openVaccinatedModal: action.openVaccinatedModal,
 			};
 		}
 		default:

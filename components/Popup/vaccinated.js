@@ -1,13 +1,18 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 // lang
 import t from '../../translate';
 
 const useRedux = () => {
-	const filter = useSelector((state) => state.filter);
-	return { filter };
+	const dispatch = useDispatch();
+	const setOpenVaccinatedModal = (openVaccinatedModal) => {
+		dispatch({ type: 'SET_OPEN_VACCINATED_MODAL', openVaccinatedModal });
+	};
+
+	const vaccinated = useSelector((state) => state.vaccinated);
+	return { vaccinated, setOpenVaccinatedModal };
 };
 
 const Wrapper = styled.div`
@@ -24,9 +29,10 @@ const Wrapper = styled.div`
 	right: 8px;
 
 	background-color: ${(props) => props.theme.color.white};
-	padding: 8px 8px 16px;
+	padding: 8px;
 	border-radius: 16px;
 
+	cursor: pointer;
 	z-index: 1;
 `;
 
@@ -46,23 +52,17 @@ const VaccinatedPopup = () => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const { filter } = useRedux();
+	const { vaccinated, setOpenVaccinatedModal } = useRedux();
 
-	let vaccinated = 0;
-	if (filter.some((item) => item === 'requireTwo')) {
-		vaccinated = 2;
-	} else if (filter.some((item) => item === 'requireOne')) {
-		vaccinated = 1;
-	}
-
-	if (!vaccinated || vaccinated === 0) {
-		return null;
-	}
+	const openVaccinatedModal = () => {
+		setOpenVaccinatedModal(true);
+	};
 
 	return (
-		<Wrapper>
-			<Iam>{t[locale].iam}</Iam>
+		<Wrapper onClick={openVaccinatedModal}>
+			{vaccinated > 0 && <Iam>{t[locale].iam}</Iam>}
 			<VaccineWrapper>
+				{vaccinated === 0 && <Image src={'/images/filter/notRequire.svg'} alt='vaccine' style={{ height: '16px' }} />}
 				{vaccinated === 1 && <Image src={'/images/filter/requireOne.svg'} alt='vaccine' style={{ height: '16px' }} />}
 				{vaccinated === 2 && <Image src={'/images/filter/requireTwo.svg'} alt='vaccine' style={{ height: '16px' }} />}
 			</VaccineWrapper>

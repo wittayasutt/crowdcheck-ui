@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 // components
 import InformationModal from './information';
@@ -13,7 +13,13 @@ import t from '../../translate';
 const useRedux = () => {
 	const dispatch = useDispatch();
 	const setFilter = (filter) => dispatch({ type: 'SET_FILTER', filter });
-	return { setFilter };
+	const setVaccinated = (vaccinated) => dispatch({ type: 'SET_VACCINATED', vaccinated });
+	const setOpenVaccinatedModal = (openVaccinatedModal) => {
+		dispatch({ type: 'SET_OPEN_VACCINATED_MODAL', openVaccinatedModal });
+	};
+	const openVaccinatedModal = useSelector((state) => state.openVaccinatedModal);
+
+	return { openVaccinatedModal, setFilter, setVaccinated, setOpenVaccinatedModal };
 };
 
 const Wrapper = styled.div`
@@ -57,7 +63,7 @@ const VaccinatedModal = ({ onClickNext }) => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const { setFilter } = useRedux();
+	const { openVaccinatedModal, setFilter, setVaccinated, setOpenVaccinatedModal } = useRedux();
 
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -66,16 +72,26 @@ const VaccinatedModal = ({ onClickNext }) => {
 	};
 
 	const handleClickNext = () => {
-		const updateFilter = ['notRequire', 'requireOne', 'requireTwo'];
-		setFilter(updateFilter);
+		if (openVaccinatedModal) {
+			setOpenVaccinatedModal(false);
+		} else {
+			// Filter
+			const updateFilter = ['notRequire', 'requireOne', 'requireTwo'];
+			setFilter(updateFilter);
 
-		localStorage.setItem('notRequire', true);
-		localStorage.setItem('requireOne', true);
-		localStorage.setItem('requireTwo', true);
-		localStorage.setItem('isOpenVaccinatedModal', true);
+			localStorage.setItem('notRequire', true);
+			localStorage.setItem('requireOne', true);
+			localStorage.setItem('requireTwo', true);
+			localStorage.setItem('isOpenVaccinatedModal', true);
 
-		onClickNext();
-		closeModal();
+			// Vaccinated
+			setVaccinated(0);
+			localStorage.setItem('vaccinated', 0);
+			setOpenVaccinatedModal(false);
+
+			onClickNext();
+			closeModal();
+		}
 	};
 
 	const handleSelectVaccinated = (number) => {
@@ -95,6 +111,11 @@ const VaccinatedModal = ({ onClickNext }) => {
 		setFilter(updateFilter);
 		localStorage.setItem('isOpenVaccinatedModal', true);
 
+		// Vaccinated
+		setVaccinated(number);
+		localStorage.setItem('vaccinated', number);
+		setOpenVaccinatedModal(false);
+
 		onClickNext();
 		closeModal();
 	};
@@ -111,7 +132,7 @@ const VaccinatedModal = ({ onClickNext }) => {
 
 	return (
 		<InformationModal
-			isOpen={isOpen}
+			isOpen={isOpen || openVaccinatedModal}
 			title={t[locale].informationModal.betterCovid.title}
 			nextText={t[locale].informationModal.skip}
 			onClickNext={handleClickNext}

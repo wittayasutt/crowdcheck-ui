@@ -34,15 +34,16 @@ const useRedux = () => {
 	const dispatch = useDispatch();
 	const setCrowdData = (crowdData) => dispatch({ type: 'SET_CROWD_DATA', crowdData });
 	const zoom = useSelector((state) => state.zoom);
+	const openVaccinatedModal = useSelector((state) => state.openVaccinatedModal);
 
-	return { zoom, setCrowdData };
+	return { zoom, openVaccinatedModal, setCrowdData };
 };
 
 const HomePage = () => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const { zoom, setCrowdData } = useRedux();
+	const { zoom, openVaccinatedModal, setCrowdData } = useRedux();
 
 	const [loading, setLoading] = useState(true);
 	const [timeInterval, setTimeInterval] = useState(null);
@@ -183,7 +184,7 @@ const HomePage = () => {
 			)}
 
 			{modalStep === 0 && <AttentionModal onClickNext={onClickNextModal} />}
-			{modalStep === 1 && <VaccinatedModal onClickNext={onClickNextModal} />}
+			{(modalStep === 1 || openVaccinatedModal) && <VaccinatedModal onClickNext={onClickNextModal} />}
 			{modalStep === 2 && <ExploreModal onClickNext={onClickNextModal} />}
 
 			{/* Don't show welcome modal, pull it back when want to use it again */}
