@@ -17,6 +17,9 @@ import VaccinatedPopup from '../Popup/vaccinated';
 import Marker from '../Marker';
 import Zoom from '../Base/zoom';
 
+// lang
+import t from '../../translate';
+
 const bootstrapURLKeys = {
 	key: 'AIzaSyDNAO9CrN3__3vQ6BEOLAY4QdBEf56GiRk',
 	libraries: ['places', 'geometry'],
@@ -219,12 +222,9 @@ const Map = ({ data, offset }) => {
 		}
 	}, [coord]);
 
-	// TODO: remove when integrate
-	const informationText = 'BKKDW 2022 Now between 20 Jan - 27 Jan';
-
 	return (
 		<Wrapper offset={offset}>
-			<InformationText text={informationText} />
+			<InformationText text={t[locale].informationText} />
 			<VaccinatedPopup />
 			<GoogleMapReact
 				bootstrapURLKeys={bootstrapURLKeys}

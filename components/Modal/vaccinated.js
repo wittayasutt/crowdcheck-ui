@@ -76,9 +76,10 @@ const VaccinatedModal = ({ onClickNext }) => {
 			setOpenVaccinatedModal(false);
 		} else {
 			// Filter
-			const updateFilter = ['notRequire', 'requireOne', 'requireTwo'];
+			const updateFilter = ['atk', 'notRequire', 'requireOne', 'requireTwo'];
 			setFilter(updateFilter);
 
+			localStorage.setItem('atk', true);
 			localStorage.setItem('notRequire', true);
 			localStorage.setItem('requireOne', true);
 			localStorage.setItem('requireTwo', true);
@@ -95,7 +96,8 @@ const VaccinatedModal = ({ onClickNext }) => {
 	};
 
 	const handleSelectVaccinated = (number) => {
-		const updateFilter = ['notRequire'];
+		const updateFilter = ['atk', 'notRequire'];
+		localStorage.setItem('atk', true);
 		localStorage.setItem('notRequire', true);
 
 		if (number > 0) {

@@ -45,29 +45,29 @@ export default {
 	exploreArea: 'Explore Area',
 	filter: {
 		atk: 'Require ATK test result',
-		notRequire: 'Does not require vaccination',
-		requireOne: 'Require at least 1 dose vaccination',
+		notRequire: 'Do not require vaccination',
+		requireOne: 'Require at least 1 vaccination',
 		requireTwo: 'Require fully vaccinated',
 		title: 'Venue’s condition filter',
 	},
 	iam: "I'm",
 	id: 'ID',
+	informationText: 'BKKDW 2022 Now between 20 Jan - 27 Jan',
 	informationModal: {
 		attention: {
-			content: 'บนมือถือของท่านเพื่อการใช้งานเว็บอย่างสมบูรณ์ แต่จะไม่ได้มีการเข้าถึงข้อมูลส่วนตัวฃของผู้ใช้งาน',
-			header: 'โปรดเปิด Bluetooth',
+			content: 'connections for our better data visualization and be part of the healthy crowd.',
+			header: 'Please enable Bluetooth',
 			title: 'Attention',
 		},
 		betterCovid: {
-			full: 'a full doser',
-			halfWay: 'half way there',
+			full: 'A full doser',
+			halfWay: 'Half way there',
 			title: 'Better Covid Experience',
-			waiting: 'waiting for my first jab',
+			waiting: 'Waiting for my first jab',
 		},
 		continue: 'Continue',
 		explore: {
-			content:
-				'Click <strong>Explore Area</strong> button to search for crowd density information on venue in city and district level.',
+			content: 'Click <strong>Explore Area</strong> to search for crowd density on venues in the city and district.',
 			title: 'Explore Area',
 		},
 		skip: 'Skip',
