@@ -208,7 +208,12 @@ const Map = ({ data, offset }) => {
 			bounds.extend(marker.getPosition());
 
 			instance.fitBounds(bounds);
-			instance.setZoom(17);
+
+			if (coord.zoom) {
+				instance.setZoom(coord.zoom);
+			} else {
+				instance.setZoom(defaultZoom);
+			}
 
 			toLocation(null);
 		}

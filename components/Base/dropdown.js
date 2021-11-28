@@ -25,7 +25,7 @@ const Title = styled.div`
 `;
 
 const Content = styled.div`
-	min-width: 120px;
+	min-width: 150px;
 	position: absolute;
 	background-color: ${(props) => props.theme.color.white};
 	z-index: 2;

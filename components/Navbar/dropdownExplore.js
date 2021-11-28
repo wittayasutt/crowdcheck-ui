@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
+import { service_get_area_and_event } from '../../services';
+import { defaultCenter, defaultZoom } from '../Map/const';
+import { getContent } from '../../helpers';
 
 // components
 import Dropdown from '../Base/dropdown';
@@ -13,56 +17,12 @@ import { faCaretLeft, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 // lang
 import t from '../../translate';
 
-// TODO: remove 'mockData' after implement
-const mockData = [
-	{
-		id: 0,
-		province: 'Bangkok',
-		event: [
-			{
-				id: 0,
-				name: 'Bangrak',
-				lat: 13.73117,
-				lng: 100.5232,
-				zoom: 16,
-			},
-			{
-				id: 1,
-				name: 'Ari - Pradipat',
-				lat: 13.73217,
-				lng: 100.5332,
-				zoom: 15,
-			},
-			{
-				id: 2,
-				name: 'Thonglor',
-				lat: 13.73317,
-				lng: 100.5432,
-				zoom: 15,
-			},
-			{
-				id: 3,
-				name: 'Phranakorn',
-				lat: 13.73417,
-				lng: 100.5532,
-				zoom: 17,
-			},
-		],
-	},
-	{
-		id: 1,
-		province: 'Chiangmai',
-		event: [
-			{
-				id: 0,
-				name: 'Center',
-				lat: 18.7941937,
-				lng: 98.816391,
-				zoom: 16,
-			},
-		],
-	},
-];
+const useRedux = () => {
+	const dispatch = useDispatch();
+	const toLocation = (coord) => dispatch({ type: 'TO_LOCATION', coord });
+
+	return { toLocation };
+};
 
 const BackItem = styled.span`
 	flex: 1;
@@ -87,8 +47,12 @@ const DropdownExplore = () => {
 	const router = useRouter();
 	const { locale } = router;
 
+	const { toLocation } = useRedux();
+
+	const [exploreListAPI, setExploreListAPI] = useState([]);
 	const [exploreList, setExploreList] = useState([]);
 	const [eventList, setEventList] = useState([]);
+	const [eventName, setEventName] = useState(null);
 
 	const setDefault = () => {
 		setEventList([]);
@@ -100,19 +64,70 @@ const DropdownExplore = () => {
 		setEventList(foundEventList);
 	};
 
+	const handleSelectEvent = (event) => {
+		setEventName(event.nameAPI);
+		toLocation(event.coord);
+	};
+
+	const transformEvent = (events) => {
+		return events.map((event) => {
+			if (!event) {
+				return null;
+			}
+
+			return {
+				id: event._id,
+				name: getContent(event.name, locale),
+				nameAPI: event.name,
+				coord: {
+					latitude: event.location?.latitude ?? defaultCenter.lat,
+					longtitude: event.location?.longtitude ?? defaultCenter.lng,
+					zoom: event.gmapZoomLevel || defaultZoom,
+				},
+			};
+		});
+	};
+
+	const getExploreList = () => {
+		try {
+			service_get_area_and_event().then((res) => {
+				if (res.status === 'success') {
+					setExploreListAPI(res.data);
+				}
+			});
+		} catch {}
+	};
+
 	useEffect(() => {
-		setExploreList(mockData);
-	}, [mockData]);
+		const exploreList = exploreListAPI.map((item) => {
+			return {
+				id: item._id,
+				province: getContent(item.name, locale),
+				event: transformEvent(item.events),
+			};
+		});
+
+		setExploreList(exploreList);
+	}, [exploreListAPI, locale]);
+
+	useEffect(() => {
+		getExploreList();
+	}, []);
 
 	return (
-		<Dropdown title={t[locale].exploreArea} onClose={setDefault}>
+		<Dropdown
+			title={`${t[locale].exploreArea}${eventName ? `: ${getContent(eventName, locale)}` : ''}`}
+			onClose={setDefault}
+		>
 			{eventList && eventList.length ? (
 				<>
 					<DropdownItem onClick={() => handleSelectProvince(null)}>
 						<IconCaretDown icon={faCaretLeft} /> <BackItem>{t[locale].back}</BackItem>
 					</DropdownItem>
 					{eventList.map((item) => (
-						<DropdownItem key={item.id}>{item.name}</DropdownItem>
+						<DropdownItem key={item.id} onClick={() => handleSelectEvent(item)}>
+							{item.name}
+						</DropdownItem>
 					))}
 				</>
 			) : (
