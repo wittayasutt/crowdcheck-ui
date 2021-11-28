@@ -34,16 +34,17 @@ const useRedux = () => {
 	const dispatch = useDispatch();
 	const setCrowdData = (crowdData) => dispatch({ type: 'SET_CROWD_DATA', crowdData });
 	const zoom = useSelector((state) => state.zoom);
+	const filter = useSelector((state) => state.filter);
 	const openVaccinatedModal = useSelector((state) => state.openVaccinatedModal);
 
-	return { zoom, openVaccinatedModal, setCrowdData };
+	return { zoom, filter, openVaccinatedModal, setCrowdData };
 };
 
 const HomePage = () => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const { zoom, openVaccinatedModal, setCrowdData } = useRedux();
+	const { zoom, filter, openVaccinatedModal, setCrowdData } = useRedux();
 
 	const [loading, setLoading] = useState(true);
 	const [timeInterval, setTimeInterval] = useState(null);
@@ -104,6 +105,37 @@ const HomePage = () => {
 		);
 	};
 
+	const filterCondition = (data) => {
+		const atk = filter.includes('atk');
+		const notRequire = filter.includes('notRequire');
+		const requireOne = filter.includes('requireOne');
+		const requireTwo = filter.includes('requireTwo');
+
+		const showAll = (notRequire && requireOne && requireTwo) || (!notRequire && !requireOne && !requireTwo);
+
+		return data.filter((item) => {
+			if (!item.covid19Conditions) {
+				return true;
+			}
+
+			const { isATKRequired, numberOfVaccineDosesRequired } = item.covid19Conditions;
+
+			if (isATKRequired && !atk) {
+				return false;
+			} else if (showAll) {
+				return true;
+			} else if (numberOfVaccineDosesRequired === 0 && !notRequire) {
+				return false;
+			} else if (numberOfVaccineDosesRequired === 1 && !requireOne) {
+				return false;
+			} else if (numberOfVaccineDosesRequired === 2 && !requireTwo) {
+				return false;
+			}
+
+			return true;
+		});
+	};
+
 	const setVenueData = (venueData, crowdData) => {
 		if (crowdData) {
 			const foundData = transformCrowdData(venueData, crowdData);
@@ -129,7 +161,8 @@ const HomePage = () => {
 	};
 
 	useEffect(() => {
-		const { zoomIn, zoomOut } = getRenderVenue(venue);
+		const filteredData = filterCondition(venue);
+		const { zoomIn, zoomOut } = getRenderVenue(filteredData);
 
 		if (zoomIn) {
 			setVenueZoomIn(zoomIn);
@@ -138,7 +171,7 @@ const HomePage = () => {
 		if (zoomOut) {
 			setVenueZoomOut(zoomOut);
 		}
-	}, [venue]);
+	}, [venue, filter]);
 
 	useEffect(() => {
 		interval();
