@@ -198,11 +198,11 @@ const Map = ({ data, offset }) => {
 	}, [instance, mapApi.api, navigator, navigator.geolocation]);
 
 	useEffect(() => {
-		if (coord && mapApi.api && userLocation) {
+		if (coord && mapApi.api) {
 			const bounds = new mapApi.api.LatLngBounds();
 
-			const toLatitude = coord === 'CURRENT' ? userLocation.latitude : coord.latitude;
-			const toLongtitude = coord === 'CURRENT' ? userLocation.longtitude : coord.longtitude;
+			const toLatitude = userLocation && coord === 'CURRENT' ? userLocation.latitude : coord.latitude;
+			const toLongtitude = userLocation && coord === 'CURRENT' ? userLocation.longtitude : coord.longtitude;
 
 			const marker = new mapApi.api.Marker({
 				position: new mapApi.api.LatLng(toLatitude, toLongtitude),
