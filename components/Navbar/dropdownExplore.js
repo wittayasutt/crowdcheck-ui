@@ -20,8 +20,9 @@ import t from '../../translate';
 const useRedux = () => {
 	const dispatch = useDispatch();
 	const toLocation = (coord) => dispatch({ type: 'TO_LOCATION', coord });
+	const setEventId = (eventId) => dispatch({ type: 'SET_EVENT_ID', eventId });
 
-	return { toLocation };
+	return { toLocation, setEventId };
 };
 
 const BackItem = styled.span`
@@ -47,7 +48,7 @@ const DropdownExplore = () => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const { toLocation } = useRedux();
+	const { toLocation, setEventId } = useRedux();
 
 	const [exploreListAPI, setExploreListAPI] = useState([]);
 	const [exploreList, setExploreList] = useState([]);
@@ -65,6 +66,7 @@ const DropdownExplore = () => {
 	};
 
 	const handleSelectEvent = (event) => {
+		setEventId(event.id);
 		setEventName(event.nameAPI);
 		toLocation(event.coord);
 	};

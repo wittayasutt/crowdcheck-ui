@@ -57,9 +57,9 @@ export const service_auth = () => {
 
 // #region VENUE
 
-export const service_get_venue_list = () => {
+export const service_get_venue_list = (event) => {
 	return $axios
-		.get(`${url}/api/venues`, {
+		.get(`${url}/api/venues${event ? `?event=${event}` : ''}`, {
 			headers: getHeaders(),
 		})
 		.then((response) => {
@@ -97,6 +97,8 @@ export const service_create_venue = (payload) => {
 };
 
 export const service_update_venue = (payload, id) => {
+	console.log('payload', payload);
+
 	return $axios
 		.put(
 			`${url}/api/venues/${id}`,

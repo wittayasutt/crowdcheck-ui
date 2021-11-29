@@ -14,6 +14,7 @@ const initialState = {
 	filter: [],
 	poi: [],
 	coord: null,
+	eventId: null,
 	vaccinated: 0,
 	openVaccinatedModal: false,
 };
@@ -85,10 +86,10 @@ const reducer = (state = initialState, action) => {
 				coord: action.coord,
 			};
 		}
-		case 'SET_VACCINATED': {
+		case 'SET_EVENT_ID': {
 			return {
 				...state,
-				vaccinated: action.vaccinated,
+				eventId: action.eventId,
 			};
 		}
 		case 'SET_VACCINATED': {

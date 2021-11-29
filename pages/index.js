@@ -35,16 +35,17 @@ const useRedux = () => {
 	const setCrowdData = (crowdData) => dispatch({ type: 'SET_CROWD_DATA', crowdData });
 	const zoom = useSelector((state) => state.zoom);
 	const filter = useSelector((state) => state.filter);
+	const eventId = useSelector((state) => state.eventId);
 	const openVaccinatedModal = useSelector((state) => state.openVaccinatedModal);
 
-	return { zoom, filter, openVaccinatedModal, setCrowdData };
+	return { zoom, filter, eventId, openVaccinatedModal, setCrowdData };
 };
 
 const HomePage = () => {
 	const router = useRouter();
 	const { locale } = router;
 
-	const { zoom, filter, openVaccinatedModal, setCrowdData } = useRedux();
+	const { zoom, filter, eventId, openVaccinatedModal, setCrowdData } = useRedux();
 
 	const [loading, setLoading] = useState(true);
 	const [timeInterval, setTimeInterval] = useState(null);
@@ -76,7 +77,7 @@ const HomePage = () => {
 	};
 
 	const getVenue = () => {
-		return service_get_venue_list().then((res) => {
+		return service_get_venue_list(eventId).then((res) => {
 			if (res.status === 'success') {
 				return res.data;
 			}
@@ -172,6 +173,10 @@ const HomePage = () => {
 			setVenueZoomOut(zoomOut);
 		}
 	}, [venue, filter]);
+
+	useEffect(() => {
+		getData(false);
+	}, [eventId]);
 
 	useEffect(() => {
 		interval();

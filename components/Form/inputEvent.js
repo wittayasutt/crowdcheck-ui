@@ -75,6 +75,7 @@ const AdminFormInputEvent = ({ title, require, data, onChange, isView }) => {
 			}
 		} else if (option && option.length) {
 			setValue(option[0].id);
+			onChange(option[0].id);
 		} else {
 			setValue(null);
 		}
