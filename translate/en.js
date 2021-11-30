@@ -52,7 +52,7 @@ export default {
 	},
 	iam: "I'm",
 	id: 'ID',
-	informationText: 'BKKDW 2022 Now between 20 Jan - 27 Jan',
+	informationText: 'Chiang Mai Design Week 2021 4-12 December 2021',
 	informationModal: {
 		attention: {
 			content: 'connections for our better data visualization and be part of the healthy crowd.',
