@@ -105,18 +105,14 @@ export const checkMatchingDate = (date) => {
 	const startDate = formatDate(date.start);
 	const endDate = formatDate(date.end);
 
-	return (
-		dayjs(startDate).isBefore(new Date()) && dayjs(endDate).isAfter(new Date())
-	);
+	return dayjs(startDate).isSameOrBefore(new Date(), 'date') && dayjs(endDate).isSameOrAfter(new Date(), 'date');
 };
 
 export const checkMatchingTime = (date) => {
 	const startTime = formatTime(date.start);
 	const endTime = formatTime(date.end);
 
-	return (
-		dayjs(startTime).isBefore(new Date()) && dayjs(endTime).isAfter(new Date())
-	);
+	return dayjs(startTime).isBefore(new Date()) && dayjs(endTime).isAfter(new Date());
 };
 
 export const getMatchingProgram = (programs) => {
