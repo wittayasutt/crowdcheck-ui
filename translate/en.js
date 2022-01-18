@@ -52,7 +52,7 @@ export default {
 	},
 	iam: "I'm",
 	id: 'ID',
-	informationText: 'Chiang Mai Design Week 2021 4-12 December 2021',
+	informationText: 'Bangkok Design Week 2022 5-13 February 2022',
 	informationModal: {
 		attention: {
 			content: 'connections for our better data visualization and be part of the healthy crowd.',

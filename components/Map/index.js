@@ -14,6 +14,7 @@ import { getContent, getMatchingProgram } from '../../helpers';
 // components
 import InformationText from '../InformationText';
 import VaccinatedPopup from '../Popup/vaccinated';
+import ToLocation from '../ToLocation';
 import Marker from '../Marker';
 import Zoom from '../Base/zoom';
 
@@ -226,6 +227,7 @@ const Map = ({ data, offset }) => {
 		<Wrapper offset={offset}>
 			<InformationText text={t[locale].informationText} />
 			<VaccinatedPopup />
+			<ToLocation />
 			<GoogleMapReact
 				bootstrapURLKeys={bootstrapURLKeys}
 				defaultCenter={defaultCenter}

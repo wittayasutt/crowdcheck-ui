@@ -123,11 +123,11 @@ const Trend = ({ data }) => {
 				))}
 				<Row>
 					<ColTitle />
-					<ColText>10am</ColText>
-					<ColText>12am</ColText>
-					<ColText>14am</ColText>
-					<ColText>16am</ColText>
-					<ColText>18am</ColText>
+					<ColText>10:00</ColText>
+					<ColText>12:00</ColText>
+					<ColText>14:00</ColText>
+					<ColText>16:00</ColText>
+					<ColText>18:00</ColText>
 				</Row>
 			</Wrapper>
 		)
