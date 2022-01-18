@@ -30,6 +30,9 @@ import ExploreModal from '../components/Modal/explore';
 // 3 Minutes
 const INTERVAL_TIME = 180000;
 
+// Initial
+const BYPASS = false;
+
 const useRedux = () => {
 	const dispatch = useDispatch();
 	const setCrowdData = (crowdData) => dispatch({ type: 'SET_CROWD_DATA', crowdData });
@@ -139,7 +142,7 @@ const HomePage = () => {
 
 	const setVenueData = (venueData, crowdData) => {
 		if (crowdData) {
-			const foundData = transformCrowdData(venueData, crowdData);
+			const foundData = transformCrowdData(venueData, crowdData, BYPASS);
 			const sortedData = sortData(foundData);
 
 			setVenue(sortedData);

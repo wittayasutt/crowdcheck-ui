@@ -32,6 +32,7 @@ const Desktop = styled.div`
 		max-width: 40vw;
 		background-color: ${(props) => props.theme.color.white};
 		overflow-y: auto;
+		z-index: 1;
 	}
 `;
 
@@ -55,22 +56,14 @@ const Place = ({ updatedTime }) => {
 			{place && (
 				<MobileMenuPlace>
 					<PlaceTitle data={place} updatedTime={updatedTime} />
-					{place.programs === 'NO_EVENT' ? (
-						<NotFound>{t[locale].programNotFound}</NotFound>
-					) : (
-						<Content data={place} />
-					)}
+					{place.programs === 'NO_EVENT' ? <NotFound>{t[locale].programNotFound}</NotFound> : <Content data={place} />}
 				</MobileMenuPlace>
 			)}
 
 			{place && (
 				<Desktop>
 					<PlaceTitle data={place} updatedTime={updatedTime} />
-					{place.programs === 'NO_EVENT' ? (
-						<NotFound>{t[locale].programNotFound}</NotFound>
-					) : (
-						<Content data={place} />
-					)}
+					{place.programs === 'NO_EVENT' ? <NotFound>{t[locale].programNotFound}</NotFound> : <Content data={place} />}
 				</Desktop>
 			)}
 		</>
@@ -78,10 +71,7 @@ const Place = ({ updatedTime }) => {
 };
 
 Place.propTypes = {
-	updatedTime: PropTypes.oneOfType([
-		PropTypes.number,
-		PropTypes.instanceOf(Date),
-	]),
+	updatedTime: PropTypes.oneOfType([PropTypes.number, PropTypes.instanceOf(Date)]),
 };
 
 Place.defaultProps = {

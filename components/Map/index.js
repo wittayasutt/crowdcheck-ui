@@ -21,6 +21,9 @@ import Zoom from '../Base/zoom';
 // lang
 import t from '../../translate';
 
+// Initial
+const BYPASS = false;
+
 const bootstrapURLKeys = {
 	key: 'AIzaSyDNAO9CrN3__3vQ6BEOLAY4QdBEf56GiRk',
 	libraries: ['places', 'geometry'],
@@ -103,7 +106,7 @@ const Map = ({ data, offset }) => {
 		try {
 			service_get_program_list(id).then((res) => {
 				if (res.status === 'success') {
-					const matchedPrograms = getMatchingProgram(res.data);
+					const matchedPrograms = getMatchingProgram(res.data, BYPASS);
 
 					if (matchedPrograms.length > 0 && crowd.value) {
 						selectPlace({

@@ -80,13 +80,17 @@ export const formatTime = (time, format) => {
 	return format ? day : new Date(day);
 };
 
-export const transformCrowdData = (venueData, crowdData) => {
+export const transformCrowdData = (venueData, crowdData, BYPASS) => {
 	if (!venueData || !crowdData) {
 		return null;
 	}
 
 	const crowdDataKeys = Object.keys(crowdData);
 	const foundData = venueData.filter((item) => {
+		if (BYPASS) {
+			return true;
+		}
+
 		return crowdDataKeys.some((key) => key === item.refId);
 	});
 
@@ -94,7 +98,11 @@ export const transformCrowdData = (venueData, crowdData) => {
 		.map((item) => {
 			return {
 				...item,
-				crowd: crowdData[item.refId],
+				crowd: BYPASS
+					? {
+							value: 1,
+					  }
+					: crowdData[item.refId],
 			};
 		})
 		.filter((item) => item && item.crowd && item.crowd.value);
@@ -115,8 +123,12 @@ export const checkMatchingTime = (date) => {
 	return dayjs(startTime).isBefore(new Date()) && dayjs(endTime).isAfter(new Date());
 };
 
-export const getMatchingProgram = (programs) => {
+export const getMatchingProgram = (programs, BYPASS) => {
 	return programs.filter((program) => {
+		if (BYPASS) {
+			return true;
+		}
+
 		if (!program.openingTime) {
 			return [];
 		}
