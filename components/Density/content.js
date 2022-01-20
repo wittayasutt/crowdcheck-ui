@@ -5,10 +5,7 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getContent, getMatchingProgram } from '../../helpers';
 
-import {
-	service_get_program_list,
-	service_get_venue_nearby,
-} from '../../services';
+import { service_get_program_list, service_get_venue_nearby } from '../../services';
 
 // components
 import Marker from '../Marker';
@@ -75,7 +72,7 @@ const DensityContent = ({ data, updatedTime }) => {
 
 	const { selectPlace, toLocation } = useRedux();
 
-	const handleSelectPlace = (id, venueName, crowd) => {
+	const handleSelectPlace = (id, venueName, crowd, covidConditions) => {
 		try {
 			service_get_program_list(id).then((res) => {
 				if (res.status === 'success') {
@@ -86,15 +83,17 @@ const DensityContent = ({ data, updatedTime }) => {
 							programs: matchedPrograms,
 							venueName,
 							crowd,
+							covidConditions,
 							nearby: 'loading',
 						});
 
-						handleGetNearlyPlace(id, matchedPrograms, venueName, crowd);
+						handleGetNearlyPlace(id, matchedPrograms, venueName, crowd, covidConditions);
 					} else {
 						selectPlace({
 							programs: 'NO_EVENT',
 							venueName,
 							crowd,
+							covidConditions,
 						});
 					}
 				}
@@ -102,7 +101,7 @@ const DensityContent = ({ data, updatedTime }) => {
 		} catch {}
 	};
 
-	const handleGetNearlyPlace = (id, programs, venueName, crowd) => {
+	const handleGetNearlyPlace = (id, programs, venueName, crowd, covidConditions) => {
 		try {
 			service_get_venue_nearby(id).then((res) => {
 				if (res.status === 'success') {
@@ -110,6 +109,7 @@ const DensityContent = ({ data, updatedTime }) => {
 						programs,
 						venueName,
 						crowd,
+						covidConditions,
 						nearby: res.data,
 					});
 				}
@@ -122,8 +122,7 @@ const DensityContent = ({ data, updatedTime }) => {
 			<TitleWrapper>
 				<span className='title'>{t[locale].densityListTitle}</span>
 				<div className='updated-time'>
-					({t[locale].update}{' '}
-					{dayjs(updatedTime).format('DD/MM/YYYY , hh:mm a')})
+					({t[locale].update} {dayjs(updatedTime).format('DD/MM/YYYY , hh:mm a')})
 				</div>
 			</TitleWrapper>
 			{data &&
@@ -132,19 +131,13 @@ const DensityContent = ({ data, updatedTime }) => {
 						<Row
 							key={item._id}
 							onClick={() => {
-								handleSelectPlace(
-									item._id,
-									getContent(item.name, locale),
-									item.crowd
-								);
+								handleSelectPlace(item._id, getContent(item.name, locale), item.crowd, item.covid19Conditions);
 
 								toLocation(item.location);
 							}}
 						>
 							{item.crowd.value && <Marker level={item.crowd.value} />}
-							{item.name && (
-								<PlaceName>{getContent(item.name, locale)}</PlaceName>
-							)}
+							{item.name && <PlaceName>{getContent(item.name, locale)}</PlaceName>}
 						</Row>
 					) : null;
 				})}
@@ -154,10 +147,7 @@ const DensityContent = ({ data, updatedTime }) => {
 
 DensityContent.propTypes = {
 	data: PropTypes.array,
-	updatedTime: PropTypes.oneOfType([
-		PropTypes.number,
-		PropTypes.instanceOf(Date),
-	]),
+	updatedTime: PropTypes.oneOfType([PropTypes.number, PropTypes.instanceOf(Date)]),
 };
 
 DensityContent.defaultProps = {

@@ -20,17 +20,43 @@ const useRedux = () => {
 };
 
 const Wrapper = styled.div`
-	height: 80px;
+	height: ${(props) => (props.hasCovidConditions ? '120px' : '80px')};
 	padding: 16px;
 	display: flex;
-	color: ${(props) => props.theme.color.black};
+	flex-direction: column;
 	position: relative;
 
 	background-color: ${(props) => props.theme.color[props.levelColor]};
 
 	@media (min-width: ${(props) => props.theme.breakpoint}) {
-		height: 56px;
+		height: ${(props) => (props.hasCovidConditions ? '96px' : '56px')};
 	}
+`;
+
+const CovidConditions = styled.div`
+	height: 40px;
+	display: flex;
+	align-items: center;
+	color: ${(props) => props.theme.color.white};
+`;
+
+const Require = styled.span`
+	font-size: 14px;
+	margin-right: 16px;
+`;
+
+const RequireImage = styled.img`
+	margin-right: 8px;
+`;
+
+const RequireText = styled.span`
+	font-size: 10px;
+	margin-right: 16px;
+`;
+
+const Content = styled.div`
+	display: flex;
+	color: ${(props) => props.theme.color.black};
 `;
 
 const Left = styled.div`
@@ -82,9 +108,14 @@ const Right = styled.div`
 	}
 `;
 
+const Space = styled.div`
+	flex: 1;
+`;
+
 const IconCaretDown = styled(FontAwesomeIcon)`
 	height: 14px;
 	width: 14px;
+	color: ${(props) => props.theme.color.black};
 
 	cursor: pointer;
 
@@ -120,33 +151,68 @@ const PlaceTitle = ({ data, updatedTime }) => {
 		}
 	};
 
+	const getVaccine = (numberOfVaccine) => {
+		switch (numberOfVaccine) {
+			case 0:
+				return 'notRequire';
+			case 1:
+				return 'requireOne';
+			case 2:
+				return 'requireTwo';
+			default:
+				return null;
+		}
+	};
+
+	const covidConditions = data.covidConditions;
+	const requireVaccine = covidConditions ? getVaccine(covidConditions.numberOfVaccineDosesRequired) : null;
+
 	return data && data.crowd && data.crowd.value ? (
 		<Wrapper
 			levelColor={getLevelColor(data.crowd.value)}
 			onClick={handleClosePlace}
+			hasCovidConditions={covidConditions}
 		>
-			<Left>{getTitle(data.crowd.value)}</Left>
-			<Right>
-				{data.venueName && <div className='place-name'>{data.venueName}</div>}
-				<div className='updated-time'>
-					<span>
-						({t[locale].update}{' '}
-						{dayjs(updatedTime).format('DD/MM/YYYY , hh:mm a')})
-					</span>
+			{covidConditions && (
+				<CovidConditions>
+					<Require>{t[locale].require}</Require>
+					{covidConditions.isATKRequired && (
+						<>
+							<RequireImage src={'/images/filter/atk.svg'} alt='atk' style={{ height: '16px' }} />
+							<RequireText>{t[locale].atkTestResult}</RequireText>
+						</>
+					)}
+					{requireVaccine && (
+						<>
+							<RequireImage src={`/images/filter/${requireVaccine}.svg`} alt='vaccine' style={{ height: '16px' }} />
+							<RequireText>{t[locale].vaccine[requireVaccine]}</RequireText>
+						</>
+					)}
 
+					<Space />
 					<IconCaretDown icon={faCaretDown} />
-				</div>
-			</Right>
+				</CovidConditions>
+			)}
+			<Content>
+				<Left>{getTitle(data.crowd.value)}</Left>
+				<Right>
+					{data.venueName && <div className='place-name'>{data.venueName}</div>}
+					<div className='updated-time'>
+						<span>
+							({t[locale].update} {dayjs(updatedTime).format('DD/MM/YYYY , hh:mm a')})
+						</span>
+
+						{!covidConditions && <IconCaretDown icon={faCaretDown} />}
+					</div>
+				</Right>
+			</Content>
 		</Wrapper>
 	) : null;
 };
 
 PlaceTitle.propTypes = {
 	data: PropTypes.object,
-	updatedTime: PropTypes.oneOfType([
-		PropTypes.number,
-		PropTypes.instanceOf(Date),
-	]),
+	updatedTime: PropTypes.oneOfType([PropTypes.number, PropTypes.instanceOf(Date)]),
 };
 
 PlaceTitle.defaultProps = {

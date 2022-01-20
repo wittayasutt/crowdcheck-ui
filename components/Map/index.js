@@ -102,7 +102,7 @@ const Map = ({ data, offset }) => {
 		});
 	};
 
-	const handleSelectPlace = (id, venueName, crowd) => {
+	const handleSelectPlace = (id, venueName, crowd, covidConditions) => {
 		try {
 			service_get_program_list(id).then((res) => {
 				if (res.status === 'success') {
@@ -113,15 +113,17 @@ const Map = ({ data, offset }) => {
 							programs: matchedPrograms,
 							venueName,
 							crowd,
+							covidConditions,
 							nearby: 'loading',
 						});
 
-						handleGetNearlyPlace(id, matchedPrograms, venueName, crowd);
+						handleGetNearlyPlace(id, matchedPrograms, venueName, crowd, covidConditions);
 					} else {
 						selectPlace({
 							programs: 'NO_EVENT',
 							venueName,
 							crowd,
+							covidConditions,
 						});
 					}
 				}
@@ -129,7 +131,7 @@ const Map = ({ data, offset }) => {
 		} catch {}
 	};
 
-	const handleGetNearlyPlace = (id, programs, venueName, crowd) => {
+	const handleGetNearlyPlace = (id, programs, venueName, crowd, covidConditions) => {
 		try {
 			service_get_venue_nearby(id).then((res) => {
 				if (res.status === 'success') {
@@ -137,6 +139,7 @@ const Map = ({ data, offset }) => {
 						programs,
 						venueName,
 						crowd,
+						covidConditions,
 						nearby: res.data,
 					});
 				}
@@ -259,7 +262,9 @@ const Map = ({ data, offset }) => {
 								title={getContent(item.name, locale)}
 								lat={item.location.latitude}
 								lng={item.location.longtitude}
-								onClick={() => handleSelectPlace(item._id, getContent(item.name, locale), item.crowd)}
+								onClick={() =>
+									handleSelectPlace(item._id, getContent(item.name, locale), item.crowd, item.covid19Conditions)
+								}
 							/>
 						) : null;
 					})}

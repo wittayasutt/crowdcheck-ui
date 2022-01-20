@@ -8,6 +8,7 @@ export default {
 	area: 'Area',
 	areaName: 'Area name',
 	atkRequired: 'ATK Required',
+	atkTestResult: 'ATK Test result',
 	back: 'back',
 	boolean: {
 		no: 'No',
@@ -125,6 +126,7 @@ export default {
 		content: `${tab}Distribution of density is an important tool in restricting coronavirus (COVID-19). Op-portunist therefore develop this project as part of the preventive measures and hopefully rebuilding trust in public space as the common ground of city dwellers.<br />${tab}Crowd check is a web-base platform which informs crowd density at public venue. Crowd check assists in journey planning, prior to and on site, with real-time density which equally disclosing the information to the public. To do so, it measures the crowd density by capturing real-time Bluetooth signals, representing number of people, and analyse the number in relation to location's capacity.`,
 		title: 'Project Background',
 	},
+	require: 'Require',
 	signIn: 'Sign In',
 	somethingWentWrong: 'something went wrong',
 	suggestionPlace: 'Suggestion Place',
@@ -149,6 +151,11 @@ export default {
 	update: 'update',
 	uploadImage: 'Upload Image',
 	username: 'Username',
+	vaccine: {
+		notRequire: 'Do not require vaccination',
+		requireOne: 'At least 1 vaccination',
+		requireTwo: 'Fully vaccinated',
+	},
 	vaccineDosesRequired: 'Number of vaccine doses required',
 	venue: 'Venue',
 	venues: 'Venues',
