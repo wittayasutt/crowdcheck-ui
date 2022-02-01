@@ -77,7 +77,11 @@ const MiniCrowdcheck = () => {
 			{!loading && place ? (
 				<>
 					<PlaceTitle data={place} updatedTime={updatedTime} isMini />
-					{place.programs === 'NO_EVENT' ? <NotFound>{t[locale].programNotFound}</NotFound> : <Content data={place} />}
+					{place.programs === 'NO_EVENT' ? (
+						<NotFound>{t[locale].programNotFound}</NotFound>
+					) : (
+						<Content data={place} isMini />
+					)}
 				</>
 			) : (
 				<Loading fullpage />

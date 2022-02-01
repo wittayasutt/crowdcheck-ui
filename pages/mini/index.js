@@ -85,7 +85,7 @@ const MiniCrowdcheckList = () => {
 				<Layout>
 					<Wrapper>
 						{venue.map((item, index) => (
-							<Link href={`mini/${item._id}`} key={item._id}>
+							<Link href={`mini/iframe/${item._id}`} key={item._id}>
 								<ListItem>
 									<ListNo className='id'>{index + 1}</ListNo>
 									<ListName className='item'>{getContent(item.name, locale)}</ListName>

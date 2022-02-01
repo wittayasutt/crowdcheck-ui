@@ -16,12 +16,12 @@ import Suggest from './suggest';
 import t from '../../translate';
 
 const Wrapper = styled.div`
-	height: calc((100vh - 64px) * 0.9 - 80px);
+	height: ${(props) => (props.isMini ? '100%' : 'calc((100vh - 64px) * 0.9 - 80px)')};
 	padding: 8px 16px;
 	overflow-y: auto;
 
 	@media (min-width: ${(props) => props.theme.breakpoint}) {
-		height: calc((100vh - 112px) - 56px);
+		height: ${(props) => (props.isMini ? '100%' : 'calc((100vh - 112px) - 56px)')};
 	}
 
 	._hide-mobile {
@@ -42,8 +42,7 @@ const Wrapper = styled.div`
 const Program = styled.div`
 	margin-bottom: ${(props) => (props.last ? '0' : '8px')};
 	padding-bottom: ${(props) => (props.last ? '0' : '8px')};
-	border-bottom: ${(props) => (props.last ? '0' : '1px')} solid
-		${(props) => props.theme.color.darkGray};
+	border-bottom: ${(props) => (props.last ? '0' : '1px')} solid ${(props) => props.theme.color.darkGray};
 `;
 
 const Title = styled.h2`
@@ -124,7 +123,13 @@ const IconAngleLeft = styled(FontAwesomeIcon)`
 	width: 24px;
 `;
 
-const PlaceContent = ({ data }) => {
+const Logo = styled.img`
+	display: flex;
+	height: 56px;
+	margin: auto;
+`;
+
+const PlaceContent = ({ data, isMini }) => {
 	const router = useRouter();
 	const { locale } = router;
 
@@ -176,64 +181,44 @@ const PlaceContent = ({ data }) => {
 	};
 
 	return data ? (
-		<Wrapper>
+		<Wrapper isMini>
 			{data.crowd && data.crowd.value && <People level={data.crowd.value} />}
 
 			{data.programs &&
 				data.programs.map((program, index) => {
 					const link = program.website ? getLink(program.website) : null;
-					const linkTitle = program.website
-						? getLinkTitle(program.website)
-						: null;
+					const linkTitle = program.website ? getLinkTitle(program.website) : null;
 					const showDate =
-						program.openingTime && program.openingTime.dates
-							? getShowDate(program.openingTime.dates)
-							: null;
+						program.openingTime && program.openingTime.dates ? getShowDate(program.openingTime.dates) : null;
 					const showTime =
-						program.openingTime && program.openingTime.hours
-							? getShowTime(program.openingTime.hours)
-							: null;
+						program.openingTime && program.openingTime.hours ? getShowTime(program.openingTime.hours) : null;
 
 					return (
 						<Program last={index === data.programs.length - 1} key={index}>
-							{program.name && (
-								<Title>{getContent(program.name, locale)}</Title>
-							)}
-							{program.type && (
-								<SubTitle>{getContent(program.type, locale)}</SubTitle>
-							)}
+							{program.name && <Title>{getContent(program.name, locale)}</Title>}
+							{program.type && <SubTitle>{getContent(program.type, locale)}</SubTitle>}
 							{(showDate || (showDate && showTime)) && (
 								<DateTime>
 									{showDate}
 									{showTime && ` | ${showTime}`}
 								</DateTime>
 							)}
-							{program.owner && (
-								<Owner>{getContent(program.owner, locale)}</Owner>
-							)}
+							{program.owner && <Owner>{getContent(program.owner, locale)}</Owner>}
 
 							<Bottom>
 								<BottomLeft>
 									{program.images &&
 										program.images.map((image, index) => (
-											<Image
-												key={index}
-												src={image}
-												alt={getContent(program.name, locale)}
-											/>
+											<Image key={index} src={image} alt={getContent(program.name, locale)} />
 										))}
 									{program.description && (
-										<Detail className='_hide-mobile'>
-											{getContent(program.description, locale)}
-										</Detail>
+										<Detail className='_hide-mobile'>{getContent(program.description, locale)}</Detail>
 									)}
 								</BottomLeft>
 
 								<BottomRight>
 									{program.description && (
-										<Detail className='_hide-desktop'>
-											{getContent(program.description, locale)}
-										</Detail>
+										<Detail className='_hide-desktop'>{getContent(program.description, locale)}</Detail>
 									)}
 									{link && linkTitle && (
 										<LinkWrapper>
@@ -250,11 +235,9 @@ const PlaceContent = ({ data }) => {
 						</Program>
 					);
 				})}
-
-			{data.crowd && data.crowd.historic && (
-				<Trend data={data.crowd.historic} />
-			)}
+			{data.crowd && data.crowd.historic && <Trend data={data.crowd.historic} />}
 			{data.nearby && <Suggest data={data.nearby} />}
+			{isMini && <Logo src='/logo.png' alt='logo' />}
 		</Wrapper>
 	) : null;
 };

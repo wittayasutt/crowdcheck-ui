@@ -18,6 +18,7 @@ export default {
 	chooseAFile: 'เลิอกไฟล์...',
 	confirm: 'ยืนยัน',
 	coordinate: 'พิกัด',
+	copyThisLink: 'คัดลอกลิงค์นี้',
 	credit: {
 		copyrightBy: 'จัดทำโดย ปิยา ลิ้มปิติ, พีรียา บุญชัยพฤกษ์, นิธิภัค สามเสน, รัฐพล วิทยาสุทธิกุล, ฐปนนท์ อมาตยกุล',
 		supportedBy: 'สนับสนุนโดย สำนักงานส่งเสริมเศรษฐกิจสร้างสรรค์ (องค์การมหาชน)',
@@ -51,6 +52,7 @@ export default {
 		requireTwo: 'ได้รับวัคซีนครบโดสแล้ว',
 		title: 'ตัวกรองเงื่อนไขเข้าใช้พื้นที่',
 	},
+	height: 'สูง',
 	iam: "I'm",
 	id: 'ไอดี',
 	informationText: 'Bangkok Design Week 2022 5-13 February 2022',
@@ -159,7 +161,8 @@ export default {
 	vaccineDosesRequired: 'จำนวนวัคซีนขั้นต่ำที่ต้องฉีด',
 	venue: 'สถานที่จัดงาน',
 	venues: 'สถานที่จัดงาน',
-	venueName: 'ชื่อสถานที่จัดงาน',
+	venueNotFound: 'ไม่พบข้อมูล',
 	venueTrendRecord: 'รายงานสถานที่จัดงาน',
+	width: 'กว้าง',
 	zoomLevel: 'ระดับการซูม',
 };

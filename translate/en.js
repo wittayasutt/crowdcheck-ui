@@ -18,6 +18,7 @@ export default {
 	chooseAFile: 'Choose a file...',
 	confirm: 'Confirm',
 	coordinate: 'Coordinate',
+	copyThisLink: 'Copy this link',
 	credit: {
 		copyrightBy:
 			'Developed by Piya Limpiti, Pheereeya boonchiyapruek, Nitipak Samsen, Ratthapon Wittayasattikul, Tapanon Amatayakul',
@@ -51,6 +52,7 @@ export default {
 		requireTwo: 'Require fully vaccinated',
 		title: 'Venue’s condition filter',
 	},
+	height: 'Height',
 	iam: "I'm",
 	id: 'ID',
 	informationText: 'Bangkok Design Week 2022 5-13 February 2022',
@@ -160,6 +162,8 @@ export default {
 	venue: 'Venue',
 	venues: 'Venues',
 	venueName: 'Venue Name',
+	venueNotFound: 'Venue not found',
 	venueTrendRecord: 'Venue Trend Record',
+	width: 'Width',
 	zoomLevel: 'Zoom level',
 };
