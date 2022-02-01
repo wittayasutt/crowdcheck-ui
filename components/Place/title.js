@@ -126,7 +126,7 @@ const IconCaretDown = styled(FontAwesomeIcon)`
 	}
 `;
 
-const PlaceTitle = ({ data, updatedTime }) => {
+const PlaceTitle = ({ data, updatedTime, isMini }) => {
 	const router = useRouter();
 	const { locale } = router;
 
@@ -188,9 +188,12 @@ const PlaceTitle = ({ data, updatedTime }) => {
 							<RequireText>{t[locale].vaccine[requireVaccine]}</RequireText>
 						</>
 					)}
-
-					<Space />
-					<IconCaretDown icon={faCaretDown} />
+					{!isMini && (
+						<>
+							<Space />
+							<IconCaretDown icon={faCaretDown} />
+						</>
+					)}
 				</CovidConditions>
 			)}
 			<Content>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
@@ -52,7 +53,7 @@ const ListNo = styled.div`
 
 const ListName = styled.div``;
 
-const MiniCrowdcheck = () => {
+const MiniCrowdcheckList = () => {
 	const router = useRouter();
 	const { locale } = router;
 
@@ -84,10 +85,12 @@ const MiniCrowdcheck = () => {
 				<Layout>
 					<Wrapper>
 						{venue.map((item, index) => (
-							<ListItem key={item._id}>
-								<ListNo className='id'>{index + 1}</ListNo>
-								<ListName className='item'>{getContent(item.name, locale)}</ListName>
-							</ListItem>
+							<Link href={`mini/${item._id}`} key={item._id}>
+								<ListItem>
+									<ListNo className='id'>{index + 1}</ListNo>
+									<ListName className='item'>{getContent(item.name, locale)}</ListName>
+								</ListItem>
+							</Link>
 						))}
 					</Wrapper>
 				</Layout>
@@ -98,4 +101,4 @@ const MiniCrowdcheck = () => {
 	);
 };
 
-export default MiniCrowdcheck;
+export default MiniCrowdcheckList;
