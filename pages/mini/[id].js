@@ -17,7 +17,7 @@ import PlaceTitle from '../../components/Place/title';
 import t from '../../translate';
 
 // Initial
-const BYPASS = true;
+const BYPASS = false;
 
 const NotFound = styled.div`
 	display: flex;

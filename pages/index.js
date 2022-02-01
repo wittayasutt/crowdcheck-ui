@@ -31,7 +31,7 @@ import ExploreModal from '../components/Modal/explore';
 const INTERVAL_TIME = 180000;
 
 // Initial
-const BYPASS = true;
+const BYPASS = false;
 
 const useRedux = () => {
 	const dispatch = useDispatch();
