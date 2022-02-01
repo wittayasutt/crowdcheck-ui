@@ -22,7 +22,7 @@ import Zoom from '../Base/zoom';
 import t from '../../translate';
 
 // Initial
-const BYPASS = false;
+const BYPASS = true;
 
 const bootstrapURLKeys = {
 	key: 'AIzaSyDNAO9CrN3__3vQ6BEOLAY4QdBEf56GiRk',
