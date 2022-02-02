@@ -95,6 +95,7 @@ export default {
 		avoid: 'หลีกเลี่ยง',
 		go: 'ไปได้',
 		goAhead: 'ควรไป',
+		noData: 'ไม่มีข้อมูล',
 		wait: 'รอสักครู่',
 	},
 	pleaseSelectAnImageFile: 'กรุณาเลือกไฟล์รูปภาพ (png หรือ jpg)',

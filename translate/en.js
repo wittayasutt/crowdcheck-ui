@@ -95,6 +95,7 @@ export default {
 		avoid: 'Avoid!',
 		go: 'Go',
 		goAhead: 'Go Ahead!',
+		noData: 'No data',
 		wait: 'Wait a while',
 	},
 	pleaseSelectAnImageFile: 'Please select an image file (png or jpg)',

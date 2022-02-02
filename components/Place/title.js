@@ -138,6 +138,8 @@ const PlaceTitle = ({ data, updatedTime, isMini }) => {
 
 	const getTitle = (level) => {
 		switch (level) {
+			case 0:
+				return t[locale].place.noData;
 			case 1:
 				return t[locale].place.goAhead;
 			case 2:
@@ -147,7 +149,7 @@ const PlaceTitle = ({ data, updatedTime, isMini }) => {
 			case 4:
 				return t[locale].place.avoid;
 			default:
-				'';
+				return t[locale].place.noData;
 		}
 	};
 
@@ -167,9 +169,9 @@ const PlaceTitle = ({ data, updatedTime, isMini }) => {
 	const covidConditions = data.covidConditions;
 	const requireVaccine = covidConditions ? getVaccine(covidConditions.numberOfVaccineDosesRequired) : null;
 
-	return data && data.crowd && data.crowd.value ? (
+	return data && ((data.crowd && data.crowd.value) || isMini) ? (
 		<Wrapper
-			levelColor={getLevelColor(data.crowd.value)}
+			levelColor={data.crowd && data.crowd.value ? getLevelColor(data.crowd.value) : getLevelColor(0)}
 			onClick={handleClosePlace}
 			hasCovidConditions={covidConditions}
 		>
@@ -197,7 +199,7 @@ const PlaceTitle = ({ data, updatedTime, isMini }) => {
 				</CovidConditions>
 			)}
 			<Content>
-				<Left>{getTitle(data.crowd.value)}</Left>
+				<Left>{data.crowd && data.crowd.value ? getTitle(data.crowd.value) : getTitle(0)}</Left>
 				<Right>
 					{data.venueName && <div className='place-name'>{data.venueName}</div>}
 					<div className='updated-time'>
