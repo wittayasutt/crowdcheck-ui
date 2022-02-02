@@ -1,12 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16.647" height="25.964" viewBox="0 0 16.647 25.964">
-    <g id="Group_577" data-name="Group 577" transform="translate(-28.117 -283.275)">
-        <rect id="Rectangle_162" data-name="Rectangle 162" width="10.559" height="25.964" transform="translate(34.205 283.275)" fill="#182752" />
-        <rect id="Rectangle_163" data-name="Rectangle 163" width="4.136" height="16.655" rx="2.068" transform="translate(37.309 291.011)" fill="#fff" />
-        <circle id="Ellipse_69" data-name="Ellipse 69" cx="2.068" cy="2.068" r="2.068" transform="translate(37.309 285.278)" fill="#fff" />
-        <rect id="Rectangle_164" data-name="Rectangle 164" width="4.136" height="0.63" transform="translate(37.309 294.72)" fill="#182752" />
-        <rect id="Rectangle_178" data-name="Rectangle 178" width="4.136" height="0.63" transform="translate(37.309 302.324)" fill="#182752" />
-        <rect id="Rectangle_165" data-name="Rectangle 165" width="3.724" height="7.735" rx="1.862" transform="translate(28.117 283.275)" fill="#182752" />
-        <rect id="Rectangle_166" data-name="Rectangle 166" width="0.993" height="20.469" rx="0.497" transform="translate(29.524 288.771)" fill="#182752" />
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#192852;}
+	.st1{clip-path:url(#SVGID_00000175293774598553275810000006722724325723742604_);}
+	.st2{fill:#FFFFFF;}
+</style>
+<rect id="Rectangle_329" x="5.6" y="7.14" class="st0" width="34.08" height="83.81"/>
+<g id="Group_583" transform="translate(0 0)">
+	<g>
+		<defs>
+			<rect id="SVGID_1_" x="5.6" y="7.14" width="90.89" height="83.81"/>
+		</defs>
+		<clipPath id="SVGID_00000065059754259120191200000009682637300554161283_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<g id="Group_582" style="clip-path:url(#SVGID_00000065059754259120191200000009682637300554161283_);">
+			<path id="Path_243" class="st2" d="M22.3,32.11L22.3,32.11c3.69,0,6.67,2.99,6.67,6.68v40.41c0.09,3.69-2.83,6.75-6.52,6.83
+				c-3.69,0.09-6.75-2.83-6.83-6.52c0-0.11,0-0.21,0-0.32V38.78C15.62,35.1,18.61,32.11,22.3,32.11"/>
+			<path id="Path_244" class="st2" d="M22.3,13.59c3.69,0.01,6.67,3,6.66,6.69c-0.01,3.69-3,6.67-6.69,6.66
+				c-3.68-0.01-6.66-2.99-6.66-6.67c-0.01-3.69,2.98-6.68,6.67-6.69C22.28,13.59,22.29,13.59,22.3,13.59"/>
+			<rect id="Rectangle_330" x="15.62" y="47.31" class="st0" width="13.35" height="2.03"/>
+			<path id="Path_245" class="st2" d="M94.48,52.68c0,17.45-14.15,31.6-31.6,31.6s-31.6-14.15-31.6-31.6
+				c0-17.45,14.15-31.6,31.6-31.6S94.48,35.23,94.48,52.68L94.48,52.68"/>
+			<path id="Path_246" class="st0" d="M62.87,27.25v25.43L51.13,75.25c12.47,6.47,27.81,1.6,34.28-10.87s1.6-27.81-10.87-34.28
+				C70.93,28.24,66.93,27.26,62.87,27.25"/>
+			<path id="Path_247" class="st0" d="M58.65,49.64h-6.16v-3.25h10v3.01l-5.31,10.16h-4.09L58.65,49.64z"/>
+			<path id="Path_248" class="st2" d="M63.67,56.32c6.47-3.67,6.84-4.49,6.84-5.54c0-0.82-0.67-1.35-1.71-1.35
+				c-0.94-0.09-1.78,0.57-1.91,1.5l-3.42-0.53c0.32-2.62,2.7-4.49,5.32-4.18c3.47,0,5.4,1.58,5.4,4.14c0,2.22-2.09,4.11-5.62,5.92
+				h5.56v3.24H63.67V56.32z"/>
+			<path id="Path_249" class="st2" d="M75.51,57.49h1.56v2.13c0.26-0.48,0.78-0.76,1.33-0.72c1.06,0,1.7,0.51,1.7,2.11v2.57h-1.56
+				v-2.41c0-0.73-0.23-0.97-0.75-0.97s-0.75,0.27-0.75,1v2.38h-1.56L75.51,57.49z"/>
+			<path id="Path_250" class="st2" d="M81.05,58.97h1.56v0.61c0.28-0.54,0.89-0.82,1.49-0.68l-0.15,1.45
+				c-0.8-0.15-1.34,0.14-1.34,1.15v2.06h-1.56V58.97z"/>
+			<path id="Path_251" class="st0" d="M64.79,19.12v-0.53h8.4c1,0,1.82-0.81,1.82-1.82V13.6c0-1-0.82-1.82-1.82-1.82H52.55
+				c-1,0-1.82,0.82-1.82,1.82v3.17c0,1,0.81,1.82,1.82,1.82h7.93v0.57c-18.5,1.34-32.41,17.41-31.07,35.91
+				c1.34,18.5,17.41,32.41,35.91,31.07s32.41-17.41,31.07-35.91C95.18,33.39,81.65,20.07,64.79,19.12 M62.87,82.29
+				c-16.35,0-29.6-13.25-29.6-29.6s13.25-29.6,29.6-29.6c16.35,0,29.6,13.25,29.6,29.6v0C92.45,69.03,79.21,82.27,62.87,82.29"/>
+		</g>
+	</g>
+</g>
 </svg>
-  
