@@ -32,11 +32,11 @@ const AdminFormInputBoolean = ({ title, require, data, onChange, isView }) => {
 				) : (
 					<div className='mb-1'>
 						<label className='radio'>
-							<input type='radio' name='boolean' onChange={() => onChange(true)} checked={boolean} />
+							<input type='radio' name={title} onChange={() => onChange(true)} checked={boolean} />
 							<Label>{t[locale].boolean.yes}</Label>
 						</label>
 						<label className='radio'>
-							<input type='radio' name='boolean' onChange={() => onChange(false)} checked={!boolean} />
+							<input type='radio' name={title} onChange={() => onChange(false)} checked={!boolean} />
 							<Label>{t[locale].boolean.no}</Label>
 						</label>
 					</div>

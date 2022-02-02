@@ -32,6 +32,7 @@ const AdminFormVenue = ({ data, isView, onUpdate }) => {
 		lng: '',
 	});
 	const [atkRequired, setAtkRequired] = useState(false);
+	const [atkRequiredOnSite, setAtkRequiredOnSite] = useState(false);
 	const [vaccineDosesRequired, setVaccineDosesRequired] = useState(0);
 	const [event, setEvent] = useState(null);
 
@@ -63,6 +64,7 @@ const AdminFormVenue = ({ data, isView, onUpdate }) => {
 				},
 				covid19Conditions: {
 					isATKRequired: atkRequired,
+					isATKRequiredOnSite: atkRequiredOnSite,
 					numberOfVaccineDosesRequired: vaccineDosesRequired || 0,
 				},
 				event: event,
@@ -76,7 +78,7 @@ const AdminFormVenue = ({ data, isView, onUpdate }) => {
 				(!vaccineDosesRequired && vaccineDosesRequired !== 0);
 			onUpdate({ payload, isError });
 		}
-	}, [id, venueName, location, atkRequired, vaccineDosesRequired, event]);
+	}, [id, venueName, location, atkRequired, atkRequiredOnSite, vaccineDosesRequired, event]);
 
 	useEffect(() => {
 		if (!data) {
@@ -104,6 +106,10 @@ const AdminFormVenue = ({ data, isView, onUpdate }) => {
 		if (data.covid19Conditions) {
 			if (data.covid19Conditions.isATKRequired) {
 				setAtkRequired(data.covid19Conditions.isATKRequired);
+			}
+
+			if (data.covid19Conditions.isATKRequiredOnSite) {
+				setAtkRequiredOnSite(data.covid19Conditions.isATKRequiredOnSite);
 			}
 
 			if (data.covid19Conditions.numberOfVaccineDosesRequired) {
@@ -138,6 +144,14 @@ const AdminFormVenue = ({ data, isView, onUpdate }) => {
 			/>
 
 			<InputLocation title={t[locale].coordinate} data={location} onChange={(e) => setLocation(e)} isView={isView} />
+
+			<InputBoolean
+				title={t[locale].atkRequiredOnSite}
+				data={atkRequiredOnSite}
+				onChange={(e) => setAtkRequiredOnSite(e)}
+				isView={isView}
+				require
+			/>
 
 			<InputBoolean
 				title={t[locale].atkRequired}

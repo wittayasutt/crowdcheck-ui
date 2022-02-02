@@ -178,7 +178,13 @@ const PlaceTitle = ({ data, updatedTime, isMini }) => {
 			{covidConditions && (
 				<CovidConditions>
 					<Require>{t[locale].require}</Require>
-					{covidConditions.isATKRequired && (
+					{covidConditions.isATKRequiredOnSite && (
+						<>
+							<RequireImage src={'/images/filter/atkOnSite.svg'} alt='atk' style={{ height: '16px' }} />
+							<RequireText>{t[locale].atkTestOnSite}</RequireText>
+						</>
+					)}
+					{covidConditions.isATKRequired && !covidConditions.isATKRequiredOnSite && (
 						<>
 							<RequireImage src={'/images/filter/atk.svg'} alt='atk' style={{ height: '16px' }} />
 							<RequireText>{t[locale].atkTestResult}</RequireText>

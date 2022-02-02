@@ -7,8 +7,10 @@ export default {
 	areYouSure: 'Are you sure?',
 	area: 'Area',
 	areaName: 'Area name',
-	atkRequired: 'ATK Required',
+	atkRequired: 'ATK Required (72 hrs)',
+	atkRequiredOnSite: 'ATK Required On Site',
 	atkTestResult: 'ATK Test result',
+	atkTestOnSite: 'ATK Test on site',
 	back: 'back',
 	boolean: {
 		no: 'No',
@@ -46,7 +48,8 @@ export default {
 	exceed: 'Exceed',
 	exploreArea: 'Explore Area',
 	filter: {
-		atk: 'Require ATK test result',
+		atk: 'Require ATK result (72 hrs)',
+		atkOnSite: 'Require ATK test on site',
 		notRequire: 'Do not require vaccination',
 		requireOne: 'Require at least 1 vaccination',
 		requireTwo: 'Require fully vaccinated',

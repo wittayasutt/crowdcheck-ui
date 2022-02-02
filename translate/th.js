@@ -7,8 +7,10 @@ export default {
 	areYouSure: 'คุณแน่ใจไหม?',
 	area: 'พื้นที่',
 	areaName: 'ชื่อพื้นที่',
-	atkRequired: 'จำเป็นต้องตรวจ ATK',
+	atkRequired: 'จำเป็นต้องตรวจ ATK ใน 72 ชม.',
+	atkRequiredOnSite: 'จำเป็นต้องตรวจ ATK ก่อนเข้างาน',
 	atkTestResult: 'ผลตรวจ ATK',
+	atkTestOnSite: 'ตรวจ ATK ก่อนเข้า',
 	back: 'กลับ',
 	boolean: {
 		no: 'ไม่',
@@ -46,7 +48,8 @@ export default {
 	exceed: 'Exceed',
 	exploreArea: 'ค้นหาพื้นที่',
 	filter: {
-		atk: 'ผลตรวจ ATK',
+		atk: 'ผลตรวจ ATK ใน 72 ชม.',
+		atkOnSite: 'ตรวจ ATK ก่อนเข้าพื้นที่',
 		notRequire: 'ไม่ต้องฉีดวัคซีน',
 		requireOne: 'ได้รับวัคซีนอย่างน้อยหนึ่งเข็ม',
 		requireTwo: 'ได้รับวัคซีนครบโดสแล้ว',

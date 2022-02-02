@@ -61,7 +61,7 @@ const Title = styled.h4`
 	margin-bottom: 12px;
 `;
 
-const filterList = ['atk', 'notRequire', 'requireOne', 'requireTwo'];
+const filterList = ['atkOnSite', 'atk', 'notRequire', 'requireOne', 'requireTwo'];
 const poiList = ['cafeAndRestaurant', 'parking', 'gallery', 'designStudio', 'craft', 'fashion'];
 
 const LegendContent = () => {
@@ -111,12 +111,16 @@ const LegendContent = () => {
 	};
 
 	useEffect(() => {
+		const atkOnSite = localStorage.getItem('atkOnSite');
 		const atk = localStorage.getItem('atk');
 		const notRequire = localStorage.getItem('notRequire');
 		const requireOne = localStorage.getItem('requireOne');
 		const requireTwo = localStorage.getItem('requireTwo');
 
 		const updatedFilter = [];
+		if (atkOnSite) {
+			updatedFilter.push('atkOnSite');
+		}
 		if (atk) {
 			updatedFilter.push('atk');
 		}

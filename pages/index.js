@@ -110,6 +110,7 @@ const HomePage = () => {
 	};
 
 	const filterCondition = (data) => {
+		const atkOnSite = filter.includes('atkOnSite');
 		const atk = filter.includes('atk');
 		const notRequire = filter.includes('notRequire');
 		const requireOne = filter.includes('requireOne');
@@ -122,9 +123,11 @@ const HomePage = () => {
 				return true;
 			}
 
-			const { isATKRequired, numberOfVaccineDosesRequired } = item.covid19Conditions;
+			const { isATKRequiredOnSite, isATKRequired, numberOfVaccineDosesRequired } = item.covid19Conditions;
 
-			if (isATKRequired && !atk) {
+			if (isATKRequiredOnSite && !atkOnSite) {
+				return false;
+			} else if (isATKRequired && !atk) {
 				return false;
 			} else if (showAll) {
 				return true;
