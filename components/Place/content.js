@@ -184,7 +184,8 @@ const PlaceContent = ({ data, isMini }) => {
 		<Wrapper isMini>
 			{data.crowd && data.crowd.value && <People level={data.crowd.value} />}
 
-			{data.programs &&
+			{!isMini &&
+				data.programs &&
 				data.programs.map((program, index) => {
 					const link = program.website ? getLink(program.website) : null;
 					const linkTitle = program.website ? getLinkTitle(program.website) : null;
@@ -236,7 +237,7 @@ const PlaceContent = ({ data, isMini }) => {
 					);
 				})}
 			{data.crowd && data.crowd.historic && <Trend data={data.crowd.historic} />}
-			{data.nearby && <Suggest data={data.nearby} />}
+			{!isMini && data.nearby && <Suggest data={data.nearby} />}
 			{isMini && <Logo src='/logo.png' alt='logo' />}
 		</Wrapper>
 	) : null;
