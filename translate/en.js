@@ -58,7 +58,7 @@ export default {
 	height: 'Height',
 	iam: "I'm",
 	id: 'ID',
-	informationText: 'Bangkok Design Week 2022 5-13 February 2022',
+	informationText: 'Isan creative festival 2022 25 Febuary - 6 March 2022',
 	informationModal: {
 		attention: {
 			content: 'connections for our better data visualization and be part of the healthy crowd.',

@@ -58,7 +58,7 @@ export default {
 	height: 'สูง',
 	iam: "I'm",
 	id: 'ไอดี',
-	informationText: 'Bangkok Design Week 2022 5-13 February 2022',
+	informationText: 'เทศกาลอีสานสร้างสรรค์ 2565 25 กุมภาพันธ์ - 6 มีนาคม 2565',
 	informationModal: {
 		attention: {
 			content: 'บนมือถือของท่านเพื่อพัฒนาการแสดงผลบนเวป และเป็นส่วนหนึ่งของสังคมสุขภาพดี',
