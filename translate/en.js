@@ -58,7 +58,7 @@ export default {
 	height: 'Height',
 	iam: "I'm",
 	id: 'ID',
-	informationText: 'Isan creative festival 2022 25 Febuary - 6 March 2022',
+	informationText: 'Everyday Crowdcheck March-May 2022',
 	informationModal: {
 		attention: {
 			content: 'connections for our better data visualization and be part of the healthy crowd.',

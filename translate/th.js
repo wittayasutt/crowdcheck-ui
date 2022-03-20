@@ -58,7 +58,7 @@ export default {
 	height: 'สูง',
 	iam: "I'm",
 	id: 'ไอดี',
-	informationText: 'เทศกาลอีสานสร้างสรรค์ 2565 25 กุมภาพันธ์ - 6 มีนาคม 2565',
+	informationText: 'Everyday Crowdcheck March-May 2022',
 	informationModal: {
 		attention: {
 			content: 'บนมือถือของท่านเพื่อพัฒนาการแสดงผลบนเวป และเป็นส่วนหนึ่งของสังคมสุขภาพดี',
